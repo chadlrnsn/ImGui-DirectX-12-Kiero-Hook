@@ -6,7 +6,7 @@ Universal ImGui implementation through DirectX 12 Hook (kiero)
 - You need only download [DirectX SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
 
 # TODO
-- [ ] Resize buffers
+- [x] Resize buffers
 - [x] Present
 
 ## Kiero
