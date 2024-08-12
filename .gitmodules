@@ -1,0 +1,6 @@
+[submodule "ImGui-DirectX-12-Kiero-Hook/vendor/imgui"]
+	path = ImGui-DirectX-12-Kiero-Hook/vendor/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "ImGui-DirectX-12-Kiero-Hook/vendor/minhook"]
+	path = ImGui-DirectX-12-Kiero-Hook/vendor/minhook
+	url = https://github.com/TsudaKageyu/minhook.git
