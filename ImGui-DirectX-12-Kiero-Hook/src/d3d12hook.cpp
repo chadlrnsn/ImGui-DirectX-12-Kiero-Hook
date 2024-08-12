@@ -7,7 +7,6 @@
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
 
-#define DX12_ENABLE_DEBUG_LAYER     0
 typedef HRESULT(__stdcall* PresentFunc)(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags);
 PresentFunc oPresent = nullptr;
 
@@ -27,7 +26,6 @@ struct FrameContext
 {
     ID3D12CommandAllocator* CommandAllocator;
     UINT64                  FenceValue; // In imgui original code // i didn't use it
-
 };
 
 // Data
@@ -36,21 +34,22 @@ static int const                    NUM_FRAMES_IN_FLIGHT = 3;
 // Modified
 FrameContext*                       g_frameContext;
 static UINT                         g_frameIndex = 0;
+static UINT                         g_fenceValue = 0;
 
 //static int const                    NUM_BACK_BUFFERS = 3; // original
 static int const                    NUM_BACK_BUFFERS = 3;
-static ID3D12Device* g_pd3dDevice = nullptr;
-static ID3D12DescriptorHeap* g_pd3dRtvDescHeap = nullptr;
-static ID3D12DescriptorHeap* g_pd3dSrvDescHeap = nullptr;
-static ID3D12CommandQueue* g_pd3dCommandQueue = nullptr;
-static ID3D12GraphicsCommandList* g_pd3dCommandList = nullptr;
-static ID3D12Fence* g_fence = nullptr;
+static ID3D12Device*                g_pd3dDevice = nullptr;
+static ID3D12DescriptorHeap*        g_pd3dRtvDescHeap = nullptr;
+static ID3D12DescriptorHeap*        g_pd3dSrvDescHeap = nullptr;
+static ID3D12CommandQueue*          g_pd3dCommandQueue = nullptr;
+static ID3D12GraphicsCommandList*   g_pd3dCommandList = nullptr;
+static ID3D12Fence*                 g_fence = nullptr;
 static HANDLE                       g_fenceEvent = nullptr;
 static UINT64                       g_fenceLastSignaledValue = 0;
-static IDXGISwapChain3* g_pSwapChain = nullptr;
+static IDXGISwapChain3*             g_pSwapChain = nullptr;
 static bool                         g_SwapChainOccluded = false;
 static HANDLE                       g_hSwapChainWaitableObject = nullptr;
-static ID3D12Resource* g_mainRenderTargetResource[NUM_BACK_BUFFERS] = {};
+static ID3D12Resource*              g_mainRenderTargetResource[NUM_BACK_BUFFERS] = {};
 static D3D12_CPU_DESCRIPTOR_HANDLE  g_mainRenderTargetDescriptor[NUM_BACK_BUFFERS] = {};
 
 UINT BufferCount = -1;
@@ -70,7 +69,7 @@ void CreateRenderTarget()
 
 void CleanupRenderTarget()
 {
-    //WaitForLastSubmittedFrame();
+    WaitForLastSubmittedFrame();
 
     for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
         if (g_mainRenderTargetResource[i]) { g_mainRenderTargetResource[i]->Release(); g_mainRenderTargetResource[i] = nullptr; }
@@ -78,67 +77,21 @@ void CleanupRenderTarget()
 
 void WaitForLastSubmittedFrame()
 {
-    FrameContext* frameCtx = &g_frameContext[g_pSwapChain->GetCurrentBackBufferIndex() % NUM_FRAMES_IN_FLIGHT];
+    // Comented code in original imgui example 
+    // 
+    //FrameContext* frameCtx = &g_frameContext[g_pSwapChain->GetCurrentBackBufferIndex() % NUM_FRAMES_IN_FLIGHT];
 
-    UINT64 fenceValue = frameCtx->FenceValue;
-    if (fenceValue == 0)
-        return; // No fence was signaled
+    //UINT64 fenceValue = frameCtx->FenceValue;
+    //if (fenceValue == 0)
+    //    return; // No fence was signaled
 
-    frameCtx->FenceValue = 0;
-    if (g_fence->GetCompletedValue() >= fenceValue)
-        return;
+    //frameCtx->FenceValue = 0;
+    //if (g_fence->GetCompletedValue() >= fenceValue)
+    //    return;
 
-    g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
+    g_fence->SetEventOnCompletion(g_fenceValue, g_fenceEvent);
     //g_fence->SetEventOnCompletion(g_fenceValue, g_fenceEvent);
     WaitForSingleObject(g_fenceEvent, INFINITE);
-}
-
-//FrameContext* WaitForNextFrameResources()
-//{
-//    UINT nextFrameIndex = g_frameIndex + 1;
-//    g_frameIndex = nextFrameIndex;
-//
-//    HANDLE waitableObjects[] = { g_hSwapChainWaitableObject, nullptr };
-//    DWORD numWaitableObjects = 1;
-//
-//    FrameContext* frameCtx = &g_frameContext[nextFrameIndex % NUM_FRAMES_IN_FLIGHT];
-//    UINT64 fenceValue = frameCtx->FenceValue;
-//    if (fenceValue != 0) // means no fence was signaled
-//    {
-//        frameCtx->FenceValue = 0;
-//        g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
-//        waitableObjects[1] = g_fenceEvent;
-//        numWaitableObjects = 2;
-//    }
-//
-//    WaitForMultipleObjects(numWaitableObjects, waitableObjects, TRUE, INFINITE);
-//
-//    return frameCtx;
-//}
-
-void ResizeSwapChain(HWND hWnd, int width, int height)
-{
-    DXGI_SWAP_CHAIN_DESC1 sd;
-    g_pSwapChain->GetDesc1(&sd);
-    sd.Width = width;
-    sd.Height = height;
-
-    IDXGIFactory4* dxgiFactory = nullptr;
-    g_pSwapChain->GetParent(IID_PPV_ARGS(&dxgiFactory));
-
-    g_pSwapChain->Release();
-    CloseHandle(g_hSwapChainWaitableObject);
-
-    IDXGISwapChain1* swapChain1 = NULL;
-    dxgiFactory->CreateSwapChainForHwnd(g_pd3dCommandQueue, hWnd, &sd, NULL, NULL, &swapChain1);
-    swapChain1->QueryInterface(IID_PPV_ARGS(&g_pSwapChain));
-    swapChain1->Release();
-    dxgiFactory->Release();
-
-    g_pSwapChain->SetMaximumFrameLatency(NUM_BACK_BUFFERS);
-
-    g_hSwapChainWaitableObject = g_pSwapChain->GetFrameLatencyWaitableObject();
-    assert(g_hSwapChainWaitableObject != NULL);
 }
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -148,7 +101,7 @@ LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     if (ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam))
         return true;
 
-    return CallWindowProc(oWndProc, hwnd, uMsg, wParam, lParam);
+    return show_demo_window ? show_demo_window : CallWindowProc(oWndProc, hwnd, uMsg, wParam, lParam);
 }
 
 void InitImGui()
@@ -178,7 +131,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&g_pd3dDevice))) {
 
             // sDesc
-
             DXGI_SWAP_CHAIN_DESC sdesc;
             pSwapChain->GetDesc(&sdesc);
             sdesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
@@ -204,21 +156,25 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
 
                 SIZE_T rtvDescriptorSize = g_pd3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
                 D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle = g_pd3dRtvDescHeap->GetCPUDescriptorHandleForHeapStart();
-                //for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
-                //{
-                //    g_mainRenderTargetDescriptor[i] = rtvHandle;
-                //    rtvHandle.ptr += rtvDescriptorSize;
-                //}
-
-                for (size_t i = 0; i < NUM_BACK_BUFFERS; i++) {
-                    ID3D12Resource* pBackBuffer = nullptr;
-
+                
+                // Create RenderTargetView
+                
+                for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
+                {
                     g_mainRenderTargetDescriptor[i] = rtvHandle;
-                    pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer));
-                    g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, rtvHandle);
-                    g_mainRenderTargetResource[i] = pBackBuffer;
                     rtvHandle.ptr += rtvDescriptorSize;
                 }
+
+                // 
+                //for (size_t i = 0; i < NUM_BACK_BUFFERS; i++) {
+                //    ID3D12Resource* pBackBuffer = nullptr;
+
+                //    g_mainRenderTargetDescriptor[i] = rtvHandle;
+                //    pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer));
+                //    g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, rtvHandle);
+                //    g_mainRenderTargetResource[i] = pBackBuffer;
+                //    rtvHandle.ptr += rtvDescriptorSize;
+                //}
 
             }
 
@@ -321,11 +277,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
 
     g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList* const*>(&g_pd3dCommandList));
 
-    g_fenceLastSignaledValue++;
-    g_pd3dCommandQueue->Signal(g_fence, g_fenceLastSignaledValue);
-    g_fence->SetEventOnCompletion(g_fenceLastSignaledValue, g_fenceEvent);
-    WaitForSingleObject(g_fenceEvent, INFINITE);
-
     return oPresent(pSwapChain, SyncInterval, Flags);
 }
 
@@ -341,17 +292,8 @@ void __stdcall hkExecuteCommandLists(ID3D12CommandQueue* pCommandQueue, UINT Num
 HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
 {
 
-    if (g_pd3dCommandQueue)
-    {
-        g_fenceLastSignaledValue++;
-        g_pd3dCommandQueue->Signal(g_fence, g_fenceLastSignaledValue);
-        g_fence->SetEventOnCompletion(g_fenceLastSignaledValue, g_fenceEvent);
-        WaitForSingleObject(g_fenceEvent, INFINITE);
-    }
-
     CleanupRenderTarget();
 
-    // Вызываем оригинальный ResizeBuffers
     HRESULT hr = oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
     if (FAILED(hr))
     {
@@ -359,7 +301,6 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
         return hr;
     }
 
-    // Пересоздаем рендер-таргеты
     CreateRenderTarget();
 
 
@@ -368,9 +309,12 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
 
 HRESULT __stdcall hkSignal(ID3D12CommandQueue* queue, ID3D12Fence* fence, UINT64 value)
 {
-    if (g_pd3dCommandQueue != nullptr && queue == g_pd3dCommandQueue) {
+    if ( g_pd3dCommandQueue != nullptr && queue == g_pd3dCommandQueue ) {
         g_fence = fence;
-        //g_fenceValue = value;
+        //if (g_pSwapChain != nullptr) 
+            //g_frameContext[g_pSwapChain->GetCurrentBackBufferIndex()].FenceValue = value;
+
+        g_fenceValue = value;
     }
     return oSignal(queue, fence, value);;
 }
@@ -388,7 +332,7 @@ void InitD3D12Hook()
             kiero::bind(140, (void**)&oPresent, hkPresent);
             kiero::bind(145, (void**)&oResizeBuffers, hkResizeBuffers);
             init = true;
-            std::cout << "KIERO!!" << std::endl;
+            std::cout << "kiero hooked" << std::endl;
         }
     } while (!init);
 }
