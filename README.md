@@ -14,6 +14,12 @@ git clone --recurse-submodules https://github.com/chadlrnsn/ImGui-DirectX-12-Kie
 # TODO
 - [x] Resize buffers
 - [x] Present
+- [ ] Fullscreen resize buffers
+
+# Known bugs
+- In debug builds, where exists debug layers might may crash
+- Flickering
+- Alt+Enter (fullscreen cause render freeze)
 
 ## Kiero
 You can find Kiero's official repository [here](https://github.com/Rebzzel/kiero)

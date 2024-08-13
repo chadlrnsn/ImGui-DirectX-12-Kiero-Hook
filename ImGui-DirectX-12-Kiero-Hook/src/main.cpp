@@ -40,6 +40,7 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     while (true) {
 
         if (GetAsyncKeyState(VK_F9) & 1) {
+            ReleaseD3D12Hook();
             std::cout << "Uninjecting..." << std::endl;
             break;
         }
@@ -47,7 +48,7 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
         Sleep(100);
     }
 
-    Uninitialize(hModule);
+    FreeLibraryAndExitThread(hModule, 0);
     return 0;
 }
 
