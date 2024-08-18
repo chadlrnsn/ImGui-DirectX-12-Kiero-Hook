@@ -14,7 +14,7 @@ git clone --recurse-submodules https://github.com/chadlrnsn/ImGui-DirectX-12-Kie
 # TODO
 - [x] Resize buffers
 - [x] Present
-- [ ] Fullscreen resize buffers
+- [x] Fullscreen resize buffers (prob fixed somehow if not - start issue) 
 
 # Known bugs
 - In debug builds, where exists debug layers might may crash

@@ -6,6 +6,7 @@
 #include <imgui.h>
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
+#include <thread>
 
 // Debug
 #include <dxgidebug.h>
@@ -25,7 +26,7 @@ SignalFunc oSignal = nullptr;
 
 HWND window;
 WNDPROC oWndProc;
-bool bShutdown = false;
+
 struct FrameContext
 {
     ID3D12CommandAllocator*         CommandAllocator;
@@ -117,21 +118,8 @@ LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     if (show_demo_window)
     {
-        if (ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam))
-        {
-            switch (uMsg)
-            {
-            case WM_MOUSEMOVE:
-            case WM_LBUTTONDOWN:
-            case WM_LBUTTONUP:
-            case WM_RBUTTONDOWN:
-            case WM_RBUTTONUP:
-            case WM_KEYDOWN:
-            case WM_KEYUP:
-                return true;
-            }
-           
-        }
+        ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam);
+        return true;
     }
 
     return CallWindowProc(oWndProc, hwnd, uMsg, wParam, lParam);
@@ -259,8 +247,6 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UIN
         init = true;
     }
 
-    if (!bShould_render) return oPresent(pSwapChain, SyncInterval, Flags);
-
     if (g_ResizeWidth != 0 && g_ResizeHeight != 0)
     {
         WaitForLastSubmittedFrame();
@@ -302,10 +288,6 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UIN
     g_pd3dCommandList->Reset(frameCtx.CommandAllocator, nullptr);
     g_pd3dCommandList->ResourceBarrier(1, &barrier);
 
-    // We dont need this
-    //const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
-    //g_pd3dCommandList->ClearRenderTargetView(g_mainRenderTargetDescriptor[backBufferIdx], clear_color_with_alpha, 0, nullptr);
-
     g_pd3dCommandList->OMSetRenderTargets(1, &g_frameContext[backBufferIdx].g_mainRenderTargetDescriptor, FALSE, nullptr);
     g_pd3dCommandList->SetDescriptorHeaps(1, &g_pd3dSrvDescHeap);
 
@@ -336,11 +318,8 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount
 {
     ImGui_ImplDX12_InvalidateDeviceObjects();
 
-    // Освобождаем текущие ресурсы рендеринга
-    //if (g_pd3dRtvDescHeap) { g_pd3dRtvDescHeap->Release(); g_pd3dRtvDescHeap = nullptr; }
-
     CleanupRenderTarget();
-    // Вызываем оригинальную функцию ResizeBuffers
+    
     HRESULT result = oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
 
     if (SUCCEEDED(result))
@@ -367,10 +346,13 @@ HRESULT __fastcall hkSignal(ID3D12CommandQueue* queue, ID3D12Fence* fence, UINT6
 
 void InitD3D12Hook()
 {
+    static size_t seconds = 2;
     static bool init = false;
     do {
         if (kiero::init(kiero::RenderType::D3D12) == kiero::Status::Success) 
         {
+            printf("Waiting for %zu seconds...", seconds);
+            std::this_thread::sleep_for(std::chrono::seconds(seconds));
             kiero::bind(54, (void**)&oExecuteCommandLists, hkExecuteCommandLists);
             kiero::bind(58, (void**)&oSignal, hkSignal);
             kiero::bind(140, (void**)&oPresent, hkPresent);
@@ -383,13 +365,6 @@ void InitD3D12Hook()
 
 void ReleaseD3D12Hook() 
 {
-
-    bShould_render = false;
-
-    ImGui_ImplDX12_Shutdown();
-    ImGui_ImplWin32_Shutdown();
-    ImGui::DestroyContext();
-
     CleanupRenderTarget();
 
     if (oWndProc)
@@ -397,4 +372,8 @@ void ReleaseD3D12Hook()
         SetWindowLongPtr(window, GWLP_WNDPROC, (LONG_PTR)oWndProc);
         oWndProc = nullptr;
     }
+
+
+    if (window)
+        window = nullptr;
 }

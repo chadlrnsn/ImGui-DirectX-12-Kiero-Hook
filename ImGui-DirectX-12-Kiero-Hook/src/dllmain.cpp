@@ -24,14 +24,7 @@ void CleanupConsole() {
     }
 }
 
-void Uninitialize(HMODULE hModule) {
-    CleanupConsole();
-    std::cout << "Uninjected" << std::endl;
-    FreeLibraryAndExitThread(hModule, 0);
-}
-
-DWORD WINAPI MainThread(LPVOID lpParam) {
-    HMODULE hModule = static_cast<HMODULE>(lpParam);
+DWORD WINAPI MainThread(HMODULE hModule, LPVOID lpParam) {
 
     std::cout << "Injected" << std::endl;
 
@@ -40,13 +33,16 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     while (true) {
 
         if (GetAsyncKeyState(VK_F9) & 1) {
-            ReleaseD3D12Hook();
             std::cout << "Uninjecting..." << std::endl;
             break;
         }
-
-        Sleep(100);
     }
+    
+    ReleaseD3D12Hook();
+    
+    MH_DisableHook(MH_ALL_HOOKS);
+    MH_RemoveHook(MH_ALL_HOOKS);
+    MH_Uninitialize();
 
     FreeLibraryAndExitThread(hModule, 0);
     return 0;
@@ -57,16 +53,16 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
         CreateConsole();
-        CreateThread(nullptr, 0, MainThread, hModule, 0, nullptr);
+        CreateThread(nullptr, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, nullptr);
         break;
 
     case DLL_PROCESS_DETACH:
-        CleanupConsole();
-
         MH_DisableHook(MH_ALL_HOOKS);
         MH_RemoveHook(MH_ALL_HOOKS);
         MH_Uninitialize();
 
+        printf("Unhooked\n");
+        CleanupConsole();
         break;
     }
     return TRUE;
