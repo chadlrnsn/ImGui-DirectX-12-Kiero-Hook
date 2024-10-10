@@ -4,6 +4,9 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+// own
+#include <logger/logger.h>
+
 
 // MinHook
 #include <minhook/include/MinHook.h>

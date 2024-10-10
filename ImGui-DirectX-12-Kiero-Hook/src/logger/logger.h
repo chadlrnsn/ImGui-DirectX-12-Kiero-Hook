@@ -8,7 +8,7 @@ public:
     enum class LogType {
         INFO,
         WARN,
-        ERROR,
+        ERR,
         DEBUG,
     };
 
@@ -24,7 +24,7 @@ public:
         case LogType::WARN:
             printf("[WARN]\t");
             break;
-        case LogType::ERROR:
+        case LogType::ERR:
             printf("[ERROR]\t");
             break;
         case LogType::DEBUG:
@@ -40,7 +40,7 @@ public:
 
 };
 
-#define LOG_ERROR(format, ...) Logger::log(Logger::LogType::ERROR, format, __VA_ARGS__)
+#define LOG_ERROR(format, ...) Logger::log(Logger::LogType::ERR, format, __VA_ARGS__)
 #define LOG_WARN(format, ...) Logger::log(Logger::LogType::WARN, format, __VA_ARGS__)
 #define LOG_INFO(format, ...) Logger::log(Logger::LogType::INFO, format, __VA_ARGS__)
 #define LOG_DEBUG(format, ...) Logger::log(Logger::LogType::DEBUG, format, __VA_ARGS__)

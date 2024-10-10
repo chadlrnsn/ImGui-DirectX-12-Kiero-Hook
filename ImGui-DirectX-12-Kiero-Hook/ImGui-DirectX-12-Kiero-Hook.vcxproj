@@ -184,6 +184,7 @@
     <ClInclude Include="src\d3d12hook.h" />
     <ClInclude Include="src\globals.h" />
     <ClInclude Include="src\includes.h" />
+    <ClInclude Include="src\logger\logger.h" />
     <ClInclude Include="vendor\imgui\backends\imgui_impl_dx12.h" />
     <ClInclude Include="vendor\imgui\backends\imgui_impl_win32.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />

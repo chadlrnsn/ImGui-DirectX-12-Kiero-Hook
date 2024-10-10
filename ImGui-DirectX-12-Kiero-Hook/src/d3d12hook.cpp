@@ -346,13 +346,12 @@ HRESULT __fastcall hkSignal(ID3D12CommandQueue* queue, ID3D12Fence* fence, UINT6
 
 void InitD3D12Hook()
 {
-    static size_t seconds = 2;
     static bool init = false;
     do {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
         if (kiero::init(kiero::RenderType::D3D12) == kiero::Status::Success) 
         {
-            printf("Waiting for %zu seconds...", seconds);
-            std::this_thread::sleep_for(std::chrono::seconds(seconds));
             kiero::bind(54, (void**)&oExecuteCommandLists, hkExecuteCommandLists);
             kiero::bind(58, (void**)&oSignal, hkSignal);
             kiero::bind(140, (void**)&oPresent, hkPresent);
@@ -360,6 +359,7 @@ void InitD3D12Hook()
             init = true;
             std::cout << "kiero hooked" << std::endl;
         }
+
     } while (!init);
 }
 

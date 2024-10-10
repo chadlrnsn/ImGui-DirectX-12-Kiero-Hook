@@ -1,8 +1,18 @@
 ﻿#include <includes.h>
 #include <d3d12hook.h>
+#include <globals.h>
+
 
 HANDLE g_consoleHandle = nullptr;
 FILE* g_consoleStream = nullptr;
+
+void CreateConsole();
+void CleanupConsole();
+void keyhandle();
+void eraseHooks();
+DWORD WINAPI MainThread(HMODULE hModule, LPVOID lpParam);
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved);
+
 
 void CreateConsole() {
     if (AllocConsole()) {
@@ -24,25 +34,42 @@ void CleanupConsole() {
     }
 }
 
+void keyhandle() {
+    while (!globals::g_break) {
+
+        if (GetAsyncKeyState(VK_F9) & 1) {
+            LOG_INFO("Uninjecting...");
+            globals::g_break = true;
+            break;
+        }
+    }
+}
+
+void eraseHooks()
+{
+    MH_DisableHook(MH_ALL_HOOKS);
+    MH_RemoveHook(MH_ALL_HOOKS);
+    MH_Uninitialize();
+    LOG_INFO("All hooks erased and disabled minhook uninitialized");
+}
+
 DWORD WINAPI MainThread(HMODULE hModule, LPVOID lpParam) {
 
-    std::cout << "Injected" << std::endl;
+    LOG_INFO("Injected");
+
+    std::thread KeyHandle(keyhandle);
+
+    KeyHandle.detach();
 
     InitD3D12Hook();
 
-    while (true) {
-
-        if (GetAsyncKeyState(VK_F9) & 1) {
-            std::cout << "Uninjecting..." << std::endl;
-            break;
-        }
+    while (!globals::g_break) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     
     ReleaseD3D12Hook();
     
-    MH_DisableHook(MH_ALL_HOOKS);
-    MH_RemoveHook(MH_ALL_HOOKS);
-    MH_Uninitialize();
+    eraseHooks();
 
     FreeLibraryAndExitThread(hModule, 0);
     return 0;
@@ -57,11 +84,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         break;
 
     case DLL_PROCESS_DETACH:
-        MH_DisableHook(MH_ALL_HOOKS);
-        MH_RemoveHook(MH_ALL_HOOKS);
-        MH_Uninitialize();
 
-        printf("Unhooked\n");
+        eraseHooks();
+        LOG_INFO("Unhooked\n");
         CleanupConsole();
         break;
     }
