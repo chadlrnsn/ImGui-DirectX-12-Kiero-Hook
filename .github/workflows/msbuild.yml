@@ -1,0 +1,86 @@
+name: MSBuild
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  # Path to the solution file relative to the root of the project.
+  SOLUTION_FILE_PATH: ./Liesofp_dlc.sln
+  tag1: V${{ github.run_number }}
+  BUILD_ID: ${{ github.run_id }}  # Уникальный идентификатор для сборки
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        configuration: [Release, Debug]  # Матрица для двух конфигураций
+        include:
+          - configuration: Release
+          - configuration: Debug
+
+    steps:
+    # Проверка репозитория
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    # Кэширование пакетов NuGet для ускорения сборки
+    - name: Cache NuGet packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+
+    # Установка MSBuild
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    # Восстановление NuGet пакетов
+    - name: Restore NuGet packages
+      working-directory: ${{ env.GITHUB_WORKSPACE }}
+      run: nuget restore ${{ env.SOLUTION_FILE_PATH }}
+
+    # Сборка проекта
+    - name: Build
+      working-directory: ${{ env.GITHUB_WORKSPACE }}
+      timeout-minutes: 10  # Увеличиваем время на случай больших сборок
+      run: msbuild /m /p:Configuration=${{ matrix.configuration }} ${{ env.SOLUTION_FILE_PATH }}
+
+    - name: Zip build artifacts
+      run: |
+        7z a bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip ${{ github.workspace }}\bin\${{ matrix.configuration }}-x64\*
+
+    # Загрузка артефактов
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: LiesOfP-${{ matrix.configuration }}
+        path: bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip
+
+  # Опционально: публикация релиза
+  # release:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #   steps:
+  #     - name: Download a Build Artifact
+  #       uses: actions/download-artifact@v3.0.0
+  #       with:
+  #         name: my-artifact
+  #     - name: Release
+  #       uses: softprops/action-gh-release@v1
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+  #         tag_name: ${{ env.tag1 }}
+  #         files: bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip

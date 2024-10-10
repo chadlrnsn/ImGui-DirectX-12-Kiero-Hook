@@ -19,7 +19,7 @@ git clone --recurse-submodules https://github.com/chadlrnsn/ImGui-DirectX-12-Kie
 # Known bugs
 - In debug builds, where exists debug layers might may crash
 - Flickering
-- Alt+Enter (fullscreen cause render freeze)
+- Alt+Enter (fullscreen cause render freeze **IF MENU IS OPEN**) 
 
 ## Kiero
 You can find Kiero's official repository [here](https://github.com/Rebzzel/kiero)
