@@ -29,16 +29,6 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Cache NuGet packages and vcpkg dependencies
-      uses: actions/cache@v4
-      with:
-        path: |
-          ~/.nuget/packages
-          C:\vcpkg\installed
-        key: ${{ runner.os }}-${{ matrix.configuration }}-${{ hashFiles('**/*.vcxproj', '**/*.vcxproj.filters', '**/vcpkg.json') }}
-        restore-keys: |
-          ${{ runner.os }}-${{ matrix.configuration }}-
-
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v2
 
@@ -84,3 +74,4 @@ jobs:
   #         token: ${{ secrets.GITHUB_TOKEN }}
   #         tag_name: ${{ env.tag1 }}
   #         files: bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip
+  #         
