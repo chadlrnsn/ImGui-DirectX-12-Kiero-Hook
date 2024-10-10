@@ -7,9 +7,9 @@ on:
     branches: [ main ]
 
 env:
-  SOLUTION_FILE_PATH = ./ImGui-DirectX-12-Kiero-Hook.sln
+  SOLUTION_FILE_PATH: ./ImGui-DirectX-12-Kiero-Hook.sln
   tag1: V${{ github.run_number }}
-  BUILD_ID: ${{ github.run_id }}
+  BUILD_ID: ${{ github.run_id }}  # Уникальный идентификатор для сборки
 
 permissions:
   contents: read
