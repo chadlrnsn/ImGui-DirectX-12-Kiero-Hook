@@ -32,13 +32,6 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v2
 
-    - name: Restore NuGet packages
-      run: |
-        Get-ChildItem -Recurse -Filter *.sln | 
-        Foreach-Object {
-          nuget restore $_.FullName
-        }
-
     - name: Build
       timeout-minutes: 10
       run: |
