@@ -2,6 +2,8 @@
 #include <Windows.h>
 #include <vector>
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 // MinHook
 #include <minhook/include/MinHook.h>
