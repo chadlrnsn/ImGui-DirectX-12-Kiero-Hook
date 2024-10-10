@@ -7,6 +7,7 @@ on:
     branches: [ main ]
 
 env:
+  SOLUTION_FILE_PATH = ./ImGui-DirectX-12-Kiero-Hook.sln
   tag1: V${{ github.run_number }}
   BUILD_ID: ${{ github.run_id }}
 
@@ -33,12 +34,10 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build
-      timeout-minutes: 10
+      working-directory: ${{ env.GITHUB_WORKSPACE }}
+      timeout-minutes: 10  # Увеличиваем время на случай больших сборок
       run: |
-        Get-ChildItem -Recurse -Filter *.sln | 
-        Foreach-Object {
-          msbuild /m /p:Configuration=${{ matrix.configuration }} $_.FullName
-        }
+        msbuild /m /p:Configuration=${{ matrix.configuration }} ${{env.SOLUTION_FILE_PATH}}
 
     - name: Zip build artifacts
       run: |
