@@ -7,7 +7,6 @@ on:
     branches: [ main ]
 
 env:
-  # Path to the solution file relative to the root of the project.
   tag1: V${{ github.run_number }}
   BUILD_ID: ${{ github.run_id }}  # Уникальный идентификатор для сборки
 
@@ -42,7 +41,7 @@ jobs:
 
     # Установка MSBuild
     - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v2  # Обновили до v2
 
     # Восстановление NuGet пакетов
     - name: Restore NuGet packages
@@ -57,7 +56,7 @@ jobs:
 
     - name: Zip build artifacts
       run: |
-        7z a bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip ${{ github.workspace }}\bin\${{ matrix.configuration }}-x64\*
+        7z a bin-${{ matrix.configuration }}.zip ${{ github.workspace }}\bin\${{ matrix.configuration }}-x64\*
 
     # Загрузка артефактов
     - name: Upload build artifacts
