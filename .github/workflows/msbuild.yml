@@ -8,7 +8,6 @@ on:
 
 env:
   # Path to the solution file relative to the root of the project.
-  SOLUTION_FILE_PATH: ./Liesofp_dlc.sln
   tag1: V${{ github.run_number }}
   BUILD_ID: ${{ github.run_id }}  # Уникальный идентификатор для сборки
 
@@ -64,8 +63,8 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: LiesOfP-${{ matrix.configuration }}
-        path: bin-${{ matrix.configuration }}-${{ env.BUILD_ID }}.zip
+        name: Artifact-${{ matrix.configuration }}
+        path: bin-${{ matrix.configuration }}.zip
 
   # Опционально: публикация релиза
   # release:
