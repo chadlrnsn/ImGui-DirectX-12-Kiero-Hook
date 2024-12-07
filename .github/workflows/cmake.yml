@@ -1,0 +1,31 @@
+name: CMake Build
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+env:
+    BUILD_TYPE: Release
+
+jobs:
+    build:
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: recursive
+
+            - name: Configure CMake
+              run: cmake --preset windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}
+
+            - name: Build
+              run: cmake --build build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }} --config ${{env.BUILD_TYPE}}
+
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                  name: ImGui_DirectX12_Hook-${{env.BUILD_TYPE}}
+                  path: build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}/bin/${{env.BUILD_TYPE}}/*.dll
