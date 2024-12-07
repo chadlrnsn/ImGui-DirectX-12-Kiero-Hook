@@ -28,4 +28,4 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   name: ImGui_DirectX12_Hook-${{env.BUILD_TYPE}}
-                  path: build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}/bin/${{env.BUILD_TYPE}}/*.dll
+                  path: build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}/${{env.BUILD_TYPE}}/ImGui_DirectX12_Hook.dll
