@@ -4,7 +4,12 @@ project(ImGui_DirectX12_Hook)
 # Указываем все исходные файлы
 set(SOURCE_FILES
     # Основной файл примера DirectX12
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/examples/example_win32_directx12/main.cpp
+    ImGui-DirectX-12-Kiero-Hook/src/dllmain.cpp
+    ImGui-DirectX-12-Kiero-Hook/src/d3d12hook.cpp
+
+    # Kiero
+    ImGui-DirectX-12-Kiero-Hook/vendor/kiero/kiero.cpp
+
     # Файлы ImGui
     ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui.cpp
     ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui_demo.cpp
@@ -17,11 +22,15 @@ set(SOURCE_FILES
 
 # Указываем пути для включаемых файлов
 include_directories(
+    ImGui-DirectX-12-Kiero-Hook/src
+    ImGui-DirectX-12-Kiero-Hook/vendor
+    # minhook
     ImGui-DirectX-12-Kiero-Hook/vendor/minhook/include
+    # kiero
+    ImGui-DirectX-12-Kiero-Hook/vendor/kiero
+    # imgui
     ImGui-DirectX-12-Kiero-Hook/vendor/imgui
     ImGui-DirectX-12-Kiero-Hook/vendor/imgui/backends
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/examples/example_win32_directx12
-    ImGui-DirectX-12-Kiero-Hook/vendor/kiero
 )
 
 # Создаем DLL
