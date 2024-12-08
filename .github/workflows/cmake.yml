@@ -11,7 +11,7 @@ jobs:
         strategy:
             matrix:
                 config: [release, debug]
-                arch: [x64, win32]
+                arch: [x64]
 
         runs-on: windows-latest
 

@@ -28,34 +28,6 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
-        },
-        {
-            "name": "windows-win32-debug",
-            "displayName": "Windows Win32 Debug",
-            "description": "Target Windows with the Visual Studio development environment.",
-            "generator": "Visual Studio 17 2022",
-            "architecture": {
-                "value": "Win32",
-                "strategy": "set"
-            },
-            "binaryDir": "${sourceDir}/build/windows-win32-debug",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "windows-win32-release",
-            "displayName": "Windows Win32 Release",
-            "description": "Target Windows with the Visual Studio development environment.",
-            "generator": "Visual Studio 17 2022",
-            "architecture": {
-                "value": "Win32",
-                "strategy": "set"
-            },
-            "binaryDir": "${sourceDir}/build/windows-win32-release",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
         }
     ]
 }
