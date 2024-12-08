@@ -10,7 +10,7 @@ jobs:
     build:
         strategy:
             matrix:
-                config: [Release, Debug]
+                config: [release, debug]
                 arch: [x64, win32]
 
         runs-on: windows-latest
