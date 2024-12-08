@@ -4,7 +4,7 @@ A DirectX 12 hook implementation using ImGui and Kiero. This project allows you 
 
 ## Features
 - DirectX 12 Hook implementation
-- ImGui integration
+- ImGui integration through Kiero
 - Resizable window support
 - Fullscreen support
 - Minimal performance impact
@@ -60,13 +60,6 @@ This project uses:
 
 ## Contributing
 Feel free to submit issues and pull requests.
-
-## TODO
-- [x] Resize buffers support
-- [x] Present hook implementation
-- [x] Fullscreen resize buffers
-- [ ] Fix fullscreen menu freeze
-- [ ] Reduce flickering
 
 [!NOTE]
 Only x64 builds are supported due to DirectX 12 limitations.
