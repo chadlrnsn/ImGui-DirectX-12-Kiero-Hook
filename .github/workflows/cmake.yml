@@ -6,11 +6,13 @@ on:
     pull_request:
         branches: ["main"]
 
-env:
-    BUILD_TYPE: Release
-
 jobs:
     build:
+        strategy:
+            matrix:
+                config: [Release, Debug]
+                arch: [x64, win32]
+
         runs-on: windows-latest
 
         steps:
@@ -19,13 +21,13 @@ jobs:
                   submodules: recursive
 
             - name: Configure CMake
-              run: cmake --preset windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}
+              run: cmake --preset windows-${{ matrix.arch }}-${{ format('{0}', matrix.config) }}
 
             - name: Build
-              run: cmake --build build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }} --config ${{env.BUILD_TYPE}}
+              run: cmake --build build/windows-${{ matrix.arch }}-${{ format('{0}', matrix.config) }} --config ${{ matrix.config }}
 
             - name: Upload artifacts
               uses: actions/upload-artifact@v3
               with:
-                  name: ImGui_DirectX12_Hook-${{env.BUILD_TYPE}}
-                  path: build/windows-x64-${{ env.BUILD_TYPE == 'Release' && 'release' || 'debug' }}/${{env.BUILD_TYPE}}/ImGui_DirectX12_Hook.dll
+                  name: ImGui_DirectX12_Hook-${{ matrix.arch }}-${{ matrix.config }}
+                  path: build/windows-${{ matrix.arch }}-${{ format('{0}', matrix.config) }}/${{ matrix.config }}/ImGui_DirectX12_Hook.dll
