@@ -346,7 +346,7 @@ void InitD3D12Hook()
             kiero::bind(58, (void **)&oSignal, hkSignal);
             kiero::bind(140, (void **)&oPresent, hkPresent);
             kiero::bind(145, (void **)&oResizeBuffers, hkResizeBuffers);
-            std::cout << "window hooked using kiero" << std::endl;
+            LOG_INFO("D3D12 Hooked using kiero");
             init = true;
         }
 
@@ -355,14 +355,105 @@ void InitD3D12Hook()
 
 void ReleaseD3D12Hook()
 {
+    // Сначала отключаем хуки, чтобы остановить новые вызовы
+    kiero::shutdown();
+
+    // Ждем завершения всех команд
+    if (g_pd3dCommandQueue && g_fence && g_fenceEvent)
+    {
+        // Отправляем финальную команду синхронизации
+        g_pd3dCommandQueue->Signal(g_fence, ++g_fenceValue);
+        if (g_fence->GetCompletedValue() < g_fenceValue)
+        {
+            g_fence->SetEventOnCompletion(g_fenceValue, g_fenceEvent);
+            WaitForSingleObject(g_fenceEvent, INFINITE);
+        }
+    }
+
+    // Освобождаем ресурсы ImGui
+    if (g_pd3dDevice)
+    {
+        ImGui_ImplDX12_Shutdown();
+        ImGui_ImplWin32_Shutdown();
+        ImGui::DestroyContext();
+    }
+
+    // Очищаем рендер таргеты
     CleanupRenderTarget();
 
-    if (oWndProc)
+    // Освобождаем командные аллокаторы
+    if (g_frameContext)
+    {
+        for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
+        {
+            if (g_frameContext[i].CommandAllocator)
+            {
+                g_frameContext[i].CommandAllocator->Release();
+                g_frameContext[i].CommandAllocator = nullptr;
+            }
+        }
+        delete[] g_frameContext;
+        g_frameContext = nullptr;
+    }
+
+    // Освобождаем ресурсы DirectX12 в правильном порядке
+    if (g_pd3dCommandList)
+    {
+        g_pd3dCommandList->Release();
+        g_pd3dCommandList = nullptr;
+    }
+
+    if (g_pd3dCommandQueue)
+    {
+        g_pd3dCommandQueue->Release();
+        g_pd3dCommandQueue = nullptr;
+    }
+
+    if (g_pd3dRtvDescHeap)
+    {
+        g_pd3dRtvDescHeap->Release();
+        g_pd3dRtvDescHeap = nullptr;
+    }
+
+    if (g_pd3dSrvDescHeap)
+    {
+        g_pd3dSrvDescHeap->Release();
+        g_pd3dSrvDescHeap = nullptr;
+    }
+
+    if (g_fence)
+    {
+        g_fence->Release();
+        g_fence = nullptr;
+    }
+
+    // Закрываем хэндлы
+    if (g_fenceEvent)
+    {
+        CloseHandle(g_fenceEvent);
+        g_fenceEvent = nullptr;
+    }
+
+    if (g_hSwapChainWaitableObject)
+    {
+        CloseHandle(g_hSwapChainWaitableObject);
+        g_hSwapChainWaitableObject = nullptr;
+    }
+
+    // Восстанавливаем оригинальный WndProc
+    if (oWndProc && window)
     {
         SetWindowLongPtr(window, GWLP_WNDPROC, (LONG_PTR)oWndProc);
         oWndProc = nullptr;
     }
 
-    if (window)
-        window = nullptr;
+    // Обнуляем оставшиеся указатели
+    g_pd3dDevice = nullptr;
+    g_pSwapChain = nullptr;
+    window = nullptr;
+
+    // Сбрасываем состояние
+    NUM_BACK_BUFFERS = -1;
+    g_frameIndex = 0;
+    g_fenceValue = 0;
 }
