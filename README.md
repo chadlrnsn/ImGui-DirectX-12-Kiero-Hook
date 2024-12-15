@@ -63,6 +63,3 @@ Feel free to submit issues and pull requests.
 
 [!NOTE]
 Only x64 builds are supported due to DirectX 12 limitations.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
