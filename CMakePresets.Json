@@ -1,33 +1,83 @@
 {
-    "version": 3,
+    "version": 8,
     "configurePresets": [
         {
-            "name": "windows-x64-debug",
-            "displayName": "Windows x64 Debug",
-            "description": "Target Windows with the Visual Studio development environment.",
+            "name": "windows-x64-debug-2022",
+            "displayName": "Windows x64 Debug (VS 2022)",
+            "description": "Target Windows with the Visual Studio 2022 development environment.",
             "generator": "Visual Studio 17 2022",
             "architecture": {
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-debug",
+            "binaryDir": "${sourceDir}/build/windows-x64-debug-2022",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
-            "name": "windows-x64-release",
-            "displayName": "Windows x64 Release",
-            "description": "Target Windows with the Visual Studio development environment.",
+            "name": "windows-x64-release-2022",
+            "displayName": "Windows x64 Release (VS 2022)",
+            "description": "Target Windows with the Visual Studio 2022 development environment.",
             "generator": "Visual Studio 17 2022",
             "architecture": {
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-release",
+            "binaryDir": "${sourceDir}/build/windows-x64-release-2022",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
+        },
+        {
+            "name": "windows-x64-debug-2019",
+            "displayName": "Windows x64 Debug (VS 2019)",
+            "description": "Target Windows with the Visual Studio 2019 development environment.",
+            "generator": "Visual Studio 16 2019",
+            "architecture": {
+                "value": "x64",
+                "strategy": "set"
+            },
+            "binaryDir": "${sourceDir}/build/windows-x64-debug-2019",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "windows-x64-release-2019",
+            "displayName": "Windows x64 Release (VS 2019)",
+            "description": "Target Windows with the Visual Studio 2019 development environment.",
+            "generator": "Visual Studio 16 2019",
+            "architecture": {
+                "value": "x64",
+                "strategy": "set"
+            },
+            "binaryDir": "${sourceDir}/build/windows-x64-release-2019",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-x64-debug-2022",
+            "configurePreset": "windows-x64-debug-2022",
+            "configuration": "Debug"
+        },
+        {
+            "name": "windows-x64-release-2022",
+            "configurePreset": "windows-x64-release-2022",
+            "configuration": "Release"
+        },
+        {
+            "name": "windows-x64-debug-2019",
+            "configurePreset": "windows-x64-debug-2019",
+            "configuration": "Debug"
+        },
+        {
+            "name": "windows-x64-release-2019",
+            "configurePreset": "windows-x64-release-2019",
+            "configuration": "Release"
         }
     ]
 }

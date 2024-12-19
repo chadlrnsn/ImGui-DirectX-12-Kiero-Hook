@@ -1,47 +1,62 @@
 cmake_minimum_required(VERSION 3.15)
-project(ImGui_DirectX12_Hook)
+project(imgui_dx12_kiero_hook)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Указываем все исходные файлы
+# Проверяем существование директорий и файлов
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src")
+    message(FATAL_ERROR "src directory not found!")
+endif()
+
+# Собираем список исходных файлов
 set(SOURCE_FILES
-    # Основной файл примера DirectX12
-    ImGui-DirectX-12-Kiero-Hook/src/dllmain.cpp
-    ImGui-DirectX-12-Kiero-Hook/src/d3d12hook.cpp
-
+    src/dllmain.cpp
+    src/hooks/d3d12hook.cpp
+    
     # Kiero
-    ImGui-DirectX-12-Kiero-Hook/vendor/kiero/kiero.cpp
+    vendor/kiero/kiero.cpp
 
-    # Файлы ImGui
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui_demo.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui_draw.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui_tables.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/imgui_widgets.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/backends/imgui_impl_dx12.cpp
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/backends/imgui_impl_win32.cpp
+    # ImGui files
+    vendor/imgui/imgui.cpp
+    vendor/imgui/imgui_demo.cpp
+    vendor/imgui/imgui_draw.cpp
+    vendor/imgui/imgui_tables.cpp
+    vendor/imgui/imgui_widgets.cpp
+    vendor/imgui/backends/imgui_impl_dx12.cpp
+    vendor/imgui/backends/imgui_impl_win32.cpp
 )
 
-# Указываем пути для включаемых файлов
+# Проверяем существование каждого исходного файла
+foreach(SOURCE_FILE ${SOURCE_FILES})
+    if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${SOURCE_FILE}")
+        message(FATAL_ERROR "Source file not found: ${SOURCE_FILE}")
+    endif()
+endforeach()
+
+# Пути для включаемых файлов
 include_directories(
-    ImGui-DirectX-12-Kiero-Hook/src
-    ImGui-DirectX-12-Kiero-Hook/vendor
-    # minhook
-    ImGui-DirectX-12-Kiero-Hook/vendor/minhook/include
-    # kiero
-    ImGui-DirectX-12-Kiero-Hook/vendor/kiero
-    # imgui
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui
-    ImGui-DirectX-12-Kiero-Hook/vendor/imgui/backends
+    src
+    vendor
+    vendor/minhook/include
+    vendor/kiero
+    vendor/imgui
+    vendor/imgui/backends
 )
 
 # Создаем DLL
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 # Добавляем MinHook
-add_subdirectory(ImGui-DirectX-12-Kiero-Hook/vendor/minhook)
+add_subdirectory(vendor/minhook)
 
-# Линкуем необходимые библиотеки
+# Линкуем библиотеки
 target_link_libraries(${PROJECT_NAME} PRIVATE
     minhook
     d3d12
     dxgi
+
 )
+
+if(MSVC)
+    add_compile_options(/std:c++17)
+endif()

@@ -5,12 +5,10 @@
 #include <thread>
 #include <chrono>
 // own
-#include <logger/logger.h>
-
+#include <dev/logger.h>
 
 // MinHook
 #include <minhook/include/MinHook.h>
-
 
 // Imgui
 #include <imgui.h>

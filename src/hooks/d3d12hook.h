@@ -1,5 +1,5 @@
 #pragma once
-#include <logger/logger.h>
+#include <dev/logger.h>
 void WaitForLastSubmittedFrame();
 void CleanupRenderTarget();
 void InitD3D12Hook();
