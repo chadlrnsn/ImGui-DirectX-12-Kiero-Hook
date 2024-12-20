@@ -373,5 +373,3 @@ build/
 # VS Code
 .vscode/
 
-vendor/*
-!vendor/kiero/
