@@ -1,4 +1,5 @@
 # ImGui DirectX12 Kiero Hook
+[![CI](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
 
 A DirectX 12 hook implementation using ImGui and Kiero. This project allows you to inject custom ImGui interfaces into DirectX 12 applications.
 
@@ -8,6 +9,7 @@ A DirectX 12 hook implementation using ImGui and Kiero. This project allows you 
 - Resizable window support
 - Fullscreen support
 - Minimal performance impact
+- Doesn't crash when injected instantly (before window is created)
 
 ## Requirements
 - Windows 10/11

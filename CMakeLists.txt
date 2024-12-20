@@ -3,12 +3,10 @@ project(imgui_dx12_kiero_hook)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Проверяем существование директорий и файлов
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src")
     message(FATAL_ERROR "src directory not found!")
 endif()
 
-# Собираем список исходных файлов
 set(SOURCE_FILES
     src/dllmain.cpp
     src/hooks/d3d12hook.cpp
@@ -26,14 +24,12 @@ set(SOURCE_FILES
     vendor/imgui/backends/imgui_impl_win32.cpp
 )
 
-# Проверяем существование каждого исходного файла
 foreach(SOURCE_FILE ${SOURCE_FILES})
     if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${SOURCE_FILE}")
         message(FATAL_ERROR "Source file not found: ${SOURCE_FILE}")
     endif()
 endforeach()
 
-# Пути для включаемых файлов
 include_directories(
     src
     vendor
@@ -43,18 +39,14 @@ include_directories(
     vendor/imgui/backends
 )
 
-# Создаем DLL
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
-# Добавляем MinHook
 add_subdirectory(vendor/minhook)
 
-# Линкуем библиотеки
 target_link_libraries(${PROJECT_NAME} PRIVATE
     minhook
     d3d12
     dxgi
-
 )
 
 if(MSVC)

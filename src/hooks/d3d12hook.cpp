@@ -65,10 +65,21 @@ bool bShould_render = true;
 
 void CreateRenderTarget()
 {
+    // Проверяем все необходимые указатели
+    if (!g_pSwapChain || !g_pd3dDevice || !g_frameContext || NUM_BACK_BUFFERS <= 0)
+    {
+        LOG_ERROR("Cannot create render target - DirectX objects not initialized");
+        return;
+    }
+
     for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
     {
         ID3D12Resource *pBackBuffer = nullptr;
-        g_pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer));
+        if (FAILED(g_pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer))))
+        {
+            LOG_ERROR("Failed to get back buffer");
+            return;
+        }
         g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, g_frameContext[i].g_mainRenderTargetDescriptor);
         g_frameContext[i].g_mainRenderTargetResource = pBackBuffer;
     }
@@ -76,12 +87,15 @@ void CreateRenderTarget()
 
 void CleanupRenderTarget()
 {
-    for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
+    if (g_frameContext && NUM_BACK_BUFFERS > 0)
     {
-        if (g_frameContext[i].g_mainRenderTargetResource)
+        for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
         {
-            g_frameContext[i].g_mainRenderTargetResource->Release();
-            g_frameContext[i].g_mainRenderTargetResource = nullptr;
+            if (g_frameContext[i].g_mainRenderTargetResource)
+            {
+                g_frameContext[i].g_mainRenderTargetResource->Release();
+                g_frameContext[i].g_mainRenderTargetResource = nullptr;
+            }
         }
     }
 }
@@ -141,8 +155,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     {
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void **)&g_pd3dDevice)))
         {
-
-            // sDesc
+            // Get swap chain description
             DXGI_SWAP_CHAIN_DESC sdesc;
             pSwapChain->GetDesc(&sdesc);
             sdesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
@@ -215,11 +228,11 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
             oWndProc = (WNDPROC)SetWindowLongPtr(window, GWLP_WNDPROC, (__int3264)(LONG_PTR)WndProc);
             InitImGui();
 
-            // Добавляем поддержку переключения полноэкранного режима
+            // Add fullscreen mode support
             DXGI_SWAP_CHAIN_DESC1 swapChainDesc;
             pSwapChain->GetDesc1(&swapChainDesc);
 
-            // Включаем поддержку Alt+Enter и изменения размера
+            // Enable Alt+Enter and resize support
             DXGI_SWAP_CHAIN_FULLSCREEN_DESC fullscreenDesc = {};
             fullscreenDesc.Windowed = TRUE;
             fullscreenDesc.RefreshRate.Numerator = 60;
@@ -301,22 +314,38 @@ void __fastcall hkExecuteCommandLists(ID3D12CommandQueue *pCommandQueue, UINT Nu
 
 HRESULT __fastcall hkResizeBuffers(IDXGISwapChain3 *pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
 {
-    ImGui_ImplDX12_InvalidateDeviceObjects();
+    // Проверяем готовность к изменению размера
+    if (!g_pd3dDevice || !g_pSwapChain)
+    {
+        LOG_ERROR("Cannot resize - DirectX objects not initialized");
+        return oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
+    }
+
+    if (g_pd3dDevice)
+    {
+        ImGui_ImplDX12_InvalidateDeviceObjects();
+    }
+
     CleanupRenderTarget();
 
+    // Сохраняем новое количество буферов
+    NUM_BACK_BUFFERS = BufferCount;
+
+    // Вызываем оригинальную функцию
     HRESULT result = oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
 
     if (SUCCEEDED(result))
     {
+        // Пересоздаем наши ресурсы только если успешно изменили размер
         CreateRenderTarget();
-        ImGui_ImplDX12_CreateDeviceObjects();
-
-        // Обновляем размеры при любом изменении разрешения
-        DXGI_MODE_DESC modeDesc = {};
-        modeDesc.Width = Width;
-        modeDesc.Height = Height;
-        modeDesc.Format = NewFormat;
-        g_pSwapChain->ResizeTarget(&modeDesc);
+        if (g_pd3dDevice)
+        {
+            ImGui_ImplDX12_CreateDeviceObjects();
+        }
+    }
+    else
+    {
+        LOG_ERROR("ResizeBuffers failed with error code: 0x%X", result);
     }
 
     return result;
@@ -333,44 +362,89 @@ HRESULT __fastcall hkSignal(ID3D12CommandQueue *queue, ID3D12Fence *fence, UINT6
     ;
 }
 
-void InitD3D12Hook()
+bool InitD3D12Hook()
 {
-    static bool init = false;
-    do
-    {
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    LOG_INFO("Waiting for process initialization...");
 
-        if (kiero::init(kiero::RenderType::D3D12) == kiero::Status::Success)
+    HANDLE d3d12Module = nullptr;
+    HANDLE dxgiModule = nullptr;
+
+    while (true)
+    {
+        d3d12Module = GetModuleHandleA("d3d12.dll");
+        dxgiModule = GetModuleHandleA("dxgi.dll");
+
+        if (d3d12Module && dxgiModule)
+            break;
+
+        if (WaitForSingleObject(GetCurrentProcess(), 1000) != WAIT_TIMEOUT)
         {
-            kiero::bind(54, (void **)&oExecuteCommandLists, hkExecuteCommandLists);
-            kiero::bind(58, (void **)&oSignal, hkSignal);
-            kiero::bind(140, (void **)&oPresent, hkPresent);
-            kiero::bind(145, (void **)&oResizeBuffers, hkResizeBuffers);
-            LOG_INFO("D3D12 Hooked using kiero");
-            init = true;
+            LOG_ERROR("Process terminated while waiting for DirectX");
+            return false;
         }
 
-    } while (!init);
+        LOG_INFO("Waiting for DirectX modules...");
+    }
+
+    LOG_INFO("DirectX modules found, initializing hooks...");
+
+    try
+    {
+        auto kieroStatus = kiero::init(kiero::RenderType::D3D12);
+        if (kieroStatus != kiero::Status::Success)
+        {
+            LOG_ERROR("Failed to initialize kiero");
+            return false;
+        }
+
+        bool hooks_success = true;
+
+        if (kiero::bind(54, (void **)&oExecuteCommandLists, hkExecuteCommandLists) != kiero::Status::Success)
+        {
+            LOG_ERROR("Failed to hook ExecuteCommandLists");
+            hooks_success = false;
+        }
+
+        if (kiero::bind(58, (void **)&oSignal, hkSignal) != kiero::Status::Success)
+        {
+            LOG_ERROR("Failed to hook Signal");
+            hooks_success = false;
+        }
+
+        if (kiero::bind(140, (void **)&oPresent, hkPresent) != kiero::Status::Success)
+        {
+            LOG_ERROR("Failed to hook Present");
+            hooks_success = false;
+        }
+
+        if (kiero::bind(145, (void **)&oResizeBuffers, hkResizeBuffers) != kiero::Status::Success)
+        {
+            LOG_ERROR("Failed to hook ResizeBuffers");
+            hooks_success = false;
+        }
+
+        if (!hooks_success)
+        {
+            LOG_ERROR("Failed to create one or more hooks");
+            kiero::shutdown();
+            return false;
+        }
+
+        LOG_INFO("D3D12 successfully hooked using kiero");
+        return true;
+    }
+    catch (...)
+    {
+        LOG_ERROR("Exception during hook initialization");
+        kiero::shutdown();
+        return false;
+    }
 }
 
 void ReleaseD3D12Hook()
 {
-    // Сначала отключаем хуки, чтобы остановить новые вызовы
     kiero::shutdown();
 
-    // Ждем завершения всех команд
-    if (g_pd3dCommandQueue && g_fence && g_fenceEvent)
-    {
-        // Отправляем финальную команду синхронизации
-        g_pd3dCommandQueue->Signal(g_fence, ++g_fenceValue);
-        if (g_fence->GetCompletedValue() < g_fenceValue)
-        {
-            g_fence->SetEventOnCompletion(g_fenceValue, g_fenceEvent);
-            WaitForSingleObject(g_fenceEvent, INFINITE);
-        }
-    }
-
-    // Освобождаем ресурсы ImGui
     if (g_pd3dDevice)
     {
         ImGui_ImplDX12_Shutdown();
@@ -378,10 +452,15 @@ void ReleaseD3D12Hook()
         ImGui::DestroyContext();
     }
 
-    // Очищаем рендер таргеты
+    if (g_pd3dCommandQueue && g_fence && g_fenceEvent)
+    {
+        WaitForLastSubmittedFrame();
+    }
+
+    // Clean up render targets
     CleanupRenderTarget();
 
-    // Освобождаем командные аллокаторы
+    // Release command allocators
     if (g_frameContext)
     {
         for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
@@ -396,7 +475,6 @@ void ReleaseD3D12Hook()
         g_frameContext = nullptr;
     }
 
-    // Освобождаем ресурсы DirectX12 в правильном порядке
     if (g_pd3dCommandList)
     {
         g_pd3dCommandList->Release();
@@ -407,6 +485,19 @@ void ReleaseD3D12Hook()
     {
         g_pd3dCommandQueue->Release();
         g_pd3dCommandQueue = nullptr;
+    }
+
+    // Close handles before releasing resources
+    if (g_fenceEvent)
+    {
+        CloseHandle(g_fenceEvent);
+        g_fenceEvent = nullptr;
+    }
+
+    if (g_hSwapChainWaitableObject)
+    {
+        CloseHandle(g_hSwapChainWaitableObject);
+        g_hSwapChainWaitableObject = nullptr;
     }
 
     if (g_pd3dRtvDescHeap)
@@ -427,32 +518,16 @@ void ReleaseD3D12Hook()
         g_fence = nullptr;
     }
 
-    // Закрываем хэндлы
-    if (g_fenceEvent)
-    {
-        CloseHandle(g_fenceEvent);
-        g_fenceEvent = nullptr;
-    }
-
-    if (g_hSwapChainWaitableObject)
-    {
-        CloseHandle(g_hSwapChainWaitableObject);
-        g_hSwapChainWaitableObject = nullptr;
-    }
-
-    // Восстанавливаем оригинальный WndProc
     if (oWndProc && window)
     {
         SetWindowLongPtr(window, GWLP_WNDPROC, (LONG_PTR)oWndProc);
         oWndProc = nullptr;
     }
 
-    // Обнуляем оставшиеся указатели
     g_pd3dDevice = nullptr;
     g_pSwapChain = nullptr;
     window = nullptr;
 
-    // Сбрасываем состояние
     NUM_BACK_BUFFERS = -1;
     g_frameIndex = 0;
     g_fenceValue = 0;

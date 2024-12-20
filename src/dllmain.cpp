@@ -3,33 +3,66 @@
 #include <dev/Console.h>
 #include <dev/logger.h>
 
-static bool g_cleanup_done = false;
-
-void RemoveAllHooks()
+namespace Hook
 {
-    MH_DisableHook(MH_ALL_HOOKS);
-    MH_RemoveHook(MH_ALL_HOOKS);
-    MH_Uninitialize();
-    LOG_INFO("All hooks erased and disabled minhook uninitialized");
-}
+    static bool g_cleanup_done = false;
 
-void Cleanup()
-{
-    if (!g_cleanup_done)
+    void RemoveAllHooks()
     {
-        LOG_INFO("Starting cleanup...");
-        ReleaseD3D12Hook();
-        RemoveAllHooks();
-        CleanupConsole();
-        g_cleanup_done = true;
-        LOG_INFO("Cleanup complete");
+        MH_DisableHook(MH_ALL_HOOKS);
+        MH_RemoveHook(MH_ALL_HOOKS);
+        MH_Uninitialize();
+        LOG_INFO("All hooks removed and MinHook uninitialized");
+    }
+
+    void Cleanup()
+    {
+        if (!g_cleanup_done)
+        {
+            LOG_INFO("Starting cleanup...");
+
+            // Disable hooks
+            RemoveAllHooks();
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+            // Release DirectX resources
+            ReleaseD3D12Hook();
+
+            // Release console
+            CleanupConsole();
+
+            g_cleanup_done = true;
+            LOG_INFO("Cleanup complete");
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
+
+    bool Initialize()
+    {
+        LOG_INFO("Initializing hooks...");
+
+        if (!InitD3D12Hook())
+        {
+            LOG_ERROR("Failed to initialize DirectX 12 hook");
+            return false;
+        }
+
+        LOG_INFO("Hooks initialized successfully");
+        return true;
     }
 }
 
-DWORD WINAPI MainThread(LPVOID lpParam)
+DWORD WINAPI MainThread(HMODULE hModule, LPVOID)
 {
-    LOG_INFO("Injected");
-    InitD3D12Hook();
+    // Инициализация
+    LOG_INFO("DLL injected successfully");
+
+    if (!Hook::Initialize())
+    {
+        Hook::Cleanup();
+        FreeLibraryAndExitThread(hModule, 1);
+        return 1;
+    }
 
     while (true)
     {
@@ -39,27 +72,28 @@ DWORD WINAPI MainThread(LPVOID lpParam)
             break;
     }
 
-    LOG_INFO("Uninjecting...");
-    Cleanup();
+    LOG_INFO("Starting unload sequence...");
+    Hook::Cleanup();
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
     LOG_INFO("Unloading DLL...");
-    FreeLibraryAndExitThread((HMODULE)lpParam, 0);
+
+    FreeLibraryAndExitThread(hModule, 0);
     return 0;
 }
 
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
 {
-    switch (ul_reason_for_call)
+    switch (reason)
     {
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
         CreateConsole();
-        CloseHandle(CreateThread(nullptr, 0, MainThread, hModule, 0, nullptr));
+        CloseHandle(CreateThread(0, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, 0));
         break;
 
     case DLL_PROCESS_DETACH:
-        // Выполняем очистку только если она еще не была выполнена
-        Cleanup();
+        Hook::Cleanup();
         break;
     }
     return TRUE;
