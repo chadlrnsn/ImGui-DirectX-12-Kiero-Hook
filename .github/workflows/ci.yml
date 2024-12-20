@@ -15,6 +15,16 @@ jobs:
               with:
                   submodules: recursive
 
+            - name: Setup VS2019
+              uses: microsoft/setup-msbuild@v1.1
+              with:
+                  vs-version: "[16.0,17.0)"
+
+            - name: Setup VS2022
+              uses: microsoft/setup-msbuild@v1.1
+              with:
+                  vs-version: "[17.0,18.0)"
+
             - name: Check CMake configuration (VS2019)
               run: cmake --preset windows-x64-debug-2019 -Wno-dev --check-system-vars
 
