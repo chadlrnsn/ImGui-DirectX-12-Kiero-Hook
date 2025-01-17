@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
 project(imgui_dx12_kiero_hook)
-set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Set output directories
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
 
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src")
     message(FATAL_ERROR "src directory not found!")
@@ -39,6 +45,9 @@ include_directories(
     vendor/imgui/backends
 )
 
+# Group source files by directories in IDE
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE_FILES})
+
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 add_subdirectory(vendor/minhook)
@@ -49,6 +58,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     dxgi
 )
 
-if(MSVC)
-    add_compile_options(/std:c++17)
-endif()
+# Enable multiprocessor compilation
+target_compile_options(${PROJECT_NAME} PRIVATE /MP)

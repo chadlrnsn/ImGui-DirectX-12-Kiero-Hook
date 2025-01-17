@@ -10,7 +10,7 @@
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-debug-2022",
+            "binaryDir": "${sourceDir}/out/build/windows-x64-debug-2022",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
@@ -24,7 +24,7 @@
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-release-2022",
+            "binaryDir": "${sourceDir}/out/build/windows-x64-release-2022",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
@@ -38,7 +38,7 @@
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-debug-2019",
+            "binaryDir": "${sourceDir}/out/build/windows-x64-debug-2019",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
@@ -52,9 +52,20 @@
                 "value": "x64",
                 "strategy": "set"
             },
-            "binaryDir": "${sourceDir}/build/windows-x64-release-2019",
+            "binaryDir": "${sourceDir}/out/build/windows-x64-release-2019",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "Clang x86_64-pc-windows-msvc",
+            "displayName": "Clang x86_64-pc-windows-msvc",
+            "description": "Using compilers: C = clang.exe, CXX = clang++.exe",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "clang.exe",
+                "CMAKE_CXX_COMPILER": "clang++.exe",
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         }
     ],
