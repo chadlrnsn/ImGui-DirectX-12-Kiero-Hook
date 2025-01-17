@@ -1,13 +1,14 @@
-name: CI Check
+name: CI Checks
 
 on:
     push:
-        branches: ["main"]
+        branches: ["main", "develop"]
     pull_request:
-        branches: ["main"]
+        branches: ["main", "develop"]
 
 jobs:
     check-vs2019:
+        name: VS2019
         runs-on: windows-2019
 
         steps:
@@ -16,30 +17,44 @@ jobs:
                   submodules: true
                   fetch-depth: 0
 
-            - name: Check CMake configuration (VS2019)
-              run: cmake --preset windows-x64-debug-2019 -Wno-dev --check-system-vars
+            - name: Cache CMake files
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      build/_deps
+                      build/CMakeCache.txt
+                      build/CMakeFiles
+                  key: ${{ runner.os }}-cmake-${{ hashFiles('CMakeLists.txt', 'CMakePresets.json') }}
 
-            - name: Verify source files exist
+            - name: Configure CMake
+              run: cmake --preset windows-x64-debug-2019 -Wno-dev
+
+            - name: Verify Files
+              shell: pwsh
               run: |
-                  @(
+                  $files = @(
                     "src/dllmain.cpp",
                     "src/includes.h",
                     "src/hooks/d3d12hook.cpp",
                     "src/hooks/d3d12hook.h",
                     "src/dev/Console.h",
+                    "src/dev/logger.h",
                     "CMakeLists.txt",
                     "CMakePresets.json",
                     "vendor/imgui/imgui.cpp",
                     "vendor/imgui/imgui_demo.cpp",
-                    "vendor/kiero/kiero.cpp"
-                  ) | ForEach-Object {
-                    if (-not (Test-Path $_)) {
-                      Write-Error "Missing file: $_"
-                      exit 1
+                    "vendor/minhook/include/MinHook.h"
+                  )
+
+                  foreach ($file in $files) {
+                    if (-not (Test-Path $file)) {
+                        Write-Error "Missing file: $file"
+                        exit 1
                     }
                   }
 
     check-vs2022:
+        name: VS2022
         runs-on: windows-latest
 
         steps:
@@ -48,5 +63,36 @@ jobs:
                   submodules: true
                   fetch-depth: 0
 
-            - name: Check CMake configuration (VS2022)
-              run: cmake --preset windows-x64-debug-2022 -Wno-dev --check-system-vars
+            - name: Cache CMake files
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      build/_deps
+                      build/CMakeCache.txt
+                      build/CMakeFiles
+                  key: ${{ runner.os }}-cmake-${{ hashFiles('CMakeLists.txt', 'CMakePresets.json') }}
+
+            - name: Configure CMake
+              run: cmake --preset windows-x64-debug-2022 -Wno-dev
+
+    check-clang:
+        name: Clang
+        runs-on: windows-latest
+
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: true
+                  fetch-depth: 0
+
+            - name: Setup LLVM
+              uses: KyleMayes/install-llvm-action@v1
+              with:
+                  version: "16.0"
+
+            - name: Configure CMake with Clang
+              run: |
+                  cmake -B build -G "Visual Studio 17 2022" -A x64 `
+                    -T ClangCL `
+                    -DCMAKE_C_COMPILER=clang-cl `
+                    -DCMAKE_CXX_COMPILER=clang-cl

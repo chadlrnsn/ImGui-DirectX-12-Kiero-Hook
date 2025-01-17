@@ -1,9 +1,13 @@
+[![VS2019](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=VS2019)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
+[![VS2022](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=VS2022)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
+[![Clang](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=Clang)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
+
 # ImGui DirectX12 Kiero Hook
-[![CI](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
 
 A DirectX 12 hook implementation using ImGui and Kiero. This project allows you to inject custom ImGui interfaces into DirectX 12 applications.
 
 ## Features
+
 - DirectX 12 Hook implementation
 - ImGui integration through Kiero
 - Resizable window support
@@ -12,56 +16,77 @@ A DirectX 12 hook implementation using ImGui and Kiero. This project allows you 
 - Doesn't crash when injected instantly (before window is created)
 
 ## Requirements
+
 - Windows 10/11
-- Visual Studio 2022
+- Visual Studio 2019/2022 or VSCode
 - [DirectX SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
 - CMake 3.15 or higher
 - Git
 
 ## Building the Project
 
-### Using CMake (Recommended)
-1. Clone the repository with submodules:
+### Using VSCode (Recommended)
+
+1. Install the following extensions:
+   - [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+   - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+
+2. Clone the repository with submodules:
+
 ```bash
 git clone --recurse-submodules https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook
 cd ImGui-DirectX-12-Kiero-Hook
 ```
 
-2. Build Release (recommended):
-```bash
-cmake --preset windows-x64-release
-cmake --build build/windows-x64-release --config Release
-```
+3. Open the project in VSCode and select a kit using CMake Tools:
+   - `Visual Studio Build Tools 2019 Release - amd64`
+   - `Visual Studio Build Tools 2022 Release - amd64`
+   - `Clang 16.0.0 x86_64-pc-windows-msvc`
 
-Or Debug:
-```bash
-cmake --preset windows-x64-debug
-cmake --build build/windows-x64-debug --config Debug
-```
+4. Select build variant (Debug/Release) and build using CMake Tools
 
-The DLL will be in:
-- Release: `build/windows-x64-release/Release/ImGui_DirectX12_Hook.dll`
-- Debug: `build/windows-x64-debug/Debug/ImGui_DirectX12_Hook.dll`
+### Using Command Line
 
-### Using Visual Studio
 1. Clone the repository as shown above
-2. Open `ImGui-DirectX-12-Kiero-Hook.sln`
-3. Select configuration (Debug/Release)
-4. Build Solution (Ctrl + B)
+2. Build using presets:
+
+```bash
+# For VS2019 Release
+cmake --preset windows-x64-release-2019
+cmake --build --preset windows-x64-release-2019
+
+# For VS2019 Debug
+cmake --preset windows-x64-debug-2019
+cmake --build --preset windows-x64-debug-2019
+
+# For VS2022 Release
+cmake --preset windows-x64-release-2022
+cmake --build --preset windows-x64-release-2022
+
+# For VS2022 Debug
+cmake --preset windows-x64-debug-2022
+cmake --build --preset windows-x64-debug-2022
+```
+
+The DLL will be in the `bin/{Debug|Release}` directory.
+
+[!NOTE]
+Only x64 builds are supported due to DirectX 12 limitations.
 
 ## Known Issues
+
 - Debug builds with debug layers enabled might crash
 - Minor flickering may occur
 - Menu freezes when switching to fullscreen (Alt+Enter) while menu is open
 
 ## Implementation Details
+
 This project uses:
+
 - [Kiero](https://github.com/Rebzzel/kiero) for function hooking
 - [Dear ImGui](https://github.com/ocornut/imgui) for the user interface
 - [MinHook](https://github.com/TsudaKageyu/minhook) for API hooking
 
 ## Contributing
-Feel free to submit issues and pull requests.
 
-[!NOTE]
-Only x64 builds are supported due to DirectX 12 limitations.
+Feel free to submit issues and pull requests.
