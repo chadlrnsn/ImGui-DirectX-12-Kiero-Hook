@@ -8,7 +8,7 @@
 #include <dev/logger.h>
 
 // MinHook
-#include <minhook/include/MinHook.h>
+#include <MinHook.h>
 
 // Imgui
 #include <imgui.h>

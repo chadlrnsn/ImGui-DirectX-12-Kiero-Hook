@@ -1,5 +1,5 @@
 #include "d3d12hook.h"
-#include <kiero/kiero.h>
+#include <kiero.h>
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <iostream>
@@ -65,23 +65,38 @@ bool bShould_render = true;
 
 void CreateRenderTarget()
 {
-    // Проверяем все необходимые указатели
-    if (!g_pSwapChain || !g_pd3dDevice || !g_frameContext || NUM_BACK_BUFFERS <= 0)
-    {
-        LOG_ERROR("Cannot create render target - DirectX objects not initialized");
+    if (!g_pSwapChain || !g_pd3dDevice || !g_pd3dRtvDescHeap || !g_frameContext || NUM_BACK_BUFFERS <= 0)
         return;
+
+    // Получаем размер дескриптора RTV и начальный дескриптор
+    SIZE_T rtvDescriptorSize = g_pd3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+    D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle = g_pd3dRtvDescHeap->GetCPUDescriptorHandleForHeapStart();
+
+    // Сначала инициализируем дескрипторы
+    for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
+    {
+        g_frameContext[i].g_mainRenderTargetDescriptor = rtvHandle;
+        rtvHandle.ptr += rtvDescriptorSize;
     }
 
+    // Затем создаем render target views
     for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
     {
         ID3D12Resource *pBackBuffer = nullptr;
-        if (FAILED(g_pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer))))
+        if (SUCCEEDED(g_pSwapChain->GetBuffer(i, IID_PPV_ARGS(&pBackBuffer))))
         {
-            LOG_ERROR("Failed to get back buffer");
-            return;
+            g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, g_frameContext[i].g_mainRenderTargetDescriptor);
+            g_frameContext[i].g_mainRenderTargetResource = pBackBuffer;
         }
-        g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, g_frameContext[i].g_mainRenderTargetDescriptor);
-        g_frameContext[i].g_mainRenderTargetResource = pBackBuffer;
+        else
+        {
+            LOG_ERROR("Failed to get back buffer %d", i);
+            if (pBackBuffer)
+            {
+                pBackBuffer->Release();
+                pBackBuffer = nullptr;
+            }
+        }
     }
 }
 
@@ -130,21 +145,17 @@ void InitImGui()
 {
     ImGui::CreateContext();
     ImGuiIO &io = ImGui::GetIO();
-    (void)io;
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;  // Enable Gamepad Controls
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
-    // Setup Dear ImGui style
-    // ImGui::StyleColorsDark();
     ImGui::StyleColorsLight();
 
-    // Setup Platform/Renderer backends
     ImGui_ImplWin32_Init(window);
+
     ImGui_ImplDX12_Init(g_pd3dDevice, NUM_FRAMES_IN_FLIGHT,
-                        DXGI_FORMAT_R8G8B8A8_UNORM, g_pd3dSrvDescHeap,
+                        DXGI_FORMAT_R8G8B8A8_UNORM,
+                        g_pd3dSrvDescHeap,
                         g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(),
                         g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
-    ImGui_ImplDX12_CreateDeviceObjects();
 }
 
 HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UINT Flags)
@@ -153,96 +164,101 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
 
     if (!init)
     {
+        // Ждем пока не получим CommandQueue через ExecuteCommandLists
+        if (!g_pd3dCommandQueue)
+            return oPresent(pSwapChain, SyncInterval, Flags);
+
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void **)&g_pd3dDevice)))
         {
-            // Get swap chain description
             DXGI_SWAP_CHAIN_DESC sdesc;
             pSwapChain->GetDesc(&sdesc);
-            sdesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
-            sdesc.Windowed = ((GetWindowLongPtr(window, GWL_STYLE) & WS_POPUP) != 0) ? false : true;
             window = sdesc.OutputWindow;
-
-            // sDesc1
-            DXGI_SWAP_CHAIN_DESC1 sdesc1;
-            pSwapChain->GetDesc1(&sdesc1);
-
             NUM_BACK_BUFFERS = sdesc.BufferCount;
-            g_frameContext = new FrameContext[NUM_BACK_BUFFERS];
 
-            // RTV Descriptor Heap
+            // SRV Heap
+            {
+                D3D12_DESCRIPTOR_HEAP_DESC desc = {};
+                desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
+                desc.NumDescriptors = 1;
+                desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
+                if (FAILED(g_pd3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&g_pd3dSrvDescHeap))))
+                    return oPresent(pSwapChain, SyncInterval, Flags);
+            }
 
+            // RTV Heap
             {
                 D3D12_DESCRIPTOR_HEAP_DESC desc = {};
                 desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
                 desc.NumDescriptors = NUM_BACK_BUFFERS;
                 desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
                 desc.NodeMask = 1;
-                if (g_pd3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&g_pd3dRtvDescHeap)) != S_OK)
-                    return E_FAIL;
-
-                SIZE_T rtvDescriptorSize = g_pd3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
-                D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle = g_pd3dRtvDescHeap->GetCPUDescriptorHandleForHeapStart();
-
-                // Create RenderTargetView
-
-                for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
-                {
-                    g_frameContext[i].g_mainRenderTargetDescriptor = rtvHandle;
-                    rtvHandle.ptr += rtvDescriptorSize;
-                }
+                if (FAILED(g_pd3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&g_pd3dRtvDescHeap))))
+                    return oPresent(pSwapChain, SyncInterval, Flags);
             }
 
-            // SRV Descriptor Heap
+            // Command Allocator
+            ID3D12CommandAllocator *allocator;
+            if (FAILED(g_pd3dDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&allocator))))
+                return oPresent(pSwapChain, SyncInterval, Flags);
+
+            // Command List
+            if (FAILED(g_pd3dDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, allocator, nullptr, IID_PPV_ARGS(&g_pd3dCommandList))))
             {
-                D3D12_DESCRIPTOR_HEAP_DESC desc = {};
-                desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
-                desc.NumDescriptors = 1;
-                desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
-                if (g_pd3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&g_pd3dSrvDescHeap)) != S_OK)
-                    return E_FAIL;
+                allocator->Release();
+                return oPresent(pSwapChain, SyncInterval, Flags);
             }
+            g_pd3dCommandList->Close();
 
+            // Frame Contexts
+            g_frameContext = new FrameContext[NUM_BACK_BUFFERS];
+            if (!g_frameContext)
             {
-                ID3D12CommandAllocator *allocator;
-                if (g_pd3dDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&allocator)) != S_OK)
-                    return E_FAIL;
-
-                for (size_t i = 0; i < NUM_BACK_BUFFERS; i++)
-                {
-                    g_frameContext[i].CommandAllocator = allocator;
-                }
-
-                if (g_pd3dDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, allocator, NULL, IID_PPV_ARGS(&g_pd3dCommandList)) != S_OK ||
-                    g_pd3dCommandList->Close() != S_OK)
-                    return E_FAIL;
+                allocator->Release();
+                return oPresent(pSwapChain, SyncInterval, Flags);
             }
 
-            g_fenceEvent = CreateEvent(nullptr, false, false, nullptr);
+            for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
+            {
+                g_frameContext[i].CommandAllocator = allocator;
+                g_frameContext[i].FenceValue = 0;
+            }
+
+            // Fence & Events
+            if (FAILED(g_pd3dDevice->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&g_fence))))
+            {
+                allocator->Release();
+                return oPresent(pSwapChain, SyncInterval, Flags);
+            }
+
+            g_fenceEvent = CreateEvent(nullptr, FALSE, FALSE, nullptr);
             if (g_fenceEvent == nullptr)
-                assert(g_fenceEvent == nullptr);
+            {
+                allocator->Release();
+                return oPresent(pSwapChain, SyncInterval, Flags);
+            }
 
             g_hSwapChainWaitableObject = pSwapChain->GetFrameLatencyWaitableObject();
             g_pSwapChain = pSwapChain;
 
+            // Create RenderTarget
             CreateRenderTarget();
+
+            // Hook window procedure
             oWndProc = (WNDPROC)SetWindowLongPtr(window, GWLP_WNDPROC, (__int3264)(LONG_PTR)WndProc);
+
+            // Initialize ImGui last, after all DirectX objects are created
             InitImGui();
 
-            // Add fullscreen mode support
-            DXGI_SWAP_CHAIN_DESC1 swapChainDesc;
-            pSwapChain->GetDesc1(&swapChainDesc);
-
-            // Enable Alt+Enter and resize support
-            DXGI_SWAP_CHAIN_FULLSCREEN_DESC fullscreenDesc = {};
-            fullscreenDesc.Windowed = TRUE;
-            fullscreenDesc.RefreshRate.Numerator = 60;
-            fullscreenDesc.RefreshRate.Denominator = 1;
-            fullscreenDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
-            fullscreenDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
+            init = true;
         }
-        init = true;
+        return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
+    // Проверяем все необходимые объекты
+    if (!g_pd3dCommandQueue || !g_pd3dDevice || !g_frameContext || !g_pd3dSrvDescHeap)
+        return oPresent(pSwapChain, SyncInterval, Flags);
+
+    // Обработка изменения размера
     if (g_ResizeWidth != 0 && g_ResizeHeight != 0)
     {
         WaitForLastSubmittedFrame();
@@ -252,28 +268,28 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
         CreateRenderTarget();
     }
 
-    if (!g_pd3dCommandQueue)
-    {
-        printf("Failed to create command queue\n");
-        return oPresent(pSwapChain, SyncInterval, Flags);
-    }
-
+    // Обработка переключения окна
     if (GetAsyncKeyState(VK_INSERT) & 1)
         show_demo_window = !show_demo_window;
 
+    // Начало нового кадра
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
     ImGui::NewFrame();
 
+    // Отрисовка ImGui
     ImGui::GetIO().MouseDrawCursor = show_demo_window;
     if (show_demo_window)
         ImGui::ShowDemoWindow();
 
-    FrameContext &frameCtx = g_frameContext[pSwapChain->GetCurrentBackBufferIndex()];
+    // Получаем текущий back buffer
+    UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
+    FrameContext &frameCtx = g_frameContext[backBufferIdx];
+
+    // Сброс command allocator
     frameCtx.CommandAllocator->Reset();
 
-    UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
-
+    // Подготовка к рендерингу
     D3D12_RESOURCE_BARRIER barrier = {};
     barrier.Type = D3D12_RESOURCE_BARRIER_TYPE_TRANSITION;
     barrier.Flags = D3D12_RESOURCE_BARRIER_FLAG_NONE;
@@ -282,21 +298,23 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_PRESENT;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_RENDER_TARGET;
 
+    // Выполнение команд рендеринга
     g_pd3dCommandList->Reset(frameCtx.CommandAllocator, nullptr);
     g_pd3dCommandList->ResourceBarrier(1, &barrier);
-
     g_pd3dCommandList->OMSetRenderTargets(1, &g_frameContext[backBufferIdx].g_mainRenderTargetDescriptor, FALSE, nullptr);
     g_pd3dCommandList->SetDescriptorHeaps(1, &g_pd3dSrvDescHeap);
 
+    // Рендеринг ImGui
     ImGui::Render();
     ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
 
+    // Возврат ресурса в состояние present
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
-
     g_pd3dCommandList->ResourceBarrier(1, &barrier);
     g_pd3dCommandList->Close();
 
+    // Выполнение command list
     g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList *const *>(&g_pd3dCommandList));
 
     return oPresent(pSwapChain, SyncInterval, Flags);

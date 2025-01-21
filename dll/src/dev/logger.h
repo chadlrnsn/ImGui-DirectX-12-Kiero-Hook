@@ -2,22 +2,24 @@
 #include <cstdarg>
 #include <cstdio>
 
-class Logger {
+class Logger
+{
 public:
-
-    enum class LogType {
+    enum class LogType
+    {
         INFO,
         WARN,
         ERR,
         DEBUG,
     };
 
-    static void log(LogType level, const char* format, ...)
+    static void log(LogType level, const char *format, ...)
     {
         va_list args;
         va_start(args, format);
-        
-        switch (level) {
+
+        switch (level)
+        {
         case LogType::INFO:
             printf("[INFO]\t");
             break;
@@ -34,12 +36,10 @@ public:
 
         vprintf(format, args);
         printf("\n");
-        
+
         va_end(args);
     }
-
 };
-
 #define LOG_ERROR(format, ...) Logger::log(Logger::LogType::ERR, format, __VA_ARGS__)
 #define LOG_WARN(format, ...) Logger::log(Logger::LogType::WARN, format, __VA_ARGS__)
 #define LOG_INFO(format, ...) Logger::log(Logger::LogType::INFO, format, __VA_ARGS__)
