@@ -1,10 +1,38 @@
-# Имя DLL
+include(FetchContent)
+
+FetchContent_Declare(
+    imgui
+    GIT_REPOSITORY https://github.com/ocornut/imgui.git
+    GIT_TAG v1.91.7
+)
+FetchContent_MakeAvailable(imgui)
+
+set(IMGUI_SOURCES
+    ${imgui_SOURCE_DIR}/imgui.cpp
+    ${imgui_SOURCE_DIR}/imgui_demo.cpp
+    ${imgui_SOURCE_DIR}/imgui_draw.cpp
+    ${imgui_SOURCE_DIR}/imgui_tables.cpp
+    ${imgui_SOURCE_DIR}/imgui_widgets.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_dx12.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_win32.cpp
+)
+
+add_library(imgui STATIC ${IMGUI_SOURCES})
+target_include_directories(imgui PUBLIC 
+    ${imgui_SOURCE_DIR}
+    ${imgui_SOURCE_DIR}/backends
+)
+
+target_include_directories(imgui PUBLIC 
+    ${CMAKE_CURRENT_BINARY_DIR}
+) 
+
+
 set(DLL_NAME "${PROJECT_NAME}-ImGui")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Создаем DLL
 add_library(${DLL_NAME} SHARED 
     src/dllmain.cpp
     ${CMAKE_SOURCE_DIR}/vendor/kiero/kiero.cpp
@@ -13,15 +41,15 @@ add_library(${DLL_NAME} SHARED
 
 set_output_directories(${DLL_NAME})
 add_unicode_definitions(${DLL_NAME})
-add_directx_dependencies(${DLL_NAME})
 
 target_link_libraries(${DLL_NAME} PRIVATE 
-    imgui::imgui
-    minhook::MinHook
+    imgui
+    minhook
     fmt::fmt
+    d3d12.lib
+    dxgi.lib
 )
 
-# Добавляем пути для включения
 target_include_directories(${DLL_NAME} PRIVATE 
     ${imgui_SOURCE_DIR}
     ${imgui_SOURCE_DIR}/backends
@@ -29,10 +57,3 @@ target_include_directories(${DLL_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/vendor/kiero
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
-
-# Копируем DLL в директорию с исполняемым файлом
-add_custom_command(TARGET ${DLL_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy 
-        $<TARGET_FILE:${DLL_NAME}>
-        ${OUTPUT_DIRECTORY}/$<CONFIG>/${DLL_NAME}.dll
-) 
