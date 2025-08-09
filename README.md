@@ -1,6 +1,4 @@
-[![VS2019](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=VS2019)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
-[![VS2022](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=VS2022)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
-[![Clang](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml/badge.svg?branch=main&event=push&label=Clang)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/ci.yml)
+[![CMake on Windows](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/cmake-single-platform.yml)
 
 # ImGui DirectX12 Kiero Hook
 
