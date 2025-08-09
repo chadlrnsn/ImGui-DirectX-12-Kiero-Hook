@@ -56,4 +56,11 @@ target_include_directories(${DLL_NAME} PRIVATE
     ${minhook_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/vendor/kiero
     ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/framework
 )
+
+#pch
+target_precompile_headers(${DLL_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/framework/stdafx.h
+)
+

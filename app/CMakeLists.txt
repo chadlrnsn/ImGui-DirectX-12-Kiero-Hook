@@ -11,3 +11,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     d3d12.lib
     dxgi.lib
 )
+
+target_precompile_headers(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/stdafx.h
+)

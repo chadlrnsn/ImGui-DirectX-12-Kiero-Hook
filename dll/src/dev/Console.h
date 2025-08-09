@@ -1,7 +1,5 @@
 #pragma once
-#include <windows.h>
-#include <stdio.h>
-#include <fstream>
+#include <framework/stdafx.h>
 
 void CreateConsole();
 void CleanupConsole();

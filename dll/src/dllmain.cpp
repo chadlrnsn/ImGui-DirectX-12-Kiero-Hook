@@ -1,4 +1,5 @@
-﻿#include <includes.h>
+﻿#include <framework/stdafx.h>
+#include <includes.h>
 #include <hooks/d3d12hook.h>
 #include <dev/Console.h>
 #include <dev/logger.h>
