@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(DirectX12-Example)
+project(DirectX12-Example VERSION 1.0.0 LANGUAGES CXX)
 
 # Общие настройки
 set(CMAKE_CXX_STANDARD 20)
@@ -12,7 +12,10 @@ set(OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/.bin")
 include(cmake/common.cmake)
 include(cmake/dependencies.cmake)
 
-# Подключаем подпроекты
 add_subdirectory(app)
-add_subdirectory(dll)
+
+# Установка
+if(BUILD_INSTALLER)
+    include(cmake/install.cmake)
+endif()
 

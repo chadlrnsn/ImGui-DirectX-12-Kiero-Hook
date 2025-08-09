@@ -11,27 +11,14 @@ add_library(${DLL_NAME} SHARED
     src/hooks/d3d12hook.cpp
 )
 
-# Настройки DLL
-set_target_properties(${DLL_NAME} PROPERTIES 
-    SUFFIX ".dll"
-    PREFIX ""
-)
-
-# Добавляем определения для kiero
-target_compile_definitions(${DLL_NAME} PRIVATE
-    KIERO_INCLUDE_D3D12=1
-    KIERO_USE_MINHOOK=1
-)
-
-# Применяем общие настройки
 set_output_directories(${DLL_NAME})
 add_unicode_definitions(${DLL_NAME})
 add_directx_dependencies(${DLL_NAME})
 
-# Добавляем зависимости
 target_link_libraries(${DLL_NAME} PRIVATE 
-    imgui_lib
-    minhook
+    imgui::imgui
+    minhook::MinHook
+    fmt::fmt
 )
 
 # Добавляем пути для включения

@@ -23,12 +23,3 @@ function(add_unicode_definitions target)
         _UNICODE
     )
 endfunction()
-
-# Функция для добавления DirectX зависимостей
-function(add_directx_dependencies target)
-    target_link_libraries(${target} PRIVATE 
-        d3d12
-        dxgi
-        d3dcompiler
-    )
-endfunction() 
