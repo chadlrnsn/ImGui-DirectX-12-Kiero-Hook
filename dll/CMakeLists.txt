@@ -37,6 +37,7 @@ add_library(${DLL_NAME} SHARED
     src/dllmain.cpp
     ${CMAKE_SOURCE_DIR}/vendor/kiero/kiero.cpp
     src/hooks/d3d12hook.cpp
+    src/dev/Console.cpp
 )
 
 set_output_directories(${DLL_NAME})

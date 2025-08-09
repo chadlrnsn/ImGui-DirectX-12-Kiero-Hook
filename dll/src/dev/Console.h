@@ -1,31 +1,42 @@
 #pragma once
 #include <framework/stdafx.h>
+#include <memory>
 
-void CreateConsole();
-void CleanupConsole();
-
-inline HANDLE g_consoleHandle = nullptr;
-inline FILE *g_consoleStream = nullptr;
-
-inline void CreateConsole()
+class Console
 {
-    if (AllocConsole())
-    {
-        g_consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-        freopen_s(&g_consoleStream, "CONOUT$", "w", stdout);
-        freopen_s(&g_consoleStream, "CONOUT$", "w", stderr);
-        freopen_s(&g_consoleStream, "CONIN$", "r", stdin);
-    }
-}
+private:
+    HANDLE m_consoleHandle;
+    FILE* m_consoleStream;
 
-inline void CleanupConsole()
-{
-    if (g_consoleStream)
-    {
-        fclose(g_consoleStream);
-        FreeConsole();
-        // Release console
-        g_consoleHandle = nullptr;
-        g_consoleStream = nullptr;
+public:
+    // Constructor create console
+    Console();
+    
+    // Destructor automaticly handle console
+    ~Console();
+    
+    // Disallow copy
+    Console(const Console&) = delete;
+    Console& operator=(const Console&) = delete;
+    
+    // Allow move   
+    Console(Console&& other) noexcept;
+    Console& operator=(Console&& other) noexcept;
+    
+    void CreateConsole();
+    void CleanupConsole();
+    
+    bool IsValid() const { return m_consoleHandle != nullptr; }
+    
+    static std::unique_ptr<Console> Create();
+};
+
+struct ConsoleDeleter {
+    void operator()(Console* console) {
+        if (console) {
+            delete console;
+        }
     }
-}
+};
+
+using ConsolePtr = std::unique_ptr<Console, ConsoleDeleter>;

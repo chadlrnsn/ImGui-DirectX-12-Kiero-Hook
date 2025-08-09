@@ -1,5 +1,4 @@
-﻿#include <framework/stdafx.h>
-#include <includes.h>
+﻿#include <includes.h>
 #include <hooks/d3d12hook.h>
 #include <dev/Console.h>
 #include <dev/logger.h>
@@ -7,6 +6,7 @@
 namespace Hook
 {
     static bool g_cleanup_done = false;
+    static Console g_console; // RAII object
 
     void RemoveAllHooks()
     {
@@ -28,9 +28,6 @@ namespace Hook
 
             // Release DirectX resources
             ReleaseD3D12Hook();
-
-            // Release console
-            CleanupConsole();
 
             g_cleanup_done = true;
             LOG_INFO("Cleanup complete");
@@ -89,7 +86,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
     {
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
-        CreateConsole();
         CloseHandle(CreateThread(0, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, 0));
         break;
 
