@@ -5,6 +5,22 @@
 #include "../SDK/BP_EngineRifle_Script_classes.hpp"
 #include <Windows.h>
 #include <vector>
+#include <string>
+
+// Forward declaration for TargetInfo
+struct TargetInfo {
+    SDK::AActor* actor = nullptr;
+    SDK::FVector position;
+    float distance = 0.0f;
+    float fovDistance = 0.0f;
+    bool isVisible = false;
+    SDK::FVector aimPoint;
+
+    // Bone targeting information
+    int targetBoneIndex = -1;
+    std::string targetBoneName;
+    bool hasBoneTarget = false;
+};
 
 namespace Cheat {
     namespace Config {
@@ -28,26 +44,27 @@ namespace Cheat {
         }
         
         // =============================================================================
-        // GAME STATE GLOBALS
+        // GAME STATE GLOBALS (single-definition via extern)
         // =============================================================================
         namespace GameState {
             // Core game objects
-            inline static SDK::UEngine* g_pEngine = nullptr;
-            inline static SDK::UWorld* g_pWorld = nullptr;
-            inline static SDK::APlayerController* g_pMyController = nullptr;
-            inline static SDK::APawn* g_pMyPawn = nullptr;
-            inline static SDK::ACharacter* g_pMyCharacter = nullptr;
-            
+            extern SDK::UEngine* g_pEngine;
+            extern SDK::UWorld* g_pWorld;
+            extern SDK::APlayerController* g_pMyController;
+            extern SDK::APawn* g_pMyPawn;
+            extern SDK::ACharacter* g_pMyCharacter;
+
             // Targeting system
-            inline static std::vector<SDK::AActor*> g_TargetsList{};
-            inline static SDK::AActor* g_pCurrentTarget = nullptr;
-            
+            extern std::vector<SDK::AActor*> g_TargetsList;
+            extern SDK::AActor* g_pCurrentTarget;
+            extern TargetInfo g_CurrentTargetInfo;
+
             // Weapon system
-            inline static SDK::ARPlayerPawn* g_pCachedPlayerPawn = nullptr;
-            inline static SDK::ARWeapon* g_pCachedWeapon = nullptr;
-            inline static SDK::URGWeaponScript* g_pCachedWeaponScript = nullptr;
-            inline static SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript = nullptr;
-            inline static bool g_bIsEngineRifle = false;
+            extern SDK::ARPlayerPawn* g_pCachedPlayerPawn;
+            extern SDK::ARWeapon* g_pCachedWeapon;
+            extern SDK::URGWeaponScript* g_pCachedWeaponScript;
+            extern SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript;
+            extern bool g_bIsEngineRifle;
         }
         
         // =============================================================================

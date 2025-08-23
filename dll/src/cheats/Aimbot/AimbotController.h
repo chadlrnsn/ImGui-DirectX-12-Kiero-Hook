@@ -2,6 +2,7 @@
 
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
+#include "../Core/Config.h"
 #include "TargetSelector.h"
 
 class AimbotController {
@@ -20,21 +21,23 @@ public:
                             float deltaTime);
     
 private:
-    static TargetInfo m_currentTarget;
     static DWORD m_lastUpdateTime;
     
     // Advanced aiming methods
     static void ApplySmoothing(SDK::APlayerController* playerController,
                              const SDK::FRotator& targetRotation,
-                             float deltaTime);
-    
+                             float deltaTime,
+                             bool shouldLog = false);
+
     static void ApplySmoothAiming(SDK::APlayerController* playerController,
                                 const SDK::FVector& targetWorldPosition,
-                                float deltaTime);
-    
+                                float deltaTime,
+                                bool shouldLog = false);
+
     static void ApplyHumanizedAiming(SDK::APlayerController* playerController,
                                    const SDK::FRotator& targetRotation,
-                                   float deltaTime);
+                                   float deltaTime,
+                                   bool shouldLog = false);
     
     // Validation
     static bool ValidateGameState(SDK::UWorld* world, 

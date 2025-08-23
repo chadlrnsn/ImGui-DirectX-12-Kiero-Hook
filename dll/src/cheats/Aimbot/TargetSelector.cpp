@@ -2,11 +2,16 @@
 #include "MathUtils.h"
 #include "../Analysis/BoneAnalyzer.h"
 #include "../Core/Config.h"
+#include <dev/validity.h>
 #include <iomanip>
 #include <iostream>
 #include <algorithm>
+#include <mutex>
 
-TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world, 
+// External mutex for thread-safe access to target list
+extern std::mutex list_mutex;
+
+TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
                                            SDK::APlayerController* playerController,
                                            SDK::ARPlayerPawn* playerPawn) {
     TargetInfo bestTarget;
@@ -32,23 +37,29 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
     std::cout << "[TARGET_SELECTOR] - Rotation: (" << std::fixed << std::setprecision(1) 
               << controlRotation.Pitch << ", " << controlRotation.Yaw << ", " << controlRotation.Roll << ")" << std::endl;
     
-    // Get all actors in the level
-    auto& actors = world->PersistentLevel->Actors;
-    
-    std::cout << "[TARGET_SELECTOR] Total actors in level: " << actors.Num() << std::endl;
+    // Use centralized target list populated by MainLoop
+    std::vector<SDK::AActor*> currentTargets;
+    {
+        // Thread-safe access to the centralized target list
+        std::lock_guard<std::mutex> lock(list_mutex);
+        currentTargets = Cheat::Config::GameState::g_TargetsList;
+    }
+
+    std::cout << "[TARGET_SELECTOR] Total targets from centralized list: " << currentTargets.size() << std::endl;
     std::cout << "[TARGET_SELECTOR] Filtering criteria:" << std::endl;
     std::cout << "[TARGET_SELECTOR] - Max distance: " << Cheat::Config::Aimbot::maxDistance << " units" << std::endl;
     std::cout << "[TARGET_SELECTOR] - FOV radius: " << Cheat::Config::Aimbot::fovRadius << " degrees" << std::endl;
     std::cout << "[TARGET_SELECTOR] - Visibility check: " << (Cheat::Config::Aimbot::visibilityCheck ? "enabled" : "disabled") << std::endl;
-    
+
     int validActorsCount = 0;
     int distanceFilteredCount = 0;
     int fovFilteredCount = 0;
     int visibilityFilteredCount = 0;
     int finalValidCount = 0;
-    
-    for (int i = 0; i < actors.Num(); i++) {
-        auto actor = actors[i];
+
+    for (auto* actor : currentTargets) {
+        // Validate actor using the existing validity checker
+        if (!actor || Validity::IsBadPoint(actor)) continue;
         if (!IsValidTarget(actor)) continue;
         
         validActorsCount++;
@@ -142,7 +153,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
     }
     
     std::cout << "[TARGET_SELECTOR] Selection summary:" << std::endl;
-    std::cout << "[TARGET_SELECTOR] - Total actors: " << actors.Num() << std::endl;
+    std::cout << "[TARGET_SELECTOR] - Total targets from centralized list: " << currentTargets.size() << std::endl;
     std::cout << "[TARGET_SELECTOR] - Valid enemy actors: " << validActorsCount << std::endl;
     std::cout << "[TARGET_SELECTOR] - Filtered by distance: " << distanceFilteredCount << std::endl;
     std::cout << "[TARGET_SELECTOR] - Filtered by FOV: " << fovFilteredCount << std::endl;

@@ -10,11 +10,11 @@
 #include <iostream>
 #include <mutex>
 
+// Mutex for thread-safe target list access (global scope)
+std::mutex list_mutex;
+
 namespace Cheat {
     namespace Core {
-
-        // Mutex for thread-safe target list access
-        static std::mutex list_mutex;
         
         bool CheatMain::Initialize() {
             if (Config::System::Initialized) {
@@ -53,7 +53,7 @@ namespace Cheat {
                 return;
             }
 
-            // Update SDK (like your example)
+            // Update SDK without logging each frame
             if (!UpdateSDK(false)) {
                 return;
             }
@@ -107,37 +107,36 @@ namespace Cheat {
                 std::cout << "Engine address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pEngine) << std::dec << std::endl;
             }
 
-            // Init PlayerController
-            if (!Config::GameState::g_pWorld->OwningGameInstance) {
-                if (log) std::cerr << "Error: OwningGameInstance not found" << std::endl;
-                return false;
-            }
-            if (!Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers[0]) {
-                if (log) std::cerr << "Error: LocalPlayers[0] not found" << std::endl;
-                return false;
-            }
-            Config::GameState::g_pMyController = Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers[0]->PlayerController;
-            if (!Config::GameState::g_pMyController) {
-                if (log) std::cerr << "Error: MyController not found" << std::endl;
-                return false;
-            }
-            if (log) {
-                std::cout << "PlayerController address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyController) << std::dec << std::endl;
-            }
+            // Update player controller and pawn (CRITICAL for aimbot!)
+            if (Config::GameState::g_pWorld->OwningGameInstance &&
+                Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers.Num() > 0) {
 
-            // Init Pawn
-            Config::GameState::g_pMyPawn = Config::GameState::g_pMyController->AcknowledgedPawn;
-            if (Config::GameState::g_pMyPawn == nullptr) {
-                if (log) std::cerr << "Error: MyPawn not found" << std::endl;
-                return false;
-            }
-            if (log) {
-                std::cout << "MyPawn address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyPawn) << std::dec << std::endl;
-                std::cout << "MyPawn name: " << Config::GameState::g_pMyPawn->GetName() << std::endl;
-            }
+                Config::GameState::g_pMyController = Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers[0]->PlayerController;
+                if (log) {
+                    std::cout << "PlayerController address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyController) << std::dec << std::endl;
+                }
 
-            Config::GameState::g_pMyCharacter = static_cast<SDK::ACharacter*>(Config::GameState::g_pMyPawn);
-            Config::GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(Config::GameState::g_pMyPawn);
+                if (Config::GameState::g_pMyController) {
+                    // Update pawn references
+                    Config::GameState::g_pMyPawn = Config::GameState::g_pMyController->K2_GetPawn();
+                    Config::GameState::g_pMyCharacter = static_cast<SDK::ACharacter*>(Config::GameState::g_pMyPawn);
+
+                    // Update player pawn for weapon system and aimbot
+                    Config::GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(Config::GameState::g_pMyPawn);
+
+                    if (log) {
+                        std::cout << "MyPawn address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyPawn) << std::dec << std::endl;
+                        if (Config::GameState::g_pMyPawn) {
+                            std::cout << "MyPawn name: " << Config::GameState::g_pMyPawn->GetName() << std::endl;
+                        }
+                        std::cout << "MyCharacter address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyCharacter) << std::dec << std::endl;
+                    }
+                }
+            } else {
+                if (log) {
+                    std::cout << "Warning: OwningGameInstance or LocalPlayers not available" << std::endl;
+                }
+            }
 
             if (Config::GameState::g_pMyCharacter == nullptr) {
                 if (log) std::cerr << "Error: MyCharacter not found" << std::endl;

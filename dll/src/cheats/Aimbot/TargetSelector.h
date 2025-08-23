@@ -3,20 +3,7 @@
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
 #include "../Analysis/BoneAnalyzer.h"
-
-struct TargetInfo {
-    SDK::AActor* actor = nullptr;
-    SDK::FVector position;
-    float distance = 0.0f;
-    float fovDistance = 0.0f;
-    bool isVisible = false;
-    SDK::FVector aimPoint;
-    
-    // Bone targeting information
-    int targetBoneIndex = -1;
-    std::string targetBoneName;
-    bool hasBoneTarget = false;
-};
+#include "../Core/Config.h"
 
 class TargetSelector {
 public:

@@ -1,5 +1,6 @@
 #pragma once
 #include <dev/logger.h>
+#include <dev/validity.h>
 #include <MinHook.h>
 
 // Imgui
