@@ -156,11 +156,7 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
         // Calculate angular distance (used later)
         float angularDistance = Math::GetAngleBetweenRotations(currentRotation, targetRotation);
         
-        // Apply humanized aiming
-        if (Cheat::Config::Aimbot::humanizeMovement) {
-
-            ApplyHumanizedAiming(playerController, targetRotation, deltaTime, shouldLogDetailed);
-        } else if (Cheat::Config::Aimbot::smoothEnabled) {
+if (Cheat::Config::Aimbot::smoothEnabled) {
 
             ApplySmoothing(playerController, targetRotation, deltaTime, shouldLogDetailed);
         } else {

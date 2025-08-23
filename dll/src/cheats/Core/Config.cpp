@@ -63,7 +63,6 @@ namespace Cheat {
             LOG_INFO("- Max Distance: %.0f units", Aimbot::maxDistance);
             LOG_INFO("- FOV Radius: %.0f degrees", Aimbot::fovRadius);
             LOG_INFO("- Smooth Aiming: %s", Aimbot::smoothEnabled ? "Enabled" : "Disabled");
-            LOG_INFO("- Humanized Movement: %s", Aimbot::humanizeMovement ? "Enabled" : "Disabled");
             LOG_INFO("- Visibility Check: %s", Aimbot::visibilityCheck ? "Enabled" : "Disabled");
             LOG_INFO("- Max Turn Speed: %.0f deg/s", Aimbot::maxTurnSpeed);
             LOG_INFO("- Reaction Time: %.2fs", Aimbot::reactionTime);

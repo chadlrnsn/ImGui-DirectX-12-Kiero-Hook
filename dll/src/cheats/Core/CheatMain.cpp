@@ -164,14 +164,12 @@ namespace Cheat {
 
                 if (!currActor)
                     continue;
-                if (!currActor->RootComponent)
+                if(currActor->IsA(SDK::ARPlayerPawn::StaticClass())) 
                     continue;
-
-                const auto location = currActor->K2_GetActorLocation();
-                if (location.X == 0.f || location.Y == 0.f || location.Z == 0.f) continue;
+                
 
                 // Check for enemy pawns (adjust class name as needed for your game)
-                if (currActor->IsA(SDK::ACharacter::StaticClass())) {
+                if (currActor->IsA(SDK::AREnemyPawnBase::StaticClass())) {
                     list->push_back(currActor);
                 }
             }

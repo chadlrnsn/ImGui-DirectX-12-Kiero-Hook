@@ -74,10 +74,9 @@ namespace Cheat {
             // Core settings
             inline static bool enabled = true;
             inline static bool smoothEnabled = false;
-            inline static bool visibilityCheck = false;
+            inline static bool visibilityCheck = true;
             inline static bool drawFOV = false;
-            inline static bool predictiveAiming = false;
-            inline static bool humanizeMovement = false;
+
             
             // Targeting parameters
             inline static float maxDistance = 50000.0f;
@@ -88,10 +87,9 @@ namespace Cheat {
             // Advanced settings
             inline static float reactionTime = 0.0f;
             inline static float targetSwitchDelay = 0.0f;
-            inline static bool prioritizeHeadshots = false;
             inline static bool aimAtMovingTargets = true;
             inline static float maxAimSnapDistance = 1800.0f;
-            inline static bool requireLineOfSight = true;
+
             
             // Aim zones (priority order)
             struct AimZones {
