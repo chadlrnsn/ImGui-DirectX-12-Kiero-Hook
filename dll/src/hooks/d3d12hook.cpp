@@ -7,10 +7,12 @@
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
 
-
 // Debug
 #include <dxgidebug.h>
 #pragma comment(lib, "dxguid.lib")
+
+// Cheat system includes
+#include <includes.h>
 
 typedef HRESULT(__stdcall *PresentFunc)(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT Flags);
 PresentFunc oPresent = nullptr;
@@ -249,6 +251,9 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
             // Initialize ImGui last, after all DirectX objects are created
             InitImGui();
 
+            // Initialize cheat system
+            Cheat::Core::CheatMain::Initialize();
+
             init = true;
         }
         return oPresent(pSwapChain, SyncInterval, Flags);
@@ -307,6 +312,14 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     // Рендеринг ImGui
     ImGui::Render();
     ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
+
+    // Cheat system main loop (runs every frame)
+    static DWORD lastFrameTime = GetTickCount();
+    DWORD currentTime = GetTickCount();
+    float deltaTime = (currentTime - lastFrameTime) / 1000.0f;
+    lastFrameTime = currentTime;
+
+    Cheat::Core::CheatMain::Update(deltaTime);
 
     // Возврат ресурса в состояние present
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;

@@ -1,7 +1,10 @@
 #include "TargetSelector.h"
 #include "MathUtils.h"
 #include "../Analysis/BoneAnalyzer.h"
+#include "../Core/Config.h"
 #include <iomanip>
+#include <iostream>
+#include <algorithm>
 
 TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world, 
                                            SDK::APlayerController* playerController,
@@ -34,9 +37,9 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
     
     std::cout << "[TARGET_SELECTOR] Total actors in level: " << actors.Num() << std::endl;
     std::cout << "[TARGET_SELECTOR] Filtering criteria:" << std::endl;
-    std::cout << "[TARGET_SELECTOR] - Max distance: " << g_AimbotConfig.maxDistance << " units" << std::endl;
-    std::cout << "[TARGET_SELECTOR] - FOV radius: " << g_AimbotConfig.fovRadius << " degrees" << std::endl;
-    std::cout << "[TARGET_SELECTOR] - Visibility check: " << (g_AimbotConfig.visibilityCheck ? "enabled" : "disabled") << std::endl;
+    std::cout << "[TARGET_SELECTOR] - Max distance: " << Cheat::Config::Aimbot::maxDistance << " units" << std::endl;
+    std::cout << "[TARGET_SELECTOR] - FOV radius: " << Cheat::Config::Aimbot::fovRadius << " degrees" << std::endl;
+    std::cout << "[TARGET_SELECTOR] - Visibility check: " << (Cheat::Config::Aimbot::visibilityCheck ? "enabled" : "disabled") << std::endl;
     
     int validActorsCount = 0;
     int distanceFilteredCount = 0;
@@ -77,14 +80,14 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         std::cout << "[TARGET_SELECTOR] - Distance: " << std::fixed << std::setprecision(1) << targetInfo.distance << " units" << std::endl;
         
         // Skip if too far
-        if (targetInfo.distance > g_AimbotConfig.maxDistance) {
-            std::cout << "[TARGET_SELECTOR] - FILTERED OUT: Too far (>" << g_AimbotConfig.maxDistance << ")" << std::endl;
+        if (targetInfo.distance > Cheat::Config::Aimbot::maxDistance) {
+            std::cout << "[TARGET_SELECTOR] - FILTERED OUT: Too far (>" << Cheat::Config::Aimbot::maxDistance << ")" << std::endl;
             distanceFilteredCount++;
             continue;
         }
         
         // // Use screen-based FOV check for more accurate targeting
-        // if (!Math::IsWithinScreenFOV(targetInfo.aimPoint, playerLocation, playerController, g_AimbotConfig.fovRadius)) {
+        // if (!Math::IsWithinScreenFOV(targetInfo.aimPoint, playerLocation, playerController, Cheat::Config::Aimbot::fovRadius)) {
         //     std::cout << "[TARGET_SELECTOR] - FILTERED OUT: Outside FOV" << std::endl;
         //     fovFilteredCount++;
         //     continue;
@@ -108,7 +111,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         }
         
         // Visibility check
-        if (g_AimbotConfig.visibilityCheck) {
+        if (Cheat::Config::Aimbot::visibilityCheck) {
             targetInfo.isVisible = IsTargetVisible(world, playerLocation, targetInfo.aimPoint, actor, playerPawn);
             std::cout << "[TARGET_SELECTOR] - Visibility check: " << (targetInfo.isVisible ? "VISIBLE" : "BLOCKED") << std::endl;
             if (!targetInfo.isVisible) {
@@ -371,7 +374,7 @@ float TargetSelector::CalculateTargetPriority(const TargetInfo& target, const SD
     float boneTargetBonus = target.hasBoneTarget ? -10.0f : 0.0f; // Negative score is better
     
     // Normalize distance (closer targets get lower scores)
-    float normalizedDistance = target.distance / g_AimbotConfig.maxDistance;
+    float normalizedDistance = target.distance / Cheat::Config::Aimbot::maxDistance;
     
     float finalScore = target.fovDistance * fovWeight + normalizedDistance * distanceWeight + boneTargetBonus;
     

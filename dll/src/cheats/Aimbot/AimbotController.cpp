@@ -1,5 +1,6 @@
 #include "AimbotController.h"
 #include "MathUtils.h"
+#include "../Core/Config.h"
 #include <Windows.h>
 #include <iomanip>
 
@@ -24,14 +25,14 @@ void AimbotController::Update(float deltaTime) {
     
     // Check for toggle key
     static bool toggleKeyWasPressed = false;
-    bool toggleKeyPressed = (GetAsyncKeyState(g_AimbotConfig.toggleKey) & 0x8000) != 0;
+    bool toggleKeyPressed = (GetAsyncKeyState(Cheat::Config::Hotkeys::AimbotToggle) & 0x8000) != 0;
     if (toggleKeyPressed && !toggleKeyWasPressed) {
-        g_AimbotConfig.enabled = !g_AimbotConfig.enabled;
-		std::cout << "[AIMBOT] Toggle pressed - Aimbot " << (g_AimbotConfig.enabled ? "ENABLED" : "DISABLED") << std::endl;
+        Cheat::Config::Aimbot::enabled = !Cheat::Config::Aimbot::enabled;
+		std::cout << "[AIMBOT] Toggle pressed - Aimbot " << (Cheat::Config::Aimbot::enabled ? "ENABLED" : "DISABLED") << std::endl;
     }
     toggleKeyWasPressed = toggleKeyPressed;
     
-    if (!g_AimbotConfig.enabled) {
+    if (!Cheat::Config::Aimbot::enabled) {
         if (shouldLog) {
             std::cout << "[AIMBOT] Status: DISABLED - skipping update" << std::endl;
             lastLogTime = currentTime;
@@ -41,8 +42,8 @@ void AimbotController::Update(float deltaTime) {
     
 
     
-    // Get game state
-    SDK::UWorld* world = SDK::UWorld::GetWorld();
+    // Get game state from centralized config
+    SDK::UWorld* world = Cheat::Config::GameState::g_pWorld;
     if (!world || !world->OwningGameInstance) {
         if (shouldLog) {
             std::cout << "[AIMBOT] ERROR: World or OwningGameInstance is null" << std::endl;
@@ -85,7 +86,7 @@ void AimbotController::Update(float deltaTime) {
 }
 
 bool AimbotController::IsAimbotKeyPressed() {
-    bool isPressed = (GetAsyncKeyState(g_AimbotConfig.triggerKey) & 0x8000) != 0;
+    bool isPressed = (GetAsyncKeyState(Cheat::Config::Hotkeys::AimbotTrigger) & 0x8000) != 0;
     static bool lastKeyState = false;
     static DWORD lastKeyLogTime = 0;
     DWORD currentTime = GetTickCount();
@@ -138,9 +139,9 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
     // Log target search results
     if (!newTarget.actor) {
         std::cout << "[AIMBOT] No valid targets found!" << std::endl;
-        std::cout << "[AIMBOT] - Max distance: " << g_AimbotConfig.maxDistance << " units" << std::endl;
-        std::cout << "[AIMBOT] - FOV radius: " << g_AimbotConfig.fovRadius << " degrees" << std::endl;
-        std::cout << "[AIMBOT] - Visibility check: " << (g_AimbotConfig.visibilityCheck ? "enabled" : "disabled") << std::endl;
+        std::cout << "[AIMBOT] - Max distance: " << Cheat::Config::Aimbot::maxDistance << " units" << std::endl;
+        std::cout << "[AIMBOT] - FOV radius: " << Cheat::Config::Aimbot::fovRadius << " degrees" << std::endl;
+        std::cout << "[AIMBOT] - Visibility check: " << (Cheat::Config::Aimbot::visibilityCheck ? "enabled" : "disabled") << std::endl;
         m_currentTarget = TargetInfo();
         lastDetailedLogTime = currentTime;
         return;
@@ -168,7 +169,7 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
         static DWORD lastTargetSwitch = 0;
         if (m_currentTarget.actor != newTarget.actor) {
             DWORD currentTime = GetTickCount();
-            if (currentTime - lastTargetSwitch < (g_AimbotConfig.targetSwitchDelay * 1000)) {
+            if (currentTime - lastTargetSwitch < (Cheat::Config::Aimbot::targetSwitchDelay * 1000)) {
                 // Too soon to switch targets, keep current one if still valid
                 if (m_currentTarget.actor) {
                     std::cout << "[AIMBOT] Target switch delay active - keeping current target" << std::endl;
@@ -212,10 +213,10 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
         }
         
         // Apply humanized aiming
-        if (g_AimbotConfig.humanizeMovement) {
+        if (Cheat::Config::Aimbot::humanizeMovement) {
             std::cout << "[AIMBOT] Applying humanized aiming..." << std::endl;
             ApplyHumanizedAiming(playerController, targetRotation, deltaTime);
-        } else if (g_AimbotConfig.smoothEnabled) {
+        } else if (Cheat::Config::Aimbot::smoothEnabled) {
             std::cout << "[AIMBOT] Applying smooth aiming..." << std::endl;
             ApplySmoothing(playerController, targetRotation, deltaTime);
         } else {
@@ -238,7 +239,7 @@ void AimbotController::ApplySmoothing(SDK::APlayerController* playerController,
     SDK::FRotator currentRotation = playerController->K2_GetActorRotation();
     
     std::cout << "[AIMBOT] Smooth aiming parameters:" << std::endl;
-    std::cout << "[AIMBOT] - Max turn speed: " << g_AimbotConfig.maxTurnSpeed << " deg/s" << std::endl;
+    std::cout << "[AIMBOT] - Max turn speed: " << Cheat::Config::Aimbot::maxTurnSpeed << " deg/s" << std::endl;
     std::cout << "[AIMBOT] - Delta time: " << std::fixed << std::setprecision(3) << deltaTime << "s" << std::endl;
     
     // Calculate smooth rotation using lerp
@@ -246,7 +247,7 @@ void AimbotController::ApplySmoothing(SDK::APlayerController* playerController,
         currentRotation, 
         targetRotation, 
         deltaTime, 
-        g_AimbotConfig.maxTurnSpeed
+        Cheat::Config::Aimbot::maxTurnSpeed
     );
     
     std::cout << "[AIMBOT] - Smoothed rotation: (" << std::fixed << std::setprecision(1) 
@@ -279,7 +280,7 @@ void AimbotController::ApplySmoothAiming(SDK::APlayerController* playerControlle
         currentRotation, 
         targetRotation, 
         deltaTime, 
-        g_AimbotConfig.maxTurnSpeed
+        Cheat::Config::Aimbot::maxTurnSpeed
     );
     
     // Apply the smoothed rotation
@@ -297,22 +298,22 @@ void AimbotController::ApplyHumanizedAiming(SDK::APlayerController* playerContro
     
     std::cout << "[AIMBOT] Humanized aiming:" << std::endl;
     std::cout << "[AIMBOT] - Angular distance: " << std::fixed << std::setprecision(1) << angularDistance << " degrees" << std::endl;
-    std::cout << "[AIMBOT] - Reaction time: " << g_AimbotConfig.reactionTime << "s" << std::endl;
-    std::cout << "[AIMBOT] - Max snap distance: " << g_AimbotConfig.maxAimSnapDistance << " degrees" << std::endl;
+    std::cout << "[AIMBOT] - Reaction time: " << Cheat::Config::Aimbot::reactionTime << "s" << std::endl;
+    std::cout << "[AIMBOT] - Max snap distance: " << Cheat::Config::Aimbot::maxAimSnapDistance << " degrees" << std::endl;
     
     // Apply reaction time delay
     static DWORD lastReactionTime = 0;
     DWORD currentTime = GetTickCount();
-    if (currentTime - lastReactionTime < (g_AimbotConfig.reactionTime * 1000)) {
+    if (currentTime - lastReactionTime < (Cheat::Config::Aimbot::reactionTime * 1000)) {
         std::cout << "[AIMBOT] Still in reaction period - delaying aim" << std::endl;
         return; // Still in reaction period
     }
     
     // Determine aiming speed based on distance
-    float aimSpeed = g_AimbotConfig.maxTurnSpeed;
-    
+    float aimSpeed = Cheat::Config::Aimbot::maxTurnSpeed;
+
     // For large distances, use instant snap (simulating mouse flick)
-    if (angularDistance > g_AimbotConfig.maxAimSnapDistance) {
+    if (angularDistance > Cheat::Config::Aimbot::maxAimSnapDistance) {
         std::cout << "[AIMBOT] Large angular distance detected - using instant snap" << std::endl;
         playerController->SetControlRotation(targetRotation);
         lastReactionTime = currentTime;
@@ -323,7 +324,7 @@ void AimbotController::ApplyHumanizedAiming(SDK::APlayerController* playerContro
     float randomFactor = 0.8f + (rand() % 40) / 100.0f; // 0.8 to 1.2
     aimSpeed *= randomFactor;
     
-    std::cout << "[AIMBOT] - Base aim speed: " << g_AimbotConfig.maxTurnSpeed << " deg/s" << std::endl;
+    std::cout << "[AIMBOT] - Base aim speed: " << Cheat::Config::Aimbot::maxTurnSpeed << " deg/s" << std::endl;
     std::cout << "[AIMBOT] - Random factor: " << std::fixed << std::setprecision(2) << randomFactor << std::endl;
     std::cout << "[AIMBOT] - Final aim speed: " << std::fixed << std::setprecision(1) << aimSpeed << " deg/s" << std::endl;
     

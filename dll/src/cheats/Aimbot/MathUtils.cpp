@@ -1,9 +1,9 @@
 #include "MathUtils.h"
+#include "../Core/Config.h"
 #include <cmath>
 #include <algorithm>
 #include <iomanip>
 
-#include "AimbotConfig.h"
 #define NOMINMAX
 namespace Math {
     

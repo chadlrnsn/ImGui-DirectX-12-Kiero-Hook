@@ -3,7 +3,6 @@
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
 #include "../Analysis/BoneAnalyzer.h"
-#include "AimbotConfig.h"
 
 struct TargetInfo {
     SDK::AActor* actor = nullptr;

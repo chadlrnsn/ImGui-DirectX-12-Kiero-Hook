@@ -7,3 +7,6 @@
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
 #include <imgui_internal.h>
+
+// Cheat system main interface
+#include "cheats/Core/CheatMain.h"
