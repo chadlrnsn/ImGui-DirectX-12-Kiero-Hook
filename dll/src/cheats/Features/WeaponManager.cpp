@@ -300,6 +300,151 @@ namespace Cheat {
             }
         }
 
+        void WeaponManager::LogAllWeaponStats() {
+            if (!s_cachedWeaponScript) {
+                LOG_INFO("=== WEAPON STATS DEBUG ===");
+                LOG_INFO("No cached weapon script available");
+                return;
+            }
+
+            LOG_INFO("=== WEAPON STATS DEBUG ===");
+
+            // PRIMARY WEAPON STATS
+            auto primary = s_cachedWeaponScript->GetBaseWeaponSettings();
+            if (primary) {
+                LOG_INFO("--- PRIMARY WEAPON ---");
+                LOG_INFO("Ammo Cost: %d", primary->BaseAmmoCost.BaseValue);
+                LOG_INFO("Damage: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseWeaponDamage.BaseValue,
+                    primary->BaseWeaponDamage.MinMaxRange.X,
+                    primary->BaseWeaponDamage.MinMaxRange.Y);
+                LOG_INFO("Crit Multiplier: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseWeaponCriticalMultiplier.BaseValue,
+                    primary->BaseWeaponCriticalMultiplier.MinMaxRange.X,
+                    primary->BaseWeaponCriticalMultiplier.MinMaxRange.Y);
+                LOG_INFO("Rate of Fire: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseRateOfFire.BaseValue,
+                    primary->BaseRateOfFire.MinMaxRange.X,
+                    primary->BaseRateOfFire.MinMaxRange.Y);
+                LOG_INFO("Cooldown: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseCooldown.BaseValue,
+                    primary->BaseCooldown.MinMaxRange.X,
+                    primary->BaseCooldown.MinMaxRange.Y);
+                LOG_INFO("Recoil: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseRecoil.BaseValue,
+                    primary->BaseRecoil.MinMaxRange.X,
+                    primary->BaseRecoil.MinMaxRange.Y);
+                LOG_INFO("Recoil Recovery: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseRecoilRecovery.BaseValue,
+                    primary->BaseRecoilRecovery.MinMaxRange.X,
+                    primary->BaseRecoilRecovery.MinMaxRange.Y);
+                LOG_INFO("Spread: %.2f (Range: %.2f - %.2f)",
+                    primary->BaseSpread.BaseValue,
+                    primary->BaseSpread.MinMaxRange.X,
+                    primary->BaseSpread.MinMaxRange.Y);
+                LOG_INFO("Reload Time: %.2f (Range: %.2f - %.2f), Delta: %.2f",
+                    primary->BaseReloadTime.BaseValue,
+                    primary->BaseReloadTime.MinMaxRange.X,
+                    primary->BaseReloadTime.MinMaxRange.Y,
+                    primary->ReloadTimeDelta);
+            } else {
+                LOG_INFO("--- PRIMARY WEAPON ---");
+                LOG_INFO("Failed to get primary weapon settings");
+            }
+
+            // SECONDARY WEAPON STATS (if Engine Rifle)
+            if (s_isEngineRifle && s_cachedEngineRifleScript && s_cachedEngineRifleScript->SecondaryWeaponModScript) {
+                auto secondary = s_cachedEngineRifleScript->SecondaryWeaponModScript->WeaponModStats;
+                if (secondary) {
+                    LOG_INFO("--- SECONDARY WEAPON ---");
+                    LOG_INFO("Ammo Cost: %d", secondary->BaseAmmoCost.BaseValue);
+                    LOG_INFO("Damage: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseWeaponDamage.BaseValue,
+                        secondary->BaseWeaponDamage.MinMaxRange.X,
+                        secondary->BaseWeaponDamage.MinMaxRange.Y);
+                    LOG_INFO("Crit Multiplier: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseWeaponCriticalMultiplier.BaseValue,
+                        secondary->BaseWeaponCriticalMultiplier.MinMaxRange.X,
+                        secondary->BaseWeaponCriticalMultiplier.MinMaxRange.Y);
+                    LOG_INFO("Rate of Fire: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseRateOfFire.BaseValue,
+                        secondary->BaseRateOfFire.MinMaxRange.X,
+                        secondary->BaseRateOfFire.MinMaxRange.Y);
+                    LOG_INFO("Cooldown: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseCooldown.BaseValue,
+                        secondary->BaseCooldown.MinMaxRange.X,
+                        secondary->BaseCooldown.MinMaxRange.Y);
+                    LOG_INFO("Recoil: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseRecoil.BaseValue,
+                        secondary->BaseRecoil.MinMaxRange.X,
+                        secondary->BaseRecoil.MinMaxRange.Y);
+                    LOG_INFO("Recoil Recovery: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseRecoilRecovery.BaseValue,
+                        secondary->BaseRecoilRecovery.MinMaxRange.X,
+                        secondary->BaseRecoilRecovery.MinMaxRange.Y);
+                    LOG_INFO("Spread: %.2f (Range: %.2f - %.2f)",
+                        secondary->BaseSpread.BaseValue,
+                        secondary->BaseSpread.MinMaxRange.X,
+                        secondary->BaseSpread.MinMaxRange.Y);
+                    LOG_INFO("Reload Time: %.2f (Range: %.2f - %.2f), Delta: %.2f",
+                        secondary->BaseReloadTime.BaseValue,
+                        secondary->BaseReloadTime.MinMaxRange.X,
+                        secondary->BaseReloadTime.MinMaxRange.Y,
+                        secondary->ReloadTimeDelta);
+                } else {
+                    LOG_INFO("--- SECONDARY WEAPON ---");
+                    LOG_INFO("Failed to get secondary weapon settings");
+                }
+            } else {
+                LOG_INFO("--- SECONDARY WEAPON ---");
+                LOG_INFO("Not an Engine Rifle or no secondary weapon mod script");
+            }
+
+            // ORIGINAL SETTINGS (if saved)
+            if (s_primaryOriginalSaved) {
+                LOG_INFO("--- ORIGINAL PRIMARY SETTINGS (SAVED) ---");
+                LOG_INFO("Ammo Cost: %d", s_originalPrimarySettings.BaseAmmoCost);
+                LOG_INFO("Damage: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseWeaponDamage,
+                    s_originalPrimarySettings.BaseWeaponDamageMinRange,
+                    s_originalPrimarySettings.BaseWeaponDamageMaxRange);
+                LOG_INFO("Crit Multiplier: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseWeaponCriticalMultiplier,
+                    s_originalPrimarySettings.BaseWeaponCriticalMultiplierMinRange,
+                    s_originalPrimarySettings.BaseWeaponCriticalMultiplierMaxRange);
+                LOG_INFO("Rate of Fire: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseRateOfFire,
+                    s_originalPrimarySettings.BaseRateOfFireMinRange,
+                    s_originalPrimarySettings.BaseRateOfFireMaxRange);
+                LOG_INFO("Cooldown: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseCooldown,
+                    s_originalPrimarySettings.BaseCooldownMinRange,
+                    s_originalPrimarySettings.BaseCooldownMaxRange);
+                LOG_INFO("Recoil: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseRecoil,
+                    s_originalPrimarySettings.BaseRecoilMinRange,
+                    s_originalPrimarySettings.BaseRecoilMaxRange);
+                LOG_INFO("Recoil Recovery: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseRecoilRecovery,
+                    s_originalPrimarySettings.BaseRecoilRecoveryMinRange,
+                    s_originalPrimarySettings.BaseRecoilRecoveryMaxRange);
+                LOG_INFO("Spread: %.2f (Range: %.2f - %.2f)",
+                    s_originalPrimarySettings.BaseSpread,
+                    s_originalPrimarySettings.BaseSpreadMinRange,
+                    s_originalPrimarySettings.BaseSpreadMaxRange);
+                LOG_INFO("Reload Time: %.2f (Range: %.2f - %.2f), Delta: %.2f",
+                    s_originalPrimarySettings.BaseReloadTime,
+                    s_originalPrimarySettings.BaseReloadTimeMinRange,
+                    s_originalPrimarySettings.BaseReloadTimeMaxRange,
+                    s_originalPrimarySettings.ReloadTimeDelta);
+            } else {
+                LOG_INFO("--- ORIGINAL PRIMARY SETTINGS ---");
+                LOG_INFO("Not saved yet");
+            }
+
+            LOG_INFO("=== END WEAPON STATS DEBUG ===");
+        }
+
         void WeaponManager::SaveOriginalSettings(SDK::URGWeaponScript* weaponScript) {
             auto ws = weaponScript->GetBaseWeaponSettings();
             if (!ws) {

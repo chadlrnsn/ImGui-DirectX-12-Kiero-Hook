@@ -69,6 +69,9 @@ namespace Cheat {
             // UI-driven application: call this whenever a checkbox/slider is changed
             static void OnWeaponSettingsChanged();
 
+            // Debug logging
+            static void LogAllWeaponStats();
+
         private:
             // Cached weapon references
             static SDK::ARPlayerPawn* s_cachedCharacter;

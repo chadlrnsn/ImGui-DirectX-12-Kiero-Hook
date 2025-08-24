@@ -294,6 +294,7 @@ namespace CheatMenu {
                     ImGui::BulletText("F2: Toggle aimbot");
                     ImGui::BulletText("F3: Dump enemy bones");
                     ImGui::BulletText("F4: Show bone database");
+                    ImGui::BulletText("F5: Log weapon stats (debug)");
                     ImGui::BulletText("Mouse4: Hold to activate aimbot");
                     ImGui::BulletText("Insert: Toggle this menu");
                     ImGui::BulletText("F9: Exit cheat system");

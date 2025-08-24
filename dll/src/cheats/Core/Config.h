@@ -34,6 +34,7 @@ namespace Cheat {
             inline static BYTE AimbotToggle = VK_F2;        // Toggle aimbot on/off
             inline static BYTE DumpBones = VK_F3;           // Dump enemy bones
             inline static BYTE ShowBoneDB = VK_F4;          // Display bone database
+            inline static BYTE LogWeaponStats = VK_F5;      // Log all weapon stats for debugging
             
             // Aimbot controls
             inline static BYTE AimbotTrigger = VK_XBUTTON1;  // Mouse4 - Hold to aim
