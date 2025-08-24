@@ -290,13 +290,9 @@ namespace Cheat {
             // Apply to primary
             weaponScript->SetBaseWeaponSettings(primary);
 
-            // --- SECONDARY (if exists) ---
+            // SECONDARY  ---
             if (s_isEngineRifle && s_cachedEngineRifleScript && s_cachedEngineRifleScript->SecondaryWeaponModScript) {
-                auto secondary = s_cachedEngineRifleScript->SecondaryWeaponModScript->WeaponModStats;
-                if (secondary) {
-                    // Apply to secondary
-                    s_cachedEngineRifleScript->SecondaryWeaponModScript->ApplyFireSettings(primary);
-                }
+                weaponScript->SecondaryWeaponModScript->ApplyFireSettings(primary);
             }
         }
 
