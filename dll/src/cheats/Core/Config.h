@@ -138,6 +138,14 @@ namespace Cheat {
             extern bool NoCooldown;          // No cooldown
             extern bool NoRecoil;            // No recoil, instant recovery, and perfect accuracy
             extern bool InstantReload;       // Instant reload
+
+            // New: multipliers/overrides (applied when corresponding toggles are enabled)
+            extern float DamageMultiplier;     // Multiplies BaseWeaponDamage when IncreasedDamage is ON
+            extern float CritMultiplier;       // Multiplies BaseWeaponCriticalMultiplier when HighCritMultiplier is ON
+
+            // New: rate of fire override (slider from Min..Max; applied when enabled)
+            extern bool RateOfFireOverride;    // Use RateOfFireValue instead of original/fast toggle
+            extern float RateOfFireValue;      // Desired rate of fire within MinMaxRange
         }
         
         // =============================================================================

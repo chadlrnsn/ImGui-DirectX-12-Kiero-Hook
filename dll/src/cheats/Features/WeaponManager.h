@@ -66,6 +66,9 @@ namespace Cheat {
             // Weapon modifications
             static void ApplyModifications(SDK::UWorld* world);
 
+            // UI-driven application: call this whenever a checkbox/slider is changed
+            static void OnWeaponSettingsChanged();
+
         private:
             // Cached weapon references
             static SDK::ARPlayerPawn* s_cachedCharacter;
@@ -74,9 +77,11 @@ namespace Cheat {
             static SDK::UBP_EngineRifle_Script_C* s_cachedEngineRifleScript;
             static bool s_isEngineRifle;
 
-            // Original settings storage
-            static OriginalWeaponSettings s_originalSettings;
-            static bool s_originalSettingsSaved;
+            // Original settings storage (primary and secondary stored separately)
+            static OriginalWeaponSettings s_originalPrimarySettings;
+            static OriginalWeaponSettings s_originalSecondarySettings;
+            static bool s_primaryOriginalSaved;
+            static bool s_secondaryOriginalSaved;
 
             // Internal methods
             static void UpdateWeaponCache(SDK::ARPlayerPawn* character);
@@ -84,8 +89,10 @@ namespace Cheat {
             static void ApplyWeaponSettings(SDK::URGWeaponScript* weaponScript);
             static void RestoreOriginalSettings(SDK::URGWeaponScript* weaponScript);
             static void SaveOriginalSettings(SDK::URGWeaponScript* weaponScript);
-            static void ApplyToSecondaryWeapon(SDK::URGWeaponScript* weaponScript, bool restore = false);
             static void PrintWeaponInfo(SDK::ARWeapon* weapon);
+            static void ApplyToSecondaryWeapon(SDK::URGWeaponScript* weaponScript, bool restore = false);
+
+            static bool AnyModsEnabled();
         };
         
     } // namespace Features

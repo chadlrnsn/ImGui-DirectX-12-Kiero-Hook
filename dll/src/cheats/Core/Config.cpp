@@ -78,6 +78,13 @@ namespace Cheat {
             bool NoCooldown = false;          // No cooldown
             bool NoRecoil = false;            // No recoil, instant recovery, and perfect accuracy
             bool InstantReload = false;       // Instant reload
+
+            // New: multipliers/overrides
+            float DamageMultiplier = 2.0f;     // 2x damage by default
+            float CritMultiplier = 2.0f;       // 2x crit multiplier by default
+
+            bool RateOfFireOverride = false;   // off by default; use FastRateOfFire instead
+            float RateOfFireValue = 0.0f;      // will be clamped between Min..Max at apply-time
         }
 
         // =============================================================================

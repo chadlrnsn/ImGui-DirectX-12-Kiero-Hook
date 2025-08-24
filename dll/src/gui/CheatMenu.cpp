@@ -2,13 +2,14 @@
 #include "../cheats/Core/Config.h"
 #include <imgui.h>
 #include <dev/logger.h>
+#include "../cheats/Features/WeaponManager.h"
 
 namespace CheatMenu {
-    
+
     // Menu state
     static bool show_menu = false;
     static MenuTab current_tab = MenuTab::AIMBOT;
-    
+
     // Apply a dark theme for the cheat menu
     void ApplyCheatMenuTheme() {
         ImVec4* colors = ImGui::GetStyle().Colors;
@@ -77,15 +78,15 @@ namespace CheatMenu {
         style.WindowBorderSize = 3;
         style.WindowTitleAlign = ImVec2(0.5, 0.5);
     }
-    
+
     void Toggle() {
         show_menu = !show_menu;
     }
-    
+
     bool IsVisible() {
         return show_menu;
     }
-    
+
     void Render() {
         if (!show_menu) return;
 
@@ -140,14 +141,14 @@ namespace CheatMenu {
                     if (ImGui::Checkbox("Draw FOV Circle", &Cheat::Config::Aimbot::drawFOV)) {
                         LOG_INFO("GUI: Aimbot FOV Circle %s", Cheat::Config::Aimbot::drawFOV ? "ENABLED" : "DISABLED");
                     }
-                    
+
                     ImGui::Spacing();
                     ImGui::Text("Targeting Settings");
                     ImGui::SliderFloat("Max Distance", &Cheat::Config::Aimbot::maxDistance, 1000.0f, 100000.0f);
                     ImGui::SliderFloat("FOV Radius", &Cheat::Config::Aimbot::fovRadius, 1.0f, 180.0f);
                     ImGui::SliderFloat("Smooth Factor", &Cheat::Config::Aimbot::smoothFactor, 1.0f, 20.0f);
                     ImGui::SliderFloat("Max Turn Speed", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 10000.0f);
-                    
+
                     ImGui::Spacing();
                     ImGui::Text("Aim Zones");
                     ImGui::Checkbox("Head", &Cheat::Config::Aimbot::aimZones.head);
@@ -155,10 +156,10 @@ namespace CheatMenu {
                     ImGui::Checkbox("Chest", &Cheat::Config::Aimbot::aimZones.chest);
                     ImGui::SameLine();
                     ImGui::Checkbox("Body", &Cheat::Config::Aimbot::aimZones.body);
-                    
+
                     break;
                 }
-                
+
                 case MenuTab::FEATURES: {
                     ImGui::Text("Game Features");
                     ImGui::Separator();
@@ -205,69 +206,89 @@ namespace CheatMenu {
 
                     if (ImGui::Checkbox("Infinite Ammo", &Cheat::Config::Features::InfiniteAmmo)) {
                         LOG_INFO("GUI: Infinite Ammo %s", Cheat::Config::Features::InfiniteAmmo ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("No ammo cost when firing");
-                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No ammo cost when firing");
 
                     if (ImGui::Checkbox("Increased Damage", &Cheat::Config::Features::IncreasedDamage)) {
                         LOG_INFO("GUI: Increased Damage %s", Cheat::Config::Features::IncreasedDamage ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Massively increased weapon damage");
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a damage multiplier");
+                    if (Cheat::Config::Features::IncreasedDamage) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Damage Multiplier", &Cheat::Config::Features::DamageMultiplier, 0.1f, 10.0f, "x%.2f")) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
                     }
 
                     if (ImGui::Checkbox("High Critical Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
                         LOG_INFO("GUI: High Critical Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Extremely high critical hit multiplier");
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a crit multiplier");
+                    if (Cheat::Config::Features::HighCritMultiplier) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Crit Multiplier", &Cheat::Config::Features::CritMultiplier, 0.1f, 10.0f, "x%.2f")) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
                     }
 
+                    if (ImGui::Checkbox("Override Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Override base rate of fire using the slider below");
+                    if (Cheat::Config::Features::RateOfFireOverride) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Rate of Fire Value", &Cheat::Config::Features::RateOfFireValue, 0.1f, 100.0f)) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    // Show Fast RoF but disable when override is active
+                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::BeginDisabled();
                     if (ImGui::Checkbox("Fast Rate of Fire", &Cheat::Config::Features::FastRateOfFire)) {
                         LOG_INFO("GUI: Fast Rate of Fire %s", Cheat::Config::Features::FastRateOfFire ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Max rate of fire");
-                    }
+                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::EndDisabled();
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Max rate of fire");
 
                     if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
                         LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("No weapon cooldown");
-                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No weapon cooldown");
 
                     if (ImGui::Checkbox("No Recoil", &Cheat::Config::Features::NoRecoil)) {
                         LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("No recoil + instant recovery + perfect accuracy");
-                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + instant recovery + perfect accuracy");
 
                     if (ImGui::Checkbox("Instant Reload", &Cheat::Config::Features::InstantReload)) {
                         LOG_INFO("GUI: Instant Reload %s", Cheat::Config::Features::InstantReload ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Instant weapon reload");
-                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Instant weapon reload");
 
                     ImGui::Separator();
 
                     if (ImGui::Checkbox("Engine Rifle Heat Management", &Cheat::Config::Features::EngineRifleHeatManagement)) {
                         LOG_INFO("GUI: Engine Rifle Heat Management %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "DISABLED");
                     }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Prevent engine rifle from overheating");
-                    }
-                    
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Prevent engine rifle from overheating");
+
                     break;
                 }
-                
+
                 case MenuTab::MISC: {
                     ImGui::Text("Miscellaneous Settings");
                     ImGui::Separator();
-                    
+
                     ImGui::Text("Hotkeys:");
                     ImGui::BulletText("F1: Apply weapon modifications");
                     ImGui::BulletText("F2: Toggle aimbot");
@@ -276,10 +297,10 @@ namespace CheatMenu {
                     ImGui::BulletText("Mouse4: Hold to activate aimbot");
                     ImGui::BulletText("Insert: Toggle this menu");
                     ImGui::BulletText("F9: Exit cheat system");
-                    
+
                     break;
                 }
-                
+
                 case MenuTab::DEBUG: {
                     ImGui::Text("Debug Information");
                     ImGui::Separator();
@@ -324,36 +345,36 @@ namespace CheatMenu {
 
                     ImGui::Spacing();
                     ImGui::Text("Game State:");
-                    
+
                     char engineBuf[256];
                     sprintf_s(engineBuf, sizeof(engineBuf), "Engine: %p", Cheat::Config::GameState::g_pEngine);
                     ImGui::Text(engineBuf);
-                    
+
                     char worldBuf[256];
                     sprintf_s(worldBuf, sizeof(worldBuf), "World: %p", Cheat::Config::GameState::g_pWorld);
                     ImGui::Text(worldBuf);
-                    
+
                     char controllerBuf[256];
                     sprintf_s(controllerBuf, sizeof(controllerBuf), "Controller: %p", Cheat::Config::GameState::g_pMyController);
                     ImGui::Text(controllerBuf);
-                    
+
                     char pawnBuf[256];
                     sprintf_s(pawnBuf, sizeof(pawnBuf), "Pawn: %p", Cheat::Config::GameState::g_pMyPawn);
                     ImGui::Text(pawnBuf);
-                    
+
                     char targetsBuf[256];
                     sprintf_s(targetsBuf, sizeof(targetsBuf), "Targets: %zu", Cheat::Config::GameState::g_TargetsList.size());
                     ImGui::Text(targetsBuf);
-                    
+
                     char currentTargetBuf[256];
                     sprintf_s(currentTargetBuf, sizeof(currentTargetBuf), "Current Target: %p", Cheat::Config::GameState::g_pCurrentTarget);
                     ImGui::Text(currentTargetBuf);
-                    
+
                     break;
                 }
             }
         }
         ImGui::End();
     }
-    
+
 } // namespace CheatMenu
