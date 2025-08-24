@@ -78,6 +78,13 @@ namespace Cheat {
             bool NoCooldown = false;          // No cooldown
             bool NoRecoil = false;            // No recoil, instant recovery, and perfect accuracy
             bool InstantReload = false;       // Instant reload
+
+            // New: multipliers/overrides
+            float DamageMultiplier = 2.0f;     // 2x damage by default
+            float CritMultiplier = 2.0f;       // 2x crit multiplier by default
+
+            bool RateOfFireOverride = false;   // off by default; use FastRateOfFire instead
+            float RateOfFireValue = 0.0f;      // will be clamped between Min..Max at apply-time
         }
 
         // =============================================================================
@@ -115,6 +122,7 @@ namespace Cheat {
             LOG_INFO("- F2: Toggle aimbot on/off");
             LOG_INFO("- F3: Dump enemy bones");
             LOG_INFO("- F4: Display bone database");
+            LOG_INFO("- F5: Log weapon stats (debug)");
             LOG_INFO("- Insert: Toggle menu");
             LOG_INFO("- F9: Unload cheat (causes crash sometimes, might fix eventually)");
 

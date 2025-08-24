@@ -228,6 +228,11 @@ namespace Cheat {
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::ShowBoneDB)) {
                 BoneAnalyzer::DisplayBoneDatabase();
             }
+
+            // Handle log weapon stats key
+            if (Utils::Input::IsKeyPressed(Config::Hotkeys::LogWeaponStats)) {
+                Features::WeaponManager::LogAllWeaponStats();
+            }
         }
 
         void CheatMain::UpdateSubsystems(float deltaTime) {

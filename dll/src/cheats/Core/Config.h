@@ -34,6 +34,7 @@ namespace Cheat {
             inline static BYTE AimbotToggle = VK_F2;        // Toggle aimbot on/off
             inline static BYTE DumpBones = VK_F3;           // Dump enemy bones
             inline static BYTE ShowBoneDB = VK_F4;          // Display bone database
+            inline static BYTE LogWeaponStats = VK_F5;      // Log all weapon stats for debugging
             
             // Aimbot controls
             inline static BYTE AimbotTrigger = VK_XBUTTON1;  // Mouse4 - Hold to aim
@@ -138,6 +139,14 @@ namespace Cheat {
             extern bool NoCooldown;          // No cooldown
             extern bool NoRecoil;            // No recoil, instant recovery, and perfect accuracy
             extern bool InstantReload;       // Instant reload
+
+            // New: multipliers/overrides (applied when corresponding toggles are enabled)
+            extern float DamageMultiplier;     // Multiplies BaseWeaponDamage when IncreasedDamage is ON
+            extern float CritMultiplier;       // Multiplies BaseWeaponCriticalMultiplier when HighCritMultiplier is ON
+
+            // New: rate of fire override (slider from Min..Max; applied when enabled)
+            extern bool RateOfFireOverride;    // Use RateOfFireValue instead of original/fast toggle
+            extern float RateOfFireValue;      // Desired rate of fire within MinMaxRange
         }
         
         // =============================================================================

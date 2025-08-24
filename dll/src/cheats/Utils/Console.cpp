@@ -87,7 +87,7 @@ namespace Cheat {
             // Debug logging every 5 seconds
             static DWORD lastDebugTime = 0;
             DWORD currentTime = GetTickCount();
-            bool shouldDebugLog = (currentTime - lastDebugTime) > 5000;
+            bool shouldDebugLog = false && (currentTime - lastDebugTime) > 5000;
 
             // Get game objects
             auto myPawn = playerController->K2_GetPawn();
