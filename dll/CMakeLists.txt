@@ -33,11 +33,36 @@ set(DLL_NAME "${PROJECT_NAME}-ImGui")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(${DLL_NAME} SHARED 
+add_library(${DLL_NAME} SHARED
     src/dllmain.cpp
     ${CMAKE_SOURCE_DIR}/vendor/kiero/kiero.cpp
     src/hooks/d3d12hook.cpp
     src/dev/Console.cpp
+
+    # Cheat system core
+    src/cheats/Core/CheatMain.cpp
+    src/cheats/Core/Config.cpp
+
+    # Cheat system features
+    src/cheats/Features/WeaponManager.cpp
+    src/cheats/Features/GodMode.cpp
+
+    # Cheat system utilities
+    src/cheats/Utils/Console.cpp
+    src/cheats/Utils/Input.cpp
+
+    # Existing cheat system components
+    src/cheats/Aimbot/AimbotController.cpp
+    src/cheats/Aimbot/MathUtils.cpp
+    src/cheats/Aimbot/TargetSelector.cpp
+    src/cheats/Analysis/BoneAnalyzer.cpp
+
+    # SDK implementation files
+    src/cheats/SDK/Basic.cpp
+    src/cheats/SDK/BP_EngineRifle_Script_Functions.cpp
+    src/cheats/SDK/CoreUObject_functions.cpp
+    src/cheats/SDK/Engine_functions.cpp
+    src/cheats/SDK/RGame_functions.cpp
 )
 
 set_output_directories(${DLL_NAME})

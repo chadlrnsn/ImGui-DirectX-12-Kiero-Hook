@@ -26,7 +26,9 @@
             },
             "binaryDir": "${sourceDir}/out/build/windows-x64-release-2022",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_CXX_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG",
+                "CMAKE_C_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG"
             }
         },
         {
@@ -78,7 +80,8 @@
         {
             "name": "windows-x64-release-2022",
             "configurePreset": "windows-x64-release-2022",
-            "configuration": "Release"
+            "configuration": "Release",
+            "nativeToolOptions": ["/verbosity:minimal", "/nologo"]
         },
         {
             "name": "windows-x64-debug-2019",

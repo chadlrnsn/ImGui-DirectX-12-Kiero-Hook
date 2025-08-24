@@ -7,10 +7,12 @@
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
 
-
 // Debug
 #include <dxgidebug.h>
 #pragma comment(lib, "dxguid.lib")
+
+// Cheat system includes
+#include <includes.h>
 
 typedef HRESULT(__stdcall *PresentFunc)(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT Flags);
 PresentFunc oPresent = nullptr;
@@ -249,16 +251,19 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
             // Initialize ImGui last, after all DirectX objects are created
             InitImGui();
 
+            // Initialize cheat system
+            Cheat::Core::CheatMain::Initialize();
+
             init = true;
         }
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
-    // Проверяем все необходимые объекты
+       // Check all required objects
     if (!g_pd3dCommandQueue || !g_pd3dDevice || !g_frameContext || !g_pd3dSrvDescHeap)
         return oPresent(pSwapChain, SyncInterval, Flags);
 
-    // Обработка изменения размера
+    // Handle resize event
     if (g_ResizeWidth != 0 && g_ResizeHeight != 0)
     {
         WaitForLastSubmittedFrame();
@@ -268,28 +273,28 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
         CreateRenderTarget();
     }
 
-    // Обработка переключения окна
+    // Handle window toggle
     if (GetAsyncKeyState(VK_INSERT) & 1)
         show_demo_window = !show_demo_window;
 
-    // Начало нового кадра
+    // Begin new frame
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
     ImGui::NewFrame();
 
-    // Отрисовка ImGui
+    // ImGui rendering
     ImGui::GetIO().MouseDrawCursor = show_demo_window;
     if (show_demo_window)
         ImGui::ShowDemoWindow();
 
-    // Получаем текущий back buffer
+    // Get current back buffer
     UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
     FrameContext &frameCtx = g_frameContext[backBufferIdx];
 
-    // Сброс command allocator
+    // Reset command allocator
     frameCtx.CommandAllocator->Reset();
 
-    // Подготовка к рендерингу
+    // Prepare for rendering
     D3D12_RESOURCE_BARRIER barrier = {};
     barrier.Type = D3D12_RESOURCE_BARRIER_TYPE_TRANSITION;
     barrier.Flags = D3D12_RESOURCE_BARRIER_FLAG_NONE;
@@ -298,24 +303,28 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_PRESENT;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_RENDER_TARGET;
 
-    // Выполнение команд рендеринга
+    // Execute rendering commands
     g_pd3dCommandList->Reset(frameCtx.CommandAllocator, nullptr);
     g_pd3dCommandList->ResourceBarrier(1, &barrier);
     g_pd3dCommandList->OMSetRenderTargets(1, &g_frameContext[backBufferIdx].g_mainRenderTargetDescriptor, FALSE, nullptr);
     g_pd3dCommandList->SetDescriptorHeaps(1, &g_pd3dSrvDescHeap);
 
-    // Рендеринг ImGui
+    // Render ImGui
     ImGui::Render();
     ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
 
-    // Возврат ресурса в состояние present
+    // Cheat system main loop (runs every frame)
+    Cheat::Core::CheatMain::Update(GetTickCount());
+
+    // Return resource to present state
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
     g_pd3dCommandList->ResourceBarrier(1, &barrier);
     g_pd3dCommandList->Close();
 
-    // Выполнение command list
+    // Execute command list
     g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList *const *>(&g_pd3dCommandList));
+
 
     return oPresent(pSwapChain, SyncInterval, Flags);
 }

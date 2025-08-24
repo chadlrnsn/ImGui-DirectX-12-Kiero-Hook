@@ -52,7 +52,7 @@ namespace Hook
 
 DWORD WINAPI MainThread(HMODULE hModule, LPVOID)
 {
-    // Инициализация
+    //  Initialization
     LOG_INFO("DLL injected successfully");
 
     if (!Hook::Initialize())
@@ -71,6 +71,10 @@ DWORD WINAPI MainThread(HMODULE hModule, LPVOID)
     }
 
     LOG_INFO("Starting unload sequence...");
+
+    // Shutdown cheat system
+    Cheat::Core::CheatMain::Shutdown();
+
     Hook::Cleanup();
 
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
