@@ -23,6 +23,10 @@ namespace Cheat {
             SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript = nullptr;
             bool g_bIsEngineRifle = false;
         }
+
+        namespace Debug {
+            bool enableMathLogging = false;
+        }
     }
 }
 
