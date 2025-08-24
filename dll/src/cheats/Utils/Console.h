@@ -16,7 +16,8 @@ namespace Cheat {
             
             // Cheat manager
             static bool EnableCheatManager(SDK::APlayerController* playerController);
-            
+            static void UpdateCheats(SDK::APlayerController* playerController);
+
             // UI
             static void PrintControls();
             

@@ -23,6 +23,61 @@ namespace Cheat {
             SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript = nullptr;
             bool g_bIsEngineRifle = false;
         }
+
+        // =============================================================================
+        // AIMBOT CONFIGURATION - Define once here
+        // =============================================================================
+        namespace Aimbot {
+            // Core settings
+            bool enabled = true;
+            bool smoothEnabled = false;
+            bool visibilityCheck = true;
+            bool drawFOV = false;
+
+            // Targeting parameters
+            float maxDistance = 50000.0f;
+            float fovRadius = 52800.0f;
+            float smoothFactor = 8.0f;
+            float maxTurnSpeed = 5180.0f;
+
+            // Advanced settings
+            float reactionTime = 0.0f;
+            float targetSwitchDelay = 0.0f;
+            bool aimAtMovingTargets = true;
+            float maxAimSnapDistance = 1800.0f;
+
+            // Aim zones
+            AimZones aimZones;
+
+            // Visual settings
+            Color fovColor = {1.0f, 1.0f, 1.0f, 0.3f};
+            Color enemyColor = {1.0f, 0.0f, 0.0f, 1.0f};
+            Color targetColor = {0.0f, 1.0f, 0.0f, 1.0f};
+        }
+
+        // =============================================================================
+        // FEATURE FLAGS - Define once here
+        // =============================================================================
+        namespace Features {
+            bool GodMode = true;             // CheatManager->God() invincibility
+            bool SpeedHack = false;           // CheatManager->Slomo(2) speed boost
+            bool WeaponMods = false;          // Weapon modifications applied
+            bool EngineRifleHeatManagement = true; // Prevent overheating
+            bool AutoCheatManager = true;     // Auto-enable cheat manager
+
+            // Speed hack configuration
+            float SpeedMultiplier = 2.0f;    // Default 2x speed
+            float OriginalMaxWalkSpeed = 0.0f;     // Will be set at startup
+            float OriginalMaxAcceleration = 0.0f;  // Will be set at startup
+            bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
+        }
+
+        // =============================================================================
+        // DEBUG SETTINGS - Define once here
+        // =============================================================================
+        namespace Debug {
+            bool enableMathLogging = false;   // Enable detailed math function logging
+        }
     }
 }
 

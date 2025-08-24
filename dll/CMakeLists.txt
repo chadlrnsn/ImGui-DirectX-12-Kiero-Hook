@@ -45,7 +45,9 @@ add_library(${DLL_NAME} SHARED
 
     # Cheat system features
     src/cheats/Features/WeaponManager.cpp
-    src/cheats/Features/GodMode.cpp
+
+    # GUI
+    src/gui/CheatMenu.cpp
 
     # Cheat system utilities
     src/cheats/Utils/Console.cpp

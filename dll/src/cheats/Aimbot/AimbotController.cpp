@@ -2,6 +2,7 @@
 #include "MathUtils.h"
 #include "../Core/Config.h"
 #include <dev/validity.h>
+#include <dev/logger.h>
 #include <Windows.h>
 #include <iomanip>
 
@@ -30,6 +31,7 @@ void AimbotController::Update(float deltaTime) {
     bool toggleKeyPressed = (GetAsyncKeyState(Cheat::Config::Hotkeys::AimbotToggle) & 0x8000) != 0;
     if (toggleKeyPressed && !toggleKeyWasPressed) {
         Cheat::Config::Aimbot::enabled = !Cheat::Config::Aimbot::enabled;
+        LOG_INFO("HOTKEY: Aimbot %s (F2 pressed)", Cheat::Config::Aimbot::enabled ? "ENABLED" : "DISABLED");
     }
     toggleKeyWasPressed = toggleKeyPressed;
 
