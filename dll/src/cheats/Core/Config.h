@@ -121,7 +121,6 @@ namespace Cheat {
         namespace Features {
             extern bool GodMode;             // CheatManager->God() invincibility
             extern bool SpeedHack;           // CheatManager->Slomo(2) speed boost
-            extern bool WeaponMods;          // Weapon modifications applied
             extern bool EngineRifleHeatManagement; // Prevent overheating
             extern bool AutoCheatManager;     // Auto-enable cheat manager
 
@@ -130,6 +129,15 @@ namespace Cheat {
             extern float OriginalMaxWalkSpeed;     // Original MaxWalkSpeed (saved at startup)
             extern float OriginalMaxAcceleration; // Original MaxAcceleration (saved at startup)
             extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
+
+            // Individual weapon modification flags
+            extern bool InfiniteAmmo;        // No ammo cost
+            extern bool IncreasedDamage;     // Massively increased damage
+            extern bool HighCritMultiplier;  // Extremely high critical hit multiplier
+            extern bool FastRateOfFire;      // Super fast rate of fire
+            extern bool NoCooldown;          // No cooldown
+            extern bool NoRecoil;            // No recoil, instant recovery, and perfect accuracy
+            extern bool InstantReload;       // Instant reload
         }
         
         // =============================================================================

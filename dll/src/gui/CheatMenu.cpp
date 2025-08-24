@@ -198,25 +198,67 @@ namespace CheatMenu {
                         ImGui::Unindent();
                     }
 
-                    if (ImGui::Checkbox("Weapon Modifications", &Cheat::Config::Features::WeaponMods)) {
-                        LOG_INFO("GUI: Weapon Modifications %s", Cheat::Config::Features::WeaponMods ? "ENABLED" : "DISABLED");
+                    // Weapon Modifications Section
+                    ImGui::Separator();
+                    ImGui::Text("Weapon Modifications");
+                    ImGui::Separator();
+
+                    if (ImGui::Checkbox("Infinite Ammo", &Cheat::Config::Features::InfiniteAmmo)) {
+                        LOG_INFO("GUI: Infinite Ammo %s", Cheat::Config::Features::InfiniteAmmo ? "ENABLED" : "DISABLED");
                     }
                     if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Apply weapon modifications (damage, etc.)");
+                        ImGui::SetTooltip("No ammo cost when firing");
                     }
+
+                    if (ImGui::Checkbox("Increased Damage", &Cheat::Config::Features::IncreasedDamage)) {
+                        LOG_INFO("GUI: Increased Damage %s", Cheat::Config::Features::IncreasedDamage ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Massively increased weapon damage");
+                    }
+
+                    if (ImGui::Checkbox("High Critical Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
+                        LOG_INFO("GUI: High Critical Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Extremely high critical hit multiplier");
+                    }
+
+                    if (ImGui::Checkbox("Fast Rate of Fire", &Cheat::Config::Features::FastRateOfFire)) {
+                        LOG_INFO("GUI: Fast Rate of Fire %s", Cheat::Config::Features::FastRateOfFire ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Max rate of fire");
+                    }
+
+                    if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
+                        LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("No weapon cooldown");
+                    }
+
+                    if (ImGui::Checkbox("No Recoil", &Cheat::Config::Features::NoRecoil)) {
+                        LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("No recoil + instant recovery + perfect accuracy");
+                    }
+
+                    if (ImGui::Checkbox("Instant Reload", &Cheat::Config::Features::InstantReload)) {
+                        LOG_INFO("GUI: Instant Reload %s", Cheat::Config::Features::InstantReload ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Instant weapon reload");
+                    }
+
+                    ImGui::Separator();
 
                     if (ImGui::Checkbox("Engine Rifle Heat Management", &Cheat::Config::Features::EngineRifleHeatManagement)) {
                         LOG_INFO("GUI: Engine Rifle Heat Management %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "DISABLED");
                     }
                     if (ImGui::IsItemHovered()) {
                         ImGui::SetTooltip("Prevent engine rifle from overheating");
-                    }
-
-                    if (ImGui::Checkbox("Auto Cheat Manager", &Cheat::Config::Features::AutoCheatManager)) {
-                        LOG_INFO("GUI: Auto Cheat Manager %s", Cheat::Config::Features::AutoCheatManager ? "ENABLED" : "DISABLED");
-                    }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Automatically enable cheat manager");
                     }
                     
                     break;
@@ -261,7 +303,16 @@ namespace CheatMenu {
                     ImGui::Text("Speed Hack: %s (%.1fx)",
                         Cheat::Config::Features::SpeedHack ? "ENABLED" : "Disabled",
                         Cheat::Config::Features::SpeedMultiplier);
-                    ImGui::Text("Weapon Mods: %s", Cheat::Config::Features::WeaponMods ? "ENABLED" : "Disabled");
+                    ImGui::Text("Weapon Modifications:");
+                    ImGui::Indent();
+                    ImGui::Text("- Infinite Ammo: %s", Cheat::Config::Features::InfiniteAmmo ? "ON" : "OFF");
+                    ImGui::Text("- Increased Damage: %s", Cheat::Config::Features::IncreasedDamage ? "ON" : "OFF");
+                    ImGui::Text("- High Crit Multiplier: %s", Cheat::Config::Features::HighCritMultiplier ? "ON" : "OFF");
+                    ImGui::Text("- Fast Rate of Fire: %s", Cheat::Config::Features::FastRateOfFire ? "ON" : "OFF");
+                    ImGui::Text("- No Cooldown: %s", Cheat::Config::Features::NoCooldown ? "ON" : "OFF");
+                    ImGui::Text("- No Recoil (+ Recovery + Accuracy): %s", Cheat::Config::Features::NoRecoil ? "ON" : "OFF");
+                    ImGui::Text("- Instant Reload: %s", Cheat::Config::Features::InstantReload ? "ON" : "OFF");
+                    ImGui::Unindent();
                     ImGui::Text("Engine Rifle Heat Mgmt: %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "Disabled");
                     ImGui::Text("Aimbot: %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "Disabled");
 

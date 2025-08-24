@@ -218,10 +218,6 @@ namespace Cheat {
         }
         
         void CheatMain::ProcessInput() {
-            // Handle weapon mods key
-            if (Utils::Input::IsKeyPressed(Config::Hotkeys::WeaponMods)) {
-                Features::WeaponManager::ApplyModifications(Config::GameState::g_pWorld);
-            }
 
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {

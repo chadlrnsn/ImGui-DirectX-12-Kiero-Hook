@@ -126,7 +126,6 @@ namespace Cheat {
             // Static state tracking for toggles
             static bool lastGodModeState = false;
             static bool lastSpeedHackState = false;
-            static bool lastWeaponModsState = false;
 
             // =============================================================================
             // DIRECT CHEAT IMPLEMENTATION (no CheatManager needed)
@@ -179,14 +178,7 @@ namespace Cheat {
             // =============================================================================
             // WEAPON MODIFICATIONS
             // =============================================================================
-            if (Cheat::Config::Features::WeaponMods != lastWeaponModsState) {
-                if (Cheat::Config::Features::WeaponMods && world) {
-                    // Apply weapon modifications when enabled
-                    Cheat::Features::WeaponManager::ApplyModifications(world);
-                    LOG_INFO("Weapon modifications applied");
-                }
-                lastWeaponModsState = Cheat::Config::Features::WeaponMods;
-            }
+            // Weapon modifications are now handled by WeaponManager::Update() for individual toggles
 
             // =============================================================================
             // CONTINUOUS CHEATS (applied every frame when enabled)
@@ -203,7 +195,6 @@ namespace Cheat {
                 LOG_INFO("=== CHEAT STATUS DEBUG ===");
                 LOG_INFO("God Mode: %s", Cheat::Config::Features::GodMode ? "ON" : "OFF");
                 LOG_INFO("Speed Hack: %s", Cheat::Config::Features::SpeedHack ? "ON" : "OFF");
-                LOG_INFO("Weapon Mods: %s", Cheat::Config::Features::WeaponMods ? "ON" : "OFF");
                 LOG_INFO("Engine Rifle Heat Mgmt: %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ON" : "OFF");
                 LOG_INFO("Aimbot Enabled: %s (addr: %p)", Cheat::Config::Aimbot::enabled ? "ON" : "OFF", &Cheat::Config::Aimbot::enabled);
                 LOG_INFO("Aimbot Smooth: %s", Cheat::Config::Aimbot::smoothEnabled ? "ON" : "OFF");
