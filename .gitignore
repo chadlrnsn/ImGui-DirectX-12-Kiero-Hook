@@ -372,5 +372,3 @@ build/
 
 # VS Code
 .vscode/
-
-/dll/src/cheats/SDK

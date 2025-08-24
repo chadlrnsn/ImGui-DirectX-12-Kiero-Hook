@@ -68,13 +68,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
             distanceFilteredCount++;
             continue;
         }
-        
-        // // Use screen-based FOV check for more accurate targeting
-        // if (!Math::IsWithinScreenFOV(targetInfo.aimPoint, playerLocation, playerController, Cheat::Config::Aimbot::fovRadius)) {
-        //     std::cout << "[TARGET_SELECTOR] - FILTERED OUT: Outside FOV" << std::endl;
-        //     fovFilteredCount++;
-        //     continue;
-        // }
+
         
         // Calculate FOV distance using screen projection for more accurate prioritization
         SDK::FVector2D targetScreenPos;

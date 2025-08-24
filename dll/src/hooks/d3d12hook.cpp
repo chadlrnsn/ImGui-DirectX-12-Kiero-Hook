@@ -14,6 +14,9 @@
 // Cheat system includes
 #include <includes.h>
 
+// GUI includes
+#include "../gui/CheatMenu.h"
+
 typedef HRESULT(__stdcall *PresentFunc)(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT Flags);
 PresentFunc oPresent = nullptr;
 
@@ -62,7 +65,6 @@ static HANDLE g_hSwapChainWaitableObject = nullptr;
 // static D3D12_CPU_DESCRIPTOR_HANDLE  g_mainRenderTargetDescriptor[NUM_BACK_BUFFERS] = {}; // Original
 static UINT g_ResizeWidth = 0, g_ResizeHeight = 0;
 
-bool show_demo_window = true;
 bool bShould_render = true;
 
 void CreateRenderTarget()
@@ -275,7 +277,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
 
     // Handle window toggle
     if (GetAsyncKeyState(VK_INSERT) & 1)
-        show_demo_window = !show_demo_window;
+        CheatMenu::Toggle();
 
     // Begin new frame
     ImGui_ImplDX12_NewFrame();
@@ -283,9 +285,8 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     ImGui::NewFrame();
 
     // ImGui rendering
-    ImGui::GetIO().MouseDrawCursor = show_demo_window;
-    if (show_demo_window)
-        ImGui::ShowDemoWindow();
+    ImGui::GetIO().MouseDrawCursor = CheatMenu::IsVisible();
+    CheatMenu::Render();
 
     // Get current back buffer
     UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();

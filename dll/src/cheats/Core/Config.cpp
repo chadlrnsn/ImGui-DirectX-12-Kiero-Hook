@@ -23,6 +23,69 @@ namespace Cheat {
             SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript = nullptr;
             bool g_bIsEngineRifle = false;
         }
+
+        // =============================================================================
+        // AIMBOT CONFIGURATION - Define once here
+        // =============================================================================
+        namespace Aimbot {
+            // Core settings
+            bool enabled = true;
+            bool smoothEnabled = false;
+            bool visibilityCheck = true;
+            bool drawFOV = false;
+
+            // Targeting parameters
+            float maxDistance = 50000.0f;
+            float fovRadius = 52800.0f;
+            float smoothFactor = 8.0f;
+            float maxTurnSpeed = 5180.0f;
+
+            // Advanced settings
+            float reactionTime = 0.0f;
+            float targetSwitchDelay = 0.0f;
+            bool aimAtMovingTargets = true;
+            float maxAimSnapDistance = 1800.0f;
+
+            // Aim zones
+            AimZones aimZones;
+
+            // Visual settings
+            Color fovColor = {1.0f, 1.0f, 1.0f, 0.3f};
+            Color enemyColor = {1.0f, 0.0f, 0.0f, 1.0f};
+            Color targetColor = {0.0f, 1.0f, 0.0f, 1.0f};
+        }
+
+        // =============================================================================
+        // FEATURE FLAGS - Define once here
+        // =============================================================================
+        namespace Features {
+            bool GodMode = true;             // CheatManager->God() invincibility
+            bool SpeedHack = false;           // CheatManager->Slomo(2) speed boost
+            bool EngineRifleHeatManagement = false; // Prevent overheating
+            bool AutoCheatManager = true;     // Auto-enable cheat manager
+
+            // Speed hack configuration
+            float SpeedMultiplier = 2.0f;    // Default 2x speed
+            float OriginalMaxWalkSpeed = 0.0f;     // Will be set at startup
+            float OriginalMaxAcceleration = 0.0f;  // Will be set at startup
+            bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
+
+            // Individual weapon modification flags
+            bool InfiniteAmmo = false;        // No ammo cost
+            bool IncreasedDamage = false;     // Massively increased damage
+            bool HighCritMultiplier = false;  // Extremely high critical hit multiplier
+            bool FastRateOfFire = false;      // Super fast rate of fire
+            bool NoCooldown = false;          // No cooldown
+            bool NoRecoil = false;            // No recoil, instant recovery, and perfect accuracy
+            bool InstantReload = false;       // Instant reload
+        }
+
+        // =============================================================================
+        // DEBUG SETTINGS - Define once here
+        // =============================================================================
+        namespace Debug {
+            bool enableMathLogging = false;   // Enable detailed math function logging
+        }
     }
 }
 
@@ -49,13 +112,11 @@ namespace Cheat {
 
             // Hotkeys
             LOG_INFO("Hotkeys:");
-            LOG_INFO("- F1: Apply weapon modifications");
             LOG_INFO("- F2: Toggle aimbot on/off");
             LOG_INFO("- F3: Dump enemy bones");
             LOG_INFO("- F4: Display bone database");
-            LOG_INFO("- Mouse4: Hold to activate aimbot");
-            LOG_INFO("- Insert: Toggle ImGui menu");
-            LOG_INFO("- F9: Exit cheat system");
+            LOG_INFO("- Insert: Toggle menu");
+            LOG_INFO("- F9: Unload cheat (causes crash sometimes, might fix eventually)");
 
             // Aimbot settings
             LOG_INFO("Aimbot Configuration:");
@@ -71,7 +132,6 @@ namespace Cheat {
             LOG_INFO("Features:");
             LOG_INFO("- God Mode: %s", Features::GodMode ? "Enabled" : "Disabled");
             LOG_INFO("- Engine Rifle Heat Management: %s", Features::EngineRifleHeatManagement ? "Enabled" : "Disabled");
-            LOG_INFO("- Auto Cheat Manager: %s", Features::AutoCheatManager ? "Enabled" : "Disabled");
         }
 
         void UpdateGameState() {

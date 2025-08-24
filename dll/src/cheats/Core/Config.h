@@ -72,57 +72,72 @@ namespace Cheat {
         // =============================================================================
         namespace Aimbot {
             // Core settings
-            inline static bool enabled = true;
-            inline static bool smoothEnabled = false;
-            inline static bool visibilityCheck = true;
-            inline static bool drawFOV = false;
+            extern bool enabled;
+            extern bool smoothEnabled;
+            extern bool visibilityCheck;
+            extern bool drawFOV;
 
-            
+
             // Targeting parameters
-            inline static float maxDistance = 50000.0f;
-            inline static float fovRadius = 52800.0f;
-            inline static float smoothFactor = 8.0f;
-            inline static float maxTurnSpeed = 5180.0f;
-            
-            // Advanced settings
-            inline static float reactionTime = 0.0f;
-            inline static float targetSwitchDelay = 0.0f;
-            inline static bool aimAtMovingTargets = true;
-            inline static float maxAimSnapDistance = 1800.0f;
+            extern float maxDistance;
+            extern float fovRadius;
+            extern float smoothFactor;
+            extern float maxTurnSpeed;
 
-            
+            // Advanced settings
+            extern float reactionTime;
+            extern float targetSwitchDelay;
+            extern bool aimAtMovingTargets;
+            extern float maxAimSnapDistance;
+
+
             // Aim zones (priority order)
             struct AimZones {
                 bool head = true;
                 bool chest = true;
                 bool body = true;
             };
-            inline static AimZones aimZones;
-            
+            extern AimZones aimZones;
+
             // Visual settings
             struct Color {
                 float r, g, b, a;
             };
-            inline static Color fovColor = {1.0f, 1.0f, 1.0f, 0.3f};
-            inline static Color enemyColor = {1.0f, 0.0f, 0.0f, 1.0f};
-            inline static Color targetColor = {0.0f, 1.0f, 0.0f, 1.0f};
+            extern Color fovColor;
+            extern Color enemyColor;
+            extern Color targetColor;
         }
         
         // =============================================================================
         // DEBUG SETTINGS
         // =============================================================================
         namespace Debug {
-            inline static bool enableMathLogging = false;   // Enable detailed math function logging
+            extern bool enableMathLogging;   // Enable detailed math function logging
         }
 
         // =============================================================================
         // FEATURE FLAGS
         // =============================================================================
         namespace Features {
-            inline static bool GodMode = true;              // Auto health restoration
-            inline static bool WeaponMods = false;          // Weapon modifications applied
-            inline static bool EngineRifleHeatManagement = true; // Prevent overheating
-            inline static bool AutoCheatManager = true;     // Auto-enable cheat manager
+            extern bool GodMode;             // CheatManager->God() invincibility
+            extern bool SpeedHack;           // CheatManager->Slomo(2) speed boost
+            extern bool EngineRifleHeatManagement; // Prevent overheating
+            extern bool AutoCheatManager;     // Auto-enable cheat manager
+
+            // Speed hack configuration
+            extern float SpeedMultiplier;    // Speed multiplier (1.0 = normal, 2.0 = 2x, etc.)
+            extern float OriginalMaxWalkSpeed;     // Original MaxWalkSpeed (saved at startup)
+            extern float OriginalMaxAcceleration; // Original MaxAcceleration (saved at startup)
+            extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
+
+            // Individual weapon modification flags
+            extern bool InfiniteAmmo;        // No ammo cost
+            extern bool IncreasedDamage;     // Massively increased damage
+            extern bool HighCritMultiplier;  // Extremely high critical hit multiplier
+            extern bool FastRateOfFire;      // Super fast rate of fire
+            extern bool NoCooldown;          // No cooldown
+            extern bool NoRecoil;            // No recoil, instant recovery, and perfect accuracy
+            extern bool InstantReload;       // Instant reload
         }
         
         // =============================================================================

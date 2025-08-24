@@ -1,7 +1,6 @@
 #include "CheatMain.h"
 #include "Config.h"
 #include "../Features/WeaponManager.h"
-#include "../Features/GodMode.h"
 #include "../Aimbot/AimbotController.h"
 #include "../Analysis/BoneAnalyzer.h"
 #include "../Utils/Console.h"
@@ -197,10 +196,12 @@ namespace Cheat {
         }
 
         bool CheatMain::InitializeSubsystems() {
-            // Initialize console and cheat manager
-            if (Config::Features::AutoCheatManager && Config::GameState::g_pMyController) {
+            // Always initialize console and cheat manager - it's required for many cheats
+            if (Config::GameState::g_pMyController) {
                 if (!Utils::Console::EnableCheatManager(Config::GameState::g_pMyController)) {
-                    LOG_INFO("Failed to enable cheat manager");
+                    LOG_INFO("Failed to enable cheat manager - will retry during updates");
+                } else {
+                    LOG_INFO("CheatManager enabled successfully at startup");
                 }
             }
 
@@ -213,17 +214,10 @@ namespace Cheat {
             // Initialize weapon manager
             Features::WeaponManager::Initialize();
 
-            // Initialize god mode
-            Features::GodMode::Initialize();
-
             return true;
         }
         
         void CheatMain::ProcessInput() {
-            // Handle weapon mods key
-            if (Utils::Input::IsKeyPressed(Config::Hotkeys::WeaponMods)) {
-                Features::WeaponManager::ApplyModifications(Config::GameState::g_pWorld);
-            }
 
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
@@ -237,11 +231,11 @@ namespace Cheat {
         }
 
         void CheatMain::UpdateSubsystems(float deltaTime) {
+            // Update cheat toggles (God Mode, Speed Hack, etc.)
+            Utils::Console::UpdateCheats(Config::GameState::g_pMyController);
+
             // Update weapon manager
             Features::WeaponManager::Update(Config::GameState::g_pCachedPlayerPawn);
-
-            // Update god mode
-            Features::GodMode::Update(Config::GameState::g_pCachedPlayerPawn);
 
             // Update aimbot system
             AimbotController::Update(deltaTime);
