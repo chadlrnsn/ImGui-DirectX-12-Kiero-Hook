@@ -18,14 +18,14 @@ set(IMGUI_SOURCES
 )
 
 add_library(imgui STATIC ${IMGUI_SOURCES})
-target_include_directories(imgui PUBLIC 
+target_include_directories(imgui PUBLIC
     ${imgui_SOURCE_DIR}
     ${imgui_SOURCE_DIR}/backends
 )
 
-target_include_directories(imgui PUBLIC 
+target_include_directories(imgui PUBLIC
     ${CMAKE_CURRENT_BINARY_DIR}
-) 
+)
 
 
 set(DLL_NAME "Abyssus")
@@ -44,10 +44,21 @@ add_library(${DLL_NAME} SHARED
     src/cheats/Core/Config.cpp
 
     # Cheat system features
-    src/cheats/Features/WeaponManager.cpp
+    src/cheats/Features/WeaponService.cpp
+
+    # Services
+    src/cheats/Services/GameServices.cpp
+    src/cheats/Services/PlayerEffectsService.cpp
 
     # GUI
     src/gui/CheatMenu.cpp
+        src/gui/Tabs/AimbotTab.cpp
+        src/gui/Tabs/WeaponsTab.cpp
+        src/gui/Tabs/GameplayTab.cpp
+        src/gui/Tabs/OptionsTab.cpp
+        src/gui/Tabs/MiscTab.cpp
+        src/gui/Tabs/DebugTab.cpp
+
 
     # Cheat system utilities
     src/cheats/Utils/Console.cpp
@@ -83,7 +94,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
     target_link_options(${DLL_NAME} PRIVATE "/DEBUG")
 endif()
 
-target_include_directories(${DLL_NAME} PRIVATE 
+target_include_directories(${DLL_NAME} PRIVATE
     ${imgui_SOURCE_DIR}
     ${imgui_SOURCE_DIR}/backends
     ${minhook_SOURCE_DIR}/include

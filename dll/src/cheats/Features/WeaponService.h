@@ -56,11 +56,11 @@ namespace Cheat {
             bool isValid = false;
         };
 
-        class WeaponManager {
+        class WeaponService {
         public:
             // Lifecycle
             static void Initialize();
-            static void Update(SDK::ARPlayerPawn* playerPawn);
+            static void Update();
             static void Shutdown();
 
             // Weapon modifications
@@ -100,3 +100,4 @@ namespace Cheat {
         
     } // namespace Features
 } // namespace Cheat
+

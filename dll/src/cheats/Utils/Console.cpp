@@ -1,6 +1,5 @@
 #include "Console.h"
 #include "../Core/Config.h"
-#include "../Features/WeaponManager.h"
 #include "Input.h"
 #include <iostream>
 #include <dev/logger.h>
