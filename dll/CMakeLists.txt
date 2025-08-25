@@ -58,7 +58,7 @@ add_library(${DLL_NAME} SHARED
         src/gui/Tabs/WeaponsTab.cpp
         src/gui/Tabs/GameplayTab.cpp
         src/gui/Tabs/OptionsTab.cpp
-        src/gui/Tabs/MiscTab.cpp
+        src/gui/Tabs/UnlocksTab.cpp
         src/gui/Tabs/DebugTab.cpp
 
 

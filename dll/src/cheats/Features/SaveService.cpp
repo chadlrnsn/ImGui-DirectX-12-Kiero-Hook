@@ -31,6 +31,19 @@ bool SaveService::IncrementSoulFragments(int32_t delta) {
     return true;
 }
 
+bool SaveService::SetSoulFragments(int32_t value) {
+    auto* save = GetCurrentSave();
+    if (!save) return false;
+    int32_t current = save->SaveGameData.SoulFragments;
+    int32_t delta = value - current;
+    if (delta != 0) {
+        if (delta > 0) save->IncrementSoulFragments(delta);
+        else           save->DecrementSoulFragments(-delta);
+    }
+    LOG_INFO("SaveService: Set SoulFragments %d -> %d (delta=%d)", current, value, delta);
+    return true;
+}
+
 } // namespace Features
 } // namespace Cheat
 

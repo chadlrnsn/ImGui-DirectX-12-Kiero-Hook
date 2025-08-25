@@ -6,8 +6,8 @@ namespace CheatMenu {
         AIMBOT = 0,
         WEAPONS,
         GAMEPLAY,
+        UNLOCKS,
         OPTIONS,
-        MISC,
         DEBUG
     };
     

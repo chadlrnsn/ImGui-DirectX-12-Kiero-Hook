@@ -9,7 +9,7 @@
 #include "Tabs/WeaponsTab.h"
 #include "Tabs/GameplayTab.h"
 #include "Tabs/OptionsTab.h"
-#include "Tabs/MiscTab.h"
+#include "Tabs/UnlocksTab.h"
 #include "Tabs/DebugTab.h"
 #include <cheats/Features/WeaponService.h>
 #include "../cheats/Services/GameServices.h"
@@ -23,6 +23,7 @@ namespace {
 
 static const char* kTabIconGameplay = ICON_FA_WALKING;
 static const char* kTabIconOptions  = ICON_FA_COG;
+static const char* kTabIconUnlocks  = ICON_FA_UNLOCK;
 static const char* kTabIconMisc     = ICON_FA_MAGIC;
 static const char* kTabIconDebug    = ICON_FA_BUG;
 
@@ -228,8 +229,8 @@ namespace CheatMenu {
                 SidebarButton(MenuTab::AIMBOT,   kTabIconAimbot,   "Aimbot");
                 SidebarButton(MenuTab::WEAPONS,  kTabIconWeapons,  "Weapons");
                 SidebarButton(MenuTab::GAMEPLAY, kTabIconGameplay, "Gameplay");
+                SidebarButton(MenuTab::UNLOCKS,  kTabIconUnlocks,  "Unlocks");
                 SidebarButton(MenuTab::OPTIONS,  kTabIconOptions,  "Options");
-                SidebarButton(MenuTab::MISC,     kTabIconMisc,     "Misc");
                 SidebarButton(MenuTab::DEBUG,    kTabIconDebug,    "Debug");
             }
             ImGui::EndChild();
@@ -254,13 +255,13 @@ namespace CheatMenu {
                     break;
                 }
 
-                case MenuTab::OPTIONS: {
-                    Tabs::OptionsTab();
+                case MenuTab::UNLOCKS: {
+                    Tabs::UnlocksTab();
                     break;
                 }
 
-                case MenuTab::MISC: {
-                    Tabs::MiscTab();
+                case MenuTab::OPTIONS: {
+                    Tabs::OptionsTab();
                     break;
                 }
 

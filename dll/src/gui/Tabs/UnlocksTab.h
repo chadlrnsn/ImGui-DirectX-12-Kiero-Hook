@@ -1,6 +1,6 @@
 #pragma once
 
 namespace CheatMenu { namespace Tabs {
-    void MiscTab();
+    void UnlocksTab();
 } } // namespace CheatMenu::Tabs
 

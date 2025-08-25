@@ -13,6 +13,9 @@ public:
 
     // Increment soul fragments by delta; returns false if chain is invalid
     static bool IncrementSoulFragments(int32_t delta);
+
+    // Set soul fragments to an absolute value; returns false if chain is invalid
+    static bool SetSoulFragments(int32_t value);
 };
 
 } // namespace Features
