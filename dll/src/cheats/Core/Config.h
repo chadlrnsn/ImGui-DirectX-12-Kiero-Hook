@@ -35,13 +35,24 @@ namespace Cheat {
             inline static BYTE DumpBones = VK_F3;           // Dump enemy bones
             inline static BYTE ShowBoneDB = VK_F4;          // Display bone database
             inline static BYTE LogWeaponStats = VK_F5;      // Log all weapon stats for debugging
-            
-            // Aimbot controls
-            inline static BYTE AimbotTrigger = VK_XBUTTON1;  // Mouse4 - Hold to aim
-            
+
+            // Aimbot controls (configurable)
+            extern BYTE AimbotTrigger;                       // Hold to aim (configurable, default: Mouse4)
+
             // System controls
             inline static BYTE MenuToggle = VK_INSERT;       // Toggle ImGui menu
             inline static BYTE ExitCheat = VK_F9;           // Exit cheat system
+
+            // Hotkey configuration state
+            extern bool IsCapturingHotkey;                   // True when waiting for user to press a key
+            extern BYTE* CurrentHotkeyBeingSet;              // Pointer to the hotkey variable being configured
+        }
+
+        // =============================================================================
+        // GUI CONFIGURATION
+        // =============================================================================
+        namespace GUI {
+            extern float Scale;                              // GUI scale multiplier (1.0 = normal, 2.0 = double size)
         }
         
         // =============================================================================

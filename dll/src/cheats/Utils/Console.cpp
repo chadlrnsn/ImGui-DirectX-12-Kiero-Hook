@@ -1,6 +1,7 @@
 #include "Console.h"
 #include "../Core/Config.h"
 #include "../Features/WeaponManager.h"
+#include "Input.h"
 #include <iostream>
 #include <dev/logger.h>
 
@@ -271,7 +272,7 @@ namespace Cheat {
             LOG_INFO("- F2: Toggle aimbot on/off");
             LOG_INFO("- F3: Dump enemy bones");
             LOG_INFO("- F4: Display bone database status");
-            LOG_INFO("- Mouse4: Hold to activate aimbot");
+            LOG_INFO("- %s: Hold to activate aimbot", Input::GetKeyName(Cheat::Config::Hotkeys::AimbotTrigger));
             LOG_INFO("- Insert: Toggle ImGui menu");
             LOG_INFO("- F9: Exit cheat system");
         }

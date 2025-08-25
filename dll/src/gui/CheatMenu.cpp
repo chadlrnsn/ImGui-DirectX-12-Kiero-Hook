@@ -1,5 +1,6 @@
 #include "CheatMenu.h"
 #include "../cheats/Core/Config.h"
+#include "../cheats/Utils/Input.h"
 #include <imgui.h>
 #include <dev/logger.h>
 #include "../cheats/Features/WeaponManager.h"
@@ -90,6 +91,15 @@ namespace CheatMenu {
     void Render() {
         if (!show_menu) return;
 
+        // Initialize GUI scale on first render
+        static bool scaleInitialized = false;
+        if (!scaleInitialized) {
+            ImGuiIO& io = ImGui::GetIO();
+            io.FontGlobalScale = Cheat::Config::GUI::Scale;
+            scaleInitialized = true;
+            LOG_INFO("GUI: Initial GUI scale set to %.1fx", Cheat::Config::GUI::Scale);
+        }
+
         // Debug: Log variable addresses and values once
         static bool debugLogged = false;
         if (!debugLogged) {
@@ -104,13 +114,23 @@ namespace CheatMenu {
 
         // Main cheat window
         if (ImGui::Begin("Cheat Menu", &show_menu, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings)) {
-            ImGui::SetWindowPos(ImVec2(100, 100), ImGuiCond_Once);
-            ImGui::SetWindowSize(ImVec2(600, 400), ImGuiCond_Once);
+            // Scale window size based on GUI scale for better usability
+            static bool windowSizeSet = false;
+            if (!windowSizeSet) {
+                float scale = Cheat::Config::GUI::Scale;
+                ImGui::SetWindowPos(ImVec2(100, 100), ImGuiCond_Always);
+                ImGui::SetWindowSize(ImVec2(600 * scale, 400 * scale), ImGuiCond_Always);
+                windowSizeSet = true;
+            }
 
             // Tab buttons
             if (ImGui::Button("Aimbot")) current_tab = MenuTab::AIMBOT;
             ImGui::SameLine();
-            if (ImGui::Button("Features")) current_tab = MenuTab::FEATURES;
+            if (ImGui::Button("Weapons")) current_tab = MenuTab::WEAPONS;
+            ImGui::SameLine();
+            if (ImGui::Button("Gameplay")) current_tab = MenuTab::GAMEPLAY;
+            ImGui::SameLine();
+            if (ImGui::Button("Options")) current_tab = MenuTab::OPTIONS;
             ImGui::SameLine();
             if (ImGui::Button("Misc")) current_tab = MenuTab::MISC;
             ImGui::SameLine();
@@ -137,6 +157,50 @@ namespace CheatMenu {
                     // }
 
                     ImGui::Spacing();
+                    ImGui::Text("Hotkey Configuration");
+                    ImGui::Separator();
+
+                    // Aimbot trigger key configuration
+                    ImGui::Text("Aimbot Trigger Key:");
+                    ImGui::SameLine();
+
+                    if (Cheat::Config::Hotkeys::IsCapturingHotkey &&
+                        Cheat::Config::Hotkeys::CurrentHotkeyBeingSet == &Cheat::Config::Hotkeys::AimbotTrigger) {
+                        // Currently capturing input
+                        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Press any key... (ESC to cancel)");
+
+                        // Check for key input (only when menu is focused)
+                        if (ImGui::IsWindowFocused(ImGuiFocusedFlags_RootAndChildWindows)) {
+                            BYTE capturedKey = Cheat::Utils::Input::CaptureNextKeyPress();
+                            if (capturedKey != 0) {
+                                if (capturedKey == VK_ESCAPE) {
+                                    // Cancel key capture
+                                    Cheat::Config::Hotkeys::IsCapturingHotkey = false;
+                                    Cheat::Config::Hotkeys::CurrentHotkeyBeingSet = nullptr;
+                                    LOG_INFO("GUI: Aimbot hotkey capture cancelled");
+                                } else {
+                                    // Set new key
+                                    Cheat::Config::Hotkeys::AimbotTrigger = capturedKey;
+                                    Cheat::Config::Hotkeys::IsCapturingHotkey = false;
+                                    Cheat::Config::Hotkeys::CurrentHotkeyBeingSet = nullptr;
+                                    LOG_INFO("GUI: Aimbot trigger key set to: %s (VK: %d)",
+                                        Cheat::Utils::Input::GetKeyName(capturedKey), capturedKey);
+                                }
+                            }
+                        }
+                    } else {
+                        // Show current key and set button
+                        ImGui::Text("Current aimbot key: %s", Cheat::Utils::Input::GetKeyName(Cheat::Config::Hotkeys::AimbotTrigger));
+                        ImGui::SameLine();
+
+                        if (ImGui::Button("Set Hotkey")) {
+                            Cheat::Config::Hotkeys::IsCapturingHotkey = true;
+                            Cheat::Config::Hotkeys::CurrentHotkeyBeingSet = &Cheat::Config::Hotkeys::AimbotTrigger;
+                            LOG_INFO("GUI: Started capturing aimbot trigger key");
+                        }
+                    }
+
+                    ImGui::Spacing();
                     ImGui::Text("Targeting Settings");
                     ImGui::SliderFloat("Max Distance", &Cheat::Config::Aimbot::maxDistance, 1000.0f, 100000.0f);
                     //ImGui::SliderFloat("FOV Radius (kinda buggy, will fix soon)", &Cheat::Config::Aimbot::fovRadius, 1.0f, 180.0f);
@@ -153,8 +217,87 @@ namespace CheatMenu {
                     break;
                 }
 
-                case MenuTab::FEATURES: {
-                    ImGui::Text("Game Features");
+                case MenuTab::WEAPONS: {
+                    ImGui::Text("Weapon Modifications");
+                    ImGui::Separator();
+
+                    if (ImGui::Checkbox("Infinite Ammo", &Cheat::Config::Features::InfiniteAmmo)) {
+                        LOG_INFO("GUI: Infinite Ammo %s", Cheat::Config::Features::InfiniteAmmo ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No ammo cost when firing");
+
+                    if (ImGui::Checkbox("Increased Damage", &Cheat::Config::Features::IncreasedDamage)) {
+                        LOG_INFO("GUI: Increased Damage %s", Cheat::Config::Features::IncreasedDamage ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a damage multiplier");
+                    if (Cheat::Config::Features::IncreasedDamage) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Damage Multiplier", &Cheat::Config::Features::DamageMultiplier, 0.1f, 10.0f, "x%.2f")) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    if (ImGui::Checkbox("Crit Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
+                        LOG_INFO("GUI: Crit Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a crit multiplier");
+                    if (Cheat::Config::Features::HighCritMultiplier) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Crit Multiplier", &Cheat::Config::Features::CritMultiplier, 0.1f, 10.0f, "x%.2f")) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    if (ImGui::Checkbox("Override Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Override base rate of fire using the slider below");
+                    if (Cheat::Config::Features::RateOfFireOverride) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Rate of Fire Value", &Cheat::Config::Features::RateOfFireValue, 0.1f, 100.0f)) {
+                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    // Show Fast RoF but disable when override is active
+                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::BeginDisabled();
+                    if (ImGui::Checkbox("Fast Rate of Fire", &Cheat::Config::Features::FastRateOfFire)) {
+                        LOG_INFO("GUI: Fast Rate of Fire %s", Cheat::Config::Features::FastRateOfFire ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::EndDisabled();
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Max rate of fire");
+
+                    if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
+                        LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No weapon cooldown");
+
+                    if (ImGui::Checkbox("No Recoil", &Cheat::Config::Features::NoRecoil)) {
+                        LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
+                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + no spread");
+
+                    ImGui::Separator();
+
+                    if (ImGui::Checkbox("Engine Rifle Heat Management", &Cheat::Config::Features::EngineRifleHeatManagement)) {
+                        LOG_INFO("GUI: Engine Rifle Heat Management %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Prevent engine rifle from overheating");
+
+                    break;
+                }
+
+                case MenuTab::GAMEPLAY: {
+                    ImGui::Text("Gameplay Modifications");
                     ImGui::Separator();
 
                     if (ImGui::Checkbox("God Mode", &Cheat::Config::Features::GodMode)) {
@@ -251,82 +394,57 @@ namespace CheatMenu {
                         ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original movement values not captured yet");
                     }
 
-                    // Weapon Modifications Section
-                    ImGui::Separator();
-                    ImGui::Text("Weapon Modifications");
-                    ImGui::Separator();
+                    break;
+                }
 
-                    if (ImGui::Checkbox("Infinite Ammo", &Cheat::Config::Features::InfiniteAmmo)) {
-                        LOG_INFO("GUI: Infinite Ammo %s", Cheat::Config::Features::InfiniteAmmo ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No ammo cost when firing");
-
-                    if (ImGui::Checkbox("Increased Damage", &Cheat::Config::Features::IncreasedDamage)) {
-                        LOG_INFO("GUI: Increased Damage %s", Cheat::Config::Features::IncreasedDamage ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a damage multiplier");
-                    if (Cheat::Config::Features::IncreasedDamage) {
-                        ImGui::Indent();
-                        if (ImGui::SliderFloat("Damage Multiplier", &Cheat::Config::Features::DamageMultiplier, 0.1f, 10.0f, "x%.2f")) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                        }
-                        ImGui::Unindent();
-                    }
-
-                    if (ImGui::Checkbox("Crit Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
-                        LOG_INFO("GUI: Crit Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a crit multiplier");
-                    if (Cheat::Config::Features::HighCritMultiplier) {
-                        ImGui::Indent();
-                        if (ImGui::SliderFloat("Crit Multiplier", &Cheat::Config::Features::CritMultiplier, 0.1f, 10.0f, "x%.2f")) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                        }
-                        ImGui::Unindent();
-                    }
-
-                    if (ImGui::Checkbox("Override Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Override base rate of fire using the slider below");
-                    if (Cheat::Config::Features::RateOfFireOverride) {
-                        ImGui::Indent();
-                        if (ImGui::SliderFloat("Rate of Fire Value", &Cheat::Config::Features::RateOfFireValue, 0.1f, 100.0f)) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                        }
-                        ImGui::Unindent();
-                    }
-
-                    // Show Fast RoF but disable when override is active
-                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::BeginDisabled();
-                    if (ImGui::Checkbox("Fast Rate of Fire", &Cheat::Config::Features::FastRateOfFire)) {
-                        LOG_INFO("GUI: Fast Rate of Fire %s", Cheat::Config::Features::FastRateOfFire ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::EndDisabled();
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Max rate of fire");
-
-                    if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
-                        LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No weapon cooldown");
-
-                    if (ImGui::Checkbox("No Recoil", &Cheat::Config::Features::NoRecoil)) {
-                        LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + no spread");
-
+                case MenuTab::OPTIONS: {
+                    ImGui::Text("Options & Settings");
                     ImGui::Separator();
 
-                    if (ImGui::Checkbox("Engine Rifle Heat Management", &Cheat::Config::Features::EngineRifleHeatManagement)) {
-                        LOG_INFO("GUI: Engine Rifle Heat Management %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "DISABLED");
+                    // GUI Scale Configuration
+                    ImGui::Text("Interface Settings");
+                    ImGui::Separator();
+
+                    static float previousScale = Cheat::Config::GUI::Scale;
+                    if (ImGui::SliderFloat("GUI Scale", &Cheat::Config::GUI::Scale, 0.5f, 3.0f, "%.1fx")) {
+                        // Apply the new scale immediately
+                        ImGuiIO& io = ImGui::GetIO();
+                        io.FontGlobalScale = Cheat::Config::GUI::Scale;
+
+                        // Update window size to match new scale
+                        ImGui::SetWindowSize(ImVec2(600 * Cheat::Config::GUI::Scale, 400 * Cheat::Config::GUI::Scale));
+
+                        LOG_INFO("GUI: GUI Scale changed from %.1fx to %.1fx", previousScale, Cheat::Config::GUI::Scale);
+                        previousScale = Cheat::Config::GUI::Scale;
                     }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Prevent engine rifle from overheating");
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Adjust the size of the GUI interface\n0.5x = Half size, 1.0x = Normal, 2.0x = Double size");
+                    }
+
+                    ImGui::Spacing();
+                    ImGui::Text("Current Scale: %.1fx", Cheat::Config::GUI::Scale);
+
+                    // Reset button
+                    if (ImGui::Button("Reset to Default (1.0x)")) {
+                        Cheat::Config::GUI::Scale = 1.0f;
+                        ImGuiIO& io = ImGui::GetIO();
+                        io.FontGlobalScale = 1.0f;
+                        ImGui::SetWindowSize(ImVec2(600 * 1.0f, 400 * 1.0f));
+                        LOG_INFO("GUI: GUI Scale reset to default (1.0x)");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Reset GUI scale to normal size");
+                    }
+
+                    ImGui::SameLine();
+                    if (ImGui::Button("1.5x")) {
+                        Cheat::Config::GUI::Scale = 1.5f;
+                        ImGuiIO& io = ImGui::GetIO();
+                        io.FontGlobalScale = 1.5f;
+                        ImGui::SetWindowSize(ImVec2(600 * 1.5f, 400 * 1.5f));
+                        LOG_INFO("GUI: GUI Scale set to (1.5x)");
+                    }
+
 
                     break;
                 }
@@ -341,7 +459,7 @@ namespace CheatMenu {
                     ImGui::BulletText("F3: Dump enemy bones");
                     ImGui::BulletText("F4: Show bone database");
                     ImGui::BulletText("F5: Log weapon stats (debug)");
-                    ImGui::BulletText("Mouse4: Hold to activate aimbot");
+                    ImGui::BulletText("%s: Hold to activate aimbot", Cheat::Utils::Input::GetKeyName(Cheat::Config::Hotkeys::AimbotTrigger));
                     ImGui::BulletText("Insert: Toggle this menu");
                     ImGui::BulletText("F9: Exit cheat system");
 
@@ -356,14 +474,6 @@ namespace CheatMenu {
 
                     ImGui::Spacing();
                     ImGui::Text("Manual Toggle Tests:");
-                    if (ImGui::Button("Toggle Aimbot (Test)")) {
-                        Cheat::Config::Aimbot::enabled = !Cheat::Config::Aimbot::enabled;
-                        LOG_INFO("DEBUG: Manual aimbot toggle - now %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "DISABLED");
-                    }
-                    if (ImGui::Button("Toggle God Mode (Test)")) {
-                        Cheat::Config::Features::GodMode = !Cheat::Config::Features::GodMode;
-                        LOG_INFO("DEBUG: Manual god mode toggle - now %s", Cheat::Config::Features::GodMode ? "ENABLED" : "DISABLED");
-                    }
 
                     ImGui::Spacing();
                     ImGui::Text("Cheat Status (Real Values):");

@@ -4,7 +4,9 @@ namespace CheatMenu {
     
     enum class MenuTab {
         AIMBOT = 0,
-        FEATURES,
+        WEAPONS,
+        GAMEPLAY,
+        OPTIONS,
         MISC,
         DEBUG
     };

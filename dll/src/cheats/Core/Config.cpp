@@ -24,6 +24,22 @@ namespace Cheat {
         }
 
         // =============================================================================
+        // HOTKEY CONFIGURATION - Define configurable hotkeys
+        // =============================================================================
+        namespace Hotkeys {
+            BYTE AimbotTrigger = VK_XBUTTON1;               // Default: Mouse4
+            bool IsCapturingHotkey = false;
+            BYTE* CurrentHotkeyBeingSet = nullptr;
+        }
+
+        // =============================================================================
+        // GUI CONFIGURATION - Define GUI settings
+        // =============================================================================
+        namespace GUI {
+            float Scale = 1.5f;                             // Default: 1.5x scale for better visibility on high-DPI displays
+        }
+
+        // =============================================================================
         // AIMBOT CONFIGURATION - Define once here
         // =============================================================================
         namespace Aimbot {
