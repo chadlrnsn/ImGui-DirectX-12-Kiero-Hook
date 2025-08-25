@@ -1,15 +1,17 @@
 #include "OptionsTab.h"
 #include <imgui.h>
+#include "../../dev/imgui/IconsFontAwesome5.h"
+
 #include "../../cheats/Core/Config.h"
 #include <dev/logger.h>
 
 namespace CheatMenu { namespace Tabs {
 
 void OptionsTab() {
-    ImGui::Text("Options & Settings");
+    ImGui::Text("%s  Options & Settings", ICON_FA_COG);
     ImGui::Separator();
 
-    ImGui::Text("Interface Settings");
+    ImGui::Text("%s  Interface", ICON_FA_SLIDERS_H);
     ImGui::Separator();
 
     static float previousScale = Cheat::Config::GUI::Scale;

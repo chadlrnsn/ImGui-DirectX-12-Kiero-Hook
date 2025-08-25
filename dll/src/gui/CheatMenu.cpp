@@ -10,6 +10,7 @@
 #include "Tabs/MiscTab.h"
 #include "Tabs/DebugTab.h"
 #include <cheats/Features/WeaponService.h>
+#include "../dev/imgui/IconsFontAwesome5.h"
 
 namespace CheatMenu {
 

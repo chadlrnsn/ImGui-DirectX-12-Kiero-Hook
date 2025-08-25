@@ -6,6 +6,10 @@
 #include <imgui.h>
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx12.h>
+// Embedded fonts
+#include "../dev/imgui/tahoma.h"
+#include "../dev/imgui/fonts/fa_solid_900.h"
+#include "../dev/imgui/IconsFontAwesome5.h"
 
 // Debug
 #include <dxgidebug.h>
@@ -151,7 +155,7 @@ void InitImGui()
     ImGuiIO &io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
-    ImGui::StyleColorsLight();
+    ImGui::StyleColorsDark();
 
     ImGui_ImplWin32_Init(window);
 
@@ -160,6 +164,28 @@ void InitImGui()
                         g_pd3dSrvDescHeap,
                         g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(),
                         g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
+
+    // Load embedded fonts (Tahoma + Font Awesome Solid)
+    {
+        ImVector<ImWchar> ranges;
+        ImFontGlyphRangesBuilder builder;
+        builder.AddRanges(io.Fonts->GetGlyphRangesDefault());
+        builder.AddText(ICON_FA_COG ICON_FA_USER ICON_FA_BULLSEYE ICON_FA_CROSSHAIRS ICON_FA_TOOLS ICON_FA_SLIDERS_H ICON_FA_BOMB ICON_FA_BOLT);
+        builder.BuildRanges(&ranges);
+
+        ImFontConfig baseCfg;
+        baseCfg.FontDataOwnedByAtlas = false;
+        io.Fonts->AddFontFromMemoryTTF((void*)tahoma, sizeof(tahoma), 16.0f, &baseCfg, ranges.Data);
+
+        ImFontConfig iconCfg;
+        iconCfg.MergeMode = true;
+        iconCfg.PixelSnapH = true;
+        iconCfg.FontDataOwnedByAtlas = false;
+        io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 16.0f, &iconCfg, ranges.Data);
+
+        io.Fonts->Build();
+        ImGui_ImplDX12_CreateDeviceObjects();
+    }
 }
 
 HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UINT Flags)

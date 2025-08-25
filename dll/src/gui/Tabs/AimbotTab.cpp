@@ -1,5 +1,7 @@
 #include "AimbotTab.h"
 #include <imgui.h>
+#include "../../dev/imgui/IconsFontAwesome5.h"
+
 #include "../../cheats/Core/Config.h"
 #include "../../cheats/Utils/Input.h"
 #include <dev/logger.h>
@@ -7,13 +9,20 @@
 namespace CheatMenu { namespace Tabs {
 
 void AimbotTab() {
-    ImGui::Text("Aimbot Configuration");
+    ImGui::Text("%s  Aimbot", ICON_FA_CROSSHAIRS);
     ImGui::Separator();
 
-    if (ImGui::Checkbox("Enable Aimbot", &Cheat::Config::Aimbot::enabled)) {
+    // Toggle row with iconized label
+    ImGui::PushID("aimbot_enabled");
+    bool enabled = Cheat::Config::Aimbot::enabled;
+    const char* label = enabled ? ICON_FA_TOGGLE_ON "  Enabled" : ICON_FA_TOGGLE_OFF "  Disabled";
+    if (ImGui::Selectable(label, false, 0, ImVec2(0, 26))) {
+        Cheat::Config::Aimbot::enabled = !enabled;
         LOG_INFO("GUI: Aimbot checkbox clicked - new value: %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "DISABLED");
         LOG_INFO("GUI: Variable address: %p", &Cheat::Config::Aimbot::enabled);
     }
+    ImGui::PopID();
+
     if (ImGui::Checkbox("Visibility Check", &Cheat::Config::Aimbot::visibilityCheck)) {
         LOG_INFO("GUI: Aimbot Visibility Check %s", Cheat::Config::Aimbot::visibilityCheck ? "ENABLED" : "DISABLED");
     }
