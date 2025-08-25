@@ -1,6 +1,8 @@
 #include "DebugTab.h"
 #include <imgui.h>
 #include "../../cheats/Core/Config.h"
+#include "../../cheats/Services/GameServices.h"
+
 
 namespace CheatMenu { namespace Tabs {
 
@@ -55,10 +57,10 @@ void DebugTab() {
 
     ImGui::Spacing();
     ImGui::Text("Game State:");
-    ImGui::Text("Engine: %p", Cheat::Config::GameState::g_pEngine);
-    ImGui::Text("World: %p", Cheat::Config::GameState::g_pWorld);
-    ImGui::Text("Controller: %p", Cheat::Config::GameState::g_pMyController);
-    ImGui::Text("Pawn: %p", Cheat::Config::GameState::g_pMyPawn);
+    ImGui::Text("Engine: %p", Cheat::Services::GameServices::GetEngine());
+    ImGui::Text("World: %p", Cheat::Services::GameServices::GetWorld());
+    ImGui::Text("Controller: %p", Cheat::Services::GameServices::GetPlayerController());
+    ImGui::Text("Pawn: %p", Cheat::Services::GameServices::GetPlayerPawn());
     ImGui::Text("Targets: %zu", Cheat::Config::GameState::g_TargetsList.size());
     ImGui::Text("Current Target: %p", Cheat::Config::GameState::g_pCurrentTarget);
 }

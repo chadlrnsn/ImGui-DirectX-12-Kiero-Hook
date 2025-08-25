@@ -95,10 +95,11 @@ namespace Cheat {
         }
         
         void CheatMain::FetchFromActors(std::vector<SDK::AActor*>* list) {
-            if (Config::GameState::g_pWorld->Levels.Num() == 0)
+            auto world = Cheat::Services::GameServices::GetWorld();
+            if (!world || world->Levels.Num() == 0)
                 return;
 
-            SDK::ULevel* currLevel = Config::GameState::g_pWorld->Levels[0];
+            SDK::ULevel* currLevel = world->Levels[0];
             if (!currLevel)
                 return;
 
@@ -121,18 +122,21 @@ namespace Cheat {
         }
 
         void CheatMain::FetchEntities() {
-            if (!Config::GameState::g_pWorld ||
-                !Config::GameState::g_pEngine ||
-                !Config::GameState::g_pMyController ||
-                !Config::GameState::g_pMyPawn) {
+            auto world = Cheat::Services::GameServices::GetWorld();
+            auto controller = Cheat::Services::GameServices::GetPlayerController();
+            auto pawn = Cheat::Services::GameServices::GetPlayerPawn();
+            if (!world || !controller || !pawn) {
                 return;
             }
 
-            if (!Config::GameState::g_pWorld->GameState) {
+            if (!world->GameState) {
                 return;
             }
 
             std::vector<SDK::AActor*> newTargets;
+            if (world->Levels.Num() == 0) return;
+            SDK::ULevel* currLevel = world->Levels[0];
+            if (!currLevel) return;
             FetchFromActors(&newTargets);
 
             {
@@ -143,8 +147,8 @@ namespace Cheat {
 
         bool CheatMain::InitializeSubsystems() {
             // Always initialize console and cheat manager - it's required for many cheats
-            if (Config::GameState::g_pMyController) {
-                if (!Utils::Console::EnableCheatManager(Config::GameState::g_pMyController)) {
+            if (auto* controller = Cheat::Services::GameServices::GetPlayerController()) {
+                if (!Utils::Console::EnableCheatManager(controller)) {
                     LOG_INFO("Failed to enable cheat manager - will retry during updates");
                 } else {
                     LOG_INFO("CheatManager enabled successfully at startup");
@@ -167,7 +171,7 @@ namespace Cheat {
 
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
-                BoneAnalyzer::DumpUniqueEnemyBones(Config::GameState::g_pWorld);
+                BoneAnalyzer::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
             }
 
             // Handle display bone database key

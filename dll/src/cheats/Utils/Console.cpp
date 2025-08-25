@@ -1,41 +1,43 @@
 #include "Console.h"
 #include "../Core/Config.h"
+#include "../Services/GameServices.h"
+
 #include "Input.h"
 #include <iostream>
 #include <dev/logger.h>
 
 namespace Cheat {
     namespace Utils {
-        
+
         bool Console::s_autoCheatManager = true;
-        
+
         void Console::Write(const std::string& text) {
             std::cout << text << std::endl;
         }
-        
+
         void Console::Write(const std::wstring& text) {
             std::wcout << text << std::endl;
         }
-        
+
         void Console::DebugPrint(const std::string& text) {
             Write(text);
         }
-        
+
         bool Console::EnableCheatManager(SDK::APlayerController* playerController) {
             if (!playerController) {
                 LOG_ERROR("PlayerController is null");
                 return false;
             }
-            
+
             auto engine = SDK::UEngine::GetEngine();
             if (!engine) {
                 LOG_ERROR("Engine not found");
                 return false;
             }
-            
+
             bool cheatSpawned = false;
             bool consoleSpawned = false;
-            
+
             // Spawn CheatManager for the PlayerController
             if (!playerController->CheatManager && playerController->CheatClass) {
                 if (auto cheatObject = SDK::UGameplayStatics::SpawnObject(playerController->CheatClass, playerController)) {
@@ -49,7 +51,7 @@ namespace Cheat {
             } else if (playerController->CheatManager) {
                 cheatSpawned = true;
             }
-            
+
             // Spawn Console for the GameViewport
             if (engine->ConsoleClass && engine->GameViewport && !engine->GameViewport->ViewportConsole) {
                 if (auto consoleObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport)) {
@@ -62,7 +64,7 @@ namespace Cheat {
             } else if (engine->GameViewport->ViewportConsole) {
                 consoleSpawned = true;
             }
-            
+
             if (cheatSpawned && consoleSpawned) {
                 Cheat::Config::Features::AutoCheatManager = false;
                 DebugPrint("CheatManager and Console enabled successfully!");
@@ -78,7 +80,7 @@ namespace Cheat {
                 return false;
             }
         }
-        
+
         void Console::UpdateCheats(SDK::APlayerController* playerController) {
             if (!playerController) {
                 return;
@@ -92,7 +94,7 @@ namespace Cheat {
             // Get game objects
             auto myPawn = playerController->K2_GetPawn();
             auto playerPawn = static_cast<SDK::ARPlayerPawn*>(myPawn);
-            auto world = Cheat::Config::GameState::g_pWorld;
+            auto world = Cheat::Services::GameServices::GetWorld();
 
 
             // Capture original speeds on first run (when character is available)
@@ -275,6 +277,6 @@ namespace Cheat {
             LOG_INFO("- Insert: Toggle ImGui menu");
             LOG_INFO("- F9: Exit cheat system");
         }
-        
+
     } // namespace Utils
 } // namespace Cheat

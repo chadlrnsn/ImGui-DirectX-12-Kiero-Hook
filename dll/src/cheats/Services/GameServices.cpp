@@ -44,15 +44,8 @@ bool GameServices::Refresh(bool log) {
         }
     }
 
-    // Keep legacy Config::GameState updated for now (transition period)
-    Cheat::Config::GameState::g_pWorld = s_world;
-    Cheat::Config::GameState::g_pEngine = s_engine;
-    Cheat::Config::GameState::g_pMyController = s_controller;
-    Cheat::Config::GameState::g_pMyPawn = s_pawn;
-    Cheat::Config::GameState::g_pCachedPlayerPawn = s_rpawn;
-
+    // No longer backfilling Config::GameState with core pointers; use accessors
     UpdateWeaponCache(s_rpawn);
-
     return true;
 }
 
@@ -63,11 +56,7 @@ void GameServices::UpdateWeaponCache(SDK::ARPlayerPawn* pawn) {
         s_engineRifleScript = nullptr;
         s_isEngineRifle = false;
 
-        // legacy globals update
-        Cheat::Config::GameState::g_pCachedWeapon = nullptr;
-        Cheat::Config::GameState::g_pCachedWeaponScript = nullptr;
-        Cheat::Config::GameState::g_pCachedEngineRifleScript = nullptr;
-        Cheat::Config::GameState::g_bIsEngineRifle = false;
+        // no legacy globals update; runtime cache is owned here
         return;
     }
 
@@ -78,20 +67,13 @@ void GameServices::UpdateWeaponCache(SDK::ARPlayerPawn* pawn) {
         s_engineRifleScript = nullptr;
         s_isEngineRifle = false;
 
-        // update legacy globals
-        Cheat::Config::GameState::g_pCachedWeapon = s_weapon;
-        Cheat::Config::GameState::g_pCachedWeaponScript = nullptr;
-        Cheat::Config::GameState::g_pCachedEngineRifleScript = nullptr;
-        Cheat::Config::GameState::g_bIsEngineRifle = false;
+        // reset our runtime caches
 
         if (s_weapon && s_weapon->RuntimeWeaponScript) {
             s_weaponScript = s_weapon->RuntimeWeaponScript;
-            Cheat::Config::GameState::g_pCachedWeaponScript = s_weaponScript;
             if (s_weaponScript->IsA(SDK::UBP_EngineRifle_Script_C::StaticClass())) {
                 s_engineRifleScript = static_cast<SDK::UBP_EngineRifle_Script_C*>(s_weaponScript);
                 s_isEngineRifle = true;
-                Cheat::Config::GameState::g_pCachedEngineRifleScript = s_engineRifleScript;
-                Cheat::Config::GameState::g_bIsEngineRifle = true;
                 LOG_INFO("[WEAPON] Engine Rifle detected and cached!");
             }
         }

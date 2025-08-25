@@ -6,21 +6,10 @@
 namespace Cheat {
     namespace Config {
         namespace GameState {
-            // Define globals exactly once
-            SDK::UEngine* g_pEngine = nullptr;
-            SDK::UWorld* g_pWorld = nullptr;
-            SDK::APlayerController* g_pMyController = nullptr;
-            SDK::APawn* g_pMyPawn = nullptr;
-
+            // Targeting-only runtime data retained in Config
             std::vector<SDK::AActor*> g_TargetsList{};
             SDK::AActor* g_pCurrentTarget = nullptr;
             TargetInfo g_CurrentTargetInfo{};
-
-            SDK::ARPlayerPawn* g_pCachedPlayerPawn = nullptr;
-            SDK::ARWeapon* g_pCachedWeapon = nullptr;
-            SDK::URGWeaponScript* g_pCachedWeaponScript = nullptr;
-            SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript = nullptr;
-            bool g_bIsEngineRifle = false;
         }
 
         // =============================================================================
@@ -136,7 +125,7 @@ namespace Cheat {
             System::LastFrameTime = GetTickCount();
             System::LastPrintTime = GetTickCount();
 
-            // Clear game state
+            // Clear runtime targeting state
             ClearGameState();
 
             LOG_INFO("Configuration initialized successfully");
@@ -170,48 +159,14 @@ namespace Cheat {
         }
 
         void UpdateGameState() {
-            // Update world reference
-            GameState::g_pWorld = SDK::UWorld::GetWorld();
-            if (!GameState::g_pWorld) {
-                return;
-            }
-
-            // Update engine reference
-            GameState::g_pEngine = SDK::UEngine::GetEngine();
-
-            // Update game instance and player controller
-            if (GameState::g_pWorld->OwningGameInstance &&
-                GameState::g_pWorld->OwningGameInstance->LocalPlayers.Num() > 0) {
-
-                GameState::g_pMyController = GameState::g_pWorld->OwningGameInstance->LocalPlayers[0]->PlayerController;
-
-                if (GameState::g_pMyController) {
-                    // Update pawn references
-                    GameState::g_pMyPawn = GameState::g_pMyController->K2_GetPawn();
-
-                    // Update player pawn for weapon system
-                    GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(GameState::g_pMyPawn);
-                }
-            }
+            // Deprecated: Use Services::GameServices::Refresh instead
         }
 
         void ClearGameState() {
-            // Clear core game objects
-            GameState::g_pEngine = nullptr;
-            GameState::g_pWorld = nullptr;
-            GameState::g_pMyController = nullptr;
-            GameState::g_pMyPawn = nullptr;
-
-            // Clear targeting system
+            // Clear targeting system only
             GameState::g_TargetsList.clear();
             GameState::g_pCurrentTarget = nullptr;
-
-            // Clear weapon system
-            GameState::g_pCachedPlayerPawn = nullptr;
-            GameState::g_pCachedWeapon = nullptr;
-            GameState::g_pCachedWeaponScript = nullptr;
-            GameState::g_pCachedEngineRifleScript = nullptr;
-            GameState::g_bIsEngineRifle = false;
+            GameState::g_CurrentTargetInfo = TargetInfo{};
         }
 
     } // namespace Config

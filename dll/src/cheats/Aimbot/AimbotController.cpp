@@ -1,6 +1,7 @@
 #include "AimbotController.h"
 #include "MathUtils.h"
 #include "../Core/Config.h"
+#include "../Services/GameServices.h"
 #include <dev/validity.h>
 #include <dev/logger.h>
 #include <Windows.h>
@@ -42,10 +43,10 @@ void AimbotController::Update(float deltaTime) {
         return;
     }
 
-    // Use centralized game state (should be populated by MainLoop)
-    SDK::UWorld* world = Cheat::Config::GameState::g_pWorld;
-    SDK::APlayerController* playerController = Cheat::Config::GameState::g_pMyController;
-    SDK::ARPlayerPawn* playerPawn = Cheat::Config::GameState::g_pCachedPlayerPawn;
+    // Use GameServices for core objects
+    SDK::UWorld* world = Cheat::Services::GameServices::GetWorld();
+    SDK::APlayerController* playerController = Cheat::Services::GameServices::GetPlayerController();
+    SDK::ARPlayerPawn* playerPawn = Cheat::Services::GameServices::GetRPlayerPawn();
 
     // Debug: Check if centralized state is available
     // Optionally: add lightweight debug here if needed

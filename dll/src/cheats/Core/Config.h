@@ -56,27 +56,15 @@ namespace Cheat {
         }
         
         // =============================================================================
-        // GAME STATE GLOBALS (single-definition via extern)
+        // RUNTIME STATE (targeting-only, moved core object pointers to Services::GameServices)
         // =============================================================================
         namespace GameState {
-            // Core game objects
-            extern SDK::UEngine* g_pEngine;
-            extern SDK::UWorld* g_pWorld;
-            extern SDK::APlayerController* g_pMyController;
-            extern SDK::APawn* g_pMyPawn;
-            // Targeting system
+            // Targeting system (kept in Config)
             extern std::vector<SDK::AActor*> g_TargetsList;
             extern SDK::AActor* g_pCurrentTarget;
             extern TargetInfo g_CurrentTargetInfo;
-
-            // Weapon system
-            extern SDK::ARPlayerPawn* g_pCachedPlayerPawn;
-            extern SDK::ARWeapon* g_pCachedWeapon;
-            extern SDK::URGWeaponScript* g_pCachedWeaponScript;
-            extern SDK::UBP_EngineRifle_Script_C* g_pCachedEngineRifleScript;
-            extern bool g_bIsEngineRifle;
         }
-        
+
         // =============================================================================
         // AIMBOT CONFIGURATION
         // =============================================================================
