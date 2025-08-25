@@ -70,13 +70,18 @@ add_library(${DLL_NAME} SHARED
 set_output_directories(${DLL_NAME})
 add_unicode_definitions(${DLL_NAME})
 
-target_link_libraries(${DLL_NAME} PRIVATE 
+target_link_libraries(${DLL_NAME} PRIVATE
     imgui
     minhook
     fmt::fmt
     d3d12.lib
     dxgi.lib
 )
+
+# Generate PDB files in release mode
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_link_options(${DLL_NAME} PRIVATE "/DEBUG")
+endif()
 
 target_include_directories(${DLL_NAME} PRIVATE 
     ${imgui_SOURCE_DIR}

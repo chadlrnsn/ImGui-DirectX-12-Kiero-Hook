@@ -27,8 +27,8 @@
             "binaryDir": "${sourceDir}/out/build/windows-x64-release-2022",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_CXX_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG",
-                "CMAKE_C_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG"
+                "CMAKE_CXX_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG /Zi",
+                "CMAKE_C_FLAGS_RELEASE": "/W0 /O2 /DNDEBUG /Zi"
             }
         },
         {
