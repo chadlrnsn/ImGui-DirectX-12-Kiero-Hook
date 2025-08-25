@@ -183,9 +183,10 @@ namespace CheatMenu {
 
                         // Show original speeds if captured
                         if (Cheat::Config::Features::OriginalSpeedsSaved) {
-                            ImGui::Text("Original speeds: Walk=%.0f, Accel=%.0f",
+                            ImGui::Text("Original speeds: Walk=%.0f, Accel=%.0f, Decel=%.0f",
                                 Cheat::Config::Features::OriginalMaxWalkSpeed,
-                                Cheat::Config::Features::OriginalMaxAcceleration);
+                                Cheat::Config::Features::OriginalMaxAcceleration,
+                                Cheat::Config::Features::OriginalMaxDeceleration);
                         } else {
                             ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original speeds not captured yet");
                         }
@@ -216,8 +217,8 @@ namespace CheatMenu {
                         ImGui::Unindent();
                     }
 
-                    if (ImGui::Checkbox("High Critical Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
-                        LOG_INFO("GUI: High Critical Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
+                    if (ImGui::Checkbox("Crit Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
+                        LOG_INFO("GUI: Crit Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
                         Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a crit multiplier");

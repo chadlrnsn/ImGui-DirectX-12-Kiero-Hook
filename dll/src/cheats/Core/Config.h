@@ -127,6 +127,7 @@ namespace Cheat {
             extern float SpeedMultiplier;    // Speed multiplier (1.0 = normal, 2.0 = 2x, etc.)
             extern float OriginalMaxWalkSpeed;     // Original MaxWalkSpeed (saved at startup)
             extern float OriginalMaxAcceleration; // Original MaxAcceleration (saved at startup)
+            extern float OriginalMaxDeceleration; // Original MaxDeceleration (saved at startup)
             extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
 
             // Individual weapon modification flags

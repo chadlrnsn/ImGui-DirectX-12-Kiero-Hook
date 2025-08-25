@@ -66,6 +66,7 @@ namespace Cheat {
             float SpeedMultiplier = 2.0f;    // Default 2x speed
             float OriginalMaxWalkSpeed = 0.0f;     // Will be set at startup
             float OriginalMaxAcceleration = 0.0f;  // Will be set at startup
+            float OriginalMaxDeceleration = 0.0f;  // Will be set at startup
             bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
 
             // Individual weapon modification flags

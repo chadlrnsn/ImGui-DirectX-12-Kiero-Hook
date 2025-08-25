@@ -99,13 +99,16 @@ namespace Cheat {
             Cheat::Config::GameState::g_pMyCharacter = myCharacter;
 
             // Capture original speeds on first run (when character is available)
-            if (myCharacter && myCharacter->CharacterMovement && !Cheat::Config::Features::OriginalSpeedsSaved) {
-                Cheat::Config::Features::OriginalMaxWalkSpeed = myCharacter->CharacterMovement->MaxWalkSpeed;
-                Cheat::Config::Features::OriginalMaxAcceleration = myCharacter->CharacterMovement->MaxAcceleration;
+            if (playerPawn->GetRPawnMovementComponent() && !Cheat::Config::Features::OriginalSpeedsSaved) {
+                auto moveComp = playerPawn->GetRPawnMovementComponent();
+                auto maxSpeed = moveComp->MaxSpeed;
+                auto acceleration = moveComp->GroundAcceleration;
+                auto deceleration = moveComp->GroundDeceleration;
+                Cheat::Config::Features::OriginalMaxWalkSpeed = maxSpeed;
+                Cheat::Config::Features::OriginalMaxAcceleration = acceleration;
+                Cheat::Config::Features::OriginalMaxDeceleration = deceleration;
                 Cheat::Config::Features::OriginalSpeedsSaved = true;
-                LOG_INFO("Original speeds captured - Walk: %.0f, Acceleration: %.0f",
-                    Cheat::Config::Features::OriginalMaxWalkSpeed,
-                    Cheat::Config::Features::OriginalMaxAcceleration);
+                
             }
 
             // =============================================================================
@@ -147,29 +150,34 @@ namespace Cheat {
             }
 
             // Handle Speed Hack - direct character movement manipulation
-            if (myCharacter && myCharacter->CharacterMovement && Cheat::Config::Features::OriginalSpeedsSaved) {
+            if (playerPawn && playerPawn->GetRPawnMovementComponent() && Cheat::Config::Features::OriginalSpeedsSaved) {
                 if (Cheat::Config::Features::SpeedHack) {
                     float newWalkSpeed = Cheat::Config::Features::OriginalMaxWalkSpeed * Cheat::Config::Features::SpeedMultiplier;
                     float newAcceleration = Cheat::Config::Features::OriginalMaxAcceleration * Cheat::Config::Features::SpeedMultiplier;
+                    float newDeceleration = Cheat::Config::Features::OriginalMaxDeceleration * Cheat::Config::Features::SpeedMultiplier;
 
-                    myCharacter->CharacterMovement->MaxWalkSpeed = newWalkSpeed;
-                    myCharacter->CharacterMovement->MaxAcceleration = newAcceleration;
+                    auto moveComp = playerPawn->GetRPawnMovementComponent();
+                    moveComp->MaxSpeed = newWalkSpeed;
+                    moveComp->GroundAcceleration = newAcceleration;
+                    moveComp->GroundDeceleration = newDeceleration;
 
                     // Log state change
                     if (Cheat::Config::Features::SpeedHack != lastSpeedHackState) {
-                        LOG_INFO("Speed Hack enabled - %.1fx speed (Walk: %.0f, Accel: %.0f)",
-                            Cheat::Config::Features::SpeedMultiplier, newWalkSpeed, newAcceleration);
+                        LOG_INFO("Speed Hack enabled - %.1fx speed (Walk: %.0f, Accel: %.0f, Decel: %.0f)",
+                            Cheat::Config::Features::SpeedMultiplier, newWalkSpeed, newAcceleration, newDeceleration);
                         lastSpeedHackState = Cheat::Config::Features::SpeedHack;
                     }
                 } else {
                     // Reset to original speeds
-                    myCharacter->CharacterMovement->MaxWalkSpeed = Cheat::Config::Features::OriginalMaxWalkSpeed;
-                    myCharacter->CharacterMovement->MaxAcceleration = Cheat::Config::Features::OriginalMaxAcceleration;
+                    auto moveComp = playerPawn->GetRPawnMovementComponent();
+                    moveComp->MaxSpeed = Cheat::Config::Features::OriginalMaxWalkSpeed;
+                    moveComp->GroundAcceleration = Cheat::Config::Features::OriginalMaxAcceleration;
+                    moveComp->GroundDeceleration = Cheat::Config::Features::OriginalMaxDeceleration;
 
                     // Log state change
                     if (lastSpeedHackState) {
-                        LOG_INFO("Speed Hack disabled - reset to original speeds (Walk: %.0f, Accel: %.0f)",
-                            Cheat::Config::Features::OriginalMaxWalkSpeed, Cheat::Config::Features::OriginalMaxAcceleration);
+                        LOG_INFO("Speed Hack disabled - reset to original speeds (Walk: %.0f, Accel: %.0f, Decel: %.0f)",
+                            Cheat::Config::Features::OriginalMaxWalkSpeed, Cheat::Config::Features::OriginalMaxAcceleration, Cheat::Config::Features::OriginalMaxDeceleration);
                         lastSpeedHackState = Cheat::Config::Features::SpeedHack;
                     }
                 }
