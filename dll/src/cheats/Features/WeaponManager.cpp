@@ -276,10 +276,10 @@ namespace Cheat {
 
             // Reload
             if (InstantReload) {
-                primary->BaseReloadTime.BaseValue = 0.01f;
-                primary->BaseReloadTime.MinMaxRange.X = 0.01f;
-                primary->BaseReloadTime.MinMaxRange.Y = 0.01f;
-                primary->ReloadTimeDelta = 0.0f;
+                primary->BaseReloadTime.BaseValue = 0.1f;
+                primary->BaseReloadTime.MinMaxRange.X = 0.1f;
+                primary->BaseReloadTime.MinMaxRange.Y = 1.6f;
+                primary->ReloadTimeDelta = 0.1f;
             } else {
                 primary->BaseReloadTime.BaseValue = s_originalPrimarySettings.BaseReloadTime;
                 primary->BaseReloadTime.MinMaxRange.X = s_originalPrimarySettings.BaseReloadTimeMinRange;
