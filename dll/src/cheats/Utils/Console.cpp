@@ -136,7 +136,6 @@ namespace Cheat {
             // Static state tracking for toggles
             static bool lastGodModeState = false;
             static bool lastSpeedHackState = false;
-            static bool lastFlyHackState = false;
             static bool lastSlowImmunityState = false;
             static bool lastJumpHeightHackState = false;
             static bool lastDashSpeedHackState = false;
@@ -187,26 +186,6 @@ namespace Cheat {
             // Handle Movement Hacks - direct movement component manipulation
             if (playerPawn && playerPawn->GetRPawnMovementComponent() && Cheat::Config::Features::OriginalMovementValuesSaved) {
                 auto moveComp = playerPawn->GetRPawnMovementComponent();
-
-                // Handle Fly Hack
-                if (Cheat::Config::Features::FlyHack) {
-                    if (!lastFlyHackState) {
-                        moveComp->StartFlying();
-                        LOG_INFO("Fly Hack enabled - flight mode activated");
-                        lastFlyHackState = true;
-                    }
-
-                    // Apply air movement speed multipliers (same as ground speed multiplier for simplicity)
-                    if (Cheat::Config::Features::SpeedHack) {
-                        moveComp->AirMaxSpeed = moveComp->MaxSpeed * Cheat::Config::Features::SpeedMultiplier;
-                        moveComp->AirAcceleration = moveComp->GroundAcceleration * Cheat::Config::Features::SpeedMultiplier;
-                        moveComp->AirDeceleration = moveComp->GroundDeceleration * Cheat::Config::Features::SpeedMultiplier;
-                    }
-                } else if (lastFlyHackState) {
-                    moveComp->StopFlying();
-                    LOG_INFO("Fly Hack disabled - flight mode deactivated");
-                    lastFlyHackState = false;
-                }
 
                 // Handle Slow Immunity
                 if (Cheat::Config::Features::SlowImmunity) {

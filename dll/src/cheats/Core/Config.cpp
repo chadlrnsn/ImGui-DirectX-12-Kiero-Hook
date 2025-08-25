@@ -67,7 +67,6 @@ namespace Cheat {
             bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
 
             // Movement hack configuration
-            bool FlyHack = false;             // Flight mode disabled by default
             bool SlowImmunity = false;        // Slow immunity disabled by default
             bool JumpHeightHack = false;      // Jump height hack disabled by default
             bool DashSpeedHack = false;       // Dash speed hack disabled by default

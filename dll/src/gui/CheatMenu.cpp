@@ -140,7 +140,7 @@ namespace CheatMenu {
                     ImGui::Text("Targeting Settings");
                     ImGui::SliderFloat("Max Distance", &Cheat::Config::Aimbot::maxDistance, 1000.0f, 100000.0f);
                     //ImGui::SliderFloat("FOV Radius (kinda buggy, will fix soon)", &Cheat::Config::Aimbot::fovRadius, 1.0f, 180.0f);
-                    ImGui::SliderFloat("Turn Speed (Lower = Smoother, Higher = Fast Snapping)", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 10000.0f);
+                    // ImGui::SliderFloat("Turn Speed (Lower = Smoother, Higher = Fast Snapping)", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 10000.0f);
 
                     // ImGui::Spacing();
                     // ImGui::Text("Aim Zones");
@@ -194,13 +194,6 @@ namespace CheatMenu {
                     ImGui::Separator();
                     ImGui::Text("Movement Hacks");
                     ImGui::Separator();
-
-                    if (ImGui::Checkbox("Fly Hack", &Cheat::Config::Features::FlyHack)) {
-                        LOG_INFO("GUI: Fly Hack %s", Cheat::Config::Features::FlyHack ? "ENABLED" : "DISABLED");
-                    }
-                    if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Enable flight mode - uses same speed multiplier as Speed Hack");
-                    }
 
                     if (ImGui::Checkbox("Slow Immunity", &Cheat::Config::Features::SlowImmunity)) {
                         LOG_INFO("GUI: Slow Immunity %s", Cheat::Config::Features::SlowImmunity ? "ENABLED" : "DISABLED");
@@ -380,7 +373,6 @@ namespace CheatMenu {
                         Cheat::Config::Features::SpeedMultiplier);
                     ImGui::Text("Movement Hacks:");
                     ImGui::Indent();
-                    ImGui::Text("- Fly Hack: %s", Cheat::Config::Features::FlyHack ? "ON" : "OFF");
                     ImGui::Text("- Slow Immunity: %s", Cheat::Config::Features::SlowImmunity ? "ON" : "OFF");
                     ImGui::Text("- Jump Height Hack: %s (%.1fx)",
                         Cheat::Config::Features::JumpHeightHack ? "ON" : "OFF",

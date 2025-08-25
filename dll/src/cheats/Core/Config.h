@@ -127,7 +127,6 @@ namespace Cheat {
             extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
 
             // Movement hack configuration
-            extern bool FlyHack;             // Enable/disable flight mode
             extern bool SlowImmunity;        // Toggle slow immunity
             extern bool JumpHeightHack;      // Enable jump height modification
             extern bool DashSpeedHack;       // Enable dash speed modification
