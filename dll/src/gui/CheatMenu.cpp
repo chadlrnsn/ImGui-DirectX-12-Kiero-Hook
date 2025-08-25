@@ -3,7 +3,7 @@
 #include "../cheats/Utils/Input.h"
 #include <imgui.h>
 #include <dev/logger.h>
-#include "../cheats/Features/WeaponManager.h"
+#include "../cheats/Features/WeaponService.h"
 
 namespace CheatMenu {
 
@@ -223,57 +223,57 @@ namespace CheatMenu {
 
                     if (ImGui::Checkbox("Infinite Ammo", &Cheat::Config::Features::InfiniteAmmo)) {
                         LOG_INFO("GUI: Infinite Ammo %s", Cheat::Config::Features::InfiniteAmmo ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("No ammo cost when firing");
 
                     if (ImGui::Checkbox("Increased Damage", &Cheat::Config::Features::IncreasedDamage)) {
                         LOG_INFO("GUI: Increased Damage %s", Cheat::Config::Features::IncreasedDamage ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a damage multiplier");
                     if (Cheat::Config::Features::IncreasedDamage) {
                         ImGui::Indent();
                         if (ImGui::SliderFloat("Damage Multiplier", &Cheat::Config::Features::DamageMultiplier, 0.1f, 10.0f, "x%.2f")) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                            Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                         }
                         ImGui::Unindent();
                     }
 
                     if (ImGui::Checkbox("Crit Multiplier", &Cheat::Config::Features::HighCritMultiplier)) {
                         LOG_INFO("GUI: Crit Multiplier %s", Cheat::Config::Features::HighCritMultiplier ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Use slider to apply a crit multiplier");
                     if (Cheat::Config::Features::HighCritMultiplier) {
                         ImGui::Indent();
                         if (ImGui::SliderFloat("Crit Multiplier", &Cheat::Config::Features::CritMultiplier, 0.1f, 10.0f, "x%.2f")) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                            Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                         }
                         ImGui::Unindent();
                     }
 
                     if (ImGui::Checkbox("Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Override base rate of fire using the slider below");
                     if (Cheat::Config::Features::RateOfFireOverride) {
                         ImGui::Indent();
                         if (ImGui::SliderFloat("Rate of Fire Value", &Cheat::Config::Features::RateOfFireValue, 0.1f, 100.0f)) {
-                            Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                            Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                         }
                         ImGui::Unindent();
                     }
 
                     if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
                         LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("No weapon cooldown");
 
                     if (ImGui::Checkbox("No Recoil", &Cheat::Config::Features::NoRecoil)) {
                         LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
+                        Cheat::Features::WeaponService::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + no spread");
 

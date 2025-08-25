@@ -1,6 +1,6 @@
 #include "CheatMain.h"
 #include "Config.h"
-#include "../Features/WeaponManager.h"
+#include "../Features/WeaponService.h"
 #include "../Aimbot/AimbotController.h"
 #include "../Analysis/BoneAnalyzer.h"
 #include "../Utils/Console.h"
@@ -157,8 +157,8 @@ namespace Cheat {
             // Initialize bone analyzer system
             BoneAnalyzer::Initialize();
 
-            // Initialize weapon manager
-            Features::WeaponManager::Initialize();
+            // Initialize weapon service
+            Features::WeaponService::Initialize();
 
             return true;
         }
@@ -177,7 +177,7 @@ namespace Cheat {
 
             // Handle log weapon stats key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::LogWeaponStats)) {
-                Features::WeaponManager::LogAllWeaponStats();
+                Features::WeaponService::LogAllWeaponStats();
             }
         }
 
@@ -185,8 +185,8 @@ namespace Cheat {
             // Update cheat toggles (God Mode, Speed Hack, etc.)
             Cheat::Services::PlayerEffectsService::Update(Cheat::Services::GameServices::GetPlayerController());
 
-            // Update weapon manager
-            Features::WeaponManager::Update(Cheat::Services::GameServices::GetRPlayerPawn());
+            // Update weapon service
+            Features::WeaponService::Update();
 
             // Update aimbot system
             AimbotController::Update(deltaTime);
