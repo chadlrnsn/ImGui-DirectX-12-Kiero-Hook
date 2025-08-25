@@ -126,6 +126,23 @@ namespace Cheat {
             extern  SDK::FRMutableFloat originalMovementSpeedModifier; // Original movement speed modifier (overwritten at startup)
             extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
 
+            // Movement hack configuration
+            extern bool FlyHack;             // Enable/disable flight mode
+            extern bool SlowImmunity;        // Toggle slow immunity
+            extern bool JumpHeightHack;      // Enable jump height modification
+            extern bool DashSpeedHack;       // Enable dash speed modification
+
+            // Movement multipliers
+            extern float JumpHeightMultiplier;   // Jump height multiplier (1.0 = normal, 2.0 = 2x, etc.)
+            extern float DashSpeedMultiplier;    // Dash speed multiplier (1.0 = normal, 2.0 = 2x, etc.)
+
+            // Original movement values for restoration
+            extern float originalJumpHeight;     // Original jump height value
+            extern float originalDashSpeed;      // Original dash speed value
+            extern float originalDashTime;       // Original dash time value
+            extern bool originalSlowImmunity;    // Original slow immunity state
+            extern bool OriginalMovementValuesSaved; // Whether original movement values have been captured
+
             // Individual weapon modification flags
             extern bool InfiniteAmmo;        // No ammo cost
             extern bool IncreasedDamage;     // Massively increased damage

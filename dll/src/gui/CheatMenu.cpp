@@ -190,6 +190,74 @@ namespace CheatMenu {
                         ImGui::Unindent();
                     }
 
+                    // Movement Hacks Section
+                    ImGui::Separator();
+                    ImGui::Text("Movement Hacks");
+                    ImGui::Separator();
+
+                    if (ImGui::Checkbox("Fly Hack", &Cheat::Config::Features::FlyHack)) {
+                        LOG_INFO("GUI: Fly Hack %s", Cheat::Config::Features::FlyHack ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Enable flight mode - uses same speed multiplier as Speed Hack");
+                    }
+
+                    if (ImGui::Checkbox("Slow Immunity", &Cheat::Config::Features::SlowImmunity)) {
+                        LOG_INFO("GUI: Slow Immunity %s", Cheat::Config::Features::SlowImmunity ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Immunity to slow effects");
+                    }
+
+                    if (ImGui::Checkbox("Jump Height Hack", &Cheat::Config::Features::JumpHeightHack)) {
+                        LOG_INFO("GUI: Jump Height Hack %s", Cheat::Config::Features::JumpHeightHack ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Multiply jump height");
+                    }
+
+                    // Jump height multiplier slider (only show when jump height hack is enabled)
+                    if (Cheat::Config::Features::JumpHeightHack) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Jump Height Multiplier", &Cheat::Config::Features::JumpHeightMultiplier, 0.1f, 10.0f, "%.1fx")) {
+                            LOG_INFO("GUI: Jump Height Multiplier changed to %.1fx", Cheat::Config::Features::JumpHeightMultiplier);
+                        }
+                        if (ImGui::IsItemHovered()) {
+                            ImGui::SetTooltip("1.0x = normal jump, 2.0x = double jump height, etc.");
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    if (ImGui::Checkbox("Dash Distance", &Cheat::Config::Features::DashSpeedHack)) {
+                        LOG_INFO("GUI: Dash Speed Hack %s", Cheat::Config::Features::DashSpeedHack ? "ENABLED" : "DISABLED");
+                    }
+                    if (ImGui::IsItemHovered()) {
+                        ImGui::SetTooltip("Multiply dash distance");
+                    }
+
+                    // Dash speed multiplier slider (only show when dash speed hack is enabled)
+                    if (Cheat::Config::Features::DashSpeedHack) {
+                        ImGui::Indent();
+                        if (ImGui::SliderFloat("Dash Distance Multiplier", &Cheat::Config::Features::DashSpeedMultiplier, 0.1f, 10.0f, "%.1fx")) {
+                            LOG_INFO("GUI: Dash Speed Multiplier changed to %.1fx", Cheat::Config::Features::DashSpeedMultiplier);
+                        }
+                        if (ImGui::IsItemHovered()) {
+                            ImGui::SetTooltip("1.0x = normal dash, 2.0x = double dash speed/time, etc.");
+                        }
+                        ImGui::Unindent();
+                    }
+
+                    // Show original movement values if captured
+                    if (Cheat::Config::Features::OriginalMovementValuesSaved) {
+                        ImGui::Text("Original values: Jump=%.1f, Dash=%.1f/%.1f, SlowImmunity=%s",
+                            Cheat::Config::Features::originalJumpHeight,
+                            Cheat::Config::Features::originalDashSpeed,
+                            Cheat::Config::Features::originalDashTime,
+                            Cheat::Config::Features::originalSlowImmunity ? "true" : "false");
+                    } else {
+                        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original movement values not captured yet");
+                    }
+
                     // Weapon Modifications Section
                     ImGui::Separator();
                     ImGui::Text("Weapon Modifications");
@@ -310,6 +378,17 @@ namespace CheatMenu {
                     ImGui::Text("Speed Hack: %s (%.1fx)",
                         Cheat::Config::Features::SpeedHack ? "ENABLED" : "Disabled",
                         Cheat::Config::Features::SpeedMultiplier);
+                    ImGui::Text("Movement Hacks:");
+                    ImGui::Indent();
+                    ImGui::Text("- Fly Hack: %s", Cheat::Config::Features::FlyHack ? "ON" : "OFF");
+                    ImGui::Text("- Slow Immunity: %s", Cheat::Config::Features::SlowImmunity ? "ON" : "OFF");
+                    ImGui::Text("- Jump Height Hack: %s (%.1fx)",
+                        Cheat::Config::Features::JumpHeightHack ? "ON" : "OFF",
+                        Cheat::Config::Features::JumpHeightMultiplier);
+                    ImGui::Text("- Dash Speed Hack: %s (%.1fx)",
+                        Cheat::Config::Features::DashSpeedHack ? "ON" : "OFF",
+                        Cheat::Config::Features::DashSpeedMultiplier);
+                    ImGui::Unindent();
                     ImGui::Text("Weapon Modifications:");
                     ImGui::Indent();
                     ImGui::Text("- Infinite Ammo: %s", Cheat::Config::Features::InfiniteAmmo ? "ON" : "OFF");
@@ -325,6 +404,13 @@ namespace CheatMenu {
 
                     if (Cheat::Config::Features::OriginalSpeedsSaved) {
                         ImGui::Text("Original Speeds: MovementSpeedModifier=%.1f", Cheat::Config::Features::originalMovementSpeedModifier);
+                    }
+                    if (Cheat::Config::Features::OriginalMovementValuesSaved) {
+                        ImGui::Text("Original Movement: Jump=%.1f, Dash=%.1f/%.1f, SlowImmunity=%s",
+                            Cheat::Config::Features::originalJumpHeight,
+                            Cheat::Config::Features::originalDashSpeed,
+                            Cheat::Config::Features::originalDashTime,
+                            Cheat::Config::Features::originalSlowImmunity ? "true" : "false");
                     }
 
                     ImGui::Spacing();

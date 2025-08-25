@@ -66,6 +66,23 @@ namespace Cheat {
  SDK::FRMutableFloat originalMovementSpeedModifier = SDK::FRMutableFloat{ 1.0f, 1.0f, 1.0f }; // Original movement speed modifier (overwritten at startup)
             bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
 
+            // Movement hack configuration
+            bool FlyHack = false;             // Flight mode disabled by default
+            bool SlowImmunity = false;        // Slow immunity disabled by default
+            bool JumpHeightHack = false;      // Jump height hack disabled by default
+            bool DashSpeedHack = false;       // Dash speed hack disabled by default
+
+            // Movement multipliers
+            float JumpHeightMultiplier = 2.0f;   // Default 2x jump height
+            float DashSpeedMultiplier = 2.0f;    // Default 2x dash speed
+
+            // Original movement values for restoration
+            float originalJumpHeight = 0.0f;     // Will be captured at runtime
+            float originalDashSpeed = 0.0f;      // Will be captured at runtime
+            float originalDashTime = 0.0f;       // Will be captured at runtime
+            bool originalSlowImmunity = false;   // Will be captured at runtime
+            bool OriginalMovementValuesSaved = false; // Whether original movement values have been captured
+
             // Individual weapon modification flags
             bool InfiniteAmmo = false;        // No ammo cost
             bool IncreasedDamage = false;     // Massively increased damage
