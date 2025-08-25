@@ -12,10 +12,15 @@
 #include "Tabs/MiscTab.h"
 #include "Tabs/DebugTab.h"
 #include <cheats/Features/WeaponService.h>
+#include "../cheats/Services/GameServices.h"
 #include "../dev/imgui/IconsFontAwesome5.h"
 
 static const char* kTabIconAimbot   = ICON_FA_CROSSHAIRS;
 static const char* kTabIconWeapons  = ICON_FA_BOMB;
+namespace {
+    bool g_inputBlockedByMenu = false;
+}
+
 static const char* kTabIconGameplay = ICON_FA_WALKING;
 static const char* kTabIconOptions  = ICON_FA_COG;
 static const char* kTabIconMisc     = ICON_FA_MAGIC;
@@ -119,6 +124,28 @@ namespace CheatMenu {
 
     void Toggle() {
         show_menu = !show_menu;
+        auto* pc = Cheat::Services::GameServices::GetPlayerController();
+        if (!pc) return;
+
+        // Block/unblock only the game input (not ImGui)
+        if (show_menu && !g_inputBlockedByMenu) {
+            // Block game input
+            pc->ClientIgnoreLookInput(true);
+            pc->ClientIgnoreMoveInput(true);
+            pc->bShowMouseCursor = true;
+            pc->bEnableClickEvents = true;
+            pc->bEnableMouseOverEvents = true;
+            g_inputBlockedByMenu = true;
+        }
+        else if (!show_menu && g_inputBlockedByMenu) {
+            // Unblock game input
+            pc->ClientIgnoreLookInput(false);
+            pc->ClientIgnoreMoveInput(false);
+            pc->bShowMouseCursor = false;
+            pc->bEnableClickEvents = false;
+            pc->bEnableMouseOverEvents = false;
+            g_inputBlockedByMenu = false;
+        }
     }
 
     bool IsVisible() {
