@@ -7,7 +7,7 @@ namespace Cheat {
     namespace Features {
 
         // Static member definitions
-        SDK::ARPlayerPawn* WeaponManager::s_cachedCharacter = nullptr;
+        SDK::ARPlayerPawn* WeaponManager::s_cachedPlayerPawn = nullptr;
         SDK::ARWeapon* WeaponManager::s_cachedWeapon = nullptr;
         SDK::URGWeaponScript* WeaponManager::s_cachedWeaponScript = nullptr;
         SDK::UBP_EngineRifle_Script_C* WeaponManager::s_cachedEngineRifleScript = nullptr;
@@ -66,7 +66,7 @@ namespace Cheat {
         }
 
         void WeaponManager::Shutdown() {
-            s_cachedCharacter = nullptr;
+            s_cachedPlayerPawn = nullptr;
             s_cachedWeapon = nullptr;
             s_cachedWeaponScript = nullptr;
             s_cachedEngineRifleScript = nullptr;
@@ -114,7 +114,7 @@ namespace Cheat {
         void WeaponManager::UpdateWeaponCache(SDK::ARPlayerPawn* character) {
             if (!character) {
                 // Clear both local and global caches
-                s_cachedCharacter = nullptr;
+                s_cachedPlayerPawn = nullptr;
                 s_cachedWeapon = nullptr;
                 s_cachedWeaponScript = nullptr;
                 s_cachedEngineRifleScript = nullptr;
@@ -128,7 +128,7 @@ namespace Cheat {
                 return;
             }
             // Update both local and global character cache
-            s_cachedCharacter = character;
+            s_cachedPlayerPawn = character;
             Cheat::Config::GameState::g_pCachedPlayerPawn = character;
 
             // Update weapon cache

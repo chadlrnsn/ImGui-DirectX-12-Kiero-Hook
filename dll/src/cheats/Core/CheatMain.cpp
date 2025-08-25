@@ -118,7 +118,6 @@ namespace Cheat {
                 if (Config::GameState::g_pMyController) {
                     // Update pawn references
                     Config::GameState::g_pMyPawn = Config::GameState::g_pMyController->K2_GetPawn();
-                    Config::GameState::g_pMyCharacter = static_cast<SDK::ACharacter*>(Config::GameState::g_pMyPawn);
 
                     // Update player pawn for weapon system and aimbot
                     Config::GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(Config::GameState::g_pMyPawn);
@@ -128,21 +127,12 @@ namespace Cheat {
                         if (Config::GameState::g_pMyPawn) {
                             std::cout << "MyPawn name: " << Config::GameState::g_pMyPawn->GetName() << std::endl;
                         }
-                        std::cout << "MyCharacter address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyCharacter) << std::dec << std::endl;
                     }
                 }
             } else {
                 if (log) {
                     std::cout << "Warning: OwningGameInstance or LocalPlayers not available" << std::endl;
                 }
-            }
-
-            if (Config::GameState::g_pMyCharacter == nullptr) {
-                if (log) std::cerr << "Error: MyCharacter not found" << std::endl;
-                return false;
-            }
-            if (log) {
-                std::cout << "MyCharacter address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyCharacter) << std::dec << std::endl;
             }
 
             return true;

@@ -11,7 +11,6 @@ namespace Cheat {
             SDK::UWorld* g_pWorld = nullptr;
             SDK::APlayerController* g_pMyController = nullptr;
             SDK::APawn* g_pMyPawn = nullptr;
-            SDK::ACharacter* g_pMyCharacter = nullptr;
 
             std::vector<SDK::AActor*> g_TargetsList{};
             SDK::AActor* g_pCurrentTarget = nullptr;
@@ -64,9 +63,7 @@ namespace Cheat {
 
             // Speed hack configuration
             float SpeedMultiplier = 2.0f;    // Default 2x speed
-            float OriginalMaxWalkSpeed = 0.0f;     // Will be set at startup
-            float OriginalMaxAcceleration = 0.0f;  // Will be set at startup
-            float OriginalMaxDeceleration = 0.0f;  // Will be set at startup
+ SDK::FRMutableFloat originalMovementSpeedModifier = SDK::FRMutableFloat{ 1.0f, 1.0f, 1.0f }; // Original movement speed modifier (overwritten at startup)
             bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
 
             // Individual weapon modification flags
@@ -159,7 +156,6 @@ namespace Cheat {
                 if (GameState::g_pMyController) {
                     // Update pawn references
                     GameState::g_pMyPawn = GameState::g_pMyController->K2_GetPawn();
-                    GameState::g_pMyCharacter = static_cast<SDK::ACharacter*>(GameState::g_pMyPawn);
 
                     // Update player pawn for weapon system
                     GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(GameState::g_pMyPawn);
@@ -173,7 +169,6 @@ namespace Cheat {
             GameState::g_pWorld = nullptr;
             GameState::g_pMyController = nullptr;
             GameState::g_pMyPawn = nullptr;
-            GameState::g_pMyCharacter = nullptr;
 
             // Clear targeting system
             GameState::g_TargetsList.clear();

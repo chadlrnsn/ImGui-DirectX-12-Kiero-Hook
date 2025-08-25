@@ -74,7 +74,7 @@ namespace Cheat {
 
         private:
             // Cached weapon references
-            static SDK::ARPlayerPawn* s_cachedCharacter;
+            static SDK::ARPlayerPawn* s_cachedPlayerPawn;
             static SDK::ARWeapon* s_cachedWeapon;
             static SDK::URGWeaponScript* s_cachedWeaponScript;
             static SDK::UBP_EngineRifle_Script_C* s_cachedEngineRifleScript;
