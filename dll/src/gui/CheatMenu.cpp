@@ -179,7 +179,6 @@ namespace CheatMenu {
 
         // Apply theme
         ApplyCheatMenuTheme();
-
         // Main cheat window
         if (ImGui::Begin("Cheat Menu", &show_menu, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings)) {
             // Scale window size based on GUI scale for better usability
