@@ -35,13 +35,24 @@ namespace Cheat {
             inline static BYTE DumpBones = VK_F3;           // Dump enemy bones
             inline static BYTE ShowBoneDB = VK_F4;          // Display bone database
             inline static BYTE LogWeaponStats = VK_F5;      // Log all weapon stats for debugging
-            
-            // Aimbot controls
-            inline static BYTE AimbotTrigger = VK_XBUTTON1;  // Mouse4 - Hold to aim
-            
+
+            // Aimbot controls (configurable)
+            extern BYTE AimbotTrigger;                       // Hold to aim (configurable, default: Mouse4)
+
             // System controls
             inline static BYTE MenuToggle = VK_INSERT;       // Toggle ImGui menu
             inline static BYTE ExitCheat = VK_F9;           // Exit cheat system
+
+            // Hotkey configuration state
+            extern bool IsCapturingHotkey;                   // True when waiting for user to press a key
+            extern BYTE* CurrentHotkeyBeingSet;              // Pointer to the hotkey variable being configured
+        }
+
+        // =============================================================================
+        // GUI CONFIGURATION
+        // =============================================================================
+        namespace GUI {
+            extern float Scale;                              // GUI scale multiplier (1.0 = normal, 2.0 = double size)
         }
         
         // =============================================================================
@@ -125,6 +136,22 @@ namespace Cheat {
             extern float SpeedMultiplier;    // Speed multiplier (1.0 = normal, 2.0 = 2x, etc.)
             extern  SDK::FRMutableFloat originalMovementSpeedModifier; // Original movement speed modifier (overwritten at startup)
             extern bool OriginalSpeedsSaved;      // Whether original speeds have been captured
+
+            // Movement hack configuration
+            extern bool SlowImmunity;        // Toggle slow immunity
+            extern bool JumpHeightHack;      // Enable jump height modification
+            extern bool DashSpeedHack;       // Enable dash speed modification
+
+            // Movement multipliers
+            extern float JumpHeightMultiplier;   // Jump height multiplier (1.0 = normal, 2.0 = 2x, etc.)
+            extern float DashSpeedMultiplier;    // Dash speed multiplier (1.0 = normal, 2.0 = 2x, etc.)
+
+            // Original movement values for restoration
+            extern float originalJumpHeight;     // Original jump height value
+            extern float originalDashSpeed;      // Original dash speed value
+            extern float originalDashTime;       // Original dash time value
+            extern bool originalSlowImmunity;    // Original slow immunity state
+            extern bool OriginalMovementValuesSaved; // Whether original movement values have been captured
 
             // Individual weapon modification flags
             extern bool InfiniteAmmo;        // No ammo cost

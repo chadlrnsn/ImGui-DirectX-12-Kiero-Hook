@@ -24,6 +24,22 @@ namespace Cheat {
         }
 
         // =============================================================================
+        // HOTKEY CONFIGURATION - Define configurable hotkeys
+        // =============================================================================
+        namespace Hotkeys {
+            BYTE AimbotTrigger = VK_XBUTTON1;               // Default: Mouse4
+            bool IsCapturingHotkey = false;
+            BYTE* CurrentHotkeyBeingSet = nullptr;
+        }
+
+        // =============================================================================
+        // GUI CONFIGURATION - Define GUI settings
+        // =============================================================================
+        namespace GUI {
+            float Scale = 1.5f;                             // Default: 1.5x scale for better visibility on high-DPI displays
+        }
+
+        // =============================================================================
         // AIMBOT CONFIGURATION - Define once here
         // =============================================================================
         namespace Aimbot {
@@ -65,6 +81,22 @@ namespace Cheat {
             float SpeedMultiplier = 2.0f;    // Default 2x speed
  SDK::FRMutableFloat originalMovementSpeedModifier = SDK::FRMutableFloat{ 1.0f, 1.0f, 1.0f }; // Original movement speed modifier (overwritten at startup)
             bool OriginalSpeedsSaved = false;      // Whether original speeds have been captured
+
+            // Movement hack configuration
+            bool SlowImmunity = false;        // Slow immunity disabled by default
+            bool JumpHeightHack = false;      // Jump height hack disabled by default
+            bool DashSpeedHack = false;       // Dash speed hack disabled by default
+
+            // Movement multipliers
+            float JumpHeightMultiplier = 2.0f;   // Default 2x jump height
+            float DashSpeedMultiplier = 2.0f;    // Default 2x dash speed
+
+            // Original movement values for restoration
+            float originalJumpHeight = 0.0f;     // Will be captured at runtime
+            float originalDashSpeed = 0.0f;      // Will be captured at runtime
+            float originalDashTime = 0.0f;       // Will be captured at runtime
+            bool originalSlowImmunity = false;   // Will be captured at runtime
+            bool OriginalMovementValuesSaved = false; // Whether original movement values have been captured
 
             // Individual weapon modification flags
             bool InfiniteAmmo = false;        // No ammo cost

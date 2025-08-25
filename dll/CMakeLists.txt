@@ -28,7 +28,7 @@ target_include_directories(imgui PUBLIC
 ) 
 
 
-set(DLL_NAME "${PROJECT_NAME}-ImGui")
+set(DLL_NAME "Abyssus")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

@@ -1,6 +1,7 @@
 #include "Console.h"
 #include "../Core/Config.h"
 #include "../Features/WeaponManager.h"
+#include "Input.h"
 #include <iostream>
 #include <dev/logger.h>
 
@@ -100,7 +101,22 @@ namespace Cheat {
                 auto moveComp = playerPawn->GetRPawnMovementComponent();
                 Cheat::Config::Features::originalMovementSpeedModifier = moveComp->MovementSpeedModifier;
                 Cheat::Config::Features::OriginalSpeedsSaved = true;
-                
+
+            }
+
+            // Capture original movement values on first run (when character is available)
+            if (playerPawn && playerPawn->GetRPawnMovementComponent() && !Cheat::Config::Features::OriginalMovementValuesSaved) {
+                auto moveComp = playerPawn->GetRPawnMovementComponent();
+                Cheat::Config::Features::originalJumpHeight = moveComp->JumpHeight;
+                Cheat::Config::Features::originalDashSpeed = moveComp->DashSpeed;
+                Cheat::Config::Features::originalDashTime = moveComp->DashTime;
+                Cheat::Config::Features::originalSlowImmunity = moveComp->bSlowImmunity;
+                Cheat::Config::Features::OriginalMovementValuesSaved = true;
+                LOG_INFO("Original movement values captured: Jump=%.1f, Dash=%.1f/%.1f, SlowImmunity=%s",
+                    Cheat::Config::Features::originalJumpHeight,
+                    Cheat::Config::Features::originalDashSpeed,
+                    Cheat::Config::Features::originalDashTime,
+                    Cheat::Config::Features::originalSlowImmunity ? "true" : "false");
             }
 
             // =============================================================================
@@ -121,6 +137,9 @@ namespace Cheat {
             // Static state tracking for toggles
             static bool lastGodModeState = false;
             static bool lastSpeedHackState = false;
+            static bool lastSlowImmunityState = false;
+            static bool lastJumpHeightHackState = false;
+            static bool lastDashSpeedHackState = false;
 
             // =============================================================================
             // DIRECT CHEAT IMPLEMENTATION (no CheatManager needed)
@@ -155,12 +174,64 @@ namespace Cheat {
                 } else {
                     // Reset to original speeds
                     auto moveComp = playerPawn->GetRPawnMovementComponent();
-                    moveComp->MovementSpeedModifier = SDK::FRMutableFloat{ 1.0f, 1.0f, 1.0f };
+                    moveComp->MovementSpeedModifier = Cheat::Config::Features::originalMovementSpeedModifier;
 
                     // Log state change
                     if (lastSpeedHackState) {
-                        LOG_INFO("Speed Hack disabled - reset to original speeds (MovementSpeedModifier: %.1f)", Cheat::Config::Features::originalMovementSpeedModifier);
+                        LOG_INFO("Speed Hack disabled - reset to original speeds (MovementSpeedModifier: %.1f)", Cheat::Config::Features::originalMovementSpeedModifier.CurrentValue);
                         lastSpeedHackState = Cheat::Config::Features::SpeedHack;
+                    }
+                }
+            }
+
+            // Handle Movement Hacks - direct movement component manipulation
+            if (playerPawn && playerPawn->GetRPawnMovementComponent() && Cheat::Config::Features::OriginalMovementValuesSaved) {
+                auto moveComp = playerPawn->GetRPawnMovementComponent();
+
+                // Handle Slow Immunity
+                if (Cheat::Config::Features::SlowImmunity) {
+                    moveComp->bSlowImmunity = true;
+                    if (!lastSlowImmunityState) {
+                        LOG_INFO("Slow Immunity enabled");
+                        lastSlowImmunityState = true;
+                    }
+                } else {
+                    moveComp->bSlowImmunity = Cheat::Config::Features::originalSlowImmunity;
+                    if (lastSlowImmunityState) {
+                        LOG_INFO("Slow Immunity disabled - restored to original state");
+                        lastSlowImmunityState = false;
+                    }
+                }
+
+                // Handle Jump Height Hack
+                if (Cheat::Config::Features::JumpHeightHack) {
+                    moveComp->JumpHeight = Cheat::Config::Features::originalJumpHeight * Cheat::Config::Features::JumpHeightMultiplier;
+                    if (!lastJumpHeightHackState) {
+                        LOG_INFO("Jump Height Hack enabled - %.1fx jump height", Cheat::Config::Features::JumpHeightMultiplier);
+                        lastJumpHeightHackState = true;
+                    }
+                } else {
+                    moveComp->JumpHeight = Cheat::Config::Features::originalJumpHeight;
+                    if (lastJumpHeightHackState) {
+                        LOG_INFO("Jump Height Hack disabled - restored to original height");
+                        lastJumpHeightHackState = false;
+                    }
+                }
+
+                // Handle Dash Speed Hack
+                if (Cheat::Config::Features::DashSpeedHack) {
+                    moveComp->DashSpeed = Cheat::Config::Features::originalDashSpeed * Cheat::Config::Features::DashSpeedMultiplier;
+                    moveComp->DashTime = Cheat::Config::Features::originalDashTime * Cheat::Config::Features::DashSpeedMultiplier;
+                    if (!lastDashSpeedHackState) {
+                        LOG_INFO("Dash Speed Hack enabled - %.1fx dash speed/time", Cheat::Config::Features::DashSpeedMultiplier);
+                        lastDashSpeedHackState = true;
+                    }
+                } else {
+                    moveComp->DashSpeed = Cheat::Config::Features::originalDashSpeed;
+                    moveComp->DashTime = Cheat::Config::Features::originalDashTime;
+                    if (lastDashSpeedHackState) {
+                        LOG_INFO("Dash Speed Hack disabled - restored to original dash values");
+                        lastDashSpeedHackState = false;
                     }
                 }
             }
@@ -201,7 +272,7 @@ namespace Cheat {
             LOG_INFO("- F2: Toggle aimbot on/off");
             LOG_INFO("- F3: Dump enemy bones");
             LOG_INFO("- F4: Display bone database status");
-            LOG_INFO("- Mouse4: Hold to activate aimbot");
+            LOG_INFO("- %s: Hold to activate aimbot", Input::GetKeyName(Cheat::Config::Hotkeys::AimbotTrigger));
             LOG_INFO("- Insert: Toggle ImGui menu");
             LOG_INFO("- F9: Exit cheat system");
         }
