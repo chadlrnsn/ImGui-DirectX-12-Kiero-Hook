@@ -18,7 +18,6 @@
 static const char* kTabIconAimbot   = ICON_FA_CROSSHAIRS;
 static const char* kTabIconWeapons  = ICON_FA_BOMB;
 namespace {
-    bool g_inputBlockedByMenu = false;
 }
 
 static const char* kTabIconGameplay = ICON_FA_WALKING;
@@ -129,23 +128,20 @@ namespace CheatMenu {
         if (!pc) return;
 
         // Block/unblock only the game input (not ImGui)
-        if (show_menu && !g_inputBlockedByMenu) {
-            // Block game input
+        if (show_menu) {
+            // Block only the game's interpretation of input, let ImGui handle it
             pc->ClientIgnoreLookInput(true);
             pc->ClientIgnoreMoveInput(true);
             pc->bShowMouseCursor = true;
-            pc->bEnableClickEvents = true;
-            pc->bEnableMouseOverEvents = true;
-            g_inputBlockedByMenu = true;
-        }
-        else if (!show_menu && g_inputBlockedByMenu) {
-            // Unblock game input
+            pc->bEnableClickEvents = false;
+            pc->bEnableMouseOverEvents = false;
+        } else {
+            // Restore defaults
             pc->ClientIgnoreLookInput(false);
             pc->ClientIgnoreMoveInput(false);
             pc->bShowMouseCursor = false;
-            pc->bEnableClickEvents = false;
-            pc->bEnableMouseOverEvents = false;
-            g_inputBlockedByMenu = false;
+            pc->bEnableClickEvents = true;
+            pc->bEnableMouseOverEvents = true;
         }
     }
 

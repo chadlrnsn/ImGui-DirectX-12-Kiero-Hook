@@ -143,8 +143,24 @@ extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam
 
 LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+    // Let ImGui process first
     if (ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam))
         return true;
+
+    // Minimal swallowing: only mouse buttons/wheel while menu is open.
+    if (CheatMenu::IsVisible())
+    {
+        switch (uMsg)
+        {
+        case WM_LBUTTONDOWN: case WM_LBUTTONUP:
+        case WM_RBUTTONDOWN: case WM_RBUTTONUP:
+        case WM_MBUTTONDOWN: case WM_MBUTTONUP:
+        case WM_MOUSEWHEEL: case WM_MOUSEHWHEEL:
+        case WM_MOUSEMOVE:
+            return true;
+        default: break;
+        }
+    }
 
     return CallWindowProc(oWndProc, hwnd, uMsg, wParam, lParam);
 }
@@ -307,9 +323,18 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     ImGui_ImplWin32_NewFrame();
     ImGui::NewFrame();
 
-    // ImGui rendering
-    ImGui::GetIO().MouseDrawCursor = CheatMenu::IsVisible();
+    // Ensure ImGui captures mouse/keyboard when hovering widgets
+    ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    io.MouseDrawCursor = CheatMenu::IsVisible();
+
+    // Render menu
     CheatMenu::Render();
+
+    // If menu is open and IO wants capture, block game input at controller too (belt and suspenders)
+    if (CheatMenu::IsVisible()) {
+        // Optional: could also set controller ignores here, but we already do in Toggle()
+    }
 
     // Get current back buffer
     UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
