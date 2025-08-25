@@ -3,6 +3,7 @@
 #include "../../cheats/Core/Config.h"
 #include "../../cheats/Utils/Input.h"
 #include "../../cheats/Services/GameServices.h"
+#include "../../cheats/Features/UnlockService.h"
 #include <dev/logger.h>
 
 namespace CheatMenu { namespace Tabs {
@@ -24,31 +25,21 @@ void MiscTab() {
     ImGui::Separator();
     ImGui::Text("Unlocks / Utilities");
 
-    auto* world = Cheat::Services::GameServices::GetWorld();
-
     if (ImGui::Button("Unlock All Abilities")) {
-        if (world) {
-            SDK::URGameFunctionLibrary::UnlockAllAbilities(world);
-            LOG_INFO("GUI: UnlockAllAbilities() invoked");
-        }
+        Cheat::Features::UnlockService::UnlockAllAbilities();
+        LOG_INFO("GUI: UnlockAllAbilities() invoked");
     }
     if (ImGui::Button("Unlock All Locked Content")) {
-        if (world) {
-            SDK::URGameFunctionLibrary::UnlockAllLockedContent(world);
-            LOG_INFO("GUI: UnlockAllLockedContent() invoked");
-        }
+        Cheat::Features::UnlockService::UnlockAllLockedContent();
+        LOG_INFO("GUI: UnlockAllLockedContent() invoked");
     }
     if (ImGui::Button("Unlock All Mutators")) {
-        if (world) {
-            SDK::URGameFunctionLibrary::UnlockAllMutators(world);
-            LOG_INFO("GUI: UnlockAllMutators() invoked");
-        }
+        Cheat::Features::UnlockService::UnlockAllMutators();
+        LOG_INFO("GUI: UnlockAllMutators() invoked");
     }
     if (ImGui::Button("Unlock All Weapon Mods")) {
-        if (world) {
-            SDK::URGameFunctionLibrary::UnlockAllWeaponMods(world);
-            LOG_INFO("GUI: UnlockAllWeaponMods() invoked");
-        }
+        Cheat::Features::UnlockService::UnlockAllWeaponMods();
+        LOG_INFO("GUI: UnlockAllWeaponMods() invoked");
     }
 }
 

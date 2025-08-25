@@ -2,6 +2,7 @@
 #include <imgui.h>
 #include "../../cheats/Core/Config.h"
 #include "../../cheats/Services/GameServices.h"
+#include "../../cheats/Features/SaveService.h"
 
 
 namespace CheatMenu { namespace Tabs {
@@ -63,6 +64,16 @@ void DebugTab() {
     ImGui::Text("Pawn: %p", Cheat::Services::GameServices::GetPlayerPawn());
     ImGui::Text("Targets: %zu", Cheat::Config::GameState::g_TargetsList.size());
     ImGui::Text("Current Target: %p", Cheat::Config::GameState::g_pCurrentTarget);
+
+    int32_t soulFragments = -1;
+    if (Cheat::Features::SaveService::TryGetSoulFragments(soulFragments)) {
+        ImGui::Text("Soul Fragments: %d", soulFragments);
+        if (ImGui::Button("+1 Soul Fragment")) {
+            Cheat::Features::SaveService::IncrementSoulFragments(1);
+        }
+    } else {
+        ImGui::Text("Soul Fragments: <unavailable>");
+    }
 }
 
 } } // namespace CheatMenu::Tabs

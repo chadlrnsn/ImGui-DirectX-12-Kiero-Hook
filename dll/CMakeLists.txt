@@ -45,6 +45,8 @@ add_library(${DLL_NAME} SHARED
 
     # Cheat system features
     src/cheats/Features/WeaponService.cpp
+    src/cheats/Features/UnlockService.cpp
+    src/cheats/Features/SaveService.cpp
 
     # Services
     src/cheats/Services/GameServices.cpp
