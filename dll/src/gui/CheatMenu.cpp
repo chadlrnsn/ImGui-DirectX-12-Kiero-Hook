@@ -125,37 +125,30 @@ namespace CheatMenu {
                     ImGui::Text("Aimbot Configuration");
                     ImGui::Separator();
 
-                    // Debug: Show current value before checkbox
-                    ImGui::Text("Current aimbot value: %s (addr: %p)", Cheat::Config::Aimbot::enabled ? "TRUE" : "FALSE", &Cheat::Config::Aimbot::enabled);
-
                     if (ImGui::Checkbox("Enable Aimbot", &Cheat::Config::Aimbot::enabled)) {
                         LOG_INFO("GUI: Aimbot checkbox clicked - new value: %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "DISABLED");
                         LOG_INFO("GUI: Variable address: %p", &Cheat::Config::Aimbot::enabled);
                     }
-                    if (ImGui::Checkbox("Smooth Aiming", &Cheat::Config::Aimbot::smoothEnabled)) {
-                        LOG_INFO("GUI: Aimbot Smooth Aiming %s", Cheat::Config::Aimbot::smoothEnabled ? "ENABLED" : "DISABLED");
-                    }
                     if (ImGui::Checkbox("Visibility Check", &Cheat::Config::Aimbot::visibilityCheck)) {
                         LOG_INFO("GUI: Aimbot Visibility Check %s", Cheat::Config::Aimbot::visibilityCheck ? "ENABLED" : "DISABLED");
                     }
-                    if (ImGui::Checkbox("Draw FOV Circle", &Cheat::Config::Aimbot::drawFOV)) {
-                        LOG_INFO("GUI: Aimbot FOV Circle %s", Cheat::Config::Aimbot::drawFOV ? "ENABLED" : "DISABLED");
-                    }
+                    // if (ImGui::Checkbox("Draw FOV Circle", &Cheat::Config::Aimbot::drawFOV)) {
+                    //     LOG_INFO("GUI: Aimbot FOV Circle %s", Cheat::Config::Aimbot::drawFOV ? "ENABLED" : "DISABLED");
+                    // }
 
                     ImGui::Spacing();
                     ImGui::Text("Targeting Settings");
                     ImGui::SliderFloat("Max Distance", &Cheat::Config::Aimbot::maxDistance, 1000.0f, 100000.0f);
-                    ImGui::SliderFloat("FOV Radius", &Cheat::Config::Aimbot::fovRadius, 1.0f, 180.0f);
-                    ImGui::SliderFloat("Smooth Factor", &Cheat::Config::Aimbot::smoothFactor, 1.0f, 20.0f);
-                    ImGui::SliderFloat("Max Turn Speed", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 10000.0f);
+                    //ImGui::SliderFloat("FOV Radius (kinda buggy, will fix soon)", &Cheat::Config::Aimbot::fovRadius, 1.0f, 180.0f);
+                    ImGui::SliderFloat("Turn Speed (Lower = Smoother, Higher = Fast Snapping)", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 10000.0f);
 
-                    ImGui::Spacing();
-                    ImGui::Text("Aim Zones");
-                    ImGui::Checkbox("Head", &Cheat::Config::Aimbot::aimZones.head);
-                    ImGui::SameLine();
-                    ImGui::Checkbox("Chest", &Cheat::Config::Aimbot::aimZones.chest);
-                    ImGui::SameLine();
-                    ImGui::Checkbox("Body", &Cheat::Config::Aimbot::aimZones.body);
+                    // ImGui::Spacing();
+                    // ImGui::Text("Aim Zones");
+                    // ImGui::Checkbox("Head", &Cheat::Config::Aimbot::aimZones.head);
+                    // ImGui::SameLine();
+                    // ImGui::Checkbox("Chest", &Cheat::Config::Aimbot::aimZones.chest);
+                    // ImGui::SameLine();
+                    // ImGui::Checkbox("Body", &Cheat::Config::Aimbot::aimZones.body);
 
                     break;
                 }
@@ -267,13 +260,7 @@ namespace CheatMenu {
                         LOG_INFO("GUI: No Recoil %s", Cheat::Config::Features::NoRecoil ? "ENABLED" : "DISABLED");
                         Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + instant recovery + perfect accuracy");
-
-                    if (ImGui::Checkbox("Instant Reload", &Cheat::Config::Features::InstantReload)) {
-                        LOG_INFO("GUI: Instant Reload %s", Cheat::Config::Features::InstantReload ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Instant weapon reload");
+                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("No recoil + no spread");
 
                     ImGui::Separator();
 

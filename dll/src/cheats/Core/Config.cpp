@@ -30,20 +30,18 @@ namespace Cheat {
         namespace Aimbot {
             // Core settings
             bool enabled = true;
-            bool smoothEnabled = false;
+            bool smoothEnabled = true;
             bool visibilityCheck = true;
             bool drawFOV = false;
 
             // Targeting parameters
             float maxDistance = 50000.0f;
             float fovRadius = 52800.0f;
-            float smoothFactor = 8.0f;
-            float maxTurnSpeed = 5180.0f;
+            float maxTurnSpeed = 1000.0f;
 
             // Advanced settings
             float reactionTime = 0.0f;
             float targetSwitchDelay = 0.0f;
-            bool aimAtMovingTargets = true;
             float maxAimSnapDistance = 1800.0f;
 
             // Aim zones
@@ -131,7 +129,6 @@ namespace Cheat {
             LOG_INFO("- Status: %s", Aimbot::enabled ? "ENABLED" : "DISABLED");
             LOG_INFO("- Max Distance: %.0f units", Aimbot::maxDistance);
             LOG_INFO("- FOV Radius: %.0f degrees", Aimbot::fovRadius);
-            LOG_INFO("- Smooth Aiming: %s", Aimbot::smoothEnabled ? "Enabled" : "Disabled");
             LOG_INFO("- Visibility Check: %s", Aimbot::visibilityCheck ? "Enabled" : "Disabled");
             LOG_INFO("- Max Turn Speed: %.0f deg/s", Aimbot::maxTurnSpeed);
             LOG_INFO("- Reaction Time: %.2fs", Aimbot::reactionTime);

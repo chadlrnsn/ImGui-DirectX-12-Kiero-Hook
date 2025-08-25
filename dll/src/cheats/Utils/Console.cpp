@@ -196,8 +196,7 @@ namespace Cheat {
                 LOG_INFO("God Mode: %s", Cheat::Config::Features::GodMode ? "ON" : "OFF");
                 LOG_INFO("Speed Hack: %s", Cheat::Config::Features::SpeedHack ? "ON" : "OFF");
                 LOG_INFO("Engine Rifle Heat Mgmt: %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ON" : "OFF");
-                LOG_INFO("Aimbot Enabled: %s (addr: %p)", Cheat::Config::Aimbot::enabled ? "ON" : "OFF", &Cheat::Config::Aimbot::enabled);
-                LOG_INFO("Aimbot Smooth: %s", Cheat::Config::Aimbot::smoothEnabled ? "ON" : "OFF");
+                LOG_INFO("Aimbot Enabled: %s ", Cheat::Config::Aimbot::enabled ? "ON" : "OFF");
                 LOG_INFO("Aimbot Visibility Check: %s", Cheat::Config::Aimbot::visibilityCheck ? "ON" : "OFF");
                 LOG_INFO("Aimbot FOV Radius: %.1f", Cheat::Config::Aimbot::fovRadius);
                 LOG_INFO("Aimbot Max Distance: %.1f", Cheat::Config::Aimbot::maxDistance);

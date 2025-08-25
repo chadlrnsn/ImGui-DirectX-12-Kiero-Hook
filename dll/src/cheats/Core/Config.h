@@ -82,13 +82,11 @@ namespace Cheat {
             // Targeting parameters
             extern float maxDistance;
             extern float fovRadius;
-            extern float smoothFactor;
             extern float maxTurnSpeed;
 
             // Advanced settings
             extern float reactionTime;
             extern float targetSwitchDelay;
-            extern bool aimAtMovingTargets;
             extern float maxAimSnapDistance;
 
 
