@@ -3,6 +3,8 @@
 #include "../cheats/Utils/Input.h"
 #include <imgui.h>
 #include <dev/logger.h>
+#include <string>
+
 #include "Tabs/AimbotTab.h"
 #include "Tabs/WeaponsTab.h"
 #include "Tabs/GameplayTab.h"
@@ -11,6 +13,13 @@
 #include "Tabs/DebugTab.h"
 #include <cheats/Features/WeaponService.h>
 #include "../dev/imgui/IconsFontAwesome5.h"
+
+static const char* kTabIconAimbot   = ICON_FA_CROSSHAIRS;
+static const char* kTabIconWeapons  = ICON_FA_BOMB;
+static const char* kTabIconGameplay = ICON_FA_WALKING;
+static const char* kTabIconOptions  = ICON_FA_COG;
+static const char* kTabIconMisc     = ICON_FA_MAGIC;
+static const char* kTabIconDebug    = ICON_FA_BUG;
 
 namespace CheatMenu {
 
@@ -156,15 +165,46 @@ namespace CheatMenu {
             }
 
             // Sidebar + content layout
-            ImGui::BeginChild("##sidebar", ImVec2(180, 0), true);
+            ImGui::BeginChild("##sidebar", ImVec2(200, 0), true);
             {
-                const ImVec2 btnSize = ImVec2(-1, 36);
-                if (ImGui::Button("Aimbot", btnSize)) current_tab = MenuTab::AIMBOT;
-                if (ImGui::Button("Weapons", btnSize)) current_tab = MenuTab::WEAPONS;
-                if (ImGui::Button("Gameplay", btnSize)) current_tab = MenuTab::GAMEPLAY;
-                if (ImGui::Button("Options", btnSize)) current_tab = MenuTab::OPTIONS;
-                if (ImGui::Button("Misc", btnSize)) current_tab = MenuTab::MISC;
-                if (ImGui::Button("Debug", btnSize)) current_tab = MenuTab::DEBUG;
+                ImGuiStyle& style = ImGui::GetStyle();
+                ImVec4 accent = ImVec4(0.18f, 0.52f, 0.96f, 1.0f);
+                ImVec4 bgSelected = ImVec4(0.12f, 0.22f, 0.36f, 1.0f);
+                ImVec4 bgHover = ImVec4(0.16f, 0.16f, 0.19f, 1.0f);
+
+                auto SidebarButton = [&](MenuTab tab, const char* icon, const char* label){
+                    bool selected = (current_tab == tab);
+                    ImVec2 pos = ImGui::GetCursorPos();
+                    ImVec2 size = ImVec2(ImGui::GetContentRegionAvail().x, 36);
+
+                    // Background for hover/selected
+                    ImDrawList* dl = ImGui::GetWindowDrawList();
+                    ImVec2 p0 = ImGui::GetCursorScreenPos();
+                    ImVec2 p1 = ImVec2(p0.x + size.x, p0.y + size.y);
+                    ImU32 col = 0;
+                    if (selected) col = ImGui::GetColorU32(bgSelected);
+                    else if (ImGui::IsMouseHoveringRect(p0, p1)) col = ImGui::GetColorU32(bgHover);
+                    if (col) dl->AddRectFilled(p0, p1, col, style.FrameRounding);
+
+                    // Icon + label
+                    ImGui::SetCursorPos(ImVec2(pos.x + 12, pos.y + 8));
+                    ImGui::PushStyleColor(ImGuiCol_Text, selected ? accent : ImVec4(0.85f,0.85f,0.90f,1.0f));
+                    ImGui::Text("%s  %s", icon, label);
+                    ImGui::PopStyleColor();
+
+                    // Invisibility button area for click handling
+                    ImGui::SetCursorPos(pos);
+                    if (ImGui::InvisibleButton(label, size)) current_tab = tab;
+
+                    ImGui::Spacing();
+                };
+
+                SidebarButton(MenuTab::AIMBOT,   kTabIconAimbot,   "Aimbot");
+                SidebarButton(MenuTab::WEAPONS,  kTabIconWeapons,  "Weapons");
+                SidebarButton(MenuTab::GAMEPLAY, kTabIconGameplay, "Gameplay");
+                SidebarButton(MenuTab::OPTIONS,  kTabIconOptions,  "Options");
+                SidebarButton(MenuTab::MISC,     kTabIconMisc,     "Misc");
+                SidebarButton(MenuTab::DEBUG,    kTabIconDebug,    "Debug");
             }
             ImGui::EndChild();
             ImGui::SameLine();

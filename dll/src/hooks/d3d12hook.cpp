@@ -167,21 +167,18 @@ void InitImGui()
 
     // Load embedded fonts (Tahoma + Font Awesome Solid)
     {
-        ImVector<ImWchar> ranges;
-        ImFontGlyphRangesBuilder builder;
-        builder.AddRanges(io.Fonts->GetGlyphRangesDefault());
-        builder.AddText(ICON_FA_COG ICON_FA_USER ICON_FA_BULLSEYE ICON_FA_CROSSHAIRS ICON_FA_TOOLS ICON_FA_SLIDERS_H ICON_FA_BOMB ICON_FA_BOLT);
-        builder.BuildRanges(&ranges);
-
+        // Base UI font
         ImFontConfig baseCfg;
         baseCfg.FontDataOwnedByAtlas = false;
-        io.Fonts->AddFontFromMemoryTTF((void*)tahoma, sizeof(tahoma), 16.0f, &baseCfg, ranges.Data);
+        io.Fonts->AddFontFromMemoryTTF((void*)tahoma, sizeof(tahoma), 16.0f, &baseCfg);
 
+        // Merge Font Awesome icons into the atlas
+        static const ImWchar icon_ranges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };
         ImFontConfig iconCfg;
         iconCfg.MergeMode = true;
         iconCfg.PixelSnapH = true;
         iconCfg.FontDataOwnedByAtlas = false;
-        io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 16.0f, &iconCfg, ranges.Data);
+        io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 16.0f, &iconCfg, icon_ranges);
 
         io.Fonts->Build();
         ImGui_ImplDX12_CreateDeviceObjects();
