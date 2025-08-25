@@ -295,8 +295,15 @@ namespace CheatMenu {
                         LOG_INFO("GUI: God Mode %s", Cheat::Config::Features::GodMode ? "ENABLED" : "DISABLED");
                     }
                     if (ImGui::IsItemHovered()) {
-                        ImGui::SetTooltip("Enable invincibility using CheatManager->God()");
+                        ImGui::SetTooltip("Always max health)");
                     }
+
+                    
+
+                    // Movement Hacks Section
+                    ImGui::Separator();
+                    ImGui::Text("Movement Hacks");
+                    ImGui::Separator();
 
                     if (ImGui::Checkbox("Speed Hack", &Cheat::Config::Features::SpeedHack)) {
                         LOG_INFO("GUI: Speed Hack %s", Cheat::Config::Features::SpeedHack ? "ENABLED" : "DISABLED");
@@ -323,11 +330,6 @@ namespace CheatMenu {
                         }
                         ImGui::Unindent();
                     }
-
-                    // Movement Hacks Section
-                    ImGui::Separator();
-                    ImGui::Text("Movement Hacks");
-                    ImGui::Separator();
 
                     if (ImGui::Checkbox("Slow Immunity", &Cheat::Config::Features::SlowImmunity)) {
                         LOG_INFO("GUI: Slow Immunity %s", Cheat::Config::Features::SlowImmunity ? "ENABLED" : "DISABLED");
@@ -372,17 +374,6 @@ namespace CheatMenu {
                             ImGui::SetTooltip("1.0x = normal dash, 2.0x = double dash speed/time, etc.");
                         }
                         ImGui::Unindent();
-                    }
-
-                    // Show original movement values if captured
-                    if (Cheat::Config::Features::OriginalMovementValuesSaved) {
-                        ImGui::Text("Original values: Jump=%.1f, Dash=%.1f/%.1f, SlowImmunity=%s",
-                            Cheat::Config::Features::originalJumpHeight,
-                            Cheat::Config::Features::originalDashSpeed,
-                            Cheat::Config::Features::originalDashTime,
-                            Cheat::Config::Features::originalSlowImmunity ? "true" : "false");
-                    } else {
-                        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original movement values not captured yet");
                     }
 
                     break;
@@ -452,7 +443,7 @@ namespace CheatMenu {
                     ImGui::BulletText("F5: Log weapon stats (debug)");
                     ImGui::BulletText("%s: Hold to activate aimbot", Cheat::Utils::Input::GetKeyName(Cheat::Config::Hotkeys::AimbotTrigger));
                     ImGui::BulletText("Insert: Toggle this menu");
-                    ImGui::BulletText("F9: Exit cheat system");
+                    ImGui::BulletText("F9: Exit cheat system (CAUSES GAME CRASH)");
 
                     break;
                 }
