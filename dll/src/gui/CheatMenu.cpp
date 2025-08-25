@@ -183,10 +183,7 @@ namespace CheatMenu {
 
                         // Show original speeds if captured
                         if (Cheat::Config::Features::OriginalSpeedsSaved) {
-                            ImGui::Text("Original speeds: Walk=%.0f, Accel=%.0f, Decel=%.0f",
-                                Cheat::Config::Features::OriginalMaxWalkSpeed,
-                                Cheat::Config::Features::OriginalMaxAcceleration,
-                                Cheat::Config::Features::OriginalMaxDeceleration);
+                            ImGui::Text("Original speeds: MovementSpeedModifier=%.1f", Cheat::Config::Features::originalMovementSpeedModifier);
                         } else {
                             ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original speeds not captured yet");
                         }
@@ -327,9 +324,7 @@ namespace CheatMenu {
                     ImGui::Text("Aimbot: %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "Disabled");
 
                     if (Cheat::Config::Features::OriginalSpeedsSaved) {
-                        ImGui::Text("Original Speeds: Walk=%.0f, Accel=%.0f",
-                            Cheat::Config::Features::OriginalMaxWalkSpeed,
-                            Cheat::Config::Features::OriginalMaxAcceleration);
+                        ImGui::Text("Original Speeds: MovementSpeedModifier=%.1f", Cheat::Config::Features::originalMovementSpeedModifier);
                     }
 
                     ImGui::Spacing();

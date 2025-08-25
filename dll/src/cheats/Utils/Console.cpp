@@ -91,22 +91,14 @@ namespace Cheat {
 
             // Get game objects
             auto myPawn = playerController->K2_GetPawn();
-            auto myCharacter = static_cast<SDK::ACharacter*>(myPawn);
             auto playerPawn = static_cast<SDK::ARPlayerPawn*>(myPawn);
             auto world = Cheat::Config::GameState::g_pWorld;
 
-            // Update global character reference for speed hack
-            Cheat::Config::GameState::g_pMyCharacter = myCharacter;
 
             // Capture original speeds on first run (when character is available)
-            if (playerPawn->GetRPawnMovementComponent() && !Cheat::Config::Features::OriginalSpeedsSaved) {
+            if (playerPawn && playerPawn->GetRPawnMovementComponent() && !Cheat::Config::Features::OriginalSpeedsSaved) {
                 auto moveComp = playerPawn->GetRPawnMovementComponent();
-                auto maxSpeed = moveComp->MaxSpeed;
-                auto acceleration = moveComp->GroundAcceleration;
-                auto deceleration = moveComp->GroundDeceleration;
-                Cheat::Config::Features::OriginalMaxWalkSpeed = maxSpeed;
-                Cheat::Config::Features::OriginalMaxAcceleration = acceleration;
-                Cheat::Config::Features::OriginalMaxDeceleration = deceleration;
+                Cheat::Config::Features::originalMovementSpeedModifier = moveComp->MovementSpeedModifier;
                 Cheat::Config::Features::OriginalSpeedsSaved = true;
                 
             }
@@ -152,32 +144,22 @@ namespace Cheat {
             // Handle Speed Hack - direct character movement manipulation
             if (playerPawn && playerPawn->GetRPawnMovementComponent() && Cheat::Config::Features::OriginalSpeedsSaved) {
                 if (Cheat::Config::Features::SpeedHack) {
-                    float newWalkSpeed = Cheat::Config::Features::OriginalMaxWalkSpeed * Cheat::Config::Features::SpeedMultiplier;
-                    float newAcceleration = Cheat::Config::Features::OriginalMaxAcceleration * Cheat::Config::Features::SpeedMultiplier;
-                    float newDeceleration = Cheat::Config::Features::OriginalMaxDeceleration * Cheat::Config::Features::SpeedMultiplier;
-
                     auto moveComp = playerPawn->GetRPawnMovementComponent();
-                    moveComp->MaxSpeed = newWalkSpeed;
-                    moveComp->GroundAcceleration = newAcceleration;
-                    moveComp->GroundDeceleration = newDeceleration;
+                    moveComp->MovementSpeedModifier = SDK::FRMutableFloat{ Cheat::Config::Features::SpeedMultiplier, Cheat::Config::Features::SpeedMultiplier, Cheat::Config::Features::SpeedMultiplier };
 
                     // Log state change
                     if (Cheat::Config::Features::SpeedHack != lastSpeedHackState) {
-                        LOG_INFO("Speed Hack enabled - %.1fx speed (Walk: %.0f, Accel: %.0f, Decel: %.0f)",
-                            Cheat::Config::Features::SpeedMultiplier, newWalkSpeed, newAcceleration, newDeceleration);
+                        LOG_INFO("Speed Hack enabled - %.1fx speed (MovementSpeedModifier: %.1f)", Cheat::Config::Features::SpeedMultiplier, Cheat::Config::Features::originalMovementSpeedModifier);
                         lastSpeedHackState = Cheat::Config::Features::SpeedHack;
                     }
                 } else {
                     // Reset to original speeds
                     auto moveComp = playerPawn->GetRPawnMovementComponent();
-                    moveComp->MaxSpeed = Cheat::Config::Features::OriginalMaxWalkSpeed;
-                    moveComp->GroundAcceleration = Cheat::Config::Features::OriginalMaxAcceleration;
-                    moveComp->GroundDeceleration = Cheat::Config::Features::OriginalMaxDeceleration;
+                    moveComp->MovementSpeedModifier = SDK::FRMutableFloat{ 1.0f, 1.0f, 1.0f };
 
                     // Log state change
                     if (lastSpeedHackState) {
-                        LOG_INFO("Speed Hack disabled - reset to original speeds (Walk: %.0f, Accel: %.0f, Decel: %.0f)",
-                            Cheat::Config::Features::OriginalMaxWalkSpeed, Cheat::Config::Features::OriginalMaxAcceleration, Cheat::Config::Features::OriginalMaxDeceleration);
+                        LOG_INFO("Speed Hack disabled - reset to original speeds (MovementSpeedModifier: %.1f)", Cheat::Config::Features::originalMovementSpeedModifier);
                         lastSpeedHackState = Cheat::Config::Features::SpeedHack;
                     }
                 }
