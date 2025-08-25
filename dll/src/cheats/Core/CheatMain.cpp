@@ -5,6 +5,8 @@
 #include "../Analysis/BoneAnalyzer.h"
 #include "../Utils/Console.h"
 #include "../Utils/Input.h"
+#include "../Services/GameServices.h"
+#include "../Services/PlayerEffectsService.h"
 #include <dev/logger.h>
 #include <iostream>
 #include <mutex>
@@ -88,54 +90,8 @@ namespace Cheat {
         }
         
         bool CheatMain::UpdateSDK(bool log) {
-            Config::GameState::g_pWorld = SDK::UWorld::GetWorld();
-            if (!Config::GameState::g_pWorld || !Config::GameState::g_pWorld->GameState) {
-                if (log) std::cerr << "Error: World not found" << std::endl;
-                return false;
-            }
-            if (log) {
-                std::cout << "World address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pWorld) << std::dec << std::endl;
-            }
-
-            Config::GameState::g_pEngine = SDK::UEngine::GetEngine();
-            if (!Config::GameState::g_pEngine) {
-                if (log) std::cerr << "Error: Engine not found" << std::endl;
-                return false;
-            }
-            if (log) {
-                std::cout << "Engine address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pEngine) << std::dec << std::endl;
-            }
-
-            // Update player controller and pawn (CRITICAL for aimbot!)
-            if (Config::GameState::g_pWorld->OwningGameInstance &&
-                Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers.Num() > 0) {
-
-                Config::GameState::g_pMyController = Config::GameState::g_pWorld->OwningGameInstance->LocalPlayers[0]->PlayerController;
-                if (log) {
-                    std::cout << "PlayerController address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyController) << std::dec << std::endl;
-                }
-
-                if (Config::GameState::g_pMyController) {
-                    // Update pawn references
-                    Config::GameState::g_pMyPawn = Config::GameState::g_pMyController->K2_GetPawn();
-
-                    // Update player pawn for weapon system and aimbot
-                    Config::GameState::g_pCachedPlayerPawn = static_cast<SDK::ARPlayerPawn*>(Config::GameState::g_pMyPawn);
-
-                    if (log) {
-                        std::cout << "MyPawn address: 0x" << std::hex << reinterpret_cast<uintptr_t>(Config::GameState::g_pMyPawn) << std::dec << std::endl;
-                        if (Config::GameState::g_pMyPawn) {
-                            std::cout << "MyPawn name: " << Config::GameState::g_pMyPawn->GetName() << std::endl;
-                        }
-                    }
-                }
-            } else {
-                if (log) {
-                    std::cout << "Warning: OwningGameInstance or LocalPlayers not available" << std::endl;
-                }
-            }
-
-            return true;
+            // Delegate to GameServices facade; it also updates legacy Config::GameState during transition
+            return Cheat::Services::GameServices::Refresh(log);
         }
         
         void CheatMain::FetchFromActors(std::vector<SDK::AActor*>* list) {
@@ -227,10 +183,10 @@ namespace Cheat {
 
         void CheatMain::UpdateSubsystems(float deltaTime) {
             // Update cheat toggles (God Mode, Speed Hack, etc.)
-            Utils::Console::UpdateCheats(Config::GameState::g_pMyController);
+            Cheat::Services::PlayerEffectsService::Update(Cheat::Services::GameServices::GetPlayerController());
 
             // Update weapon manager
-            Features::WeaponManager::Update(Config::GameState::g_pCachedPlayerPawn);
+            Features::WeaponManager::Update(Cheat::Services::GameServices::GetRPlayerPawn());
 
             // Update aimbot system
             AimbotController::Update(deltaTime);
