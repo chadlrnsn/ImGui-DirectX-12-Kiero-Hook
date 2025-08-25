@@ -253,7 +253,7 @@ namespace CheatMenu {
                         ImGui::Unindent();
                     }
 
-                    if (ImGui::Checkbox("Override Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
+                    if (ImGui::Checkbox("Rate of Fire", &Cheat::Config::Features::RateOfFireOverride)) {
                         Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
                     }
                     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Override base rate of fire using the slider below");
@@ -264,15 +264,6 @@ namespace CheatMenu {
                         }
                         ImGui::Unindent();
                     }
-
-                    // Show Fast RoF but disable when override is active
-                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::BeginDisabled();
-                    if (ImGui::Checkbox("Fast Rate of Fire", &Cheat::Config::Features::FastRateOfFire)) {
-                        LOG_INFO("GUI: Fast Rate of Fire %s", Cheat::Config::Features::FastRateOfFire ? "ENABLED" : "DISABLED");
-                        Cheat::Features::WeaponManager::OnWeaponSettingsChanged();
-                    }
-                    if (Cheat::Config::Features::RateOfFireOverride) ImGui::EndDisabled();
-                    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Max rate of fire");
 
                     if (ImGui::Checkbox("No Cooldown", &Cheat::Config::Features::NoCooldown)) {
                         LOG_INFO("GUI: No Cooldown %s", Cheat::Config::Features::NoCooldown ? "ENABLED" : "DISABLED");
@@ -496,7 +487,7 @@ namespace CheatMenu {
                     ImGui::Text("- Infinite Ammo: %s", Cheat::Config::Features::InfiniteAmmo ? "ON" : "OFF");
                     ImGui::Text("- Increased Damage: %s", Cheat::Config::Features::IncreasedDamage ? "ON" : "OFF");
                     ImGui::Text("- High Crit Multiplier: %s", Cheat::Config::Features::HighCritMultiplier ? "ON" : "OFF");
-                    ImGui::Text("- Fast Rate of Fire: %s", Cheat::Config::Features::FastRateOfFire ? "ON" : "OFF");
+                    ImGui::Text("- Rate of Fire Override: %s", Cheat::Config::Features::RateOfFireOverride ? "ON" : "OFF");
                     ImGui::Text("- No Cooldown: %s", Cheat::Config::Features::NoCooldown ? "ON" : "OFF");
                     ImGui::Text("- No Recoil (+ Recovery + Accuracy): %s", Cheat::Config::Features::NoRecoil ? "ON" : "OFF");
                     ImGui::Text("- Instant Reload: %s", Cheat::Config::Features::InstantReload ? "ON" : "OFF");
