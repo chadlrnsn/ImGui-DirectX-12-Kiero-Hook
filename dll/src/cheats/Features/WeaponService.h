@@ -6,7 +6,7 @@
 
 namespace Cheat {
     namespace Features {
-        
+
         // Structure to store original weapon settings
         struct OriginalWeaponSettings {
             // Ammo settings
@@ -93,11 +93,15 @@ namespace Cheat {
             static void RestoreOriginalSettings(SDK::URGWeaponScript* weaponScript);
             static void SaveOriginalSettings(SDK::URGWeaponScript* weaponScript);
             static void PrintWeaponInfo(SDK::ARWeapon* weapon);
-            static void ApplyToSecondaryWeapon(SDK::URGWeaponScript* weaponScript, bool restore = false);
+
+            // Helpers to genericize primary/secondary handling
+            static SDK::URBaseWeaponSettings* GetPrimarySettings(SDK::URGWeaponScript* ws);
+            static SDK::URBaseWeaponSettings* GetSecondarySettings(SDK::URGWeaponScript* ws);
+            static void SaveOriginalSettingsFor(SDK::URBaseWeaponSettings* src, OriginalWeaponSettings& out);
 
             static bool AnyModsEnabled();
         };
-        
+
     } // namespace Features
 } // namespace Cheat
 

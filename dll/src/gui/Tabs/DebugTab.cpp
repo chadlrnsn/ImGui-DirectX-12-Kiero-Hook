@@ -41,7 +41,7 @@ void DebugTab() {
     ImGui::Text("- No Recoil (+ Recovery + Accuracy): %s", Cheat::Config::Features::NoRecoil ? "ON" : "OFF");
     ImGui::Text("- Instant Reload: %s", Cheat::Config::Features::InstantReload ? "ON" : "OFF");
     ImGui::Unindent();
-    ImGui::Text("Engine Rifle Heat Mgmt: %s", Cheat::Config::Features::EngineRifleHeatManagement ? "ENABLED" : "Disabled");
+    ImGui::Text("Engine Rifle Heat Mgmt: %s", Cheat::Config::Features::NoHeatBuildup ? "ENABLED" : "Disabled");
     ImGui::Text("Aimbot: %s", Cheat::Config::Aimbot::enabled ? "ENABLED" : "Disabled");
 
     if (Cheat::Config::Features::OriginalSpeedsSaved) {

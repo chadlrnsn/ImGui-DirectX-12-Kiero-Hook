@@ -117,7 +117,7 @@ namespace Cheat {
         namespace Features {
             extern bool GodMode;             // CheatManager->God() invincibility
             extern bool SpeedHack;           // CheatManager->Slomo(2) speed boost
-            extern bool EngineRifleHeatManagement; // Prevent overheating
+            extern bool NoHeatBuildup; // Prevent overheating
             extern bool AutoCheatManager;     // Auto-enable cheat manager
 
             // Speed hack configuration

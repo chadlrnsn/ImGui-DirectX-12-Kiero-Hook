@@ -65,7 +65,7 @@ void WeaponsTab() {
 
     ImGui::Separator();
 
-    if (ImGui::Checkbox("Engine Rifle Heat Management", &Cheat::Config::Features::EngineRifleHeatManagement)) {
+    if (ImGui::Checkbox("No Engine Rifle Heat", &Cheat::Config::Features::NoHeatBuildup)) {
         // No immediate call needed; it runs every update when enabled
     }
     if (ImGui::IsItemHovered()) ImGui::SetTooltip("Prevent engine rifle from overheating");
