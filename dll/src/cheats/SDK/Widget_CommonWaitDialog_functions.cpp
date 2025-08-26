@@ -17,25 +17,83 @@
 namespace SDK
 {
 
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.SetInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FText&                      Header_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      Descript                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      OkText_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonWaitDialog_C::SetInfo(const class FText& Header_0, const class FText& Descript, const class FText& OkText_0)
+void UWidget_CommonWaitDialog_C::BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "SetInfo");
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
 
-	Params::Widget_CommonWaitDialog_C_SetInfo Parms{};
+	Params::Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
 
-	Parms.Header_0 = std::move(Header_0);
-	Parms.Descript = std::move(Descript);
-	Parms.OkText_0 = std::move(OkText_0);
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.ClosePanel
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonWaitDialog_C::ClosePanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "ClosePanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_CommonWaitDialog_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.DestructAnimationFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonWaitDialog_C::DestructAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "DestructAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.ExecuteUbergraph_Widget_CommonWaitDialog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonWaitDialog_C::ExecuteUbergraph_Widget_CommonWaitDialog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "ExecuteUbergraph_Widget_CommonWaitDialog");
+
+	Params::Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -61,83 +119,25 @@ void UWidget_CommonWaitDialog_C::FinishedWaiting(bool PopWidget_0)
 }
 
 
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.ExecuteUbergraph_Widget_CommonWaitDialog
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.SetInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Header_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Descript                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      OkText_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_CommonWaitDialog_C::ExecuteUbergraph_Widget_CommonWaitDialog(int32 EntryPoint)
+void UWidget_CommonWaitDialog_C::SetInfo(const class FText& Header_0, const class FText& Descript, const class FText& OkText_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "ExecuteUbergraph_Widget_CommonWaitDialog");
+		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "SetInfo");
 
-	Params::Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog Parms{};
+	Params::Widget_CommonWaitDialog_C_SetInfo Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.DestructAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonWaitDialog_C::DestructAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "DestructAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_CommonWaitDialog_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.ClosePanel
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonWaitDialog_C::ClosePanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "ClosePanel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonWaitDialog_C::BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonWaitDialog_C", "BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
-
-	Params::Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Parms.Header_0 = std::move(Header_0);
+	Parms.Descript = std::move(Descript);
+	Parms.OkText_0 = std::move(OkText_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

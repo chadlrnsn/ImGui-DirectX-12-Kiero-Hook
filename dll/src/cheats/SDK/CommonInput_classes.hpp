@@ -133,7 +133,7 @@ static_assert(offsetof(UCommonUIHoldData, Touch) == 0x000038, "Member 'UCommonUI
 
 // Class CommonInput.CommonInputBaseControllerData
 // 0x00C0 (0x00E8 - 0x0028)
-class UCommonInputBaseControllerData : public UObject
+class UCommonInputBaseControllerData final : public UObject
 {
 public:
 	ECommonInputType                              InputType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

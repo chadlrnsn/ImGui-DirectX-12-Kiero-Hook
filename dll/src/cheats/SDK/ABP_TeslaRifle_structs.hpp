@@ -94,5 +94,13 @@ static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, Anim
 static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend) == 0x0003C0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
 static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x0003F0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
 
+// ScriptStruct ABP_TeslaRifle.ABP_TeslaRifle_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData");
+
 }
 

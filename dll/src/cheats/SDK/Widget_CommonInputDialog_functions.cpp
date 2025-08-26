@@ -17,45 +17,119 @@
 namespace SDK
 {
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.SetupTexts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonInputDialog_C::SetupTexts()
+void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "SetupTexts");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UWidget_CommonInputDialog_C::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.OnWidgetPopped
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ClosePanel
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonInputDialog_C::OnWidgetPopped()
+void UWidget_CommonInputDialog_C::ClosePanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "OnWidgetPopped");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "ClosePanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.OnInitialized
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_CommonInputDialog_C::OnInitialized()
+void UWidget_CommonInputDialog_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.DestructAnimationFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonInputDialog_C::DestructAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "DestructAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ExecuteUbergraph_Widget_CommonInputDialog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonInputDialog_C::ExecuteUbergraph_Widget_CommonInputDialog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "ExecuteUbergraph_Widget_CommonInputDialog");
+
+	Params::Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -93,119 +167,45 @@ void UWidget_CommonInputDialog_C::Initialize(const class FText& HeaderText_0, co
 }
 
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ExecuteUbergraph_Widget_CommonInputDialog
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonInputDialog_C::ExecuteUbergraph_Widget_CommonInputDialog(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "ExecuteUbergraph_Widget_CommonInputDialog");
-
-	Params::Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.DestructAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonInputDialog_C::DestructAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "DestructAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.Construct
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_CommonInputDialog_C::Construct()
+void UWidget_CommonInputDialog_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "Construct");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ClosePanel
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.OnWidgetPopped
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonInputDialog_C::ClosePanel()
+void UWidget_CommonInputDialog_C::OnWidgetPopped()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "ClosePanel");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "OnWidgetPopped");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BP_OnDeactivated
-// (Event, Protected, BlueprintEvent)
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.SetupTexts
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonInputDialog_C::BP_OnDeactivated()
+void UWidget_CommonInputDialog_C::SetupTexts()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BP_OnDeactivated");
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "SetupTexts");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

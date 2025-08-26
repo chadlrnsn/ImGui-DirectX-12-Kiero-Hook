@@ -22,145 +22,63 @@
 namespace SDK::Params
 {
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.UpdateMapping
-// 0x00B8 (0x00B8 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_UpdateMapping final
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ExecuteUbergraph_Widget_Settings_KeyMappingBase
+// 0x0070 (0x0070 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase final
 {
 public:
-	class FName                                   Mapping_Name;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMappableKeySlot                        Slot_0;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   New_Key;                                           // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UInputKeySelector*                      KeySelector;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FInputChord                            K2Node_MakeStruct_InputChord;                      // 0x0030(0x0020)(HasGetValueTypeHash)
-	struct FMapPlayerKeyArgs                      K2Node_MakeStruct_MapPlayerKeyArgs;                // 0x0050(0x0040)()
-	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  CallFunc_MapPlayerKey_FailureReason;               // 0x0098(0x0020)()
-};
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_UpdateMapping) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_UpdateMapping");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_UpdateMapping) == 0x0000B8, "Wrong size on Widget_Settings_KeyMappingBase_C_UpdateMapping");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, Mapping_Name) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::Mapping_Name' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, Slot_0) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::Slot_0' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, New_Key) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::New_Key' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, KeySelector) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::KeySelector' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, K2Node_MakeStruct_InputChord) == 0x000030, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::K2Node_MakeStruct_InputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, K2Node_MakeStruct_MapPlayerKeyArgs) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::K2Node_MakeStruct_MapPlayerKeyArgs' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000090, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, CallFunc_MapPlayerKey_FailureReason) == 0x000098, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::CallFunc_MapPlayerKey_FailureReason' has a wrong offset!");
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ToggleHighlight
-// 0x0030 (0x0030 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_ToggleHighlight final
-{
-public:
-	class UImage*                                 ImageToHighlight;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldHighlight;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x000C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
-};
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_ToggleHighlight) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ToggleHighlight");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ToggleHighlight) == 0x000030, "Wrong size on Widget_Settings_KeyMappingBase_C_ToggleHighlight");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, ImageToHighlight) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::ImageToHighlight' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, bShouldHighlight) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::bShouldHighlight' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, CallFunc_SelectColor_ReturnValue) == 0x00000C, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.SelectInputFromSlot
-// 0x0110 (0x0110 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_SelectInputFromSlot final
-{
-public:
-	EPlayerMappableKeySlot                        Slot_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   MappingName;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMappableKeySlot                        ReturnSlot;                                        // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   DefaultKey;                                        // 0x0010(0x0018)(Parm, OutParm, HasGetValueTypeHash)
-	struct FKey                                   CurrentKey;                                        // 0x0028(0x0018)(Parm, OutParm, HasGetValueTypeHash)
-	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedPlayerMappableKeyProfile*      CallFunc_GetCurrentKeyProfile_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMapPlayerKeyArgs                      K2Node_MakeStruct_MapPlayerKeyArgs;                // 0x0050(0x0040)()
-	struct FPlayerKeyMapping                      CallFunc_K2_FindKeyMapping_OutKeyMapping;          // 0x0090(0x0080)(HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_SelectInputFromSlot");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot) == 0x000110, "Wrong size on Widget_Settings_KeyMappingBase_C_SelectInputFromSlot");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, Slot_0) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::Slot_0' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, MappingName) == 0x000004, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::MappingName' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, ReturnSlot) == 0x00000C, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::ReturnSlot' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, DefaultKey) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::DefaultKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CurrentKey) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CurrentKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000040, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_GetCurrentKeyProfile_ReturnValue) == 0x000048, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_GetCurrentKeyProfile_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, K2Node_MakeStruct_MapPlayerKeyArgs) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::K2Node_MakeStruct_MapPlayerKeyArgs' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_K2_FindKeyMapping_OutKeyMapping) == 0x000090, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_K2_FindKeyMapping_OutKeyMapping' has a wrong offset!");
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ResetKeyMapping
-// 0x0050 (0x0050 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_ResetKeyMapping final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMappableKeySlot                        Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMappableKeySlot                        Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMappableKeySlot                        K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_SelectInputFromSlot_MappingName;          // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPlayerMappableKeySlot                        CallFunc_SelectInputFromSlot_ReturnSlot;           // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_SelectInputFromSlot_DefaultKey;           // 0x0020(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   CallFunc_SelectInputFromSlot_CurrentKey;           // 0x0038(0x0018)(HasGetValueTypeHash)
+	struct FInputChord                            K2Node_MakeStruct_InputChord;                      // 0x0050(0x0020)(HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ResetKeyMapping");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping) == 0x000050, "Wrong size on Widget_Settings_KeyMappingBase_C_ResetKeyMapping");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_bool_Variable) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_byte_Variable) == 0x000001, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_byte_Variable_1) == 0x000002, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_GetInputKeySelector_OutSelector) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_Key_IsGamepadKey_ReturnValue) == 0x000011, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_Key_IsGamepadKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, K2Node_Select_Default) == 0x000012, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_MappingName) == 0x000014, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_MappingName' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_ReturnSlot) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_ReturnSlot' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_DefaultKey) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_DefaultKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_CurrentKey) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_CurrentKey' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase) == 0x000070, "Wrong size on Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, EntryPoint) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_GetInputKeySelector_OutSelector) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_MappingName) == 0x000014, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_MappingName' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_ReturnSlot) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_ReturnSlot' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_DefaultKey) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_DefaultKey' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_CurrentKey) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_CurrentKey' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, K2Node_MakeStruct_InputChord) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::K2Node_MakeStruct_InputChord' has a wrong offset!");
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.KeySelected
-// 0x0040 (0x0040 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_KeySelected final
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetEnhancedUserSettings
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings final
 {
 public:
-	struct FInputChord                            InputChord;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector_1;        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNewKeyValid_Valid;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_GetUserSettings_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputUserSettings*             CallFunc_GetUserSettings_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_KeySelected) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_KeySelected");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_KeySelected) == 0x000040, "Wrong size on Widget_Settings_KeyMappingBase_C_KeySelected");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, InputChord) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::InputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetInputKeySelector_OutSelector) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetInputKeySelector_OutSelector_1) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetInputKeySelector_OutSelector_1' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_IsNewKeyValid_Valid) == 0x000031, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_IsNewKeyValid_Valid' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings) == 0x000030, "Wrong size on Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, UserSettings) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::UserSettings' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_self_CastInput) == 0x000018, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_self_CastInput' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_ReturnValue) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_ReturnValue' has a wrong offset!");
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsSelectingKeyChanged
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetInputKeySelector
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged final
+struct Widget_Settings_KeyMappingBase_C_GetInputKeySelector final
 {
 public:
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInputKeySelector*                      OutSelector;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged) == 0x000008, "Wrong size on Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_GetInputKeySelector");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector) == 0x000008, "Wrong size on Widget_Settings_KeyMappingBase_C_GetInputKeySelector");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector, OutSelector) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_GetInputKeySelector::OutSelector' has a wrong offset!");
 
 // Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsNewKeyValid
 // 0x0260 (0x0260 - 0x0000)
@@ -243,63 +161,145 @@ static_assert(offsetof(Widget_Settings_KeyMappingBase_C_IsNewKeyValid, K2Node_Ma
 static_assert(offsetof(Widget_Settings_KeyMappingBase_C_IsNewKeyValid, K2Node_MakeArray_Array) == 0x000240, "Member 'Widget_Settings_KeyMappingBase_C_IsNewKeyValid::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(Widget_Settings_KeyMappingBase_C_IsNewKeyValid, CallFunc_Format_ReturnValue) == 0x000250, "Member 'Widget_Settings_KeyMappingBase_C_IsNewKeyValid::CallFunc_Format_ReturnValue' has a wrong offset!");
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetInputKeySelector
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsSelectingKeyChanged
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_GetInputKeySelector final
+struct Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged final
 {
 public:
-	class UInputKeySelector*                      OutSelector;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_GetInputKeySelector");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector) == 0x000008, "Wrong size on Widget_Settings_KeyMappingBase_C_GetInputKeySelector");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetInputKeySelector, OutSelector) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_GetInputKeySelector::OutSelector' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged) == 0x000008, "Wrong size on Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_IsSelectingKeyChanged::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetEnhancedUserSettings
-// 0x0030 (0x0030 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings final
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.KeySelected
+// 0x0040 (0x0040 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_KeySelected final
 {
 public:
-	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_GetUserSettings_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputUserSettings*             CallFunc_GetUserSettings_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputChord                            InputChord;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector_1;        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNewKeyValid_Valid;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings) == 0x000030, "Wrong size on Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, UserSettings) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::UserSettings' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_self_CastInput) == 0x000018, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_self_CastInput' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_ReturnValue) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_KeySelected) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_KeySelected");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_KeySelected) == 0x000040, "Wrong size on Widget_Settings_KeyMappingBase_C_KeySelected");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, InputChord) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::InputChord' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetInputKeySelector_OutSelector) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetInputKeySelector_OutSelector_1) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetInputKeySelector_OutSelector_1' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_IsNewKeyValid_Valid) == 0x000031, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_IsNewKeyValid_Valid' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_KeySelected, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_KeySelected::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ExecuteUbergraph_Widget_Settings_KeyMappingBase
-// 0x0070 (0x0070 - 0x0000)
-struct Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase final
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ResetKeyMapping
+// 0x0050 (0x0050 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_ResetKeyMapping final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMappableKeySlot                        Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMappableKeySlot                        Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputKeySelector*                      CallFunc_GetInputKeySelector_OutSelector;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMappableKeySlot                        K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_SelectInputFromSlot_MappingName;          // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPlayerMappableKeySlot                        CallFunc_SelectInputFromSlot_ReturnSlot;           // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_SelectInputFromSlot_DefaultKey;           // 0x0020(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   CallFunc_SelectInputFromSlot_CurrentKey;           // 0x0038(0x0018)(HasGetValueTypeHash)
-	struct FInputChord                            K2Node_MakeStruct_InputChord;                      // 0x0050(0x0020)(HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase");
-static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase) == 0x000070, "Wrong size on Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, EntryPoint) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_GetInputKeySelector_OutSelector) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_MappingName) == 0x000014, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_MappingName' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_ReturnSlot) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_ReturnSlot' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_DefaultKey) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_DefaultKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, CallFunc_SelectInputFromSlot_CurrentKey) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::CallFunc_SelectInputFromSlot_CurrentKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase, K2Node_MakeStruct_InputChord) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase::K2Node_MakeStruct_InputChord' has a wrong offset!");
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ResetKeyMapping");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping) == 0x000050, "Wrong size on Widget_Settings_KeyMappingBase_C_ResetKeyMapping");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_bool_Variable) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_byte_Variable) == 0x000001, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, Temp_byte_Variable_1) == 0x000002, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_GetInputKeySelector_OutSelector) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_Key_IsGamepadKey_ReturnValue) == 0x000011, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_Key_IsGamepadKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, K2Node_Select_Default) == 0x000012, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_MappingName) == 0x000014, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_MappingName' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_ReturnSlot) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_ReturnSlot' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_DefaultKey) == 0x000020, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_DefaultKey' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ResetKeyMapping, CallFunc_SelectInputFromSlot_CurrentKey) == 0x000038, "Member 'Widget_Settings_KeyMappingBase_C_ResetKeyMapping::CallFunc_SelectInputFromSlot_CurrentKey' has a wrong offset!");
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.SelectInputFromSlot
+// 0x0110 (0x0110 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_SelectInputFromSlot final
+{
+public:
+	EPlayerMappableKeySlot                        Slot_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   MappingName;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMappableKeySlot                        ReturnSlot;                                        // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   DefaultKey;                                        // 0x0010(0x0018)(Parm, OutParm, HasGetValueTypeHash)
+	struct FKey                                   CurrentKey;                                        // 0x0028(0x0018)(Parm, OutParm, HasGetValueTypeHash)
+	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedPlayerMappableKeyProfile*      CallFunc_GetCurrentKeyProfile_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMapPlayerKeyArgs                      K2Node_MakeStruct_MapPlayerKeyArgs;                // 0x0050(0x0040)()
+	struct FPlayerKeyMapping                      CallFunc_K2_FindKeyMapping_OutKeyMapping;          // 0x0090(0x0080)(HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_SelectInputFromSlot");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot) == 0x000110, "Wrong size on Widget_Settings_KeyMappingBase_C_SelectInputFromSlot");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, Slot_0) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::Slot_0' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, MappingName) == 0x000004, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::MappingName' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, ReturnSlot) == 0x00000C, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::ReturnSlot' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, DefaultKey) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::DefaultKey' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CurrentKey) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CurrentKey' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000040, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_GetCurrentKeyProfile_ReturnValue) == 0x000048, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_GetCurrentKeyProfile_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, K2Node_MakeStruct_MapPlayerKeyArgs) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::K2Node_MakeStruct_MapPlayerKeyArgs' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_SelectInputFromSlot, CallFunc_K2_FindKeyMapping_OutKeyMapping) == 0x000090, "Member 'Widget_Settings_KeyMappingBase_C_SelectInputFromSlot::CallFunc_K2_FindKeyMapping_OutKeyMapping' has a wrong offset!");
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ToggleHighlight
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_ToggleHighlight final
+{
+public:
+	class UImage*                                 ImageToHighlight;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldHighlight;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x000C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x001C(0x0014)()
+};
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_ToggleHighlight) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_ToggleHighlight");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_ToggleHighlight) == 0x000030, "Wrong size on Widget_Settings_KeyMappingBase_C_ToggleHighlight");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, ImageToHighlight) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::ImageToHighlight' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, bShouldHighlight) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::bShouldHighlight' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, CallFunc_SelectColor_ReturnValue) == 0x00000C, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_ToggleHighlight, K2Node_MakeStruct_SlateColor) == 0x00001C, "Member 'Widget_Settings_KeyMappingBase_C_ToggleHighlight::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.UpdateMapping
+// 0x00B8 (0x00B8 - 0x0000)
+struct Widget_Settings_KeyMappingBase_C_UpdateMapping final
+{
+public:
+	class FName                                   Mapping_Name;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMappableKeySlot                        Slot_0;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   New_Key;                                           // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UInputKeySelector*                      KeySelector;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FInputChord                            K2Node_MakeStruct_InputChord;                      // 0x0030(0x0020)(HasGetValueTypeHash)
+	struct FMapPlayerKeyArgs                      K2Node_MakeStruct_MapPlayerKeyArgs;                // 0x0050(0x0040)()
+	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  CallFunc_MapPlayerKey_FailureReason;               // 0x0098(0x0020)()
+};
+static_assert(alignof(Widget_Settings_KeyMappingBase_C_UpdateMapping) == 0x000008, "Wrong alignment on Widget_Settings_KeyMappingBase_C_UpdateMapping");
+static_assert(sizeof(Widget_Settings_KeyMappingBase_C_UpdateMapping) == 0x0000B8, "Wrong size on Widget_Settings_KeyMappingBase_C_UpdateMapping");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, Mapping_Name) == 0x000000, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::Mapping_Name' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, Slot_0) == 0x000008, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::Slot_0' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, New_Key) == 0x000010, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::New_Key' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, KeySelector) == 0x000028, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::KeySelector' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, K2Node_MakeStruct_InputChord) == 0x000030, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::K2Node_MakeStruct_InputChord' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, K2Node_MakeStruct_MapPlayerKeyArgs) == 0x000050, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::K2Node_MakeStruct_MapPlayerKeyArgs' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000090, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
+static_assert(offsetof(Widget_Settings_KeyMappingBase_C_UpdateMapping, CallFunc_MapPlayerKey_FailureReason) == 0x000098, "Member 'Widget_Settings_KeyMappingBase_C_UpdateMapping::CallFunc_MapPlayerKey_FailureReason' has a wrong offset!");
 
 }
 

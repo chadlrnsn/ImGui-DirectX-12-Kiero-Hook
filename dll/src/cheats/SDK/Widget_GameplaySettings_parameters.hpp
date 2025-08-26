@@ -16,299 +16,289 @@
 namespace SDK::Params
 {
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetWidgetCurrentValues
-// 0x0160 (0x0160 - 0x0000)
-struct Widget_GameplaySettings_C_SetWidgetCurrentValues final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature final
 {
 public:
-	TArray<class FString>                         Temp_wildcard_Variable;                            // 0x0000(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EGamepadIconScheme                            CallFunc_GetGamepadIconScheme_ReturnValue;         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_1;       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetGameLanguage_ReturnValue;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_2;       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetAllowTelemetryDataCollection_ReturnValue; // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_3;       // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDisableLanguageFiltering_ReturnValue;  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_4;       // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetShowDashIndicator_ReturnValue;         // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_5;       // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ECrosshairAlignmentOption                     CallFunc_GetCrosshairAlignmentOption_ReturnValue;  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCrosshairAlignmentIndexByOption_Index; // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_6;       // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAimAssistStrength_ReturnValue;         // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetControllerScopedYSensitivity_ReturnValue; // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetControllerScopedXSensitivity_ReturnValue; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetControllerYSensitivity_ReturnValue;    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetControllerXSensitivity_ReturnValue;    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EDamageNumbersOption                          CallFunc_GetShowDamageNumbers_ReturnValue;         // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetDamageNumbersIndexByOption_Index;      // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_7;       // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAimSensitivity_ReturnValue;            // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetInvertXAxis_ReturnValue;               // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScopedAimSensitivity_ReturnValue;      // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetPerformCameraShakes_ReturnValue;       // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetShowPlayerNames_ReturnValue;           // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetShowPlayerHUD_ReturnValue;             // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetShowCrosshair_ReturnValue;             // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetInvertYAxis_ReturnValue;               // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetShowHealthBars_ReturnValue;            // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetHoldToScope_ReturnValue;               // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116[0x2];                                      // 0x0116(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFieldOfView_ReturnValue;               // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast;            // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_1;          // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_2;          // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_3;          // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_4;          // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_SetWidgetCurrentValues");
-static_assert(sizeof(Widget_GameplaySettings_C_SetWidgetCurrentValues) == 0x000160, "Wrong size on Widget_GameplaySettings_C_SetWidgetCurrentValues");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_wildcard_Variable) == 0x000000, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000038, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGamepadIconScheme_ReturnValue) == 0x000040, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGamepadIconScheme_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000048, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000058, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGameLanguage_ReturnValue) == 0x000060, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGameLanguage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000070, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_2) == 0x000078, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAllowTelemetryDataCollection_ReturnValue) == 0x000080, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAllowTelemetryDataCollection_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_3) == 0x000088, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetDisableLanguageFiltering_ReturnValue) == 0x000090, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetDisableLanguageFiltering_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Not_PreBool_ReturnValue) == 0x000091, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_4) == 0x000098, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowDashIndicator_ReturnValue) == 0x0000A0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowDashIndicator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_5) == 0x0000A8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetCrosshairAlignmentOption_ReturnValue) == 0x0000B0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetCrosshairAlignmentOption_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetCrosshairAlignmentIndexByOption_Index) == 0x0000B4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetCrosshairAlignmentIndexByOption_Index' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_6) == 0x0000B8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAimAssistStrength_ReturnValue) == 0x0000C0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAimAssistStrength_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerScopedYSensitivity_ReturnValue) == 0x0000C4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerScopedYSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerScopedXSensitivity_ReturnValue) == 0x0000D0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerScopedXSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerYSensitivity_ReturnValue) == 0x0000D4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerYSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerXSensitivity_ReturnValue) == 0x0000D8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerXSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowDamageNumbers_ReturnValue) == 0x0000DC, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowDamageNumbers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetDamageNumbersIndexByOption_Index) == 0x0000E0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetDamageNumbersIndexByOption_Index' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_7) == 0x0000E8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAimSensitivity_ReturnValue) == 0x0000F0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAimSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetInvertXAxis_ReturnValue) == 0x0000F4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetInvertXAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0000F8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetScopedAimSensitivity_ReturnValue) == 0x000100, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetScopedAimSensitivity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetPerformCameraShakes_ReturnValue) == 0x000104, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetPerformCameraShakes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000108, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowPlayerNames_ReturnValue) == 0x000110, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowPlayerNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowPlayerHUD_ReturnValue) == 0x000111, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowPlayerHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowCrosshair_ReturnValue) == 0x000112, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowCrosshair_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetInvertYAxis_ReturnValue) == 0x000113, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetInvertYAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowHealthBars_ReturnValue) == 0x000114, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowHealthBars_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetHoldToScope_ReturnValue) == 0x000115, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetHoldToScope_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetFieldOfView_ReturnValue) == 0x000118, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetFieldOfView_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000120, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast) == 0x000128, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_1) == 0x000130, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_2) == 0x000138, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_3) == 0x000140, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000148, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000150, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_4) == 0x000158, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_4' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetIconSchemeOptions
-// 0x0078 (0x0078 - 0x0000)
-struct Widget_GameplaySettings_C_SetIconSchemeOptions final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature final
 {
 public:
-	TArray<class FText>                           Options;                                           // 0x0000(0x0010)(Edit, BlueprintVisible)
-	EGamepadIconScheme                            Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetEnumeratorValueFromIndex_ReturnValue;  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0030(0x0010)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0040(0x0010)()
-	class FText                                   K2Node_Select_Default;                             // 0x0050(0x0010)(ConstParm)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_SetIconSchemeOptions) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_SetIconSchemeOptions");
-static_assert(sizeof(Widget_GameplaySettings_C_SetIconSchemeOptions) == 0x000078, "Wrong size on Widget_GameplaySettings_C_SetIconSchemeOptions");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Options) == 0x000000, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Options' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_byte_Variable) == 0x000010, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralInt_ReturnValue) == 0x000014, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_int_Variable) == 0x000018, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_int_Variable_1) == 0x00001C, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_IntToByte_ReturnValue) == 0x000020, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_GetValidValue_ReturnValue) == 0x000028, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_IntToByte_ReturnValue_1) == 0x000029, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_IntToByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_GetEnumeratorValueFromIndex_ReturnValue) == 0x00002A, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_GetEnumeratorValueFromIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Less_IntInt_ReturnValue) == 0x00002B, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00002C, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralText_ReturnValue) == 0x000030, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000040, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, K2Node_Select_Default) == 0x000050, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_TextToString_ReturnValue) == 0x000060, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Array_Add_ReturnValue) == 0x000070, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.PreviousWidgetSettingsValue
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GameplaySettings_C_PreviousWidgetSettingsValue final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature final
 {
 public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_PreviousWidgetSettingsValue");
-static_assert(sizeof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GameplaySettings_C_PreviousWidgetSettingsValue");
-static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.NextWidgetSettingsValue
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GameplaySettings_C_NextWidgetSettingsValue final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
 {
 public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_NextWidgetSettingsValue");
-static_assert(sizeof(Widget_GameplaySettings_C_NextWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GameplaySettings_C_NextWidgetSettingsValue");
-static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDesiredFocusWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GameplaySettings_C_GetDesiredFocusWidget final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature final
 {
 public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_GetDesiredFocusWidget");
-static_assert(sizeof(Widget_GameplaySettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetDesiredFocusWidget");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersOptionByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EDamageNumbersOption                          Option;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex");
-static_assert(sizeof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, Option) == 0x000004, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::Option' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersIndexByOption
-// 0x000C (0x000C - 0x0000)
-struct Widget_GameplaySettings_C_GetDamageNumbersIndexByOption final
-{
-public:
-	EDamageNumbersOption                          Option;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetDamageNumbersIndexByOption");
-static_assert(sizeof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption) == 0x00000C, "Wrong size on Widget_GameplaySettings_C_GetDamageNumbersIndexByOption");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, Option) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::Option' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, Index_0) == 0x000004, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentOptionByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECrosshairAlignmentOption                     Option;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex");
-static_assert(sizeof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, Option) == 0x000004, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::Option' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentIndexByOption
-// 0x000C (0x000C - 0x0000)
-struct Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
 {
 public:
-	ECrosshairAlignmentOption                     Option;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption");
-static_assert(sizeof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption) == 0x00000C, "Wrong size on Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, Option) == 0x000000, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::Option' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, Index_0) == 0x000004, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::State' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetAvailableLanguages
-// 0x0028 (0x0028 - 0x0000)
-struct Widget_GameplaySettings_C_GetAvailableLanguages final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
 {
 public:
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetGameLanguage_ReturnValue;              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<class FString>                         CallFunc_GetLocalizedCultures_ReturnValue;         // 0x0018(0x0010)(ReferenceParm)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_GetAvailableLanguages) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_GetAvailableLanguages");
-static_assert(sizeof(Widget_GameplaySettings_C_GetAvailableLanguages) == 0x000028, "Wrong size on Widget_GameplaySettings_C_GetAvailableLanguages");
-static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetGameLanguage_ReturnValue) == 0x000008, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetGameLanguage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetLocalizedCultures_ReturnValue) == 0x000018, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetLocalizedCultures_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature final
+{
+public:
+	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature final
+{
+public:
+	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_GetScrollBoxWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GameplaySettings_C_BP_GetScrollBoxWidget final
+{
+public:
+	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BP_GetScrollBoxWidget");
+static_assert(sizeof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GameplaySettings_C_BP_GetScrollBoxWidget");
+static_assert(offsetof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GameplaySettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
 
 // Function Widget_GameplaySettings.Widget_GameplaySettings_C.ExecuteUbergraph_Widget_GameplaySettings
 // 0x0238 (0x0238 - 0x0000)
@@ -492,289 +482,299 @@ static_assert(offsetof(Widget_GameplaySettings_C_ExecuteUbergraph_Widget_Gamepla
 static_assert(offsetof(Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings, CallFunc_SetControllerScopedYSensitivity_newValue_ImplicitCast) == 0x000230, "Member 'Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings::CallFunc_SetControllerScopedYSensitivity_newValue_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings, CallFunc_SetAimAssistStrength_NewStrength_ImplicitCast) == 0x000234, "Member 'Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings::CallFunc_SetAimAssistStrength_NewStrength_ImplicitCast' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_GetScrollBoxWidget
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetAvailableLanguages
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_GameplaySettings_C_GetAvailableLanguages final
+{
+public:
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetGameLanguage_ReturnValue;              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         CallFunc_GetLocalizedCultures_ReturnValue;         // 0x0018(0x0010)(ReferenceParm)
+};
+static_assert(alignof(Widget_GameplaySettings_C_GetAvailableLanguages) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_GetAvailableLanguages");
+static_assert(sizeof(Widget_GameplaySettings_C_GetAvailableLanguages) == 0x000028, "Wrong size on Widget_GameplaySettings_C_GetAvailableLanguages");
+static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetGameLanguage_ReturnValue) == 0x000008, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetGameLanguage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetAvailableLanguages, CallFunc_GetLocalizedCultures_ReturnValue) == 0x000018, "Member 'Widget_GameplaySettings_C_GetAvailableLanguages::CallFunc_GetLocalizedCultures_ReturnValue' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentIndexByOption
+// 0x000C (0x000C - 0x0000)
+struct Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption final
+{
+public:
+	ECrosshairAlignmentOption                     Option;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption");
+static_assert(sizeof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption) == 0x00000C, "Wrong size on Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, Option) == 0x000000, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::Option' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, Index_0) == 0x000004, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::Index_0' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentOptionByIndex
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_GameplaySettings_C_BP_GetScrollBoxWidget final
-{
-public:
-	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GameplaySettings_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_GameplaySettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GameplaySettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature final
-{
-public:
-	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature final
-{
-public:
-	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
+struct Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECrosshairAlignmentOption                     Option;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex");
+static_assert(sizeof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, Option) == 0x000004, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::Option' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'Widget_GameplaySettings_C_GetCrosshairAlignmentOptionByIndex::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersIndexByOption
+// 0x000C (0x000C - 0x0000)
+struct Widget_GameplaySettings_C_GetDamageNumbersIndexByOption final
+{
+public:
+	EDamageNumbersOption                          Option;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetDamageNumbersIndexByOption");
+static_assert(sizeof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption) == 0x00000C, "Wrong size on Widget_GameplaySettings_C_GetDamageNumbersIndexByOption");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, Option) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::Option' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, Index_0) == 0x000004, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::Index_0' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersIndexByOption, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'Widget_GameplaySettings_C_GetDamageNumbersIndexByOption::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersOptionByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EDamageNumbersOption                          Option;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex) == 0x000004, "Wrong alignment on Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex");
+static_assert(sizeof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, Index_0) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::Index_0' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, Option) == 0x000004, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::Option' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDesiredFocusWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GameplaySettings_C_GetDesiredFocusWidget final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_GetDesiredFocusWidget");
+static_assert(sizeof(Widget_GameplaySettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong size on Widget_GameplaySettings_C_GetDesiredFocusWidget");
+static_assert(offsetof(Widget_GameplaySettings_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_GameplaySettings_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.NextWidgetSettingsValue
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GameplaySettings_C_NextWidgetSettingsValue final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_NextWidgetSettingsValue");
+static_assert(sizeof(Widget_GameplaySettings_C_NextWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GameplaySettings_C_NextWidgetSettingsValue");
+static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GameplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.PreviousWidgetSettingsValue
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GameplaySettings_C_PreviousWidgetSettingsValue final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_PreviousWidgetSettingsValue");
+static_assert(sizeof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GameplaySettings_C_PreviousWidgetSettingsValue");
+static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GameplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetIconSchemeOptions
+// 0x0078 (0x0078 - 0x0000)
+struct Widget_GameplaySettings_C_SetIconSchemeOptions final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FText>                           Options;                                           // 0x0000(0x0010)(Edit, BlueprintVisible)
+	EGamepadIconScheme                            Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetEnumeratorValueFromIndex_ReturnValue;  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0030(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0040(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0050(0x0010)(ConstParm)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_SetIconSchemeOptions) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_SetIconSchemeOptions");
+static_assert(sizeof(Widget_GameplaySettings_C_SetIconSchemeOptions) == 0x000078, "Wrong size on Widget_GameplaySettings_C_SetIconSchemeOptions");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Options) == 0x000000, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Options' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_byte_Variable) == 0x000010, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralInt_ReturnValue) == 0x000014, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_int_Variable) == 0x000018, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, Temp_int_Variable_1) == 0x00001C, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_IntToByte_ReturnValue) == 0x000020, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_GetValidValue_ReturnValue) == 0x000028, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_IntToByte_ReturnValue_1) == 0x000029, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_IntToByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_GetEnumeratorValueFromIndex_ReturnValue) == 0x00002A, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_GetEnumeratorValueFromIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Less_IntInt_ReturnValue) == 0x00002B, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00002C, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralText_ReturnValue) == 0x000030, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000040, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, K2Node_Select_Default) == 0x000050, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Conv_TextToString_ReturnValue) == 0x000060, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetIconSchemeOptions, CallFunc_Array_Add_ReturnValue) == 0x000070, "Member 'Widget_GameplaySettings_C_SetIconSchemeOptions::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature final
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetWidgetCurrentValues
+// 0x0160 (0x0160 - 0x0000)
+struct Widget_GameplaySettings_C_SetWidgetCurrentValues final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         Temp_wildcard_Variable;                            // 0x0000(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EGamepadIconScheme                            CallFunc_GetGamepadIconScheme_ReturnValue;         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_1;       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetGameLanguage_ReturnValue;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_2;       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetAllowTelemetryDataCollection_ReturnValue; // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_3;       // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDisableLanguageFiltering_ReturnValue;  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_4;       // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShowDashIndicator_ReturnValue;         // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_5;       // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECrosshairAlignmentOption                     CallFunc_GetCrosshairAlignmentOption_ReturnValue;  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetCrosshairAlignmentIndexByOption_Index; // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_6;       // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAimAssistStrength_ReturnValue;         // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetControllerScopedYSensitivity_ReturnValue; // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetControllerScopedXSensitivity_ReturnValue; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetControllerYSensitivity_ReturnValue;    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetControllerXSensitivity_ReturnValue;    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EDamageNumbersOption                          CallFunc_GetShowDamageNumbers_ReturnValue;         // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetDamageNumbersIndexByOption_Index;      // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_7;       // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAimSensitivity_ReturnValue;            // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetInvertXAxis_ReturnValue;               // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScopedAimSensitivity_ReturnValue;      // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetPerformCameraShakes_ReturnValue;       // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShowPlayerNames_ReturnValue;           // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShowPlayerHUD_ReturnValue;             // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShowCrosshair_ReturnValue;             // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetInvertYAxis_ReturnValue;               // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetShowHealthBars_ReturnValue;            // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetHoldToScope_ReturnValue;               // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_116[0x2];                                      // 0x0116(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFieldOfView_ReturnValue;               // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast;            // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_1;          // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_2;          // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_3;          // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_4;          // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+static_assert(alignof(Widget_GameplaySettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_GameplaySettings_C_SetWidgetCurrentValues");
+static_assert(sizeof(Widget_GameplaySettings_C_SetWidgetCurrentValues) == 0x000160, "Wrong size on Widget_GameplaySettings_C_SetWidgetCurrentValues");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_wildcard_Variable) == 0x000000, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_wildcard_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000038, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGamepadIconScheme_ReturnValue) == 0x000040, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGamepadIconScheme_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000048, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000058, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGameLanguage_ReturnValue) == 0x000060, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGameLanguage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000070, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_2) == 0x000078, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAllowTelemetryDataCollection_ReturnValue) == 0x000080, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAllowTelemetryDataCollection_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_3) == 0x000088, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetDisableLanguageFiltering_ReturnValue) == 0x000090, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetDisableLanguageFiltering_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Not_PreBool_ReturnValue) == 0x000091, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_4) == 0x000098, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowDashIndicator_ReturnValue) == 0x0000A0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowDashIndicator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_5) == 0x0000A8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetCrosshairAlignmentOption_ReturnValue) == 0x0000B0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetCrosshairAlignmentOption_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetCrosshairAlignmentIndexByOption_Index) == 0x0000B4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetCrosshairAlignmentIndexByOption_Index' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_6) == 0x0000B8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAimAssistStrength_ReturnValue) == 0x0000C0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAimAssistStrength_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerScopedYSensitivity_ReturnValue) == 0x0000C4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerScopedYSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerScopedXSensitivity_ReturnValue) == 0x0000D0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerScopedXSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerYSensitivity_ReturnValue) == 0x0000D4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerYSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetControllerXSensitivity_ReturnValue) == 0x0000D8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetControllerXSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowDamageNumbers_ReturnValue) == 0x0000DC, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowDamageNumbers_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetDamageNumbersIndexByOption_Index) == 0x0000E0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetDamageNumbersIndexByOption_Index' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_7) == 0x0000E8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetAimSensitivity_ReturnValue) == 0x0000F0, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetAimSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetInvertXAxis_ReturnValue) == 0x0000F4, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetInvertXAxis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0000F8, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetScopedAimSensitivity_ReturnValue) == 0x000100, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetScopedAimSensitivity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetPerformCameraShakes_ReturnValue) == 0x000104, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetPerformCameraShakes_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000108, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowPlayerNames_ReturnValue) == 0x000110, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowPlayerNames_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowPlayerHUD_ReturnValue) == 0x000111, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowPlayerHUD_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowCrosshair_ReturnValue) == 0x000112, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowCrosshair_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetInvertYAxis_ReturnValue) == 0x000113, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetInvertYAxis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetShowHealthBars_ReturnValue) == 0x000114, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetShowHealthBars_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetHoldToScope_ReturnValue) == 0x000115, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetHoldToScope_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_GetFieldOfView_ReturnValue) == 0x000118, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_GetFieldOfView_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000120, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast) == 0x000128, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_1) == 0x000130, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_2) == 0x000138, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_3) == 0x000140, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000148, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000150, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(Widget_GameplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_4) == 0x000158, "Member 'Widget_GameplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_4' has a wrong offset!");
 
 }
 

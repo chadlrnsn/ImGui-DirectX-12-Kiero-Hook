@@ -17,162 +17,25 @@
 namespace SDK
 {
 
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ToggleHighlight
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsComboBox_C::ToggleHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "ToggleHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.AddOptions
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FText>&                    Options                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_SettingsComboBox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWidget_SettingsComboBox_C::AddOptions(TArray<class FText>& Options)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Tick");
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "AddOptions");
 
-	Params::Widget_SettingsComboBox_C_Tick Parms{};
+	Params::Widget_SettingsComboBox_C_AddOptions Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.SetCurrentOption
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWidget_SettingsComboBox_C::SetCurrentOption(const class FText& Option)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "SetCurrentOption");
-
-	Params::Widget_SettingsComboBox_C_SetCurrentOption Parms{};
-
-	Parms.Option = std::move(Option);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsComboBox_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "PreConstruct");
-
-	Params::Widget_SettingsComboBox_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.OnNavigationAccept
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsComboBox_C::OnNavigationAccept()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "OnNavigationAccept");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.GetDesiredFocusSubwidget
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget**                         Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsComboBox_C::GetDesiredFocusSubwidget(class UWidget** Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "GetDesiredFocusSubwidget");
-
-	Params::Widget_SettingsComboBox_C_GetDesiredFocusSubwidget Parms{};
+	Parms.Options = std::move(Options);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ExecuteUbergraph_Widget_SettingsComboBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsComboBox_C::ExecuteUbergraph_Widget_SettingsComboBox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "ExecuteUbergraph_Widget_SettingsComboBox");
-
-	Params::Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_SettingsComboBox_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Clear Options
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsComboBox_C::Clear_Options()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Clear Options");
-
-	UObject::ProcessEvent(Func, nullptr);
+	Options = std::move(Parms.Options);
 }
 
 
@@ -198,25 +61,162 @@ void UWidget_SettingsComboBox_C::BndEvt__Widget_SettingsComboBox_ComboBoxString_
 }
 
 
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.AddOptions
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FText>&                    Options                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Clear Options
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingsComboBox_C::AddOptions(TArray<class FText>& Options)
+void UWidget_SettingsComboBox_C::Clear_Options()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsComboBox_C", "AddOptions");
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Clear Options");
 
-	Params::Widget_SettingsComboBox_C_AddOptions Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Options = std::move(Options);
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_SettingsComboBox_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ExecuteUbergraph_Widget_SettingsComboBox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsComboBox_C::ExecuteUbergraph_Widget_SettingsComboBox(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "ExecuteUbergraph_Widget_SettingsComboBox");
+
+	Params::Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.GetDesiredFocusSubwidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget**                         Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsComboBox_C::GetDesiredFocusSubwidget(class UWidget** Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "GetDesiredFocusSubwidget");
+
+	Params::Widget_SettingsComboBox_C_GetDesiredFocusSubwidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Options = std::move(Parms.Options);
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.OnNavigationAccept
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingsComboBox_C::OnNavigationAccept()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "OnNavigationAccept");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsComboBox_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "PreConstruct");
+
+	Params::Widget_SettingsComboBox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.SetCurrentOption
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_SettingsComboBox_C::SetCurrentOption(const class FText& Option)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "SetCurrentOption");
+
+	Params::Widget_SettingsComboBox_C_SetCurrentOption Parms{};
+
+	Parms.Option = std::move(Option);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsComboBox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "Tick");
+
+	Params::Widget_SettingsComboBox_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ToggleHighlight
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingsComboBox_C::ToggleHighlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsComboBox_C", "ToggleHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

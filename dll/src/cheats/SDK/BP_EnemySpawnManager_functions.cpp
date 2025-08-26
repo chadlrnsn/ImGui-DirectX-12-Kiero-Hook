@@ -17,123 +17,93 @@
 namespace SDK
 {
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.UpdateEnemyOutline
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.CheckLastEnemyOfEncounter
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPawnBase*                       EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    renderDepth                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnemySpawnManager_C::UpdateEnemyOutline(class ARPawnBase* EnemyPawn, bool renderDepth)
+void ABP_EnemySpawnManager_C::CheckLastEnemyOfEncounter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "UpdateEnemyOutline");
-
-	Params::BP_EnemySpawnManager_C_UpdateEnemyOutline Parms{};
-
-	Parms.EnemyPawn = EnemyPawn;
-	Parms.renderDepth = renderDepth;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveOnEnemySpawnPrimed
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UClass*                           EnemyClass                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   SpawnDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnManager_C::ReceiveOnEnemySpawnPrimed(class UClass* EnemyClass, float SpawnDuration, const struct FTransform& SpawnTransform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ReceiveOnEnemySpawnPrimed");
-
-	Params::BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed Parms{};
-
-	Parms.EnemyClass = EnemyClass;
-	Parms.SpawnDuration = SpawnDuration;
-	Parms.SpawnTransform = std::move(SpawnTransform);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EnemySpawnManager_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "CheckLastEnemyOfEncounter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.PopulatePool
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.CheckOutlineThresholdReached
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_EnemySpawnManager_C::PopulatePool(int32 Num)
+void ABP_EnemySpawnManager_C::CheckOutlineThresholdReached()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "PopulatePool");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "CheckOutlineThresholdReached");
 
-	Params::BP_EnemySpawnManager_C_PopulatePool Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Num = Num;
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ExecuteUbergraph_BP_EnemySpawnManager
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnManager_C::ExecuteUbergraph_BP_EnemySpawnManager(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ExecuteUbergraph_BP_EnemySpawnManager");
+
+	Params::BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnSpawned
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetEliteVFXAssets
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ARNPCPawnBase*                    EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UNiagaraSystem**                  NiagaraSystemAsset                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnemySpawnManager_C::OnSpawned(class ARNPCPawnBase* EnemyPawn)
+void ABP_EnemySpawnManager_C::GetEliteVFXAssets(class UNiagaraSystem** NiagaraSystemAsset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "OnSpawned");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "GetEliteVFXAssets");
 
-	Params::BP_EnemySpawnManager_C_OnSpawned Parms{};
-
-	Parms.EnemyPawn = EnemyPawn;
+	Params::BP_EnemySpawnManager_C_GetEliteVFXAssets Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NiagaraSystemAsset != nullptr)
+		*NiagaraSystemAsset = Parms.NiagaraSystemAsset;
 }
 
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnKilled
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetPooledSpawnBP
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ARNPCPawnBase*                    EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_EnemySpawnDecoy_C**           SpawnBP                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnemySpawnManager_C::OnKilled(class ARNPCPawnBase* EnemyPawn)
+void ABP_EnemySpawnManager_C::GetPooledSpawnBP(class ABP_EnemySpawnDecoy_C** SpawnBP)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "OnKilled");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "GetPooledSpawnBP");
 
-	Params::BP_EnemySpawnManager_C_OnKilled Parms{};
-
-	Parms.EnemyPawn = EnemyPawn;
+	Params::BP_EnemySpawnManager_C_GetPooledSpawnBP Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (SpawnBP != nullptr)
+		*SpawnBP = Parms.SpawnBP;
 }
 
 
@@ -162,93 +132,123 @@ void ABP_EnemySpawnManager_C::GetVFXAssets(class UMaterialInstance** DecoyMateri
 }
 
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetPooledSpawnBP
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_EnemySpawnDecoy_C**           SpawnBP                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnManager_C::GetPooledSpawnBP(class ABP_EnemySpawnDecoy_C** SpawnBP)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "GetPooledSpawnBP");
-
-	Params::BP_EnemySpawnManager_C_GetPooledSpawnBP Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SpawnBP != nullptr)
-		*SpawnBP = Parms.SpawnBP;
-}
-
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetEliteVFXAssets
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UNiagaraSystem**                  NiagaraSystemAsset                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnManager_C::GetEliteVFXAssets(class UNiagaraSystem** NiagaraSystemAsset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "GetEliteVFXAssets");
-
-	Params::BP_EnemySpawnManager_C_GetEliteVFXAssets Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NiagaraSystemAsset != nullptr)
-		*NiagaraSystemAsset = Parms.NiagaraSystemAsset;
-}
-
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ExecuteUbergraph_BP_EnemySpawnManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnManager_C::ExecuteUbergraph_BP_EnemySpawnManager(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ExecuteUbergraph_BP_EnemySpawnManager");
-
-	Params::BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.CheckOutlineThresholdReached
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnKilled
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARNPCPawnBase*                    EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnemySpawnManager_C::CheckOutlineThresholdReached()
+void ABP_EnemySpawnManager_C::OnKilled(class ARNPCPawnBase* EnemyPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "CheckOutlineThresholdReached");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "OnKilled");
+
+	Params::BP_EnemySpawnManager_C_OnKilled Parms{};
+
+	Parms.EnemyPawn = EnemyPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnSpawned
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARNPCPawnBase*                    EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnManager_C::OnSpawned(class ARNPCPawnBase* EnemyPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "OnSpawned");
+
+	Params::BP_EnemySpawnManager_C_OnSpawned Parms{};
+
+	Parms.EnemyPawn = EnemyPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.PopulatePool
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnManager_C::PopulatePool(int32 Num)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "PopulatePool");
+
+	Params::BP_EnemySpawnManager_C_PopulatePool Parms{};
+
+	Parms.Num = Num;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EnemySpawnManager_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.CheckLastEnemyOfEncounter
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveOnEnemySpawnPrimed
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UClass*                           EnemyClass                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   SpawnDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnemySpawnManager_C::CheckLastEnemyOfEncounter()
+void ABP_EnemySpawnManager_C::ReceiveOnEnemySpawnPrimed(class UClass* EnemyClass, float SpawnDuration, const struct FTransform& SpawnTransform)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnManager_C", "CheckLastEnemyOfEncounter");
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "ReceiveOnEnemySpawnPrimed");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed Parms{};
+
+	Parms.EnemyClass = EnemyClass;
+	Parms.SpawnDuration = SpawnDuration;
+	Parms.SpawnTransform = std::move(SpawnTransform);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.UpdateEnemyOutline
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPawnBase*                       EnemyPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    renderDepth                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnManager_C::UpdateEnemyOutline(class ARPawnBase* EnemyPawn, bool renderDepth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnManager_C", "UpdateEnemyOutline");
+
+	Params::BP_EnemySpawnManager_C_UpdateEnemyOutline Parms{};
+
+	Parms.EnemyPawn = EnemyPawn;
+	Parms.renderDepth = renderDepth;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

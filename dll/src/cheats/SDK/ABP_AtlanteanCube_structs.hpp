@@ -46,5 +46,13 @@ static_assert(offsetof(ABP_AtlanteanCube::FAnimBlueprintGeneratedConstantData, A
 static_assert(offsetof(ABP_AtlanteanCube::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalRefPose) == 0x000100, "Member 'ABP_AtlanteanCube::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalRefPose' has a wrong offset!");
 static_assert(offsetof(ABP_AtlanteanCube::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000130, "Member 'ABP_AtlanteanCube::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
 
+// ScriptStruct ABP_AtlanteanCube.ABP_AtlanteanCube_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_AtlanteanCube::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_AtlanteanCube::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_AtlanteanCube::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_AtlanteanCube::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_AtlanteanCube::FAnimBlueprintGeneratedMutableData");
+
 }
 

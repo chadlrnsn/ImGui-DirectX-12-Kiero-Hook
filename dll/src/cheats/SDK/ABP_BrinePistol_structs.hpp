@@ -68,5 +68,13 @@ static_assert(offsetof(ABP_BrinePistol::FAnimBlueprintGeneratedConstantData, Ani
 static_assert(offsetof(ABP_BrinePistol::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_1) == 0x000258, "Member 'ABP_BrinePistol::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_1' has a wrong offset!");
 static_assert(offsetof(ABP_BrinePistol::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x000288, "Member 'ABP_BrinePistol::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
 
+// ScriptStruct ABP_BrinePistol.ABP_BrinePistol_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_BrinePistol::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_BrinePistol::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_BrinePistol::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_BrinePistol::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_BrinePistol::FAnimBlueprintGeneratedMutableData");
+
 }
 

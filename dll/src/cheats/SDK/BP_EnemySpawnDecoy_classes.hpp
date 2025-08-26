@@ -33,11 +33,11 @@ public:
 	TArray<class UMaterialInstanceDynamic*>       DynamicMaterials;                                  // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void StartSpawnSequence(class USkeletalMesh* Mesh, const struct FTransform& Transform, float Duration, class UAnimationAsset* SpawnAnimation, class UMaterialInterface* DecoyMaterial, class UNiagaraSystem* NiagaraSystemAsset);
-	void SpawnTimeline__UpdateFunc();
-	void SpawnTimeline__FinishedFunc();
-	void OnSpawnSequenceStarted(float Duration);
 	void ExecuteUbergraph_BP_EnemySpawnDecoy(int32 EntryPoint);
+	void OnSpawnSequenceStarted(float Duration);
+	void SpawnTimeline__FinishedFunc();
+	void SpawnTimeline__UpdateFunc();
+	void StartSpawnSequence(class USkeletalMesh* Mesh, const struct FTransform& Transform, float Duration, class UAnimationAsset* SpawnAnimation, class UMaterialInterface* DecoyMaterial, class UNiagaraSystem* NiagaraSystemAsset);
 
 public:
 	static class UClass* StaticClass()

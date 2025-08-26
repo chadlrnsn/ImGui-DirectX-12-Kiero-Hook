@@ -19,259 +19,158 @@
 namespace SDK::Params
 {
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_C8DC33074EB64552DA18F3823C40C860
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.AcceptEvent
 // 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860 final
+struct Widget_CommonContinueScreen_C_AcceptEvent final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   Input;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_AcceptEvent) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_AcceptEvent");
+static_assert(sizeof(Widget_CommonContinueScreen_C_AcceptEvent) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_AcceptEvent");
+static_assert(offsetof(Widget_CommonContinueScreen_C_AcceptEvent, Input) == 0x000000, "Member 'Widget_CommonContinueScreen_C_AcceptEvent::Input' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_B6684397495E22740104AEBD89F4D149
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149 final
-{
-public:
-	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149) == 0x000020, "Wrong size on Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149, TravelURL) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149::TravelURL' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149, Error) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_82A6D90D4C9B568C3A82E086F8AAC3BA
-// 0x0130 (0x0130 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA::Error' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA::Result' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_668D2AB547705A2D3A24E78BE4A9938B
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_310E636941FBBEAF07D8309EC80FD66B
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_248933154BD1B24F482489AF96FBB2E4
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_11720C654DE537088EB6F691B6CE867F
-// 0x0130 (0x0130 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F::Error' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F::Result' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_10AEA8054E757C7F60602496049155B3
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_0D722042493414F39BACCEAD2A5ECA57
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCurrentSaveGameChanged
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged final
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class URSaveGame*                             CurrentSaveGame;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged");
-static_assert(sizeof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged");
-static_assert(offsetof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged, CurrentSaveGame) == 0x000000, "Member 'Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged::CurrentSaveGame' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.JoinSession
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_JoinSession final
-{
-public:
-	class FString                                 SessionId;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_JoinSession) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_JoinSession");
-static_assert(sizeof(Widget_CommonContinueScreen_C_JoinSession) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_JoinSession");
-static_assert(offsetof(Widget_CommonContinueScreen_C_JoinSession, SessionId) == 0x000000, "Member 'Widget_CommonContinueScreen_C_JoinSession::SessionId' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.GoToMainDungeon
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_GoToMainDungeon final
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_GoToMainDungeon) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_GoToMainDungeon");
-static_assert(sizeof(Widget_CommonContinueScreen_C_GoToMainDungeon) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_GoToMainDungeon");
-static_assert(offsetof(Widget_CommonContinueScreen_C_GoToMainDungeon, CallFunc_GetOwningPlayer_ReturnValue) == 0x000000, "Member 'Widget_CommonContinueScreen_C_GoToMainDungeon::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.FailedToJoinGame
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_FailedToJoinGame final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_FailedToJoinGame) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_FailedToJoinGame");
-static_assert(sizeof(Widget_CommonContinueScreen_C_FailedToJoinGame) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_FailedToJoinGame");
-static_assert(offsetof(Widget_CommonContinueScreen_C_FailedToJoinGame, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_FailedToJoinGame::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_C8DC33074EB64552DA18F3823C40C860
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860 final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_B6684397495E22740104AEBD89F4D149
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149 final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149) == 0x000020, "Wrong size on Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149, TravelURL) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149::TravelURL' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149, Error) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_82A6D90D4C9B568C3A82E086F8AAC3BA
-// 0x0130 (0x0130 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA::Error' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA::Result' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_668D2AB547705A2D3A24E78BE4A9938B
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BuildSessionSettings
+// 0x0230 (0x0230 - 0x0000)
+struct Widget_CommonContinueScreen_C_BuildSessionSettings final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TMap<class FName, struct FDMSessionSetting>   SessionSettings;                                   // 0x0000(0x0050)(Parm, OutParm)
+	TMap<class FName, struct FDMSessionSetting>   SessionSettingsMap;                                // 0x0050(0x0050)(Edit, BlueprintVisible)
+	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x00A8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_2;                              // 0x00B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting;                // 0x00B8(0x0018)()
+	class FName                                   Temp_name_Variable_3;                              // 0x00D0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_4;                              // 0x00D8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_1;              // 0x00F8(0x0018)()
+	bool                                          CallFunc_MakeLiteralBool_ReturnValue;              // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_2;              // 0x0128(0x0018)()
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_3;              // 0x0168(0x0018)()
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0190(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01A0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_4;              // 0x0218(0x0018)()
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_BuildSessionSettings) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BuildSessionSettings");
+static_assert(sizeof(Widget_CommonContinueScreen_C_BuildSessionSettings) == 0x000230, "Wrong size on Widget_CommonContinueScreen_C_BuildSessionSettings");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, SessionSettings) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::SessionSettings' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, SessionSettingsMap) == 0x000050, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::SessionSettingsMap' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable) == 0x0000A0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_1) == 0x0000A8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_2) == 0x0000B0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_2' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting) == 0x0000B8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_3) == 0x0000D0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_3' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_4) == 0x0000D8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_4' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralInt_ReturnValue) == 0x0000E0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_IntToString_ReturnValue) == 0x0000E8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_1) == 0x0000F8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralBool_ReturnValue) == 0x000110, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_BoolToString_ReturnValue) == 0x000118, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_2) == 0x000128, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_2' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralByte_ReturnValue) == 0x000140, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000148, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_ByteToString_ReturnValue) == 0x000150, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_ByteToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_IsValid_ReturnValue) == 0x000160, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_3) == 0x000168, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_3' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_GetPlayerName_ReturnValue) == 0x000180, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_StringToText_ReturnValue) == 0x000190, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_FormatArgumentData) == 0x0001A0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeArray_Array) == 0x0001E8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_TextToString_ReturnValue) == 0x000208, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_4) == 0x000218, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_4' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_310E636941FBBEAF07D8309EC80FD66B
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B final
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ClearLoadingIndicator
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_CommonContinueScreen_C_ClearLoadingIndicator final
 {
 public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_248933154BD1B24F482489AF96FBB2E4
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_11720C654DE537088EB6F691B6CE867F
-// 0x0130 (0x0130 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F::Error' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F::Result' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_10AEA8054E757C7F60602496049155B3
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3::Error' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_0D722042493414F39BACCEAD2A5ECA57
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57 final
-{
-public:
-	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57");
-static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57");
-static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57::Error' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_ClearLoadingIndicator) == 0x000001, "Wrong alignment on Widget_CommonContinueScreen_C_ClearLoadingIndicator");
+static_assert(sizeof(Widget_CommonContinueScreen_C_ClearLoadingIndicator) == 0x000001, "Wrong size on Widget_CommonContinueScreen_C_ClearLoadingIndicator");
+static_assert(offsetof(Widget_CommonContinueScreen_C_ClearLoadingIndicator, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'Widget_CommonContinueScreen_C_ClearLoadingIndicator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ExecuteUbergraph_Widget_CommonContinueScreen
 // 0x0F68 (0x0F68 - 0x0000)
@@ -698,158 +597,259 @@ static_assert(offsetof(Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_Com
 static_assert(offsetof(Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen, CallFunc_MakeLiteralText_ReturnValue_2) == 0x000F48, "Member 'Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen::CallFunc_MakeLiteralText_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen, CallFunc_Conv_TextToString_ReturnValue_4) == 0x000F58, "Member 'Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen::CallFunc_Conv_TextToString_ReturnValue_4' has a wrong offset!");
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ClearLoadingIndicator
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_CommonContinueScreen_C_ClearLoadingIndicator final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_ClearLoadingIndicator) == 0x000001, "Wrong alignment on Widget_CommonContinueScreen_C_ClearLoadingIndicator");
-static_assert(sizeof(Widget_CommonContinueScreen_C_ClearLoadingIndicator) == 0x000001, "Wrong size on Widget_CommonContinueScreen_C_ClearLoadingIndicator");
-static_assert(offsetof(Widget_CommonContinueScreen_C_ClearLoadingIndicator, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'Widget_CommonContinueScreen_C_ClearLoadingIndicator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BuildSessionSettings
-// 0x0230 (0x0230 - 0x0000)
-struct Widget_CommonContinueScreen_C_BuildSessionSettings final
-{
-public:
-	TMap<class FName, struct FDMSessionSetting>   SessionSettings;                                   // 0x0000(0x0050)(Parm, OutParm)
-	TMap<class FName, struct FDMSessionSetting>   SessionSettingsMap;                                // 0x0050(0x0050)(Edit, BlueprintVisible)
-	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_1;                              // 0x00A8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_2;                              // 0x00B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting;                // 0x00B8(0x0018)()
-	class FName                                   Temp_name_Variable_3;                              // 0x00D0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_4;                              // 0x00D8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_1;              // 0x00F8(0x0018)()
-	bool                                          CallFunc_MakeLiteralBool_ReturnValue;              // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_2;              // 0x0128(0x0018)()
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_3;              // 0x0168(0x0018)()
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0190(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01A0(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_4;              // 0x0218(0x0018)()
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BuildSessionSettings) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BuildSessionSettings");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BuildSessionSettings) == 0x000230, "Wrong size on Widget_CommonContinueScreen_C_BuildSessionSettings");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, SessionSettings) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::SessionSettings' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, SessionSettingsMap) == 0x000050, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::SessionSettingsMap' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable) == 0x0000A0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_1) == 0x0000A8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_2) == 0x0000B0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting) == 0x0000B8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_3) == 0x0000D0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, Temp_name_Variable_4) == 0x0000D8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::Temp_name_Variable_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralInt_ReturnValue) == 0x0000E0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_IntToString_ReturnValue) == 0x0000E8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_1) == 0x0000F8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralBool_ReturnValue) == 0x000110, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_BoolToString_ReturnValue) == 0x000118, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_2) == 0x000128, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_MakeLiteralByte_ReturnValue) == 0x000140, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000148, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_ByteToString_ReturnValue) == 0x000150, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_ByteToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_IsValid_ReturnValue) == 0x000160, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_3) == 0x000168, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_GetPlayerName_ReturnValue) == 0x000180, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_StringToText_ReturnValue) == 0x000190, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_FormatArgumentData) == 0x0001A0, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeArray_Array) == 0x0001E8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, CallFunc_Conv_TextToString_ReturnValue) == 0x000208, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BuildSessionSettings, K2Node_MakeStruct_DMSessionSetting_4) == 0x000218, "Member 'Widget_CommonContinueScreen_C_BuildSessionSettings::K2Node_MakeStruct_DMSessionSetting_4' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.AcceptEvent
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_0D722042493414F39BACCEAD2A5ECA57
 // 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonContinueScreen_C_AcceptEvent final
+struct Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57 final
 {
 public:
-	class FText                                   Input;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonContinueScreen_C_AcceptEvent) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_AcceptEvent");
-static_assert(sizeof(Widget_CommonContinueScreen_C_AcceptEvent) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_AcceptEvent");
-static_assert(offsetof(Widget_CommonContinueScreen_C_AcceptEvent, Input) == 0x000000, "Member 'Widget_CommonContinueScreen_C_AcceptEvent::Input' has a wrong offset!");
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_10AEA8054E757C7F60602496049155B3
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_11720C654DE537088EB6F691B6CE867F
+// 0x0130 (0x0130 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F::Error' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_11720C654DE537088EB6F691B6CE867F::Result' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_248933154BD1B24F482489AF96FBB2E4
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_310E636941FBBEAF07D8309EC80FD66B
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_668D2AB547705A2D3A24E78BE4A9938B
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_82A6D90D4C9B568C3A82E086F8AAC3BA
+// 0x0130 (0x0130 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA::Error' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA::Result' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_B6684397495E22740104AEBD89F4D149
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149 final
+{
+public:
+	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149) == 0x000020, "Wrong size on Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149, TravelURL) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149::TravelURL' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149, Error) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_C8DC33074EB64552DA18F3823C40C860
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.FailedToJoinGame
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_FailedToJoinGame final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_FailedToJoinGame) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_FailedToJoinGame");
+static_assert(sizeof(Widget_CommonContinueScreen_C_FailedToJoinGame) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_FailedToJoinGame");
+static_assert(offsetof(Widget_CommonContinueScreen_C_FailedToJoinGame, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_FailedToJoinGame::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.GoToMainDungeon
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_GoToMainDungeon final
+{
+public:
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_GoToMainDungeon) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_GoToMainDungeon");
+static_assert(sizeof(Widget_CommonContinueScreen_C_GoToMainDungeon) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_GoToMainDungeon");
+static_assert(offsetof(Widget_CommonContinueScreen_C_GoToMainDungeon, CallFunc_GetOwningPlayer_ReturnValue) == 0x000000, "Member 'Widget_CommonContinueScreen_C_GoToMainDungeon::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.JoinSession
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_JoinSession final
+{
+public:
+	class FString                                 SessionId;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_JoinSession) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_JoinSession");
+static_assert(sizeof(Widget_CommonContinueScreen_C_JoinSession) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_JoinSession");
+static_assert(offsetof(Widget_CommonContinueScreen_C_JoinSession, SessionId) == 0x000000, "Member 'Widget_CommonContinueScreen_C_JoinSession::SessionId' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCurrentSaveGameChanged
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged final
+{
+public:
+	class URSaveGame*                             CurrentSaveGame;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged");
+static_assert(sizeof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged) == 0x000008, "Wrong size on Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged");
+static_assert(offsetof(Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged, CurrentSaveGame) == 0x000000, "Member 'Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged::CurrentSaveGame' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_0D722042493414F39BACCEAD2A5ECA57
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_10AEA8054E757C7F60602496049155B3
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_11720C654DE537088EB6F691B6CE867F
+// 0x0130 (0x0130 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F::Error' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F::Result' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_248933154BD1B24F482489AF96FBB2E4
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_310E636941FBBEAF07D8309EC80FD66B
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_668D2AB547705A2D3A24E78BE4A9938B
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_82A6D90D4C9B568C3A82E086F8AAC3BA
+// 0x0130 (0x0130 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA) == 0x000130, "Wrong size on Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA::Error' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA, Result) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA::Result' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_B6684397495E22740104AEBD89F4D149
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149 final
+{
+public:
+	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149) == 0x000020, "Wrong size on Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149, TravelURL) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149::TravelURL' has a wrong offset!");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149, Error) == 0x000010, "Member 'Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149::Error' has a wrong offset!");
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_C8DC33074EB64552DA18F3823C40C860
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860 final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860) == 0x000008, "Wrong alignment on Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860");
+static_assert(sizeof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860) == 0x000010, "Wrong size on Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860");
+static_assert(offsetof(Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860, Error) == 0x000000, "Member 'Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860::Error' has a wrong offset!");
 
 // Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BP_GetDesiredFocusTarget
 // 0x0008 (0x0008 - 0x0000)

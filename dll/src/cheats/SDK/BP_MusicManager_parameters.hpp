@@ -19,339 +19,47 @@
 namespace SDK::Params
 {
 
-// Function BP_MusicManager.BP_MusicManager_C.UpdateIntensity
-// 0x0080 (0x0080 - 0x0000)
-struct BP_MusicManager_C_UpdateIntensity final
+// Function BP_MusicManager.BP_MusicManager_C.CalculateMultiplayerMix
+// 0x00C8 (0x00C8 - 0x0000)
+struct BP_MusicManager_C_CalculateMultiplayerMix final
 {
 public:
-	bool                                          bElite;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TotalEnemyThreat;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x0010(0x0010)(ConstParm, ReferenceParm)
-	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x0020(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
+	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x0010(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue;            // 0x0050(0x0028)(NoDestructor)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue_1;          // 0x0080(0x0028)(NoDestructor)
+	TArray<struct FSoundControlBusMixStage>       K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm)
+	class USoundControlBusMix*                    CallFunc_CreateBusMix_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast;     // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast_1;   // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_UpdateIntensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_UpdateIntensity");
-static_assert(sizeof(BP_MusicManager_C_UpdateIntensity) == 0x000080, "Wrong size on BP_MusicManager_C_UpdateIntensity");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, bElite) == 0x000000, "Member 'BP_MusicManager_C_UpdateIntensity::bElite' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, TotalEnemyThreat) == 0x000004, "Member 'BP_MusicManager_C_UpdateIntensity::TotalEnemyThreat' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_object_Variable) == 0x000010, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000038, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectInt_ReturnValue) == 0x000048, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectFloat_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Variable) == 0x000058, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000060, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue_1) == 0x000070, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_FClamp_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.Spawn Ambience
-// 0x00D0 (0x00D0 - 0x0000)
-struct BP_MusicManager_C_Spawn_Ambience final
-{
-public:
-	const class URAreaData*                       Key;                                               // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   CallFunc_Map_Find_Value;                           // 0x0070(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_LoadClassFromSoftClassPtr_ReturnValue;    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 K2Node_ClassDynamicCast_AsActor;                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_Spawn_Ambience) == 0x000010, "Wrong alignment on BP_MusicManager_C_Spawn_Ambience");
-static_assert(sizeof(BP_MusicManager_C_Spawn_Ambience) == 0x0000D0, "Wrong size on BP_MusicManager_C_Spawn_Ambience");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, Key) == 0x000000, "Member 'BP_MusicManager_C_Spawn_Ambience::Key' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_Value) == 0x000070, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x0000A0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_AsActor) == 0x0000A8, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_AsActor' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_bSuccess) == 0x0000B0, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000C0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.Set MusicData Fallback
-// 0x0070 (0x0070 - 0x0000)
-struct BP_MusicManager_C_Set_MusicData_Fallback final
-{
-public:
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRLevelMusicData                       CallFunc_Array_Get_Item;                           // 0x0028(0x0040)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000008, "Wrong alignment on BP_MusicManager_C_Set_MusicData_Fallback");
-static_assert(sizeof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000070, "Wrong size on BP_MusicManager_C_Set_MusicData_Fallback");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_bool_True_if_break_was_hit_Variable) == 0x000000, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_GetLevelManager_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_BooleanAND_ReturnValue) == 0x000069, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00006A, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.PrintAllLevelIds
-// 0x0058 (0x0058 - 0x0000)
-struct BP_MusicManager_C_PrintAllLevelIds final
-{
-public:
-	TArray<class FName>                           Temp_wildcard_Variable;                            // 0x0000(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetCurrentLevelIds_ReturnValue;           // 0x0040(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_PrintAllLevelIds) == 0x000008, "Wrong alignment on BP_MusicManager_C_PrintAllLevelIds");
-static_assert(sizeof(BP_MusicManager_C_PrintAllLevelIds) == 0x000058, "Wrong size on BP_MusicManager_C_PrintAllLevelIds");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_wildcard_Variable) == 0x000000, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Conv_NameToString_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetLevelManager_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetCurrentLevelIds_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetCurrentLevelIds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayEventMusic
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_PlayEventMusic final
-{
-public:
-	class FName                                   Event;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_PlayEventMusic) == 0x000004, "Wrong alignment on BP_MusicManager_C_PlayEventMusic");
-static_assert(sizeof(BP_MusicManager_C_PlayEventMusic) == 0x000008, "Wrong size on BP_MusicManager_C_PlayEventMusic");
-static_assert(offsetof(BP_MusicManager_C_PlayEventMusic, Event) == 0x000000, "Member 'BP_MusicManager_C_PlayEventMusic::Event' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongImplementation
-// 0x0010 (0x0010 - 0x0000)
-struct BP_MusicManager_C_PlayEmoteSongImplementation final
-{
-public:
-	const class USoundBase*                       EmoteSong;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class ARPawnBase*                       RequestingPlayer;                                  // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000008, "Wrong alignment on BP_MusicManager_C_PlayEmoteSongImplementation");
-static_assert(sizeof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000010, "Wrong size on BP_MusicManager_C_PlayEmoteSongImplementation");
-static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, EmoteSong) == 0x000000, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::EmoteSong' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, RequestingPlayer) == 0x000008, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::RequestingPlayer' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnSegmentStarted
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnSegmentStarted final
-{
-public:
-	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentStarted");
-static_assert(sizeof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentStarted");
-static_assert(offsetof(BP_MusicManager_C_OnSegmentStarted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentStarted::EnemySpawnAreaSegment' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnSegmentCompleted
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnSegmentCompleted final
-{
-public:
-	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentCompleted");
-static_assert(sizeof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentCompleted");
-static_assert(offsetof(BP_MusicManager_C_OnSegmentCompleted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentCompleted::EnemySpawnAreaSegment' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnRep_Intensity
-// 0x0020 (0x0020 - 0x0000)
-struct BP_MusicManager_C_OnRep_Intensity final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast;   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnRep_Intensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnRep_Intensity");
-static_assert(sizeof(BP_MusicManager_C_OnRep_Intensity) == 0x000020, "Wrong size on BP_MusicManager_C_OnRep_Intensity");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_self_CastInput) == 0x000008, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_InFloat_ImplicitCast) == 0x000018, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_InFloat_ImplicitCast' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerPawnRespawned_Event
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnPlayerPawnRespawned_Event final
-{
-public:
-	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerPawnRespawned_Event, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerPawnRespawned_Event::Player' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerDowned
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnPlayerDowned final
-{
-public:
-	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerDowned");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerDowned");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerDowned, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerDowned::Player' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerAlive
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnPlayerAlive final
-{
-public:
-	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerAlive");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerAlive");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerAlive, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerAlive::Player' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnLocalPlayerKilled
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnLocalPlayerKilled final
-{
-public:
-	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnLocalPlayerKilled");
-static_assert(sizeof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong size on BP_MusicManager_C_OnLocalPlayerKilled");
-static_assert(offsetof(BP_MusicManager_C_OnLocalPlayerKilled, Player) == 0x000000, "Member 'BP_MusicManager_C_OnLocalPlayerKilled::Player' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.OnBossPhaseStarted
-// 0x0008 (0x0008 - 0x0000)
-struct BP_MusicManager_C_OnBossPhaseStarted final
-{
-public:
-	class FName                                   NewState;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000004, "Wrong alignment on BP_MusicManager_C_OnBossPhaseStarted");
-static_assert(sizeof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnBossPhaseStarted");
-static_assert(offsetof(BP_MusicManager_C_OnBossPhaseStarted, NewState) == 0x000000, "Member 'BP_MusicManager_C_OnBossPhaseStarted::NewState' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.IsNotInSegment
-// 0x0002 (0x0002 - 0x0000)
-struct BP_MusicManager_C_IsNotInSegment final
-{
-public:
-	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_IsNotInSegment) == 0x000001, "Wrong alignment on BP_MusicManager_C_IsNotInSegment");
-static_assert(sizeof(BP_MusicManager_C_IsNotInSegment) == 0x000002, "Wrong size on BP_MusicManager_C_IsNotInSegment");
-static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, RetValue) == 0x000000, "Member 'BP_MusicManager_C_IsNotInSegment::RetValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_MusicManager_C_IsNotInSegment::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewMusicCue
-// 0x0058 (0x0058 - 0x0000)
-struct BP_MusicManager_C_FadeOutAndPlayNewMusicCue final
-{
-public:
-	class FText                                   SongName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         PartSelect;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Cue;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        StartTime;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetIntParameter_self_CastInput; // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
-static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000058, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, SongName) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::SongName' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, PartSelect) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::PartSelect' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, Cue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::Cue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, StartTime) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::StartTime' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SetIntParameter_self_CastInput) == 0x000038, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SetIntParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00004C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000050, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
-
-// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewAmbience
-// 0x0028 (0x0028 - 0x0000)
-struct BP_MusicManager_C_FadeOutAndPlayNewAmbience final
-{
-public:
-	class USoundBase*                             Cue;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        StartTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
-static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000028, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, Cue) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::Cue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, StartTime) == 0x000008, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::StartTime' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00001C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x000008, "Wrong alignment on BP_MusicManager_C_CalculateMultiplayerMix");
+static_assert(sizeof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x0000C8, "Wrong size on BP_MusicManager_C_CalculateMultiplayerMix");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, Temp_object_Variable) == 0x000000, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Subtract_IntInt_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Clamp_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Clamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_SafeDivide_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue_1) == 0x000080, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, K2Node_MakeArray_Array) == 0x0000A8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMix_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMix_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast) == 0x0000C0, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast_1) == 0x0000C4, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast_1' has a wrong offset!");
 
 // Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
 // 0x0378 (0x0378 - 0x0000)
@@ -633,47 +341,339 @@ static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallF
 static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1) == 0x000370, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast) == 0x000374, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast' has a wrong offset!");
 
-// Function BP_MusicManager.BP_MusicManager_C.CalculateMultiplayerMix
-// 0x00C8 (0x00C8 - 0x0000)
-struct BP_MusicManager_C_CalculateMultiplayerMix final
+// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewAmbience
+// 0x0028 (0x0028 - 0x0000)
+struct BP_MusicManager_C_FadeOutAndPlayNewAmbience final
 {
 public:
-	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
-	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x0010(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue;            // 0x0050(0x0028)(NoDestructor)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue_1;          // 0x0080(0x0028)(NoDestructor)
-	TArray<struct FSoundControlBusMixStage>       K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm)
-	class USoundControlBusMix*                    CallFunc_CreateBusMix_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast;     // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast_1;   // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        StartTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x000008, "Wrong alignment on BP_MusicManager_C_CalculateMultiplayerMix");
-static_assert(sizeof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x0000C8, "Wrong size on BP_MusicManager_C_CalculateMultiplayerMix");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, Temp_object_Variable) == 0x000000, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Subtract_IntInt_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Clamp_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_SafeDivide_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue_1) == 0x000080, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, K2Node_MakeArray_Array) == 0x0000A8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMix_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMix_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast) == 0x0000C0, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast_1) == 0x0000C4, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast_1' has a wrong offset!");
+static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
+static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000028, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, Cue) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::Cue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, StartTime) == 0x000008, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::StartTime' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00001C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewMusicCue
+// 0x0058 (0x0058 - 0x0000)
+struct BP_MusicManager_C_FadeOutAndPlayNewMusicCue final
+{
+public:
+	class FText                                   SongName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         PartSelect;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Cue;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        StartTime;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetIntParameter_self_CastInput; // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
+static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000058, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, SongName) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::SongName' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, PartSelect) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::PartSelect' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, Cue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::Cue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, StartTime) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::StartTime' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SetIntParameter_self_CastInput) == 0x000038, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SetIntParameter_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00004C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000050, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.IsNotInSegment
+// 0x0002 (0x0002 - 0x0000)
+struct BP_MusicManager_C_IsNotInSegment final
+{
+public:
+	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_IsNotInSegment) == 0x000001, "Wrong alignment on BP_MusicManager_C_IsNotInSegment");
+static_assert(sizeof(BP_MusicManager_C_IsNotInSegment) == 0x000002, "Wrong size on BP_MusicManager_C_IsNotInSegment");
+static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, RetValue) == 0x000000, "Member 'BP_MusicManager_C_IsNotInSegment::RetValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_MusicManager_C_IsNotInSegment::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnBossPhaseStarted
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnBossPhaseStarted final
+{
+public:
+	class FName                                   NewState;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000004, "Wrong alignment on BP_MusicManager_C_OnBossPhaseStarted");
+static_assert(sizeof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnBossPhaseStarted");
+static_assert(offsetof(BP_MusicManager_C_OnBossPhaseStarted, NewState) == 0x000000, "Member 'BP_MusicManager_C_OnBossPhaseStarted::NewState' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnLocalPlayerKilled
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnLocalPlayerKilled final
+{
+public:
+	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnLocalPlayerKilled");
+static_assert(sizeof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong size on BP_MusicManager_C_OnLocalPlayerKilled");
+static_assert(offsetof(BP_MusicManager_C_OnLocalPlayerKilled, Player) == 0x000000, "Member 'BP_MusicManager_C_OnLocalPlayerKilled::Player' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerAlive
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnPlayerAlive final
+{
+public:
+	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerAlive");
+static_assert(sizeof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerAlive");
+static_assert(offsetof(BP_MusicManager_C_OnPlayerAlive, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerAlive::Player' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerDowned
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnPlayerDowned final
+{
+public:
+	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerDowned");
+static_assert(sizeof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerDowned");
+static_assert(offsetof(BP_MusicManager_C_OnPlayerDowned, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerDowned::Player' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerPawnRespawned_Event
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnPlayerPawnRespawned_Event final
+{
+public:
+	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
+static_assert(sizeof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
+static_assert(offsetof(BP_MusicManager_C_OnPlayerPawnRespawned_Event, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerPawnRespawned_Event::Player' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnRep_Intensity
+// 0x0020 (0x0020 - 0x0000)
+struct BP_MusicManager_C_OnRep_Intensity final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast;   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnRep_Intensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnRep_Intensity");
+static_assert(sizeof(BP_MusicManager_C_OnRep_Intensity) == 0x000020, "Wrong size on BP_MusicManager_C_OnRep_Intensity");
+static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_self_CastInput) == 0x000008, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_InFloat_ImplicitCast) == 0x000018, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_InFloat_ImplicitCast' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnSegmentCompleted
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnSegmentCompleted final
+{
+public:
+	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentCompleted");
+static_assert(sizeof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentCompleted");
+static_assert(offsetof(BP_MusicManager_C_OnSegmentCompleted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentCompleted::EnemySpawnAreaSegment' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.OnSegmentStarted
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_OnSegmentStarted final
+{
+public:
+	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentStarted");
+static_assert(sizeof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentStarted");
+static_assert(offsetof(BP_MusicManager_C_OnSegmentStarted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentStarted::EnemySpawnAreaSegment' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongImplementation
+// 0x0010 (0x0010 - 0x0000)
+struct BP_MusicManager_C_PlayEmoteSongImplementation final
+{
+public:
+	const class USoundBase*                       EmoteSong;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class ARPawnBase*                       RequestingPlayer;                                  // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000008, "Wrong alignment on BP_MusicManager_C_PlayEmoteSongImplementation");
+static_assert(sizeof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000010, "Wrong size on BP_MusicManager_C_PlayEmoteSongImplementation");
+static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, EmoteSong) == 0x000000, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::EmoteSong' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, RequestingPlayer) == 0x000008, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::RequestingPlayer' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayEventMusic
+// 0x0008 (0x0008 - 0x0000)
+struct BP_MusicManager_C_PlayEventMusic final
+{
+public:
+	class FName                                   Event;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_PlayEventMusic) == 0x000004, "Wrong alignment on BP_MusicManager_C_PlayEventMusic");
+static_assert(sizeof(BP_MusicManager_C_PlayEventMusic) == 0x000008, "Wrong size on BP_MusicManager_C_PlayEventMusic");
+static_assert(offsetof(BP_MusicManager_C_PlayEventMusic, Event) == 0x000000, "Member 'BP_MusicManager_C_PlayEventMusic::Event' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.PrintAllLevelIds
+// 0x0058 (0x0058 - 0x0000)
+struct BP_MusicManager_C_PrintAllLevelIds final
+{
+public:
+	TArray<class FName>                           Temp_wildcard_Variable;                            // 0x0000(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetCurrentLevelIds_ReturnValue;           // 0x0040(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_PrintAllLevelIds) == 0x000008, "Wrong alignment on BP_MusicManager_C_PrintAllLevelIds");
+static_assert(sizeof(BP_MusicManager_C_PrintAllLevelIds) == 0x000058, "Wrong size on BP_MusicManager_C_PrintAllLevelIds");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_wildcard_Variable) == 0x000000, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_wildcard_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Conv_NameToString_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetLevelManager_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetCurrentLevelIds_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetCurrentLevelIds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.Set MusicData Fallback
+// 0x0070 (0x0070 - 0x0000)
+struct BP_MusicManager_C_Set_MusicData_Fallback final
+{
+public:
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRLevelMusicData                       CallFunc_Array_Get_Item;                           // 0x0028(0x0040)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000008, "Wrong alignment on BP_MusicManager_C_Set_MusicData_Fallback");
+static_assert(sizeof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000070, "Wrong size on BP_MusicManager_C_Set_MusicData_Fallback");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_bool_True_if_break_was_hit_Variable) == 0x000000, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_GetLevelManager_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_BooleanAND_ReturnValue) == 0x000069, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00006A, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.Spawn Ambience
+// 0x00D0 (0x00D0 - 0x0000)
+struct BP_MusicManager_C_Spawn_Ambience final
+{
+public:
+	const class URAreaData*                       Key;                                               // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   CallFunc_Map_Find_Value;                           // 0x0070(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_LoadClassFromSoftClassPtr_ReturnValue;    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_ClassDynamicCast_AsActor;                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_Spawn_Ambience) == 0x000010, "Wrong alignment on BP_MusicManager_C_Spawn_Ambience");
+static_assert(sizeof(BP_MusicManager_C_Spawn_Ambience) == 0x0000D0, "Wrong size on BP_MusicManager_C_Spawn_Ambience");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, Key) == 0x000000, "Member 'BP_MusicManager_C_Spawn_Ambience::Key' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_Value) == 0x000070, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x0000A0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_AsActor) == 0x0000A8, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_AsActor' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_bSuccess) == 0x0000B0, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000C0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+
+// Function BP_MusicManager.BP_MusicManager_C.UpdateIntensity
+// 0x0080 (0x0080 - 0x0000)
+struct BP_MusicManager_C_UpdateIntensity final
+{
+public:
+	bool                                          bElite;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TotalEnemyThreat;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x0010(0x0010)(ConstParm, ReferenceParm)
+	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x0020(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MusicManager_C_UpdateIntensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_UpdateIntensity");
+static_assert(sizeof(BP_MusicManager_C_UpdateIntensity) == 0x000080, "Wrong size on BP_MusicManager_C_UpdateIntensity");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, bElite) == 0x000000, "Member 'BP_MusicManager_C_UpdateIntensity::bElite' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, TotalEnemyThreat) == 0x000004, "Member 'BP_MusicManager_C_UpdateIntensity::TotalEnemyThreat' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_object_Variable) == 0x000010, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000038, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectInt_ReturnValue) == 0x000048, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectFloat_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Variable) == 0x000058, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000060, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue_1) == 0x000070, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_FClamp_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
 
 }
 

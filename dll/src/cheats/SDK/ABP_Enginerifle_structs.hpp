@@ -76,5 +76,13 @@ static_assert(offsetof(ABP_Enginerifle::FAnimBlueprintGeneratedConstantData, Ani
 static_assert(offsetof(ABP_Enginerifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_1) == 0x0002E8, "Member 'ABP_Enginerifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_1' has a wrong offset!");
 static_assert(offsetof(ABP_Enginerifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x000318, "Member 'ABP_Enginerifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
 
+// ScriptStruct ABP_Enginerifle.ABP_EngineRifle_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_Enginerifle::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_Enginerifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Enginerifle::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Enginerifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Enginerifle::FAnimBlueprintGeneratedMutableData");
+
 }
 

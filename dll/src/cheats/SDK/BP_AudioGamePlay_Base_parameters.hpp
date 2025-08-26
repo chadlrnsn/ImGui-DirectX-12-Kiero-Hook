@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AudioGamePlay_Base_C_ConditionMet final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AudioGamePlay_Base_C_ConditionMet) == 0x000001, "Wrong alignment on BP_AudioGamePlay_Base_C_ConditionMet");
+static_assert(sizeof(BP_AudioGamePlay_Base_C_ConditionMet) == 0x000001, "Wrong size on BP_AudioGamePlay_Base_C_ConditionMet");
+static_assert(offsetof(BP_AudioGamePlay_Base_C_ConditionMet, ReturnValue) == 0x000000, "Member 'BP_AudioGamePlay_Base_C_ConditionMet::ReturnValue' has a wrong offset!");
+
 // Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet_Position
 // 0x0020 (0x0020 - 0x0000)
 struct BP_AudioGamePlay_Base_C_ConditionMet_Position final
@@ -28,17 +39,6 @@ static_assert(alignof(BP_AudioGamePlay_Base_C_ConditionMet_Position) == 0x000008
 static_assert(sizeof(BP_AudioGamePlay_Base_C_ConditionMet_Position) == 0x000020, "Wrong size on BP_AudioGamePlay_Base_C_ConditionMet_Position");
 static_assert(offsetof(BP_AudioGamePlay_Base_C_ConditionMet_Position, Position) == 0x000000, "Member 'BP_AudioGamePlay_Base_C_ConditionMet_Position::Position' has a wrong offset!");
 static_assert(offsetof(BP_AudioGamePlay_Base_C_ConditionMet_Position, ReturnValue) == 0x000018, "Member 'BP_AudioGamePlay_Base_C_ConditionMet_Position::ReturnValue' has a wrong offset!");
-
-// Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AudioGamePlay_Base_C_ConditionMet final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AudioGamePlay_Base_C_ConditionMet) == 0x000001, "Wrong alignment on BP_AudioGamePlay_Base_C_ConditionMet");
-static_assert(sizeof(BP_AudioGamePlay_Base_C_ConditionMet) == 0x000001, "Wrong size on BP_AudioGamePlay_Base_C_ConditionMet");
-static_assert(offsetof(BP_AudioGamePlay_Base_C_ConditionMet, ReturnValue) == 0x000000, "Member 'BP_AudioGamePlay_Base_C_ConditionMet::ReturnValue' has a wrong offset!");
 
 }
 

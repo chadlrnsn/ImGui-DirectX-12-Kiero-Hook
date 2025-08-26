@@ -25,12 +25,12 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void GetDesiredFocusSubwidget(class UWidget** Result);
-	void ExecuteUbergraph_Widget_SettingsBase(int32 EntryPoint);
-	void BP_IncreaseSettingValue();
 	void BP_DecreaseSettingValue();
+	void BP_IncreaseSettingValue();
+	void ExecuteUbergraph_Widget_SettingsBase(int32 EntryPoint);
+	void GetDesiredFocusSubwidget(class UWidget** Result);
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
 
 public:
 	static class UClass* StaticClass()

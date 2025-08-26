@@ -33,17 +33,17 @@ public:
 	class UWidget_SettingInputMappingTabBase_C*   ParentWidget;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UpdateMapping(class FName Mapping_Name, EPlayerMappableKeySlot Slot_0, const struct FKey& New_Key, class UInputKeySelector* KeySelector);
-	void ToggleHighlight(class UImage* ImageToHighlight, bool bShouldHighlight);
-	void SelectInputFromSlot(EPlayerMappableKeySlot Slot_0, class FName* MappingName, EPlayerMappableKeySlot* ReturnSlot, struct FKey* DefaultKey, struct FKey* CurrentKey);
-	void ResetKeyMapping();
-	void KeySelected(const struct FInputChord& InputChord);
-	void IsSelectingKeyChanged();
-	void IsNewKeyValid(EPlayerMappableKeySlot VarSlot, const struct FKey& NewKey_0, class UInputKeySelector* InputKeySelector, bool* Valid);
-	void GetInputKeySelector(class UInputKeySelector** OutSelector);
-	void GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings);
-	void ExecuteUbergraph_Widget_Settings_KeyMappingBase(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_Settings_KeyMappingBase(int32 EntryPoint);
+	void GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings);
+	void GetInputKeySelector(class UInputKeySelector** OutSelector);
+	void IsNewKeyValid(EPlayerMappableKeySlot VarSlot, const struct FKey& NewKey_0, class UInputKeySelector* InputKeySelector, bool* Valid);
+	void IsSelectingKeyChanged();
+	void KeySelected(const struct FInputChord& InputChord);
+	void ResetKeyMapping();
+	void SelectInputFromSlot(EPlayerMappableKeySlot Slot_0, class FName* MappingName, EPlayerMappableKeySlot* ReturnSlot, struct FKey* DefaultKey, struct FKey* CurrentKey);
+	void ToggleHighlight(class UImage* ImageToHighlight, bool bShouldHighlight);
+	void UpdateMapping(class FName Mapping_Name, EPlayerMappableKeySlot Slot_0, const struct FKey& New_Key, class UInputKeySelector* KeySelector);
 
 public:
 	static class UClass* StaticClass()

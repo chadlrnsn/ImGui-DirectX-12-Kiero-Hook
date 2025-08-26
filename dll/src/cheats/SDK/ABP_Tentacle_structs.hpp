@@ -76,5 +76,13 @@ static_assert(offsetof(ABP_Tentacle::FAnimBlueprintGeneratedConstantData, AnimGr
 static_assert(offsetof(ABP_Tentacle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x0001B8, "Member 'ABP_Tentacle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
 static_assert(offsetof(ABP_Tentacle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequenceEvaluator) == 0x0001E8, "Member 'ABP_Tentacle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
 
+// ScriptStruct ABP_Tentacle.ABP_Tentacle_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_Tentacle::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_Tentacle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Tentacle::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Tentacle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Tentacle::FAnimBlueprintGeneratedMutableData");
+
 }
 

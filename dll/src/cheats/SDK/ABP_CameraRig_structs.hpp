@@ -104,5 +104,13 @@ static_assert(offsetof(ABP_CameraRig::FAnimBlueprintGeneratedConstantData, AnimG
 static_assert(offsetof(ABP_CameraRig::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x0003B8, "Member 'ABP_CameraRig::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
 static_assert(offsetof(ABP_CameraRig::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Inertialization) == 0x0003E8, "Member 'ABP_CameraRig::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Inertialization' has a wrong offset!");
 
+// ScriptStruct ABP_CameraRig.ABP_CameraRig_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_CameraRig::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_CameraRig::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_CameraRig::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_CameraRig::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_CameraRig::FAnimBlueprintGeneratedMutableData");
+
 }
 

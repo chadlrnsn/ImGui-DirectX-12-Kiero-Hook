@@ -9,38 +9,30 @@
 // FORWARD DECLARATIONS
 
 
-namespace ABP_Ricky_Wardrobe { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_BrinePistol { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Generic_Chest { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_PlayerTurret { struct FAnimBlueprintGeneratedConstantData; }
-
 namespace AB_LootGolem { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Syringe { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Enginerifle { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Shotgun { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_FishDiety { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Tentacle { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Ricky_Arms { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace AB_Ricky { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_CopyPose { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_Ricky_Arms { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_TeslaRifle { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_CameraRig { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_CopyPose
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
 
-namespace ABP_AtlanteanCube { struct FAnimBlueprintGeneratedConstantData; }
+namespace ABP_Generic_Chest
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
 
+namespace ABP_Tentacle
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
 
 namespace ABP_RocketLauncher
 {
@@ -48,7 +40,31 @@ namespace ABP_RocketLauncher
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_Golem_Sentry
+namespace ABP_Syringe
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_FishDiety
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Enginerifle
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_BasePlayer
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_TeslaRifle
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -60,13 +76,37 @@ namespace ABP_BasePlayer_Arms
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_BasePlayer
+namespace ABP_Shotgun
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Golem_Sentry
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_CoralShaman
+namespace ABP_PlayerTurret
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_BrinePistol
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_CameraRig
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_AtlanteanCube
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

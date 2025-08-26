@@ -17,119 +17,114 @@
 namespace SDK::Params
 {
 
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ValidateProfileNameInput
-// 0x0060 (0x0060 - 0x0000)
-struct Widget_CommonSaveMenu_C_ValidateProfileNameInput final
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.AcceptEvent_Event
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonSaveMenu_C_AcceptEvent_Event final
 {
 public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Valid;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Input;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_CommonSaveMenu_C_ValidateProfileNameInput) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_ValidateProfileNameInput");
-static_assert(sizeof(Widget_CommonSaveMenu_C_ValidateProfileNameInput) == 0x000060, "Wrong size on Widget_CommonSaveMenu_C_ValidateProfileNameInput");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Name_0) == 0x000000, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Name_0' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Valid) == 0x000010, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Valid' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Array_Index_Variable_1) == 0x000020, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Loop_Counter_Variable_1) == 0x000024, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x00003C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Less_IntInt_ReturnValue) == 0x00003D, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Add_IntInt_ReturnValue_1) == 0x000040, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Get_Item_1) == 0x000048, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Length_ReturnValue_1) == 0x000058, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Contains_ReturnValue) == 0x00005C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Less_IntInt_ReturnValue_1) == 0x00005D, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(Widget_CommonSaveMenu_C_AcceptEvent_Event) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_AcceptEvent_Event");
+static_assert(sizeof(Widget_CommonSaveMenu_C_AcceptEvent_Event) == 0x000010, "Wrong size on Widget_CommonSaveMenu_C_AcceptEvent_Event");
+static_assert(offsetof(Widget_CommonSaveMenu_C_AcceptEvent_Event, Input) == 0x000000, "Member 'Widget_CommonSaveMenu_C_AcceptEvent_Event::Input' has a wrong offset!");
 
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.UpdateDeleteButtonStatus
-// 0x0090 (0x0090 - 0x0000)
-struct Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus final
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	ECommonInputType                              Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature final
+{
+public:
+	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature");
+static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature) == 0x000010, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature");
+static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature, Item) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature::Item' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature, Widget) == 0x000008, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature::Widget' has a wrong offset!");
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ConstructSaveSlotWidgets
+// 0x0098 (0x0098 - 0x0000)
+struct Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0018(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SaveSlot_C*                     K2Node_DynamicCast_AsWidget_Save_Slot;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue_1;   // 0x0058(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SaveSlot_C*                     K2Node_DynamicCast_AsWidget_Save_Slot_1;           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasUserFocus_ReturnValue;                 // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue;          // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue_1;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue_1;        // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue_2;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class URSaveGame*>                     CallFunc_GetAllSaveGames_ReturnValue;              // 0x0058(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_Array_Get_Item_1;                         // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8F[0x1];                                       // 0x008F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus");
-static_assert(sizeof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus) == 0x000090, "Wrong size on Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Selection) == 0x000000, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Selection' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_AsWidget_Save_Slot) == 0x000038, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_AsWidget_Save_Slot' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetOwningPlayer_ReturnValue) == 0x000050, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetDisplayedEntryWidgets_ReturnValue_1) == 0x000058, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetDisplayedEntryWidgets_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Length_ReturnValue_1) == 0x000068, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Get_Item_1) == 0x000070, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Less_IntInt_ReturnValue_1) == 0x000078, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_AsWidget_Save_Slot_1) == 0x000080, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_AsWidget_Save_Slot_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_HasUserFocus_ReturnValue) == 0x000089, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_HasUserFocus_ReturnValue' has a wrong offset!");
-
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnInputMethodChanged_Event
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_CommonSaveMenu_C_OnInputMethodChanged_Event final
-{
-public:
-	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event) == 0x000001, "Wrong alignment on Widget_CommonSaveMenu_C_OnInputMethodChanged_Event");
-static_assert(sizeof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event) == 0x000001, "Wrong size on Widget_CommonSaveMenu_C_OnInputMethodChanged_Event");
-static_assert(offsetof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event, bNewInputType) == 0x000000, "Member 'Widget_CommonSaveMenu_C_OnInputMethodChanged_Event::bNewInputType' has a wrong offset!");
+static_assert(alignof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets");
+static_assert(sizeof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets) == 0x000098, "Wrong size on Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue) == 0x000010, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSlot_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue_1) == 0x000030, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSlot_ReturnValue_1) == 0x000038, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSlot_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsWithEditor_ReturnValue) == 0x000048, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue_2) == 0x000050, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetAllSaveGames_ReturnValue) == 0x000058, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetAllSaveGames_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Get_Item) == 0x000070, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue_1) == 0x000078, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000079, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue_2) == 0x00008C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Less_IntInt_ReturnValue) == 0x00008D, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x00008E, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Length_ReturnValue_1) == 0x000090, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000094, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ExecuteUbergraph_Widget_CommonSaveMenu
 // 0x0130 (0x0130 - 0x0000)
@@ -221,114 +216,119 @@ static_assert(offsetof(Widget_CommonSaveMenu_C_ExecuteUbergraph_Widget_CommonSav
 static_assert(offsetof(Widget_CommonSaveMenu_C_ExecuteUbergraph_Widget_CommonSaveMenu, CallFunc_PushWidget_OutWidget_3) == 0x000120, "Member 'Widget_CommonSaveMenu_C_ExecuteUbergraph_Widget_CommonSaveMenu::CallFunc_PushWidget_OutWidget_3' has a wrong offset!");
 static_assert(offsetof(Widget_CommonSaveMenu_C_ExecuteUbergraph_Widget_CommonSaveMenu, K2Node_CustomEvent_bNewInputType) == 0x000128, "Member 'Widget_CommonSaveMenu_C_ExecuteUbergraph_Widget_CommonSaveMenu::K2Node_CustomEvent_bNewInputType' has a wrong offset!");
 
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ConstructSaveSlotWidgets
-// 0x0098 (0x0098 - 0x0000)
-struct Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets final
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnInputMethodChanged_Event
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_CommonSaveMenu_C_OnInputMethodChanged_Event final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event) == 0x000001, "Wrong alignment on Widget_CommonSaveMenu_C_OnInputMethodChanged_Event");
+static_assert(sizeof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event) == 0x000001, "Wrong size on Widget_CommonSaveMenu_C_OnInputMethodChanged_Event");
+static_assert(offsetof(Widget_CommonSaveMenu_C_OnInputMethodChanged_Event, bNewInputType) == 0x000000, "Member 'Widget_CommonSaveMenu_C_OnInputMethodChanged_Event::bNewInputType' has a wrong offset!");
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.UpdateDeleteButtonStatus
+// 0x0090 (0x0090 - 0x0000)
+struct Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus final
+{
+public:
+	ECommonInputType                              Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue;          // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue_1;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue_1;        // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue_2;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class URSaveGame*>                     CallFunc_GetAllSaveGames_ReturnValue;              // 0x0058(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_Array_Get_Item_1;                         // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F[0x1];                                       // 0x008F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0018(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SaveSlot_C*                     K2Node_DynamicCast_AsWidget_Save_Slot;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue_1;   // 0x0058(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SaveSlot_C*                     K2Node_DynamicCast_AsWidget_Save_Slot_1;           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasUserFocus_ReturnValue;                 // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets");
-static_assert(sizeof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets) == 0x000098, "Wrong size on Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue) == 0x000010, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSlot_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue_1) == 0x000030, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSlot_ReturnValue_1) == 0x000038, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSlot_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsWithEditor_ReturnValue) == 0x000048, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetLastSaveGameSession_ReturnValue_2) == 0x000050, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetLastSaveGameSession_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_GetAllSaveGames_ReturnValue) == 0x000058, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_GetAllSaveGames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Get_Item) == 0x000070, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue_1) == 0x000078, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000079, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_IsValid_ReturnValue_2) == 0x00008C, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Less_IntInt_ReturnValue) == 0x00008D, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x00008E, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Array_Length_ReturnValue_1) == 0x000090, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000094, "Member 'Widget_CommonSaveMenu_C_ConstructSaveSlotWidgets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus");
+static_assert(sizeof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus) == 0x000090, "Wrong size on Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Selection) == 0x000000, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Selection' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_AsWidget_Save_Slot) == 0x000038, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_AsWidget_Save_Slot' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetOwningPlayer_ReturnValue) == 0x000050, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_GetDisplayedEntryWidgets_ReturnValue_1) == 0x000058, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_GetDisplayedEntryWidgets_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Length_ReturnValue_1) == 0x000068, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Array_Get_Item_1) == 0x000070, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_Less_IntInt_ReturnValue_1) == 0x000078, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_AsWidget_Save_Slot_1) == 0x000080, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_AsWidget_Save_Slot_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus, CallFunc_HasUserFocus_ReturnValue) == 0x000089, "Member 'Widget_CommonSaveMenu_C_UpdateDeleteButtonStatus::CallFunc_HasUserFocus_ReturnValue' has a wrong offset!");
 
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature final
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ValidateProfileNameInput
+// 0x0060 (0x0060 - 0x0000)
+struct Widget_CommonSaveMenu_C_ValidateProfileNameInput final
 {
 public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Valid;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature) == 0x000010, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature, Item) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature::Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature, Widget) == 0x000008, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature::Widget' has a wrong offset!");
-
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSaveMenu_C_BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.AcceptEvent_Event
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_CommonSaveMenu_C_AcceptEvent_Event final
-{
-public:
-	class FText                                   Input;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(Widget_CommonSaveMenu_C_AcceptEvent_Event) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_AcceptEvent_Event");
-static_assert(sizeof(Widget_CommonSaveMenu_C_AcceptEvent_Event) == 0x000010, "Wrong size on Widget_CommonSaveMenu_C_AcceptEvent_Event");
-static_assert(offsetof(Widget_CommonSaveMenu_C_AcceptEvent_Event, Input) == 0x000000, "Member 'Widget_CommonSaveMenu_C_AcceptEvent_Event::Input' has a wrong offset!");
+static_assert(alignof(Widget_CommonSaveMenu_C_ValidateProfileNameInput) == 0x000008, "Wrong alignment on Widget_CommonSaveMenu_C_ValidateProfileNameInput");
+static_assert(sizeof(Widget_CommonSaveMenu_C_ValidateProfileNameInput) == 0x000060, "Wrong size on Widget_CommonSaveMenu_C_ValidateProfileNameInput");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Name_0) == 0x000000, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Name_0' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Valid) == 0x000010, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Valid' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Array_Index_Variable_1) == 0x000020, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, Temp_int_Loop_Counter_Variable_1) == 0x000024, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x00003C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Less_IntInt_ReturnValue) == 0x00003D, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Add_IntInt_ReturnValue_1) == 0x000040, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Get_Item_1) == 0x000048, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Array_Length_ReturnValue_1) == 0x000058, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Contains_ReturnValue) == 0x00005C, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonSaveMenu_C_ValidateProfileNameInput, CallFunc_Less_IntInt_ReturnValue_1) == 0x00005D, "Member 'Widget_CommonSaveMenu_C_ValidateProfileNameInput::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BP_GetDesiredFocusTarget
 // 0x0028 (0x0028 - 0x0000)

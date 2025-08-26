@@ -17,29 +17,112 @@
 namespace SDK
 {
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ResetSettings
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_SettingInputMappingTabBase_C::ResetSettings()
+void UWidget_SettingInputMappingTabBase_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "ResetSettings");
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.RegisterMappableIMCs
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ExecuteUbergraph_Widget_SettingInputMappingTabBase
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingInputMappingTabBase_C::RegisterMappableIMCs()
+void UWidget_SettingInputMappingTabBase_C::ExecuteUbergraph_Widget_SettingInputMappingTabBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "RegisterMappableIMCs");
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "ExecuteUbergraph_Widget_SettingInputMappingTabBase");
+
+	Params::Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetEnhancedUserSettings
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UEnhancedInputUserSettings**      UserSettings                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingInputMappingTabBase_C::GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetEnhancedUserSettings");
+
+	Params::Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (UserSettings != nullptr)
+		*UserSettings = Parms.UserSettings;
+}
+
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetInputMappingsPanelWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UPanelWidget**                    Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingInputMappingTabBase_C::GetInputMappingsPanelWidget(class UPanelWidget** Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetInputMappingsPanelWidget");
+
+	Params::Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetMappableIMCs
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UInputMappingContext*>*    MappableIMCs_0                                         (Parm, OutParm)
+
+void UWidget_SettingInputMappingTabBase_C::GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetMappableIMCs");
+
+	Params::Widget_SettingInputMappingTabBase_C_GetMappableIMCs Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MappableIMCs_0 != nullptr)
+		*MappableIMCs_0 = std::move(Parms.MappableIMCs_0);
+}
+
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.PopulatePanelWithMappableInputs
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingInputMappingTabBase_C::PopulatePanelWithMappableInputs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "PopulatePanelWithMappableInputs");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,112 +148,29 @@ void UWidget_SettingInputMappingTabBase_C::Refresh(int32 FocusIndex)
 }
 
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.PopulatePanelWithMappableInputs
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.RegisterMappableIMCs
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingInputMappingTabBase_C::PopulatePanelWithMappableInputs()
+void UWidget_SettingInputMappingTabBase_C::RegisterMappableIMCs()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "PopulatePanelWithMappableInputs");
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "RegisterMappableIMCs");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetMappableIMCs
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<class UInputMappingContext*>*    MappableIMCs_0                                         (Parm, OutParm)
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ResetSettings
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingInputMappingTabBase_C::GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0)
+void UWidget_SettingInputMappingTabBase_C::ResetSettings()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetMappableIMCs");
-
-	Params::Widget_SettingInputMappingTabBase_C_GetMappableIMCs Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MappableIMCs_0 != nullptr)
-		*MappableIMCs_0 = std::move(Parms.MappableIMCs_0);
-}
-
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetInputMappingsPanelWidget
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UPanelWidget**                    Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingInputMappingTabBase_C::GetInputMappingsPanelWidget(class UPanelWidget** Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetInputMappingsPanelWidget");
-
-	Params::Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetEnhancedUserSettings
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UEnhancedInputUserSettings**      UserSettings                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingInputMappingTabBase_C::GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "GetEnhancedUserSettings");
-
-	Params::Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (UserSettings != nullptr)
-		*UserSettings = Parms.UserSettings;
-}
-
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ExecuteUbergraph_Widget_SettingInputMappingTabBase
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingInputMappingTabBase_C::ExecuteUbergraph_Widget_SettingInputMappingTabBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "ExecuteUbergraph_Widget_SettingInputMappingTabBase");
-
-	Params::Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_SettingInputMappingTabBase_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "Construct");
+		Func = Class->GetFunction("Widget_SettingInputMappingTabBase_C", "ResetSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -28,9 +28,9 @@ public:
 	bool                                          BeginVisible;                                      // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetLoadingIndicatorVisibility(bool Visible);
-	void OnInitialized();
 	void ExecuteUbergraph_Widget_LoadingIndicator_Common(int32 EntryPoint);
+	void OnInitialized();
+	void SetLoadingIndicatorVisibility(bool Visible);
 
 public:
 	static class UClass* StaticClass()

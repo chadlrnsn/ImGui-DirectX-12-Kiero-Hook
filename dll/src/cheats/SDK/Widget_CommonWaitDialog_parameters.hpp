@@ -14,33 +14,16 @@
 namespace SDK::Params
 {
 
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.SetInfo
-// 0x0040 (0x0040 - 0x0000)
-struct Widget_CommonWaitDialog_C_SetInfo final
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature final
 {
 public:
-	class FText                                   Header_0;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Descript;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   OkText_0;                                          // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0030(0x0010)()
+	class UWidget_TextButton_C*                   Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonWaitDialog_C_SetInfo) == 0x000008, "Wrong alignment on Widget_CommonWaitDialog_C_SetInfo");
-static_assert(sizeof(Widget_CommonWaitDialog_C_SetInfo) == 0x000040, "Wrong size on Widget_CommonWaitDialog_C_SetInfo");
-static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, Header_0) == 0x000000, "Member 'Widget_CommonWaitDialog_C_SetInfo::Header_0' has a wrong offset!");
-static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, Descript) == 0x000010, "Member 'Widget_CommonWaitDialog_C_SetInfo::Descript' has a wrong offset!");
-static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, OkText_0) == 0x000020, "Member 'Widget_CommonWaitDialog_C_SetInfo::OkText_0' has a wrong offset!");
-static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, CallFunc_TextToUpper_ReturnValue) == 0x000030, "Member 'Widget_CommonWaitDialog_C_SetInfo::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.FinishedWaiting
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_CommonWaitDialog_C_FinishedWaiting final
-{
-public:
-	bool                                          PopWidget_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonWaitDialog_C_FinishedWaiting) == 0x000001, "Wrong alignment on Widget_CommonWaitDialog_C_FinishedWaiting");
-static_assert(sizeof(Widget_CommonWaitDialog_C_FinishedWaiting) == 0x000001, "Wrong size on Widget_CommonWaitDialog_C_FinishedWaiting");
-static_assert(offsetof(Widget_CommonWaitDialog_C_FinishedWaiting, PopWidget_0) == 0x000000, "Member 'Widget_CommonWaitDialog_C_FinishedWaiting::PopWidget_0' has a wrong offset!");
+static_assert(alignof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
+static_assert(sizeof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
+static_assert(offsetof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature::Button' has a wrong offset!");
 
 // Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.ExecuteUbergraph_Widget_CommonWaitDialog
 // 0x0040 (0x0040 - 0x0000)
@@ -64,16 +47,33 @@ static_assert(offsetof(Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonW
 static_assert(offsetof(Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog, CallFunc_PlayAnimation_ReturnValue) == 0x000030, "Member 'Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog, CallFunc_PlayAnimation_ReturnValue_1) == 0x000038, "Member 'Widget_CommonWaitDialog_C_ExecuteUbergraph_Widget_CommonWaitDialog::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 
-// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature final
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.FinishedWaiting
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_CommonWaitDialog_C_FinishedWaiting final
 {
 public:
-	class UWidget_TextButton_C*                   Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          PopWidget_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
-static_assert(sizeof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
-static_assert(offsetof(Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonWaitDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature::Button' has a wrong offset!");
+static_assert(alignof(Widget_CommonWaitDialog_C_FinishedWaiting) == 0x000001, "Wrong alignment on Widget_CommonWaitDialog_C_FinishedWaiting");
+static_assert(sizeof(Widget_CommonWaitDialog_C_FinishedWaiting) == 0x000001, "Wrong size on Widget_CommonWaitDialog_C_FinishedWaiting");
+static_assert(offsetof(Widget_CommonWaitDialog_C_FinishedWaiting, PopWidget_0) == 0x000000, "Member 'Widget_CommonWaitDialog_C_FinishedWaiting::PopWidget_0' has a wrong offset!");
+
+// Function Widget_CommonWaitDialog.Widget_CommonWaitDialog_C.SetInfo
+// 0x0040 (0x0040 - 0x0000)
+struct Widget_CommonWaitDialog_C_SetInfo final
+{
+public:
+	class FText                                   Header_0;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   Descript;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   OkText_0;                                          // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0030(0x0010)()
+};
+static_assert(alignof(Widget_CommonWaitDialog_C_SetInfo) == 0x000008, "Wrong alignment on Widget_CommonWaitDialog_C_SetInfo");
+static_assert(sizeof(Widget_CommonWaitDialog_C_SetInfo) == 0x000040, "Wrong size on Widget_CommonWaitDialog_C_SetInfo");
+static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, Header_0) == 0x000000, "Member 'Widget_CommonWaitDialog_C_SetInfo::Header_0' has a wrong offset!");
+static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, Descript) == 0x000010, "Member 'Widget_CommonWaitDialog_C_SetInfo::Descript' has a wrong offset!");
+static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, OkText_0) == 0x000020, "Member 'Widget_CommonWaitDialog_C_SetInfo::OkText_0' has a wrong offset!");
+static_assert(offsetof(Widget_CommonWaitDialog_C_SetInfo, CallFunc_TextToUpper_ReturnValue) == 0x000030, "Member 'Widget_CommonWaitDialog_C_SetInfo::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
 
 }
 

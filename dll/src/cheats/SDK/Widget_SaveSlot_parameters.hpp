@@ -19,76 +19,38 @@
 namespace SDK::Params
 {
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.Setup
-// 0x0068 (0x0068 - 0x0000)
-struct Widget_SaveSlot_C_Setup final
-{
-public:
-	class URSaveGame*                             SaveGame;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
-	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue;          // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue;  // 0x0050(0x0010)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SaveSlot_C_Setup) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_Setup");
-static_assert(sizeof(Widget_SaveSlot_C_Setup) == 0x000068, "Wrong size on Widget_SaveSlot_C_Setup");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, SaveGame) == 0x000000, "Member 'Widget_SaveSlot_C_Setup::SaveGame' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_bool_Variable) == 0x000008, "Member 'Widget_SaveSlot_C_Setup::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_byte_Variable) == 0x000009, "Member 'Widget_SaveSlot_C_Setup::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_byte_Variable_1) == 0x00000A, "Member 'Widget_SaveSlot_C_Setup::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'Widget_SaveSlot_C_Setup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000020, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetCurrentInputType_ReturnValue) == 0x000028, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000029, "Member 'Widget_SaveSlot_C_Setup::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLastSaveGameSession_ReturnValue) == 0x000030, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLastSaveGameSession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLastSaveGameSlot_ReturnValue) == 0x000038, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLastSaveGameSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000048, "Member 'Widget_SaveSlot_C_Setup::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue) == 0x000050, "Member 'Widget_SaveSlot_C_Setup::CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SaveSlot_C_Setup, K2Node_Select_Default) == 0x000060, "Member 'Widget_SaveSlot_C_Setup::K2Node_Select_Default' has a wrong offset!");
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.OnRemovedFromFocusPath
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_SaveSlot_C_OnRemovedFromFocusPath final
+struct Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SaveSlot_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_SaveSlot_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_SaveSlot_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_SaveSlot_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SaveSlot_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+static_assert(alignof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SaveSlot_C_OnListItemObjectSet final
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SaveSlot_C_BP_OnItemExpansionChanged final
 {
 public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SaveSlot_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_OnListItemObjectSet");
-static_assert(sizeof(Widget_SaveSlot_C_OnListItemObjectSet) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnListItemObjectSet");
-static_assert(offsetof(Widget_SaveSlot_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'Widget_SaveSlot_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
+static_assert(alignof(Widget_SaveSlot_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on Widget_SaveSlot_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(Widget_SaveSlot_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on Widget_SaveSlot_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(Widget_SaveSlot_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'Widget_SaveSlot_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.OnAddedToFocusPath
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SaveSlot_C_OnAddedToFocusPath final
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SaveSlot_C_BP_OnItemSelectionChanged final
 {
 public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SaveSlot_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_SaveSlot_C_OnAddedToFocusPath");
-static_assert(sizeof(Widget_SaveSlot_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnAddedToFocusPath");
-static_assert(offsetof(Widget_SaveSlot_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SaveSlot_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+static_assert(alignof(Widget_SaveSlot_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on Widget_SaveSlot_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(Widget_SaveSlot_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on Widget_SaveSlot_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(Widget_SaveSlot_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'Widget_SaveSlot_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
 // Function Widget_SaveSlot.Widget_SaveSlot_C.ExecuteUbergraph_Widget_SaveSlot
 // 0x0168 (0x0168 - 0x0000)
@@ -157,38 +119,76 @@ static_assert(offsetof(Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot, K2Nod
 static_assert(offsetof(Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot, K2Node_MakeArray_Array) == 0x000148, "Member 'Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot, CallFunc_Format_ReturnValue) == 0x000158, "Member 'Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot::CallFunc_Format_ReturnValue' has a wrong offset!");
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SaveSlot_C_BP_OnItemSelectionChanged final
-{
-public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SaveSlot_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on Widget_SaveSlot_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(Widget_SaveSlot_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on Widget_SaveSlot_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(Widget_SaveSlot_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'Widget_SaveSlot_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SaveSlot_C_BP_OnItemExpansionChanged final
-{
-public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SaveSlot_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on Widget_SaveSlot_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(Widget_SaveSlot_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on Widget_SaveSlot_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(Widget_SaveSlot_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'Widget_SaveSlot_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
+struct Widget_SaveSlot_C_OnAddedToFocusPath final
 {
 public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+static_assert(alignof(Widget_SaveSlot_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_SaveSlot_C_OnAddedToFocusPath");
+static_assert(sizeof(Widget_SaveSlot_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnAddedToFocusPath");
+static_assert(offsetof(Widget_SaveSlot_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SaveSlot_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SaveSlot_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SaveSlot_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_OnListItemObjectSet");
+static_assert(sizeof(Widget_SaveSlot_C_OnListItemObjectSet) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnListItemObjectSet");
+static_assert(offsetof(Widget_SaveSlot_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'Widget_SaveSlot_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnRemovedFromFocusPath
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SaveSlot_C_OnRemovedFromFocusPath final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(Widget_SaveSlot_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_SaveSlot_C_OnRemovedFromFocusPath");
+static_assert(sizeof(Widget_SaveSlot_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_SaveSlot_C_OnRemovedFromFocusPath");
+static_assert(offsetof(Widget_SaveSlot_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SaveSlot_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.Setup
+// 0x0068 (0x0068 - 0x0000)
+struct Widget_SaveSlot_C_Setup final
+{
+public:
+	class URSaveGame*                             SaveGame;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGameSession*                      CallFunc_GetLastSaveGameSession_ReturnValue;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetLastSaveGameSlot_ReturnValue;          // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue;  // 0x0050(0x0010)()
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SaveSlot_C_Setup) == 0x000008, "Wrong alignment on Widget_SaveSlot_C_Setup");
+static_assert(sizeof(Widget_SaveSlot_C_Setup) == 0x000068, "Wrong size on Widget_SaveSlot_C_Setup");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, SaveGame) == 0x000000, "Member 'Widget_SaveSlot_C_Setup::SaveGame' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_bool_Variable) == 0x000008, "Member 'Widget_SaveSlot_C_Setup::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_byte_Variable) == 0x000009, "Member 'Widget_SaveSlot_C_Setup::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, Temp_byte_Variable_1) == 0x00000A, "Member 'Widget_SaveSlot_C_Setup::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'Widget_SaveSlot_C_Setup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000020, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetCurrentInputType_ReturnValue) == 0x000028, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000029, "Member 'Widget_SaveSlot_C_Setup::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLastSaveGameSession_ReturnValue) == 0x000030, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLastSaveGameSession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_GetLastSaveGameSlot_ReturnValue) == 0x000038, "Member 'Widget_SaveSlot_C_Setup::CallFunc_GetLastSaveGameSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000048, "Member 'Widget_SaveSlot_C_Setup::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue) == 0x000050, "Member 'Widget_SaveSlot_C_Setup::CallFunc_AsTimeZoneDateTime_DateTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SaveSlot_C_Setup, K2Node_Select_Default) == 0x000060, "Member 'Widget_SaveSlot_C_Setup::K2Node_Select_Default' has a wrong offset!");
 
 }
 

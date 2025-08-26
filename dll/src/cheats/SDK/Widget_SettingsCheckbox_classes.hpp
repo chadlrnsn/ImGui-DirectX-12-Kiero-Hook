@@ -36,20 +36,20 @@ public:
 	bool                                          ShowCheckbox;                                      // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ToggleValue();
-	void ToggleHighlight();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetValue(bool State);
-	void Set_Text(bool Condition);
-	void PreConstruct(bool IsDesignTime);
-	struct FEventReply ImagePressed(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void GetDesiredFocusSubwidget(class UWidget** Result);
-	void ExecuteUbergraph_Widget_SettingsCheckbox(int32 EntryPoint);
-	void Construct();
-	void BP_IncreaseSettingValue();
-	void BP_DecreaseSettingValue();
-	void BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
 	void BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
+	void BP_DecreaseSettingValue();
+	void BP_IncreaseSettingValue();
+	void Construct();
+	void ExecuteUbergraph_Widget_SettingsCheckbox(int32 EntryPoint);
+	void GetDesiredFocusSubwidget(class UWidget** Result);
+	struct FEventReply ImagePressed(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void PreConstruct(bool IsDesignTime);
+	void Set_Text(bool Condition);
+	void SetValue(bool State);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ToggleHighlight();
+	void ToggleValue();
 
 public:
 	static class UClass* StaticClass()

@@ -34,21 +34,21 @@ public:
 	TArray<class USoundWave*>                     Sound;                                             // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void SetWidgetCurrentValues();
-	void ResetSettings();
-	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
-	void NextWidgetSettingsValue(class UUserWidget* Widget);
-	void ExecuteUbergraph_Widget_AudioSettings(int32 EntryPoint);
-	void Construct();
-	void BP_GetScrollBoxWidget(class UScrollBox** Result);
-	void BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(double Value, double Percent);
 	void ApplySettings();
+	void BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BP_GetScrollBoxWidget(class UScrollBox** Result);
+	void Construct();
+	void ExecuteUbergraph_Widget_AudioSettings(int32 EntryPoint);
+	void NextWidgetSettingsValue(class UUserWidget* Widget);
+	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
+	void ResetSettings();
+	void SetWidgetCurrentValues();
 
 public:
 	static class UClass* StaticClass()

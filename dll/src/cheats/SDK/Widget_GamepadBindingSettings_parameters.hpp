@@ -16,6 +16,57 @@
 namespace SDK::Params
 {
 
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.BP_GetScrollBoxWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget final
+{
+public:
+	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget");
+static_assert(sizeof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
+
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetDesiredFocusWidget
+// 0x0040 (0x0040 - 0x0000)
+struct Widget_GamepadBindingSettings_C_GetDesiredFocusWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UScrollBox*                             CallFunc_BP_GetScrollBoxWidget_Result;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_Settings_KeybindInput_C*        K2Node_DynamicCast_AsWidget_Settings_Keybind_Input; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_Settings_GamepadInput_C*        K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_GetDesiredFocusWidget");
+static_assert(sizeof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget) == 0x000040, "Wrong size on Widget_GamepadBindingSettings_C_GetDesiredFocusWidget");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_BP_GetScrollBoxWidget_Result) == 0x000008, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_BP_GetScrollBoxWidget_Result' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsWidget_Settings_Keybind_Input) == 0x000020, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsWidget_Settings_Keybind_Input' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input) == 0x000030, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input' has a wrong offset!");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetInputMappingsPanelWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget final
+{
+public:
+	class UPanelWidget*                           Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget");
+static_assert(sizeof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong size on Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget");
+static_assert(offsetof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget, Result) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget::Result' has a wrong offset!");
+
 // Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetMappableIMCs
 // 0x0138 (0x0138 - 0x0000)
 struct Widget_GamepadBindingSettings_C_GetMappableIMCs final
@@ -51,57 +102,6 @@ static_assert(offsetof(Widget_GamepadBindingSettings_C_GetMappableIMCs, CallFunc
 static_assert(offsetof(Widget_GamepadBindingSettings_C_GetMappableIMCs, K2Node_DynamicCast_AsInput_Mapping_Context_2) == 0x000118, "Member 'Widget_GamepadBindingSettings_C_GetMappableIMCs::K2Node_DynamicCast_AsInput_Mapping_Context_2' has a wrong offset!");
 static_assert(offsetof(Widget_GamepadBindingSettings_C_GetMappableIMCs, K2Node_DynamicCast_bSuccess_2) == 0x000120, "Member 'Widget_GamepadBindingSettings_C_GetMappableIMCs::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 static_assert(offsetof(Widget_GamepadBindingSettings_C_GetMappableIMCs, K2Node_MakeArray_Array) == 0x000128, "Member 'Widget_GamepadBindingSettings_C_GetMappableIMCs::K2Node_MakeArray_Array' has a wrong offset!");
-
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetInputMappingsPanelWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget final
-{
-public:
-	class UPanelWidget*                           Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget");
-static_assert(sizeof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong size on Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget, Result) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget::Result' has a wrong offset!");
-
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetDesiredFocusWidget
-// 0x0040 (0x0040 - 0x0000)
-struct Widget_GamepadBindingSettings_C_GetDesiredFocusWidget final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UScrollBox*                             CallFunc_BP_GetScrollBoxWidget_Result;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_Settings_KeybindInput_C*        K2Node_DynamicCast_AsWidget_Settings_Keybind_Input; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_Settings_GamepadInput_C*        K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_GetDesiredFocusWidget");
-static_assert(sizeof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget) == 0x000040, "Wrong size on Widget_GamepadBindingSettings_C_GetDesiredFocusWidget");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_BP_GetScrollBoxWidget_Result) == 0x000008, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_BP_GetScrollBoxWidget_Result' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsWidget_Settings_Keybind_Input) == 0x000020, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsWidget_Settings_Keybind_Input' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input) == 0x000030, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsWidget_Settings_Gamepad_Input' has a wrong offset!");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'Widget_GamepadBindingSettings_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.BP_GetScrollBoxWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget final
-{
-public:
-	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
 
 }
 

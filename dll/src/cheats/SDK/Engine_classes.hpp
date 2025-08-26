@@ -36382,7 +36382,7 @@ static_assert(offsetof(ALevelInstance, LevelInstanceSpawnGuid) == 0x0002E0, "Mem
 
 // Class Engine.PackedLevelActor
 // 0x0000 (0x0348 - 0x0348)
-class APackedLevelActor : public ALevelInstance
+class APackedLevelActor final : public ALevelInstance
 {
 public:
 	static class UClass* StaticClass()

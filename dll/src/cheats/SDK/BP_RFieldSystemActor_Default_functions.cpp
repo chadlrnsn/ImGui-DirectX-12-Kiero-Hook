@@ -17,92 +17,6 @@
 namespace SDK
 {
 
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.K2_OnApplyTransientfields
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   FieldLocation                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const float                             FieldRadius                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RFieldSystemActor_Default_C::K2_OnApplyTransientfields(const struct FVector& FieldLocation, const float FieldRadius)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "K2_OnApplyTransientfields");
-
-	Params::BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields Parms{};
-
-	Parms.FieldLocation = std::move(FieldLocation);
-	Parms.FieldRadius = FieldRadius;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ExecuteUbergraph_BP_RFieldSystemActor_Default
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RFieldSystemActor_Default_C::ExecuteUbergraph_BP_RFieldSystemActor_Default(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ExecuteUbergraph_BP_RFieldSystemActor_Default");
-
-	Params::BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyStrain
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   FieldLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  FieldRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RFieldSystemActor_Default_C::ApplyStrain(const struct FVector& FieldLocation, double FieldRadius)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ApplyStrain");
-
-	Params::BP_RFieldSystemActor_Default_C_ApplyStrain Parms{};
-
-	Parms.FieldLocation = std::move(FieldLocation);
-	Parms.FieldRadius = FieldRadius;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyForce
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   FieldLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  FieldRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RFieldSystemActor_Default_C::ApplyForce(const struct FVector& FieldLocation, double FieldRadius)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ApplyForce");
-
-	Params::BP_RFieldSystemActor_Default_C_ApplyForce Parms{};
-
-	Parms.FieldLocation = std::move(FieldLocation);
-	Parms.FieldRadius = FieldRadius;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.AddFalloffAndCulling
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -132,6 +46,92 @@ void ABP_RFieldSystemActor_Default_C::AddFalloffAndCulling(double StrainMagnitud
 
 	if (NewParam != nullptr)
 		*NewParam = Parms.NewParam;
+}
+
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyForce
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   FieldLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  FieldRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RFieldSystemActor_Default_C::ApplyForce(const struct FVector& FieldLocation, double FieldRadius)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ApplyForce");
+
+	Params::BP_RFieldSystemActor_Default_C_ApplyForce Parms{};
+
+	Parms.FieldLocation = std::move(FieldLocation);
+	Parms.FieldRadius = FieldRadius;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyStrain
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   FieldLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  FieldRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RFieldSystemActor_Default_C::ApplyStrain(const struct FVector& FieldLocation, double FieldRadius)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ApplyStrain");
+
+	Params::BP_RFieldSystemActor_Default_C_ApplyStrain Parms{};
+
+	Parms.FieldLocation = std::move(FieldLocation);
+	Parms.FieldRadius = FieldRadius;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ExecuteUbergraph_BP_RFieldSystemActor_Default
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RFieldSystemActor_Default_C::ExecuteUbergraph_BP_RFieldSystemActor_Default(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "ExecuteUbergraph_BP_RFieldSystemActor_Default");
+
+	Params::BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.K2_OnApplyTransientfields
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   FieldLocation                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const float                             FieldRadius                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_RFieldSystemActor_Default_C::K2_OnApplyTransientfields(const struct FVector& FieldLocation, const float FieldRadius)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RFieldSystemActor_Default_C", "K2_OnApplyTransientfields");
+
+	Params::BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields Parms{};
+
+	Parms.FieldLocation = std::move(FieldLocation);
+	Parms.FieldRadius = FieldRadius;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

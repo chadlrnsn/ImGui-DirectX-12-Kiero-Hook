@@ -16,163 +16,161 @@
 namespace SDK::Params
 {
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.SetWidgetCurrentValues
-// 0x0080 (0x0080 - 0x0000)
-struct Widget_GraphicSettings_C_SetWidgetCurrentValues final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
 {
 public:
-	bool                                          bInit;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_3;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_4;                               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_5;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetOverallScalabilityLevel_ReturnValue;   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDepthOfFieldEnabled_ReturnValue;       // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetMotionBlurEnabled_ReturnValue;         // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_MinScaleValue; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_MaxScaleValue; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScreenPercentage_ReturnValue;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetGIType_ReturnValue;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetPostProcessingQuality_ReturnValue;     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTextureQuality_ReturnValue;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetFoliageQuality_ReturnValue;            // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetVisualEffectQuality_ReturnValue;       // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetShadowQuality_ReturnValue;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAntiAliasingQuality_ReturnValue;       // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAAType_ReturnValue;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default;                             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_SetWidgetCurrentValues");
-static_assert(sizeof(Widget_GraphicSettings_C_SetWidgetCurrentValues) == 0x000080, "Wrong size on Widget_GraphicSettings_C_SetWidgetCurrentValues");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, bInit) == 0x000000, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::bInit' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable) == 0x000004, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_1) == 0x000008, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_2) == 0x00000C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_3) == 0x000010, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_4) == 0x000014, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_5) == 0x000018, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_5' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000020, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetOverallScalabilityLevel_ReturnValue) == 0x000028, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetOverallScalabilityLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetDepthOfFieldEnabled_ReturnValue) == 0x00002C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetDepthOfFieldEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetMotionBlurEnabled_ReturnValue) == 0x00002D, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetMotionBlurEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized) == 0x000030, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue) == 0x000034, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MinScaleValue) == 0x000038, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MinScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MaxScaleValue) == 0x00003C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MaxScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetScreenPercentage_ReturnValue) == 0x000040, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetScreenPercentage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetGIType_ReturnValue) == 0x000044, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetGIType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_ReturnValue) == 0x000048, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetPostProcessingQuality_ReturnValue) == 0x000050, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetPostProcessingQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetTextureQuality_ReturnValue) == 0x000054, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetTextureQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetFoliageQuality_ReturnValue) == 0x000058, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetFoliageQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetVisualEffectQuality_ReturnValue) == 0x00005C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetVisualEffectQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetShadowQuality_ReturnValue) == 0x000060, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetShadowQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetAntiAliasingQuality_ReturnValue) == 0x000064, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetAntiAliasingQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetAAType_ReturnValue) == 0x000068, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetAAType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, K2Node_Select_Default) == 0x00006C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_B_ImplicitCast) == 0x000070, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_A_ImplicitCast) == 0x000078, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.PreviousWidgetSettingsValue
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GraphicSettings_C_PreviousWidgetSettingsValue final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
 {
 public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_PreviousWidgetSettingsValue");
-static_assert(sizeof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GraphicSettings_C_PreviousWidgetSettingsValue");
-static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.NextWidgetSettingsValue
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GraphicSettings_C_NextWidgetSettingsValue final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_NextWidgetSettingsValue");
-static_assert(sizeof(Widget_GraphicSettings_C_NextWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GraphicSettings_C_NextWidgetSettingsValue");
-static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.GetFocusedWidget
-// 0x0050 (0x0050 - 0x0000)
-struct Widget_GraphicSettings_C_GetFocusedWidget final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
 {
 public:
-	class UUserWidget*                            FocusedWidget;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            K2Node_DynamicCast_AsUser_Widget;                  // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_GetFocusedWidget) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_GetFocusedWidget");
-static_assert(sizeof(Widget_GraphicSettings_C_GetFocusedWidget) == 0x000050, "Wrong size on Widget_GraphicSettings_C_GetFocusedWidget");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, FocusedWidget) == 0x000000, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::FocusedWidget' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_GetAllChildren_ReturnValue) == 0x000018, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, K2Node_DynamicCast_AsUser_Widget) == 0x000040, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::K2Node_DynamicCast_AsUser_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000049, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::State' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.Get_TSRSharpness_Visibility
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_GraphicSettings_C_Get_TSRSharpness_Visibility final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
 {
 public:
-	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAAType_ReturnValue;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_Get_TSRSharpness_Visibility");
-static_assert(sizeof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility) == 0x000018, "Wrong size on Widget_GraphicSettings_C_Get_TSRSharpness_Visibility");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, ReturnValue) == 0x000000, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_bool_Variable) == 0x000001, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_byte_Variable) == 0x000002, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_byte_Variable_1) == 0x000003, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000008, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_GetAAType_ReturnValue) == 0x000010, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_GetAAType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000014, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, K2Node_Select_Default) == 0x000015, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::K2Node_Select_Default' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BP_GetScrollBoxWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_GraphicSettings_C_BP_GetScrollBoxWidget final
+{
+public:
+	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BP_GetScrollBoxWidget");
+static_assert(sizeof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GraphicSettings_C_BP_GetScrollBoxWidget");
+static_assert(offsetof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GraphicSettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
 
 // Function Widget_GraphicSettings.Widget_GraphicSettings_C.ExecuteUbergraph_Widget_GraphicSettings
 // 0x0180 (0x0180 - 0x0000)
@@ -326,161 +324,163 @@ static_assert(offsetof(Widget_GraphicSettings_C_ExecuteUbergraph_Widget_GraphicS
 static_assert(offsetof(Widget_GraphicSettings_C_ExecuteUbergraph_Widget_GraphicSettings, CallFunc_SetValue_InValue_ImplicitCast) == 0x000170, "Member 'Widget_GraphicSettings_C_ExecuteUbergraph_Widget_GraphicSettings::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Widget_GraphicSettings_C_ExecuteUbergraph_Widget_GraphicSettings, CallFunc_SetScreenPercentage_newValue_ImplicitCast) == 0x000178, "Member 'Widget_GraphicSettings_C_ExecuteUbergraph_Widget_GraphicSettings::CallFunc_SetScreenPercentage_newValue_ImplicitCast' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BP_GetScrollBoxWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GraphicSettings_C_BP_GetScrollBoxWidget final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.Get_TSRSharpness_Visibility
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GraphicSettings_C_Get_TSRSharpness_Visibility final
 {
 public:
-	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAAType_ReturnValue;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_GraphicSettings_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_GraphicSettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_GraphicSettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_Get_TSRSharpness_Visibility");
+static_assert(sizeof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility) == 0x000018, "Wrong size on Widget_GraphicSettings_C_Get_TSRSharpness_Visibility");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, ReturnValue) == 0x000000, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_bool_Variable) == 0x000001, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_byte_Variable) == 0x000002, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, Temp_byte_Variable_1) == 0x000003, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000008, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_GetAAType_ReturnValue) == 0x000010, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_GetAAType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000014, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_Get_TSRSharpness_Visibility, K2Node_Select_Default) == 0x000015, "Member 'Widget_GraphicSettings_C_Get_TSRSharpness_Visibility::K2Node_Select_Default' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.GetFocusedWidget
+// 0x0050 (0x0050 - 0x0000)
+struct Widget_GraphicSettings_C_GetFocusedWidget final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            FocusedWidget;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            K2Node_DynamicCast_AsUser_Widget;                  // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_GetFocusedWidget) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_GetFocusedWidget");
+static_assert(sizeof(Widget_GraphicSettings_C_GetFocusedWidget) == 0x000050, "Wrong size on Widget_GraphicSettings_C_GetFocusedWidget");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, FocusedWidget) == 0x000000, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::FocusedWidget' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_GetAllChildren_ReturnValue) == 0x000018, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, K2Node_DynamicCast_AsUser_Widget) == 0x000040, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::K2Node_DynamicCast_AsUser_Widget' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_GetFocusedWidget, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000049, "Member 'Widget_GraphicSettings_C_GetFocusedWidget::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.NextWidgetSettingsValue
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GraphicSettings_C_NextWidgetSettingsValue final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_NextWidgetSettingsValue");
+static_assert(sizeof(Widget_GraphicSettings_C_NextWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GraphicSettings_C_NextWidgetSettingsValue");
+static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GraphicSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.PreviousWidgetSettingsValue
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_GraphicSettings_C_PreviousWidgetSettingsValue final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_PreviousWidgetSettingsValue");
+static_assert(sizeof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue) == 0x000018, "Wrong size on Widget_GraphicSettings_C_PreviousWidgetSettingsValue");
+static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_GraphicSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.SetWidgetCurrentValues
+// 0x0080 (0x0080 - 0x0000)
+struct Widget_GraphicSettings_C_SetWidgetCurrentValues final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInit;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetOverallScalabilityLevel_ReturnValue;   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDepthOfFieldEnabled_ReturnValue;       // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetMotionBlurEnabled_ReturnValue;         // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_MinScaleValue; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_MaxScaleValue; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScreenPercentage_ReturnValue;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetGIType_ReturnValue;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPostProcessingQuality_ReturnValue;     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTextureQuality_ReturnValue;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetFoliageQuality_ReturnValue;            // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetVisualEffectQuality_ReturnValue;       // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetShadowQuality_ReturnValue;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAntiAliasingQuality_ReturnValue;       // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAAType_ReturnValue;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_A_ImplicitCast;               // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_GraphicSettings.Widget_GraphicSettings_C.BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_GraphicSettings_C_BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+static_assert(alignof(Widget_GraphicSettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_GraphicSettings_C_SetWidgetCurrentValues");
+static_assert(sizeof(Widget_GraphicSettings_C_SetWidgetCurrentValues) == 0x000080, "Wrong size on Widget_GraphicSettings_C_SetWidgetCurrentValues");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, bInit) == 0x000000, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::bInit' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable) == 0x000004, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_1) == 0x000008, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_2) == 0x00000C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_3) == 0x000010, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_4) == 0x000014, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, Temp_int_Variable_5) == 0x000018, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000020, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetOverallScalabilityLevel_ReturnValue) == 0x000028, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetOverallScalabilityLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetDepthOfFieldEnabled_ReturnValue) == 0x00002C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetDepthOfFieldEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetMotionBlurEnabled_ReturnValue) == 0x00002D, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetMotionBlurEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized) == 0x000030, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue) == 0x000034, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MinScaleValue) == 0x000038, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MinScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MaxScaleValue) == 0x00003C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MaxScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetScreenPercentage_ReturnValue) == 0x000040, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetScreenPercentage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetGIType_ReturnValue) == 0x000044, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetGIType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_ReturnValue) == 0x000048, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetPostProcessingQuality_ReturnValue) == 0x000050, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetPostProcessingQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetTextureQuality_ReturnValue) == 0x000054, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetTextureQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetFoliageQuality_ReturnValue) == 0x000058, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetFoliageQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetVisualEffectQuality_ReturnValue) == 0x00005C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetVisualEffectQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetShadowQuality_ReturnValue) == 0x000060, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetShadowQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetAntiAliasingQuality_ReturnValue) == 0x000064, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetAntiAliasingQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_GetAAType_ReturnValue) == 0x000068, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_GetAAType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, K2Node_Select_Default) == 0x00006C, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_B_ImplicitCast) == 0x000070, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Widget_GraphicSettings_C_SetWidgetCurrentValues, CallFunc_SelectFloat_A_ImplicitCast) == 0x000078, "Member 'Widget_GraphicSettings_C_SetWidgetCurrentValues::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
 
 }
 

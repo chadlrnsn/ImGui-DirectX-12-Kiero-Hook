@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_AudioGamePlay_Base_C::ConditionMet() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AudioGamePlay_Base_C", "ConditionMet");
+
+	Params::BP_AudioGamePlay_Base_C_ConditionMet Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet_Position
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -33,26 +53,6 @@ bool ABP_AudioGamePlay_Base_C::ConditionMet_Position(const struct FVector& Posit
 	Params::BP_AudioGamePlay_Base_C_ConditionMet_Position Parms{};
 
 	Parms.Position = std::move(Position);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_AudioGamePlay_Base.BP_AudioGamePlay_Base_C.ConditionMet
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool ABP_AudioGamePlay_Base_C::ConditionMet() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AudioGamePlay_Base_C", "ConditionMet");
-
-	Params::BP_AudioGamePlay_Base_C_ConditionMet Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

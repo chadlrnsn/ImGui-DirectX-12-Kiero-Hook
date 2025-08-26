@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_FlaskBase_CharacterMutator.BP_FlaskBase_CharacterMutator_C
 // 0x0018 (0x0EB8 - 0x0EA0)
-class UBP_FlaskBase_CharacterMutator_C : public UBP_Activatable_CharacterMutator_C
+class UBP_FlaskBase_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FlaskBase_CharacterMutator_C;    // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

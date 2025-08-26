@@ -31,15 +31,15 @@ public:
 	TArray<class UInputAction*>                   BlacklistedIAs;                                    // 0x0378(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly)
 
 public:
-	void ResetSettings();
-	void RegisterMappableIMCs();
-	void Refresh(int32 FocusIndex);
-	void PopulatePanelWithMappableInputs();
-	void GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0);
-	void GetInputMappingsPanelWidget(class UPanelWidget** Result);
-	void GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings);
-	void ExecuteUbergraph_Widget_SettingInputMappingTabBase(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_SettingInputMappingTabBase(int32 EntryPoint);
+	void GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings);
+	void GetInputMappingsPanelWidget(class UPanelWidget** Result);
+	void GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0);
+	void PopulatePanelWithMappableInputs();
+	void Refresh(int32 FocusIndex);
+	void RegisterMappableIMCs();
+	void ResetSettings();
 
 public:
 	static class UClass* StaticClass()

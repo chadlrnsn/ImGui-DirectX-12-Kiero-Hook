@@ -18,55 +18,6 @@
 namespace SDK::Params
 {
 
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AmbiencePlayer_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AmbiencePlayer_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AmbiencePlayer_C_ReceiveTick");
-static_assert(sizeof(BP_AmbiencePlayer_C_ReceiveTick) == 0x000004, "Wrong size on BP_AmbiencePlayer_C_ReceiveTick");
-static_assert(offsetof(BP_AmbiencePlayer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AmbiencePlayer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ExecuteUbergraph_BP_AmbiencePlayer
-// 0x0078 (0x0078 - 0x0000)
-struct BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAudioParameter>                CallFunc_CalculateQuadGain_Array;                  // 0x0038(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsActive_ReturnValue;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetParameters_Blueprint_self_CastInput; // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FadeIn_FadeInDuration_ImplicitCast;       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast; // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer) == 0x000008, "Wrong alignment on BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer");
-static_assert(sizeof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer) == 0x000078, "Wrong size on BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, EntryPoint) == 0x000000, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000008, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_GetCameraRotation_ReturnValue) == 0x000010, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Roll) == 0x000028, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Pitch) == 0x00002C, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Yaw) == 0x000030, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_CalculateQuadGain_Array) == 0x000038, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_CalculateQuadGain_Array' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_IsActive_ReturnValue) == 0x000048, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_IsActive_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_SetParameters_Blueprint_self_CastInput) == 0x000050, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_SetParameters_Blueprint_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_FadeIn_FadeInDuration_ImplicitCast) == 0x000060, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_FadeIn_FadeInDuration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast) == 0x000068, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000070, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
-
 // Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.CalculateQuadGain
 // 0x04E0 (0x04E0 - 0x0000)
 struct BP_AmbiencePlayer_C_CalculateQuadGain final
@@ -141,6 +92,55 @@ static_assert(offsetof(BP_AmbiencePlayer_C_CalculateQuadGain, CallFunc_FloatToAu
 static_assert(offsetof(BP_AmbiencePlayer_C_CalculateQuadGain, CallFunc_FloatToAudioParameter_Float_ImplicitCast_1) == 0x0004D4, "Member 'BP_AmbiencePlayer_C_CalculateQuadGain::CallFunc_FloatToAudioParameter_Float_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_AmbiencePlayer_C_CalculateQuadGain, CallFunc_FloatToAudioParameter_Float_ImplicitCast_2) == 0x0004D8, "Member 'BP_AmbiencePlayer_C_CalculateQuadGain::CallFunc_FloatToAudioParameter_Float_ImplicitCast_2' has a wrong offset!");
 static_assert(offsetof(BP_AmbiencePlayer_C_CalculateQuadGain, CallFunc_FloatToAudioParameter_Float_ImplicitCast_3) == 0x0004DC, "Member 'BP_AmbiencePlayer_C_CalculateQuadGain::CallFunc_FloatToAudioParameter_Float_ImplicitCast_3' has a wrong offset!");
+
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ExecuteUbergraph_BP_AmbiencePlayer
+// 0x0078 (0x0078 - 0x0000)
+struct BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAudioParameter>                CallFunc_CalculateQuadGain_Array;                  // 0x0038(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsActive_ReturnValue;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetParameters_Blueprint_self_CastInput; // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeIn_FadeInDuration_ImplicitCast;       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast; // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer) == 0x000008, "Wrong alignment on BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer");
+static_assert(sizeof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer) == 0x000078, "Wrong size on BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, EntryPoint) == 0x000000, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000008, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_GetCameraRotation_ReturnValue) == 0x000010, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Roll) == 0x000028, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Pitch) == 0x00002C, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_BreakRotator_Yaw) == 0x000030, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_CalculateQuadGain_Array) == 0x000038, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_CalculateQuadGain_Array' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_IsActive_ReturnValue) == 0x000048, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_IsActive_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_SetParameters_Blueprint_self_CastInput) == 0x000050, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_SetParameters_Blueprint_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_FadeIn_FadeInDuration_ImplicitCast) == 0x000060, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_FadeIn_FadeInDuration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast) == 0x000068, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_CalculateQuadGain_CameraYaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000070, "Member 'BP_AmbiencePlayer_C_ExecuteUbergraph_BP_AmbiencePlayer::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AmbiencePlayer_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AmbiencePlayer_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AmbiencePlayer_C_ReceiveTick");
+static_assert(sizeof(BP_AmbiencePlayer_C_ReceiveTick) == 0x000004, "Wrong size on BP_AmbiencePlayer_C_ReceiveTick");
+static_assert(offsetof(BP_AmbiencePlayer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AmbiencePlayer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

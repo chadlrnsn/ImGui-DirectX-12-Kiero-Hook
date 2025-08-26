@@ -44,22 +44,22 @@ public:
 	class URSettingTabWidget*                     CurrentSettingsTab;                                // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tab_Highlighted(int32 Index_0);
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void NavigateTabRight();
-	void NavigateTabLeft();
-	void HighlightedTabNavigateRight();
-	void HighlightedTabNavigateLeft();
-	void HighlightedTabNavigateAccept();
-	void GetTabIndexById(int32* Index_0);
-	void ExecuteUbergraph_Widget_CommonSettingsMenu(int32 EntryPoint);
-	void Construct();
-	void BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId);
-	void BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId);
+	void Construct();
+	void ExecuteUbergraph_Widget_CommonSettingsMenu(int32 EntryPoint);
+	void GetTabIndexById(int32* Index_0);
+	void HighlightedTabNavigateAccept();
+	void HighlightedTabNavigateLeft();
+	void HighlightedTabNavigateRight();
+	void NavigateTabLeft();
+	void NavigateTabRight();
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void Tab_Highlighted(int32 Index_0);
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 

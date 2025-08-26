@@ -31,18 +31,18 @@ public:
 	TSoftClassPtr<class UClass>                   SoftFrenziedMutatorRef;                            // 0x05B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateEnemyOutline(class ARPawnBase* EnemyPawn, bool renderDepth);
-	void ReceiveOnEnemySpawnPrimed(class UClass* EnemyClass, float SpawnDuration, const struct FTransform& SpawnTransform);
-	void ReceiveBeginPlay();
-	void PopulatePool(int32 Num);
-	void OnSpawned(class ARNPCPawnBase* EnemyPawn);
-	void OnKilled(class ARNPCPawnBase* EnemyPawn);
-	void GetVFXAssets(class UMaterialInstance** DecoyMaterial, class UNiagaraSystem** NiagaraSystemAsset);
-	void GetPooledSpawnBP(class ABP_EnemySpawnDecoy_C** SpawnBP);
-	void GetEliteVFXAssets(class UNiagaraSystem** NiagaraSystemAsset);
-	void ExecuteUbergraph_BP_EnemySpawnManager(int32 EntryPoint);
-	void CheckOutlineThresholdReached();
 	void CheckLastEnemyOfEncounter();
+	void CheckOutlineThresholdReached();
+	void ExecuteUbergraph_BP_EnemySpawnManager(int32 EntryPoint);
+	void GetEliteVFXAssets(class UNiagaraSystem** NiagaraSystemAsset);
+	void GetPooledSpawnBP(class ABP_EnemySpawnDecoy_C** SpawnBP);
+	void GetVFXAssets(class UMaterialInstance** DecoyMaterial, class UNiagaraSystem** NiagaraSystemAsset);
+	void OnKilled(class ARNPCPawnBase* EnemyPawn);
+	void OnSpawned(class ARNPCPawnBase* EnemyPawn);
+	void PopulatePool(int32 Num);
+	void ReceiveBeginPlay();
+	void ReceiveOnEnemySpawnPrimed(class UClass* EnemyClass, float SpawnDuration, const struct FTransform& SpawnTransform);
+	void UpdateEnemyOutline(class ARPawnBase* EnemyPawn, bool renderDepth);
 
 public:
 	static class UClass* StaticClass()

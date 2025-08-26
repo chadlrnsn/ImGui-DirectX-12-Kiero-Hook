@@ -43,21 +43,21 @@ public:
 	bool                                          bBroadcastValueChanged;                            // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateProgressbarPercentage();
-	void ToggleHighlight();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetValuePercentage(double InPercentage);
-	void SetValue(double InValue, bool bBroadcastValueChanged_0);
-	void Set_Value_Text_Value();
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_Widget_SettingsSlider(int32 EntryPoint);
-	void Construct();
-	void ChangeValueWithNavigation(double Delta);
-	void BP_IncreaseSettingValue();
-	void BP_DecreaseSettingValue();
-	void BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value);
+	void BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BP_DecreaseSettingValue();
+	void BP_IncreaseSettingValue();
+	void ChangeValueWithNavigation(double Delta);
+	void Construct();
+	void ExecuteUbergraph_Widget_SettingsSlider(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Set_Value_Text_Value();
+	void SetValue(double InValue, bool bBroadcastValueChanged_0);
+	void SetValuePercentage(double InPercentage);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ToggleHighlight();
+	void UpdateProgressbarPercentage();
 
 public:
 	static class UClass* StaticClass()

@@ -18,18 +18,16 @@
 namespace SDK::Params
 {
 
-// Function Widget_CommonCredits.Widget_CommonCredits_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct Widget_CommonCredits_C_Tick final
+// Function Widget_CommonCredits.Widget_CommonCredits_C.BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonCredits_C_Tick) == 0x000004, "Wrong alignment on Widget_CommonCredits_C_Tick");
-static_assert(sizeof(Widget_CommonCredits_C_Tick) == 0x00003C, "Wrong size on Widget_CommonCredits_C_Tick");
-static_assert(offsetof(Widget_CommonCredits_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_CommonCredits_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_CommonCredits_C_Tick::InDeltaTime' has a wrong offset!");
+static_assert(alignof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
 // Function Widget_CommonCredits.Widget_CommonCredits_C.ExecuteUbergraph_Widget_CommonCredits
 // 0x0108 (0x0108 - 0x0000)
@@ -73,16 +71,18 @@ static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCred
 static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_MakeStruct_WidgetTransform_1) == 0x0000C8, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_MakeStruct_WidgetTransform_1' has a wrong offset!");
 static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000100, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function Widget_CommonCredits.Widget_CommonCredits_C.BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
+// Function Widget_CommonCredits.Widget_CommonCredits_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct Widget_CommonCredits_C_Tick final
 {
 public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+static_assert(alignof(Widget_CommonCredits_C_Tick) == 0x000004, "Wrong alignment on Widget_CommonCredits_C_Tick");
+static_assert(sizeof(Widget_CommonCredits_C_Tick) == 0x00003C, "Wrong size on Widget_CommonCredits_C_Tick");
+static_assert(offsetof(Widget_CommonCredits_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_CommonCredits_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(Widget_CommonCredits_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_CommonCredits_C_Tick::InDeltaTime' has a wrong offset!");
 
 }
 

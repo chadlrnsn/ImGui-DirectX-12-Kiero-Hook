@@ -28,13 +28,13 @@ public:
 	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void GetInputKeySelector(class UInputKeySelector** OutSelector);
-	void ExecuteUbergraph_Widget_Settings_GamepadInput(int32 EntryPoint);
-	void Construct();
-	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature();
 	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey);
+	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_Widget_Settings_GamepadInput(int32 EntryPoint);
+	void GetInputKeySelector(class UInputKeySelector** OutSelector);
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
 
 public:
 	static class UClass* StaticClass()

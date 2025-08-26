@@ -46,17 +46,17 @@ public:
 	double                                        HoldDuration;                                      // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void StopHold();
-	void StartHold();
-	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& YesText_0, const class FText& NoText_0, double HoldDuration_0);
-	void ExecuteUbergraph_Widget_ChoiceHoldConfirmationDialog(int32 EntryPoint);
-	void DestructAnimationFinished();
-	void ClosePanel();
-	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature();
-	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature();
 	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature();
+	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature();
+	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature();
+	void ClosePanel();
+	void DestructAnimationFinished();
+	void ExecuteUbergraph_Widget_ChoiceHoldConfirmationDialog(int32 EntryPoint);
+	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& YesText_0, const class FText& NoText_0, double HoldDuration_0);
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void StartHold();
+	void StopHold();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

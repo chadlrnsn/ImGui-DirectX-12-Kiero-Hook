@@ -1,8 +1,8 @@
 #include "CheatMain.h"
 #include "Config.h"
 #include "../Features/WeaponService.h"
-#include "../Aimbot/AimbotController.h"
-#include "../Analysis/BoneAnalyzer.h"
+#include "../Services/AimbotService.h"
+#include "../Services/BoneService.h"
 #include "../Utils/Console.h"
 #include "../Utils/Input.h"
 #include "../Services/GameServices.h"
@@ -80,7 +80,7 @@ namespace Cheat {
             LOG_INFO("Shutting down cheat system...");
 
             // Shutdown subsystems
-            AimbotController::Shutdown();
+            Services::AimbotService::Shutdown();
 
             Config::System::Initialized = false;
             Config::System::ShouldExit = false;
@@ -156,10 +156,10 @@ namespace Cheat {
             }
 
             // Initialize aimbot system
-            AimbotController::Initialize();
+            Services::AimbotService::Initialize();
 
             // Initialize bone analyzer system
-            BoneAnalyzer::Initialize();
+            Services::BoneService::Initialize();
 
             // Initialize weapon service
             Features::WeaponService::Initialize();
@@ -171,12 +171,12 @@ namespace Cheat {
 
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
-                BoneAnalyzer::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
+                Services::BoneService::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
             }
 
             // Handle display bone database key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::ShowBoneDB)) {
-                BoneAnalyzer::DisplayBoneDatabase();
+                Services::BoneService::DisplayBoneDatabase();
             }
 
             // Handle log weapon stats key
@@ -193,7 +193,7 @@ namespace Cheat {
             Features::WeaponService::Update();
 
             // Update aimbot system
-            AimbotController::Update(deltaTime);
+            Services::AimbotService::Update(deltaTime);
         }
         
     } // namespace Core

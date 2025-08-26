@@ -46,5 +46,13 @@ static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGra
 static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalRefPose) == 0x000100, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalRefPose' has a wrong offset!");
 static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000130, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
 
+// ScriptStruct ABP_Syringe.ABP_Syringe_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_Syringe::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_Syringe::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Syringe::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Syringe::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Syringe::FAnimBlueprintGeneratedMutableData");
+
 }
 

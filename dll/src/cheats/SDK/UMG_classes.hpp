@@ -330,7 +330,7 @@ static_assert(offsetof(UBorder, OnMouseDoubleClickEvent) == 0x0002E4, "Member 'U
 
 // Class UMG.WidgetComponent
 // 0x0140 (0x0660 - 0x0520)
-class UWidgetComponent : public UMeshComponent
+class UWidgetComponent final : public UMeshComponent
 {
 public:
 	EWidgetSpace                                  Space;                                             // 0x0518(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1189,7 +1189,7 @@ static_assert(offsetof(UWidgetNavigation, Previous) == 0x0000DC, "Member 'UWidge
 
 // Class UMG.CheckBox
 // 0x09A0 (0x0B20 - 0x0180)
-class UCheckBox : public UContentWidget
+class UCheckBox final : public UContentWidget
 {
 public:
 	ECheckBoxState                                CheckedState;                                      // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2508,7 +2508,7 @@ static_assert(offsetof(UComboBoxKey, OnOpening) == 0x001920, "Member 'UComboBoxK
 
 // Class UMG.ComboBoxString
 // 0x1878 (0x19E0 - 0x0168)
-class UComboBoxString : public UWidget
+class UComboBoxString final : public UWidget
 {
 public:
 	TArray<class FString>                         DefaultOptions;                                    // 0x0168(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
@@ -4885,7 +4885,7 @@ static_assert(offsetof(UWrapBoxSlot, bForceNewLine) == 0x00004F, "Member 'UWrapB
 
 // Class UMG.DragDropOperation
 // 0x0068 (0x0090 - 0x0028)
-class UDragDropOperation : public UObject
+class UDragDropOperation final : public UObject
 {
 public:
 	class FString                                 Tag;                                               // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)

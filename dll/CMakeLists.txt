@@ -51,6 +51,9 @@ add_library(${DLL_NAME} SHARED
     # Services
     src/cheats/Services/GameServices.cpp
     src/cheats/Services/PlayerEffectsService.cpp
+    src/cheats/Services/AimbotService.cpp
+    src/cheats/Services/TargetingService.cpp
+    src/cheats/Services/BoneService.cpp
 
     # GUI
     src/gui/CheatMenu.cpp

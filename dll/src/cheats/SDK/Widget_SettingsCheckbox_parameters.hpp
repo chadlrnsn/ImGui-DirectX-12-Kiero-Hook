@@ -17,6 +17,114 @@
 namespace SDK::Params
 {
 
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
+{
+public:
+	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(sizeof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(offsetof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ExecuteUbergraph_Widget_SettingsCheckbox
+// 0x0044 (0x0044 - 0x0000)
+struct Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox) == 0x000004, "Wrong alignment on Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox");
+static_assert(sizeof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox) == 0x000044, "Wrong size on Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, EntryPoint) == 0x000000, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_IsDesignTime) == 0x000004, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_ComponentBoundEvent_bIsChecked) == 0x000005, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, CallFunc_IsChecked_ReturnValue) == 0x000006, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, CallFunc_Not_PreBool_ReturnValue) == 0x000007, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_MyGeometry) == 0x000008, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_InDeltaTime) == 0x000040, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_InDeltaTime' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.GetDesiredFocusSubwidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget final
+{
+public:
+	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget");
+static_assert(sizeof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget");
+static_assert(offsetof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ImagePressed
+// 0x0220 (0x0220 - 0x0000)
+struct Widget_SettingsCheckbox_C_ImagePressed final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            K2Node_MakeStruct_EventReply;                      // 0x0168(0x00B8)()
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_ImagePressed) == 0x000008, "Wrong alignment on Widget_SettingsCheckbox_C_ImagePressed");
+static_assert(sizeof(Widget_SettingsCheckbox_C_ImagePressed) == 0x000220, "Wrong size on Widget_SettingsCheckbox_C_ImagePressed");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, MyGeometry) == 0x000000, "Member 'Widget_SettingsCheckbox_C_ImagePressed::MyGeometry' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, MouseEvent) == 0x000038, "Member 'Widget_SettingsCheckbox_C_ImagePressed::MouseEvent' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, ReturnValue) == 0x0000B0, "Member 'Widget_SettingsCheckbox_C_ImagePressed::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, K2Node_MakeStruct_EventReply) == 0x000168, "Member 'Widget_SettingsCheckbox_C_ImagePressed::K2Node_MakeStruct_EventReply' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingsCheckbox_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_PreConstruct");
+static_assert(sizeof(Widget_SettingsCheckbox_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_PreConstruct");
+static_assert(offsetof(Widget_SettingsCheckbox_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsCheckbox_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Set Text
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingsCheckbox_C_Set_Text final
+{
+public:
+	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_Set_Text) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_Set_Text");
+static_assert(sizeof(Widget_SettingsCheckbox_C_Set_Text) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_Set_Text");
+static_assert(offsetof(Widget_SettingsCheckbox_C_Set_Text, Condition) == 0x000000, "Member 'Widget_SettingsCheckbox_C_Set_Text::Condition' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.SetValue
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingsCheckbox_C_SetValue final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_SetValue) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_SetValue");
+static_assert(sizeof(Widget_SettingsCheckbox_C_SetValue) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_SetValue");
+static_assert(offsetof(Widget_SettingsCheckbox_C_SetValue, State) == 0x000000, "Member 'Widget_SettingsCheckbox_C_SetValue::State' has a wrong offset!");
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct Widget_SettingsCheckbox_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsCheckbox_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsCheckbox_C_Tick");
+static_assert(sizeof(Widget_SettingsCheckbox_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsCheckbox_C_Tick");
+static_assert(offsetof(Widget_SettingsCheckbox_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsCheckbox_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsCheckbox_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsCheckbox_C_Tick::InDeltaTime' has a wrong offset!");
+
 // Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ToggleHighlight
 // 0x0018 (0x0018 - 0x0000)
 struct Widget_SettingsCheckbox_C_ToggleHighlight final
@@ -42,114 +150,6 @@ static_assert(offsetof(Widget_SettingsCheckbox_C_ToggleHighlight, CallFunc_HasUs
 static_assert(offsetof(Widget_SettingsCheckbox_C_ToggleHighlight, Temp_bool_IsClosed_Variable_1) == 0x000011, "Member 'Widget_SettingsCheckbox_C_ToggleHighlight::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
 static_assert(offsetof(Widget_SettingsCheckbox_C_ToggleHighlight, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000012, "Member 'Widget_SettingsCheckbox_C_ToggleHighlight::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Widget_SettingsCheckbox_C_ToggleHighlight, CallFunc_BooleanOR_ReturnValue) == 0x000013, "Member 'Widget_SettingsCheckbox_C_ToggleHighlight::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct Widget_SettingsCheckbox_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsCheckbox_C_Tick");
-static_assert(sizeof(Widget_SettingsCheckbox_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsCheckbox_C_Tick");
-static_assert(offsetof(Widget_SettingsCheckbox_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsCheckbox_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsCheckbox_C_Tick::InDeltaTime' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.SetValue
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingsCheckbox_C_SetValue final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_SetValue) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_SetValue");
-static_assert(sizeof(Widget_SettingsCheckbox_C_SetValue) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_SetValue");
-static_assert(offsetof(Widget_SettingsCheckbox_C_SetValue, State) == 0x000000, "Member 'Widget_SettingsCheckbox_C_SetValue::State' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Set Text
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingsCheckbox_C_Set_Text final
-{
-public:
-	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_Set_Text) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_Set_Text");
-static_assert(sizeof(Widget_SettingsCheckbox_C_Set_Text) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_Set_Text");
-static_assert(offsetof(Widget_SettingsCheckbox_C_Set_Text, Condition) == 0x000000, "Member 'Widget_SettingsCheckbox_C_Set_Text::Condition' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingsCheckbox_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_PreConstruct");
-static_assert(sizeof(Widget_SettingsCheckbox_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_PreConstruct");
-static_assert(offsetof(Widget_SettingsCheckbox_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsCheckbox_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ImagePressed
-// 0x0220 (0x0220 - 0x0000)
-struct Widget_SettingsCheckbox_C_ImagePressed final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            K2Node_MakeStruct_EventReply;                      // 0x0168(0x00B8)()
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_ImagePressed) == 0x000008, "Wrong alignment on Widget_SettingsCheckbox_C_ImagePressed");
-static_assert(sizeof(Widget_SettingsCheckbox_C_ImagePressed) == 0x000220, "Wrong size on Widget_SettingsCheckbox_C_ImagePressed");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, MyGeometry) == 0x000000, "Member 'Widget_SettingsCheckbox_C_ImagePressed::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, MouseEvent) == 0x000038, "Member 'Widget_SettingsCheckbox_C_ImagePressed::MouseEvent' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, ReturnValue) == 0x0000B0, "Member 'Widget_SettingsCheckbox_C_ImagePressed::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ImagePressed, K2Node_MakeStruct_EventReply) == 0x000168, "Member 'Widget_SettingsCheckbox_C_ImagePressed::K2Node_MakeStruct_EventReply' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.GetDesiredFocusSubwidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget final
-{
-public:
-	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget");
-static_assert(sizeof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget");
-static_assert(offsetof(Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ExecuteUbergraph_Widget_SettingsCheckbox
-// 0x0044 (0x0044 - 0x0000)
-struct Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox) == 0x000004, "Wrong alignment on Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox");
-static_assert(sizeof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox) == 0x000044, "Wrong size on Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, EntryPoint) == 0x000000, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_IsDesignTime) == 0x000004, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_ComponentBoundEvent_bIsChecked) == 0x000005, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, CallFunc_IsChecked_ReturnValue) == 0x000006, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, CallFunc_Not_PreBool_ReturnValue) == 0x000007, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_MyGeometry) == 0x000008, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox, K2Node_Event_InDeltaTime) == 0x000040, "Member 'Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox::K2Node_Event_InDeltaTime' has a wrong offset!");
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
-{
-public:
-	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(sizeof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(offsetof(Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
 
 }
 

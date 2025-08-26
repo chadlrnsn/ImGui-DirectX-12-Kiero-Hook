@@ -2,6 +2,7 @@
 #include "MathUtils.h"
 #include "../Core/Config.h"
 #include "../Services/GameServices.h"
+#include "../Services/TargetingService.h"
 #include <dev/validity.h>
 #include <dev/logger.h>
 #include <Windows.h>
@@ -109,9 +110,9 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
 
 
 
-    // Find the best target
-    TargetInfo newTarget = TargetSelector::SelectBestTarget(world, playerController, playerPawn);
-    
+    // Find the best target via TargetingService
+    TargetInfo newTarget = Cheat::Services::TargetingService::GetBestTarget(world, playerController, playerPawn);
+
     // Log target search results
     if (!newTarget.actor) {
         if (shouldLogDetailed) {

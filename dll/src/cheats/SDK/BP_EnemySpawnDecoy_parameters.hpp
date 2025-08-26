@@ -17,67 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.StartSpawnSequence
-// 0x01E0 (0x01E0 - 0x0000)
-struct BP_EnemySpawnDecoy_C_StartSpawnSequence final
-{
-public:
-	class USkeletalMesh*                          Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Duration;                                          // 0x0070(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationAsset*                        SpawnAnimation;                                    // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     DecoyMaterial;                                     // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x00A0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x01A8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnDecoy_C_StartSpawnSequence) == 0x000010, "Wrong alignment on BP_EnemySpawnDecoy_C_StartSpawnSequence");
-static_assert(sizeof(BP_EnemySpawnDecoy_C_StartSpawnSequence) == 0x0001E0, "Wrong size on BP_EnemySpawnDecoy_C_StartSpawnSequence");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Mesh) == 0x000000, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Transform) == 0x000010, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Transform' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Duration) == 0x000070, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Duration' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, SpawnAnimation) == 0x000078, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::SpawnAnimation' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, DecoyMaterial) == 0x000080, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::DecoyMaterial' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, NiagaraSystemAsset) == 0x000088, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::NiagaraSystemAsset' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_IsValid_ReturnValue) == 0x000094, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x0000A0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_K2_SetActorTransform_ReturnValue) == 0x0001A0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_GetMaterials_ReturnValue) == 0x0001A8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Array_Length_ReturnValue) == 0x0001B8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Less_IntInt_ReturnValue) == 0x0001BC, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Temp_int_Array_Index_Variable) == 0x0001C0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0001C8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Array_Add_ReturnValue) == 0x0001D0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.OnSpawnSequenceStarted
-// 0x0004 (0x0004 - 0x0000)
-struct BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted final
-{
-public:
-	float                                         Duration;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted) == 0x000004, "Wrong alignment on BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted");
-static_assert(sizeof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted) == 0x000004, "Wrong size on BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted");
-static_assert(offsetof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted, Duration) == 0x000000, "Member 'BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted::Duration' has a wrong offset!");
-
 // Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.ExecuteUbergraph_BP_EnemySpawnDecoy
 // 0x0070 (0x0070 - 0x0000)
 struct BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy final
@@ -131,6 +70,67 @@ static_assert(offsetof(BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy,
 static_assert(offsetof(BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy, CallFunc_Lerp_Alpha_ImplicitCast) == 0x000060, "Member 'BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy::CallFunc_Lerp_Alpha_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000068, "Member 'BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x00006C, "Member 'BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.OnSpawnSequenceStarted
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted final
+{
+public:
+	float                                         Duration;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted) == 0x000004, "Wrong alignment on BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted");
+static_assert(sizeof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted) == 0x000004, "Wrong size on BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted, Duration) == 0x000000, "Member 'BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted::Duration' has a wrong offset!");
+
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.StartSpawnSequence
+// 0x01E0 (0x01E0 - 0x0000)
+struct BP_EnemySpawnDecoy_C_StartSpawnSequence final
+{
+public:
+	class USkeletalMesh*                          Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Duration;                                          // 0x0070(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationAsset*                        SpawnAnimation;                                    // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     DecoyMaterial;                                     // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x00A0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x01A8(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnDecoy_C_StartSpawnSequence) == 0x000010, "Wrong alignment on BP_EnemySpawnDecoy_C_StartSpawnSequence");
+static_assert(sizeof(BP_EnemySpawnDecoy_C_StartSpawnSequence) == 0x0001E0, "Wrong size on BP_EnemySpawnDecoy_C_StartSpawnSequence");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Mesh) == 0x000000, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Mesh' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Transform) == 0x000010, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Transform' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Duration) == 0x000070, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Duration' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, SpawnAnimation) == 0x000078, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::SpawnAnimation' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, DecoyMaterial) == 0x000080, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::DecoyMaterial' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, NiagaraSystemAsset) == 0x000088, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::NiagaraSystemAsset' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_IsValid_ReturnValue) == 0x000094, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x0000A0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_K2_SetActorTransform_ReturnValue) == 0x0001A0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_GetMaterials_ReturnValue) == 0x0001A8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Array_Length_ReturnValue) == 0x0001B8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Less_IntInt_ReturnValue) == 0x0001BC, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, Temp_int_Array_Index_Variable) == 0x0001C0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0001C8, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnDecoy_C_StartSpawnSequence, CallFunc_Array_Add_ReturnValue) == 0x0001D0, "Member 'BP_EnemySpawnDecoy_C_StartSpawnSequence::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 }
 

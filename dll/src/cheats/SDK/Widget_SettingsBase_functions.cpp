@@ -17,41 +17,49 @@
 namespace SDK
 {
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.OnRemovedFromFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// Function Widget_SettingsBase.Widget_SettingsBase_C.BP_DecreaseSettingValue
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingsBase_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_SettingsBase_C::BP_DecreaseSettingValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsBase_C", "OnRemovedFromFocusPath");
+		Func = Class->GetFunction("Widget_SettingsBase_C", "BP_DecreaseSettingValue");
 
-	Params::Widget_SettingsBase_C_OnRemovedFromFocusPath Parms{};
-
-	Parms.InFocusEvent = std::move(InFocusEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// Function Widget_SettingsBase.Widget_SettingsBase_C.BP_IncreaseSettingValue
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingsBase_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_SettingsBase_C::BP_IncreaseSettingValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsBase_C", "OnAddedToFocusPath");
+		Func = Class->GetFunction("Widget_SettingsBase_C", "BP_IncreaseSettingValue");
 
-	Params::Widget_SettingsBase_C_OnAddedToFocusPath Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+
+// Function Widget_SettingsBase.Widget_SettingsBase_C.ExecuteUbergraph_Widget_SettingsBase
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsBase_C::ExecuteUbergraph_Widget_SettingsBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsBase_C", "ExecuteUbergraph_Widget_SettingsBase");
+
+	Params::Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -78,51 +86,43 @@ void UWidget_SettingsBase_C::GetDesiredFocusSubwidget(class UWidget** Result)
 }
 
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.ExecuteUbergraph_Widget_SettingsBase
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_SettingsBase.Widget_SettingsBase_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_SettingsBase_C::ExecuteUbergraph_Widget_SettingsBase(int32 EntryPoint)
+void UWidget_SettingsBase_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsBase_C", "ExecuteUbergraph_Widget_SettingsBase");
+		Func = Class->GetFunction("Widget_SettingsBase_C", "OnAddedToFocusPath");
 
-	Params::Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase Parms{};
+	Params::Widget_SettingsBase_C_OnAddedToFocusPath Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.BP_IncreaseSettingValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingsBase.Widget_SettingsBase_C.OnRemovedFromFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_SettingsBase_C::BP_IncreaseSettingValue()
+void UWidget_SettingsBase_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsBase_C", "BP_IncreaseSettingValue");
+		Func = Class->GetFunction("Widget_SettingsBase_C", "OnRemovedFromFocusPath");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_SettingsBase_C_OnRemovedFromFocusPath Parms{};
 
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.BP_DecreaseSettingValue
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsBase_C::BP_DecreaseSettingValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsBase_C", "BP_DecreaseSettingValue");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

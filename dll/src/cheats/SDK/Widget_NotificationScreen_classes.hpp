@@ -28,10 +28,10 @@ public:
 	class UVerticalBox*                           VerticalBox_253;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnShowHUDUpdated_Event_0(bool NewValue);
-	void OnInitialized();
-	void ExecuteUbergraph_Widget_NotificationScreen(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_NotificationScreen(int32 EntryPoint);
+	void OnInitialized();
+	void OnShowHUDUpdated_Event_0(bool NewValue);
 
 public:
 	static class UClass* StaticClass()

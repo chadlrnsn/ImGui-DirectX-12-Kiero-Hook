@@ -35,28 +35,28 @@ public:
 	class UWidget_SettingsOptions_C*              WindowMode;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UWidget* WindowModeDownNavigation(EUINavigation Navigation_0);
-	void StringToResolution(const class FString& InString, struct FIntPoint* Resolution_0);
-	void SetWidgetCurrentValues();
-	void SetDisplayedResolutionComboboxOption();
-	class FString ResolutionToString(const struct FIntPoint& IntPoint);
-	void ResetSettings();
-	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
-	void NextWidgetSettingsValue(class UUserWidget* Widget);
-	class UWidget* GammaNavigationUp(EUINavigation Navigation_0);
-	void ExecuteUbergraph_Widget_DisplaySettings(int32 EntryPoint);
-	void Construct();
-	void BP_GetScrollBoxWidget(class UScrollBox** Result);
-	void BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0);
-	void BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void ApplySettings();
 	void Add_Resolutions_To_Combo_Box(EWindowMode Selection);
+	void ApplySettings();
+	void BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0);
+	void BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BP_GetScrollBoxWidget(class UScrollBox** Result);
+	void Construct();
+	void ExecuteUbergraph_Widget_DisplaySettings(int32 EntryPoint);
+	class UWidget* GammaNavigationUp(EUINavigation Navigation_0);
+	void NextWidgetSettingsValue(class UUserWidget* Widget);
+	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
+	void ResetSettings();
+	class FString ResolutionToString(const struct FIntPoint& IntPoint);
+	void SetDisplayedResolutionComboboxOption();
+	void SetWidgetCurrentValues();
+	void StringToResolution(const class FString& InString, struct FIntPoint* Resolution_0);
+	class UWidget* WindowModeDownNavigation(EUINavigation Navigation_0);
 
 public:
 	static class UClass* StaticClass()

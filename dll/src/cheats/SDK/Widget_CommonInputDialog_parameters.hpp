@@ -14,18 +14,51 @@
 namespace SDK::Params
 {
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.SetupTexts
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_CommonInputDialog_C_SetupTexts final
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0000(0x0010)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0010(0x0010)()
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonInputDialog_C_SetupTexts) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_SetupTexts");
-static_assert(sizeof(Widget_CommonInputDialog_C_SetupTexts) == 0x000020, "Wrong size on Widget_CommonInputDialog_C_SetupTexts");
-static_assert(offsetof(Widget_CommonInputDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue) == 0x000000, "Member 'Widget_CommonInputDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue_1) == 0x000010, "Member 'Widget_CommonInputDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+static_assert(sizeof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+static_assert(offsetof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ExecuteUbergraph_Widget_CommonInputDialog
+// 0x0048 (0x0048 - 0x0000)
+struct Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0030(0x0010)()
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog");
+static_assert(sizeof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog) == 0x000048, "Wrong size on Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, EntryPoint) == 0x000000, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_PlayAnimation_ReturnValue) == 0x000018, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_PlayAnimation_ReturnValue_1) == 0x000020, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_ComponentBoundEvent_Button_1) == 0x000028, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_GetText_ReturnValue) == 0x000030, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_GetText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_ComponentBoundEvent_Button) == 0x000040, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
 
 // Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.Initialize
 // 0x0058 (0x0058 - 0x0000)
@@ -52,51 +85,18 @@ static_assert(offsetof(Widget_CommonInputDialog_C_Initialize, MaxInputLength_0) 
 static_assert(offsetof(Widget_CommonInputDialog_C_Initialize, NumbersOnly_0) == 0x000054, "Member 'Widget_CommonInputDialog_C_Initialize::NumbersOnly_0' has a wrong offset!");
 static_assert(offsetof(Widget_CommonInputDialog_C_Initialize, PopOnAccept_0) == 0x000055, "Member 'Widget_CommonInputDialog_C_Initialize::PopOnAccept_0' has a wrong offset!");
 
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.ExecuteUbergraph_Widget_CommonInputDialog
-// 0x0048 (0x0048 - 0x0000)
-struct Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog final
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.SetupTexts
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_CommonInputDialog_C_SetupTexts final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0030(0x0010)()
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0000(0x0010)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0010(0x0010)()
 };
-static_assert(alignof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog");
-static_assert(sizeof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog) == 0x000048, "Wrong size on Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, EntryPoint) == 0x000000, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_PlayAnimation_ReturnValue) == 0x000018, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_PlayAnimation_ReturnValue_1) == 0x000020, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_ComponentBoundEvent_Button_1) == 0x000028, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, CallFunc_GetText_ReturnValue) == 0x000030, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog, K2Node_ComponentBoundEvent_Button) == 0x000040, "Member 'Widget_CommonInputDialog_C_ExecuteUbergraph_Widget_CommonInputDialog::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+static_assert(alignof(Widget_CommonInputDialog_C_SetupTexts) == 0x000008, "Wrong alignment on Widget_CommonInputDialog_C_SetupTexts");
+static_assert(sizeof(Widget_CommonInputDialog_C_SetupTexts) == 0x000020, "Wrong size on Widget_CommonInputDialog_C_SetupTexts");
+static_assert(offsetof(Widget_CommonInputDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue) == 0x000000, "Member 'Widget_CommonInputDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_CommonInputDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue_1) == 0x000010, "Member 'Widget_CommonInputDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
 
 }
 

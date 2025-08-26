@@ -17,73 +17,19 @@
 namespace SDK
 {
 
-// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_TelemetryConsentScreen_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.ExecuteUbergraph_Widget_TelemetryConsentScreen
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TelemetryConsentScreen_C::ExecuteUbergraph_Widget_TelemetryConsentScreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "ExecuteUbergraph_Widget_TelemetryConsentScreen");
-
-	Params::Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -111,23 +57,77 @@ void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_TelemetryConsentScreen_W_B
 }
 
 
-// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TelemetryConsentScreen_C::BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.ExecuteUbergraph_Widget_TelemetryConsentScreen
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TelemetryConsentScreen_C::ExecuteUbergraph_Widget_TelemetryConsentScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "ExecuteUbergraph_Widget_TelemetryConsentScreen");
+
+	Params::Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_TelemetryConsentScreen_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TelemetryConsentScreen_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

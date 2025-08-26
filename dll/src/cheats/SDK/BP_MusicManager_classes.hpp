@@ -46,31 +46,31 @@ public:
 	TSoftObjectPtr<class USoundWave>              SoftVictoryTrack;                                  // 0x0470(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateIntensity();
-	void Spawn_Ambience(const class URAreaData* Key);
-	void Set_MusicData_Fallback();
-	void ReceiveBeginPlay();
-	void PrintAllLevelIds();
-	void PlayEventMusic(class FName Event);
-	void PlayEmoteSongImplementation(const class USoundBase* EmoteSong, const class ARPawnBase* RequestingPlayer);
-	void PlayEmoteSongAllPlayers();
-	void PlayCurrentLevelMusicBP();
-	void PlayCurrentLevelMusic();
-	void OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
-	void OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
-	void OnRep_Intensity();
-	void OnPlayerPawnRespawned_Event(class ARPlayerPawn* Player);
-	void OnPlayerDowned(class ARPlayerPawn* Player);
-	void OnPlayerAlive(class ARPlayerPawn* Player);
-	void OnLocalPlayerKilled(class ARPlayerPawn* Player);
-	void OnEmoteSongOver();
-	void OnBossPhaseStarted(class FName NewState);
-	void K2_OnLevelChanged();
-	void IsNotInSegment(bool* RetValue);
-	void FadeOutAndPlayNewMusicCue(const class FText& SongName, int32 PartSelect, class USoundBase* Cue, double StartTime);
-	void FadeOutAndPlayNewAmbience(class USoundBase* Cue, double StartTime);
-	void ExecuteUbergraph_BP_MusicManager(int32 EntryPoint);
 	void CalculateMultiplayerMix();
+	void ExecuteUbergraph_BP_MusicManager(int32 EntryPoint);
+	void FadeOutAndPlayNewAmbience(class USoundBase* Cue, double StartTime);
+	void FadeOutAndPlayNewMusicCue(const class FText& SongName, int32 PartSelect, class USoundBase* Cue, double StartTime);
+	void IsNotInSegment(bool* RetValue);
+	void K2_OnLevelChanged();
+	void OnBossPhaseStarted(class FName NewState);
+	void OnEmoteSongOver();
+	void OnLocalPlayerKilled(class ARPlayerPawn* Player);
+	void OnPlayerAlive(class ARPlayerPawn* Player);
+	void OnPlayerDowned(class ARPlayerPawn* Player);
+	void OnPlayerPawnRespawned_Event(class ARPlayerPawn* Player);
+	void OnRep_Intensity();
+	void OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void PlayCurrentLevelMusic();
+	void PlayCurrentLevelMusicBP();
+	void PlayEmoteSongAllPlayers();
+	void PlayEmoteSongImplementation(const class USoundBase* EmoteSong, const class ARPawnBase* RequestingPlayer);
+	void PlayEventMusic(class FName Event);
+	void PrintAllLevelIds();
+	void ReceiveBeginPlay();
+	void Set_MusicData_Fallback();
+	void Spawn_Ambience(const class URAreaData* Key);
+	void UpdateIntensity();
 
 public:
 	static class UClass* StaticClass()
