@@ -3,7 +3,6 @@
 #include <string>
 #include <unordered_set>
 #include <unordered_map>
-#include <fstream>
 #include <vector>
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
@@ -22,17 +21,11 @@ namespace BoneAnalyzer {
     // Global map for storing bone data per enemy type
     extern std::unordered_map<std::string, EnemyBoneData> g_enemyBoneMap;
     
-    // File path for storing bone data
+    // File path is unused in in-memory mode, keep declaration for compatibility if needed
     extern std::string g_boneDataFilePath;
 
-    // Initialize the bone analyzer (load existing data from file)
+    // Initialize the bone analyzer (in-memory, no file IO)
     void Initialize();
-
-    // Save bone data to file
-    void SaveBoneDataToFile();
-
-    // Load bone data from file
-    void LoadBoneDataFromFile();
 
     // Helper function to get a stable class name from an object by parsing GetFullName() and removing instance IDs
     std::string GetUObjectClassName(SDK::UObject* obj);
