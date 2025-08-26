@@ -2,7 +2,7 @@
 
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
-#include "../Analysis/BoneAnalyzer.h"
+#include "../Services/BoneService.h"
 #include "../Core/Config.h"
 
 class TargetSelector {

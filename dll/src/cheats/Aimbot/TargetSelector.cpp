@@ -1,6 +1,6 @@
 #include "TargetSelector.h"
 #include "MathUtils.h"
-#include "../Analysis/BoneAnalyzer.h"
+#include "../Services/BoneService.h"
 #include "../Core/Config.h"
 #include <dev/validity.h>
 #include <iomanip>
@@ -178,24 +178,24 @@ SDK::FVector TargetSelector::GetBoneBasedAimPoint(SDK::AActor* targetActor, int&
     }
     
     // Build enemy key for bone database lookup using the helper function
-    std::string enemyKey = BoneAnalyzer::BuildEnemyKey(enemy, mesh);
+    std::string enemyKey = Cheat::Services::BoneService::BuildEnemyKey(enemy, mesh);
     if (enemyKey.empty()) {
         std::cout << "[TARGET_SELECTOR] GetBoneBasedAimPoint: failed to build enemy key" << std::endl;
         return SDK::FVector();
     }
-    
 
-    
+
+
     // Get target bone from database
-    int targetBoneIndex = BoneAnalyzer::GetTargetBoneIndex(enemyKey);
-    std::string targetBoneName = BoneAnalyzer::GetTargetBoneName(enemyKey);
-    
+    int targetBoneIndex = Cheat::Services::BoneService::GetTargetBoneIndex(enemyKey);
+    std::string targetBoneName = Cheat::Services::BoneService::GetTargetBoneName(enemyKey);
+
     if (targetBoneIndex == -1) {
         // Try to automatically analyze and add this enemy to the database
-        if (BoneAnalyzer::AnalyzeAndAddEnemy(enemy, mesh)) {
+        if (Cheat::Services::BoneService::AnalyzeAndAddEnemy(enemy, mesh)) {
             // Retry the lookup after adding to database
-            targetBoneIndex = BoneAnalyzer::GetTargetBoneIndex(enemyKey);
-            targetBoneName = BoneAnalyzer::GetTargetBoneName(enemyKey);
+            targetBoneIndex = Cheat::Services::BoneService::GetTargetBoneIndex(enemyKey);
+            targetBoneName = Cheat::Services::BoneService::GetTargetBoneName(enemyKey);
 
             if (targetBoneIndex == -1) {
                 return SDK::FVector();
@@ -204,7 +204,7 @@ SDK::FVector TargetSelector::GetBoneBasedAimPoint(SDK::AActor* targetActor, int&
             return SDK::FVector();
         }
     }
-    
+
     // Get the bone name from the mesh
     SDK::FName boneName = mesh->GetBoneName(targetBoneIndex);
     if (boneName.ToString().empty()) {
