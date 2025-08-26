@@ -35,19 +35,19 @@ public:
 	class UWidget_CommonInputDialog_C*            AcceptWidget;                                      // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ValidateProfileNameInput(const class FString& Name_0, bool* Valid);
-	void UpdateDeleteButtonStatus(ECommonInputType Selection);
-	void OnSaveSlotSelected();
-	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
-	void OnInitialized();
-	void ExecuteUbergraph_Widget_CommonSaveMenu(int32 EntryPoint);
-	void DeletedSaveSlot();
-	void ConstructSaveSlotWidgets();
-	void Construct();
-	void BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
-	void BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void AcceptEvent_Event(const class FText& Input);
+	void BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonSaveMenu_W_BackBTN_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_SaveMenu_SlotWidgetList_K2Node_ComponentBoundEvent_2_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget);
+	void Construct();
+	void ConstructSaveSlotWidgets();
+	void DeletedSaveSlot();
+	void ExecuteUbergraph_Widget_CommonSaveMenu(int32 EntryPoint);
+	void OnInitialized();
+	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
+	void OnSaveSlotSelected();
+	void UpdateDeleteButtonStatus(ECommonInputType Selection);
+	void ValidateProfileNameInput(const class FString& Name_0, bool* Valid);
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 

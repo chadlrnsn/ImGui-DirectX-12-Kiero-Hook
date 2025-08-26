@@ -27,9 +27,9 @@ public:
 	class UTextBlock*                             TextBlock_151;                                     // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_Widget_VersionNumber(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_VersionNumber(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

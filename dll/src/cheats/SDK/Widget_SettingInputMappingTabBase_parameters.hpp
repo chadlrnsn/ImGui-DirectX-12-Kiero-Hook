@@ -16,46 +16,92 @@
 namespace SDK::Params
 {
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.RegisterMappableIMCs
-// 0x0038 (0x0038 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs final
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ExecuteUbergraph_Widget_SettingInputMappingTabBase
+// 0x0070 (0x0070 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputMappingContext*>           CallFunc_GetMappableIMCs_MappableIMCs;             // 0x0010(0x0010)(ReferenceParm)
-	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UInputMappingContext*                   CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMappingContextRegistered_ReturnValue;   // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RegisterInputMappingContext_ReturnValue;  // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetInputMappingsPanelWidget_Result;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetInputMappingsPanelWidget_Result_1;     // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_FocusIndex;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_Settings_KeyMappingBase_C*      K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base; // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs) == 0x000038, "Wrong size on Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_GetMappableIMCs_MappableIMCs) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_GetMappableIMCs_MappableIMCs' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000020, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_IsMappingContextRegistered_ReturnValue) == 0x000034, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_IsMappingContextRegistered_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Less_IntInt_ReturnValue) == 0x000035, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_RegisterInputMappingContext_ReturnValue) == 0x000036, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_RegisterInputMappingContext_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase) == 0x000070, "Wrong size on Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, EntryPoint) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetInputMappingsPanelWidget_Result) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetInputMappingsPanelWidget_Result' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetInputMappingsPanelWidget_Result_1) == 0x000020, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetInputMappingsPanelWidget_Result_1' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_CustomEvent_FocusIndex) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_CustomEvent_FocusIndex' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_IsValid_ReturnValue) == 0x00002C, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetChildAt_ReturnValue) == 0x000030, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_IsValid_ReturnValue_1) == 0x000038, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetAllChildren_ReturnValue) == 0x000040, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Array_Get_Item) == 0x000050, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base) == 0x000060, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Less_IntInt_ReturnValue) == 0x000069, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.Refresh
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_Refresh final
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetEnhancedUserSettings
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings final
 {
 public:
-	int32                                         FocusIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_GetUserSettings_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UEnhancedInputUserSettings*             CallFunc_GetUserSettings_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_Refresh) == 0x000004, "Wrong alignment on Widget_SettingInputMappingTabBase_C_Refresh");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_Refresh) == 0x000004, "Wrong size on Widget_SettingInputMappingTabBase_C_Refresh");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_Refresh, FocusIndex) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_Refresh::FocusIndex' has a wrong offset!");
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings) == 0x000030, "Wrong size on Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, UserSettings) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::UserSettings' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_self_CastInput) == 0x000018, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_self_CastInput' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_ReturnValue) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetInputMappingsPanelWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget final
+{
+public:
+	class UPanelWidget*                           Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong size on Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget, Result) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget::Result' has a wrong offset!");
+
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetMappableIMCs
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_GetMappableIMCs final
+{
+public:
+	TArray<class UInputMappingContext*>           MappableIMCs_0;                                    // 0x0000(0x0010)(Parm, OutParm)
+};
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetMappableIMCs");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs) == 0x000010, "Wrong size on Widget_SettingInputMappingTabBase_C_GetMappableIMCs");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs, MappableIMCs_0) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetMappableIMCs::MappableIMCs_0' has a wrong offset!");
 
 // Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.PopulatePanelWithMappableInputs
 // 0x0218 (0x0218 - 0x0000)
@@ -174,92 +220,46 @@ static_assert(offsetof(Widget_SettingInputMappingTabBase_C_PopulatePanelWithMapp
 static_assert(offsetof(Widget_SettingInputMappingTabBase_C_PopulatePanelWithMappableInputs, CallFunc_GetInputMappingsPanelWidget_Result_1) == 0x000208, "Member 'Widget_SettingInputMappingTabBase_C_PopulatePanelWithMappableInputs::CallFunc_GetInputMappingsPanelWidget_Result_1' has a wrong offset!");
 static_assert(offsetof(Widget_SettingInputMappingTabBase_C_PopulatePanelWithMappableInputs, CallFunc_IsValid_ReturnValue) == 0x000210, "Member 'Widget_SettingInputMappingTabBase_C_PopulatePanelWithMappableInputs::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetMappableIMCs
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_GetMappableIMCs final
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.Refresh
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_Refresh final
 {
 public:
-	TArray<class UInputMappingContext*>           MappableIMCs_0;                                    // 0x0000(0x0010)(Parm, OutParm)
+	int32                                         FocusIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetMappableIMCs");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs) == 0x000010, "Wrong size on Widget_SettingInputMappingTabBase_C_GetMappableIMCs");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetMappableIMCs, MappableIMCs_0) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetMappableIMCs::MappableIMCs_0' has a wrong offset!");
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_Refresh) == 0x000004, "Wrong alignment on Widget_SettingInputMappingTabBase_C_Refresh");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_Refresh) == 0x000004, "Wrong size on Widget_SettingInputMappingTabBase_C_Refresh");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_Refresh, FocusIndex) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_Refresh::FocusIndex' has a wrong offset!");
 
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetInputMappingsPanelWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget final
+// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.RegisterMappableIMCs
+// 0x0038 (0x0038 - 0x0000)
+struct Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs final
 {
 public:
-	class UPanelWidget*                           Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInputMappingContext*>           CallFunc_GetMappableIMCs_MappableIMCs;             // 0x0010(0x0010)(ReferenceParm)
+	class UEnhancedInputUserSettings*             CallFunc_GetEnhancedUserSettings_UserSettings;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInputMappingContext*                   CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMappingContextRegistered_ReturnValue;   // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RegisterInputMappingContext_ReturnValue;  // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget) == 0x000008, "Wrong size on Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget, Result) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetInputMappingsPanelWidget::Result' has a wrong offset!");
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.GetEnhancedUserSettings
-// 0x0030 (0x0030 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings final
-{
-public:
-	class UEnhancedInputUserSettings*             UserSettings;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_GetUserSettings_self_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputUserSettings*             CallFunc_GetUserSettings_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings) == 0x000030, "Wrong size on Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, UserSettings) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::UserSettings' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_self_CastInput) == 0x000018, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_self_CastInput' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings, CallFunc_GetUserSettings_ReturnValue) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_GetEnhancedUserSettings::CallFunc_GetUserSettings_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingInputMappingTabBase.Widget_SettingInputMappingTabBase_C.ExecuteUbergraph_Widget_SettingInputMappingTabBase
-// 0x0070 (0x0070 - 0x0000)
-struct Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelWidget*                           CallFunc_GetInputMappingsPanelWidget_Result;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelWidget*                           CallFunc_GetInputMappingsPanelWidget_Result_1;     // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_FocusIndex;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_Settings_KeyMappingBase_C*      K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base; // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase");
-static_assert(sizeof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase) == 0x000070, "Wrong size on Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, EntryPoint) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetInputMappingsPanelWidget_Result) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetInputMappingsPanelWidget_Result' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetInputMappingsPanelWidget_Result_1) == 0x000020, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetInputMappingsPanelWidget_Result_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_CustomEvent_FocusIndex) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_CustomEvent_FocusIndex' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_IsValid_ReturnValue) == 0x00002C, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetChildAt_ReturnValue) == 0x000030, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_IsValid_ReturnValue_1) == 0x000038, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_GetAllChildren_ReturnValue) == 0x000040, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Array_Get_Item) == 0x000050, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base) == 0x000060, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_DynamicCast_AsWidget_Settings_Key_Mapping_Base' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase, CallFunc_Less_IntInt_ReturnValue) == 0x000069, "Member 'Widget_SettingInputMappingTabBase_C_ExecuteUbergraph_Widget_SettingInputMappingTabBase::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs) == 0x000008, "Wrong alignment on Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs");
+static_assert(sizeof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs) == 0x000038, "Wrong size on Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_GetMappableIMCs_MappableIMCs) == 0x000010, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_GetMappableIMCs_MappableIMCs' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_GetEnhancedUserSettings_UserSettings) == 0x000020, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_GetEnhancedUserSettings_UserSettings' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_IsMappingContextRegistered_ReturnValue) == 0x000034, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_IsMappingContextRegistered_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_Less_IntInt_ReturnValue) == 0x000035, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs, CallFunc_RegisterInputMappingContext_ReturnValue) == 0x000036, "Member 'Widget_SettingInputMappingTabBase_C_RegisterMappableIMCs::CallFunc_RegisterInputMappingContext_ReturnValue' has a wrong offset!");
 
 }
 

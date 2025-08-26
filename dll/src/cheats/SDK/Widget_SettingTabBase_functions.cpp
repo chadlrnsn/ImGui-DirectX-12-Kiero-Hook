@@ -17,112 +17,17 @@
 namespace SDK
 {
 
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnVisibilityChanged_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingTabBase_C::OnVisibilityChanged_Event(ESlateVisibility InVisibility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "OnVisibilityChanged_Event");
-
-	Params::Widget_SettingTabBase_C_OnVisibilityChanged_Event Parms{};
-
-	Parms.InVisibility = InVisibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_SettingTabBase_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.GetDesiredFocusWidget
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_SettingTabBase_C::GetDesiredFocusWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "GetDesiredFocusWidget");
-
-	Params::Widget_SettingTabBase_C_GetDesiredFocusWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.ExecuteUbergraph_Widget_SettingTabBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingTabBase_C::ExecuteUbergraph_Widget_SettingTabBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "ExecuteUbergraph_Widget_SettingTabBase");
-
-	Params::Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_IncreaseSettingValue
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_DecreaseSettingValue
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_SettingTabBase_C::BP_IncreaseSettingValue()
+void UWidget_SettingTabBase_C::BP_DecreaseSettingValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_IncreaseSettingValue");
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_DecreaseSettingValue");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_GetScrollBoxWidget
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingTabBase_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_GetScrollBoxWidget");
-
-	Params::Widget_SettingTabBase_C_BP_GetScrollBoxWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
@@ -147,17 +52,112 @@ void UWidget_SettingTabBase_C::BP_GetFocusedWidget(class UUserWidget** Result)
 }
 
 
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_DecreaseSettingValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_GetScrollBoxWidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingTabBase_C::BP_DecreaseSettingValue()
+void UWidget_SettingTabBase_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_DecreaseSettingValue");
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_GetScrollBoxWidget");
+
+	Params::Widget_SettingTabBase_C_BP_GetScrollBoxWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_IncreaseSettingValue
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingTabBase_C::BP_IncreaseSettingValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "BP_IncreaseSettingValue");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.ExecuteUbergraph_Widget_SettingTabBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingTabBase_C::ExecuteUbergraph_Widget_SettingTabBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "ExecuteUbergraph_Widget_SettingTabBase");
+
+	Params::Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.GetDesiredFocusWidget
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_SettingTabBase_C::GetDesiredFocusWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "GetDesiredFocusWidget");
+
+	Params::Widget_SettingTabBase_C_GetDesiredFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_SettingTabBase_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnVisibilityChanged_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingTabBase_C::OnVisibilityChanged_Event(ESlateVisibility InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingTabBase_C", "OnVisibilityChanged_Event");
+
+	Params::Widget_SettingTabBase_C_OnVisibilityChanged_Event Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

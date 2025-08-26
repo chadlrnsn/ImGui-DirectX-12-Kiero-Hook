@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Widget_LootSelectScreenBase_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "Widget_LootSelectScreenBase_classes.hpp"
 #include "UMG_structs.hpp"
 
 

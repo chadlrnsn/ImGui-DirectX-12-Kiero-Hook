@@ -17,41 +17,69 @@
 namespace SDK
 {
 
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnRemovedFromFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FInputChord&               SelectedKey                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWidget_Settings_GamepadInput_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_Settings_GamepadInput_C::BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "OnRemovedFromFocusPath");
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
 
-	Params::Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath Parms{};
+	Params::Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature Parms{};
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	Parms.SelectedKey = std::move(SelectedKey);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_Settings_GamepadInput_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_Settings_GamepadInput_C::BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "OnAddedToFocusPath");
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature");
 
-	Params::Widget_Settings_GamepadInput_C_OnAddedToFocusPath Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_Settings_GamepadInput_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.ExecuteUbergraph_Widget_Settings_GamepadInput
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Settings_GamepadInput_C::ExecuteUbergraph_Widget_Settings_GamepadInput(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "ExecuteUbergraph_Widget_Settings_GamepadInput");
+
+	Params::Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -78,69 +106,41 @@ void UWidget_Settings_GamepadInput_C::GetInputKeySelector(class UInputKeySelecto
 }
 
 
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.ExecuteUbergraph_Widget_Settings_GamepadInput
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_Settings_GamepadInput_C::ExecuteUbergraph_Widget_Settings_GamepadInput(int32 EntryPoint)
+void UWidget_Settings_GamepadInput_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "ExecuteUbergraph_Widget_Settings_GamepadInput");
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "OnAddedToFocusPath");
 
-	Params::Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput Parms{};
+	Params::Widget_Settings_GamepadInput_C_OnAddedToFocusPath Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.Construct
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnRemovedFromFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_Settings_GamepadInput_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_Settings_GamepadInput_C::BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature
-// (BlueprintEvent)
 // Parameters:
-// const struct FInputChord&               SelectedKey                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_Settings_GamepadInput_C::BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
+void UWidget_Settings_GamepadInput_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "OnRemovedFromFocusPath");
 
-	Params::Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature Parms{};
+	Params::Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath Parms{};
 
-	Parms.SelectedKey = std::move(SelectedKey);
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

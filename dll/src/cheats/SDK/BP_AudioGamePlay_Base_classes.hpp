@@ -27,8 +27,8 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool ConditionMet_Position(const struct FVector& Position) const;
 	bool ConditionMet() const;
+	bool ConditionMet_Position(const struct FVector& Position) const;
 
 public:
 	static class UClass* StaticClass()

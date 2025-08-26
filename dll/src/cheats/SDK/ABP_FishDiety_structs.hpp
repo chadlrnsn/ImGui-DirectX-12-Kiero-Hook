@@ -68,5 +68,13 @@ static_assert(offsetof(ABP_FishDiety::FAnimBlueprintGeneratedConstantData, AnimG
 static_assert(offsetof(ABP_FishDiety::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000228, "Member 'ABP_FishDiety::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 static_assert(offsetof(ABP_FishDiety::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000258, "Member 'ABP_FishDiety::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
 
+// ScriptStruct ABP_FishDiety.ABP_FishDiety_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_FishDiety::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_FishDiety::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_FishDiety::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_FishDiety::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_FishDiety::FAnimBlueprintGeneratedMutableData");
+
 }
 

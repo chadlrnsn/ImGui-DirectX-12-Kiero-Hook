@@ -17,385 +17,228 @@
 namespace SDK
 {
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_C8DC33074EB64552DA18F3823C40C860
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.AcceptEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FText&                      Input                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_CommonContinueScreen_C::Success_C8DC33074EB64552DA18F3823C40C860(const class FString& Error)
+void UWidget_CommonContinueScreen_C::AcceptEvent(const class FText& Input)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_C8DC33074EB64552DA18F3823C40C860");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "AcceptEvent");
 
-	Params::Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860 Parms{};
+	Params::Widget_CommonContinueScreen_C_AcceptEvent Parms{};
 
-	Parms.Error = std::move(Error);
+	Parms.Input = std::move(Input);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_B6684397495E22740104AEBD89F4D149
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_B6684397495E22740104AEBD89F4D149(const class FString& TravelURL, const class FString& Error)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_B6684397495E22740104AEBD89F4D149");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149 Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.TravelURL = std::move(TravelURL);
-	Parms.Error = std::move(Error);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_82A6D90D4C9B568C3A82E086F8AAC3BA
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_82A6D90D4C9B568C3A82E086F8AAC3BA(const class FString& Error, const struct FBlueprintSessionResult& Result)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Error = std::move(Error);
-	Parms.Result = std::move(Result);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_668D2AB547705A2D3A24E78BE4A9938B
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_668D2AB547705A2D3A24E78BE4A9938B(const class FString& Error)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_668D2AB547705A2D3A24E78BE4A9938B");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Error = std::move(Error);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_310E636941FBBEAF07D8309EC80FD66B
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_310E636941FBBEAF07D8309EC80FD66B(const class FString& Error)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_310E636941FBBEAF07D8309EC80FD66B");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Error = std::move(Error);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_248933154BD1B24F482489AF96FBB2E4
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_248933154BD1B24F482489AF96FBB2E4(const class FString& Error)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_248933154BD1B24F482489AF96FBB2E4");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4 Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Error = std::move(Error);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_11720C654DE537088EB6F691B6CE867F
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Success_11720C654DE537088EB6F691B6CE867F(const class FString& Error, const struct FBlueprintSessionResult& Result)
+void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_11720C654DE537088EB6F691B6CE867F");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F Parms{};
+	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Error = std::move(Error);
-	Parms.Result = std::move(Result);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_10AEA8054E757C7F60602496049155B3
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BuildSessionSettings
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TMap<class FName, struct FDMSessionSetting>*SessionSettings                                        (Parm, OutParm)
 
-void UWidget_CommonContinueScreen_C::Success_10AEA8054E757C7F60602496049155B3(const class FString& Error)
+void UWidget_CommonContinueScreen_C::BuildSessionSettings(TMap<class FName, struct FDMSessionSetting>* SessionSettings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_10AEA8054E757C7F60602496049155B3");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BuildSessionSettings");
 
-	Params::Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3 Parms{};
-
-	Parms.Error = std::move(Error);
+	Params::Widget_CommonContinueScreen_C_BuildSessionSettings Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (SessionSettings != nullptr)
+		*SessionSettings = std::move(Parms.SessionSettings);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_0D722042493414F39BACCEAD2A5ECA57
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::Success_0D722042493414F39BACCEAD2A5ECA57(const class FString& Error)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_0D722042493414F39BACCEAD2A5ECA57");
-
-	Params::Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57 Parms{};
-
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ShowLoadingIndicator
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::ShowLoadingIndicator()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ShowLoadingIndicator");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.RetryPassword
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::RetryPassword()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "RetryPassword");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ReconnectToPreviousSession
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::ReconnectToPreviousSession()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ReconnectToPreviousSession");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.PlayOffline
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::PlayOffline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "PlayOffline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.PlayFadeInAnimation
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::PlayFadeInAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "PlayFadeInAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Play
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::Play()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Play");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCurrentSaveGameChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URSaveGame*                       CurrentSaveGame                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::OnCurrentSaveGameChanged(class URSaveGame* CurrentSaveGame)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "OnCurrentSaveGameChanged");
-
-	Params::Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged Parms{};
-
-	Parms.CurrentSaveGame = CurrentSaveGame;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCancelJoin
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::OnCancelJoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "OnCancelJoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.LoginIfEOS
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::LoginIfEOS()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "LoginIfEOS");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.JoinSession
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    SessionId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::JoinSession(const class FString& SessionId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "JoinSession");
-
-	Params::Widget_CommonContinueScreen_C_JoinSession Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.InitializeReconnect
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonContinueScreen_C::InitializeReconnect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "InitializeReconnect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.GoToMainDungeon
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ClearLoadingIndicator
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonContinueScreen_C::GoToMainDungeon()
+void UWidget_CommonContinueScreen_C::ClearLoadingIndicator()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "GoToMainDungeon");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ClearLoadingIndicator");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.FailedToJoinGame
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_CommonContinueScreen_C::FailedToJoinGame(const class FString& Error)
+void UWidget_CommonContinueScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "FailedToJoinGame");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Construct");
 
-	Params::Widget_CommonContinueScreen_C_FailedToJoinGame Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ExecuteUbergraph_Widget_CommonContinueScreen
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::ExecuteUbergraph_Widget_CommonContinueScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ExecuteUbergraph_Widget_CommonContinueScreen");
+
+	Params::Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_0D722042493414F39BACCEAD2A5ECA57
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Fail_0D722042493414F39BACCEAD2A5ECA57(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_0D722042493414F39BACCEAD2A5ECA57");
+
+	Params::Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57 Parms{};
 
 	Parms.Error = std::move(Error);
 
@@ -403,123 +246,19 @@ void UWidget_CommonContinueScreen_C::FailedToJoinGame(const class FString& Error
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_C8DC33074EB64552DA18F3823C40C860
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_10AEA8054E757C7F60602496049155B3
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Fail_C8DC33074EB64552DA18F3823C40C860(const class FString& Error)
+void UWidget_CommonContinueScreen_C::Fail_10AEA8054E757C7F60602496049155B3(const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_C8DC33074EB64552DA18F3823C40C860");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_10AEA8054E757C7F60602496049155B3");
 
-	Params::Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860 Parms{};
-
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_B6684397495E22740104AEBD89F4D149
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::Fail_B6684397495E22740104AEBD89F4D149(const class FString& TravelURL, const class FString& Error)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_B6684397495E22740104AEBD89F4D149");
-
-	Params::Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149 Parms{};
-
-	Parms.TravelURL = std::move(TravelURL);
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_82A6D90D4C9B568C3A82E086F8AAC3BA
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWidget_CommonContinueScreen_C::Fail_82A6D90D4C9B568C3A82E086F8AAC3BA(const class FString& Error, const struct FBlueprintSessionResult& Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
-
-	Params::Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA Parms{};
-
-	Parms.Error = std::move(Error);
-	Parms.Result = std::move(Result);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_668D2AB547705A2D3A24E78BE4A9938B
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::Fail_668D2AB547705A2D3A24E78BE4A9938B(const class FString& Error)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_668D2AB547705A2D3A24E78BE4A9938B");
-
-	Params::Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B Parms{};
-
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_310E636941FBBEAF07D8309EC80FD66B
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::Fail_310E636941FBBEAF07D8309EC80FD66B(const class FString& Error)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_310E636941FBBEAF07D8309EC80FD66B");
-
-	Params::Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B Parms{};
-
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_248933154BD1B24F482489AF96FBB2E4
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::Fail_248933154BD1B24F482489AF96FBB2E4(const class FString& Error)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_248933154BD1B24F482489AF96FBB2E4");
-
-	Params::Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4 Parms{};
+	Params::Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3 Parms{};
 
 	Parms.Error = std::move(Error);
 
@@ -549,19 +288,19 @@ void UWidget_CommonContinueScreen_C::Fail_11720C654DE537088EB6F691B6CE867F(const
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_10AEA8054E757C7F60602496049155B3
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_248933154BD1B24F482489AF96FBB2E4
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Fail_10AEA8054E757C7F60602496049155B3(const class FString& Error)
+void UWidget_CommonContinueScreen_C::Fail_248933154BD1B24F482489AF96FBB2E4(const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_10AEA8054E757C7F60602496049155B3");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_248933154BD1B24F482489AF96FBB2E4");
 
-	Params::Widget_CommonContinueScreen_C_Fail_10AEA8054E757C7F60602496049155B3 Parms{};
+	Params::Widget_CommonContinueScreen_C_Fail_248933154BD1B24F482489AF96FBB2E4 Parms{};
 
 	Parms.Error = std::move(Error);
 
@@ -569,19 +308,19 @@ void UWidget_CommonContinueScreen_C::Fail_10AEA8054E757C7F60602496049155B3(const
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_0D722042493414F39BACCEAD2A5ECA57
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_310E636941FBBEAF07D8309EC80FD66B
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::Fail_0D722042493414F39BACCEAD2A5ECA57(const class FString& Error)
+void UWidget_CommonContinueScreen_C::Fail_310E636941FBBEAF07D8309EC80FD66B(const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_0D722042493414F39BACCEAD2A5ECA57");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_310E636941FBBEAF07D8309EC80FD66B");
 
-	Params::Widget_CommonContinueScreen_C_Fail_0D722042493414F39BACCEAD2A5ECA57 Parms{};
+	Params::Widget_CommonContinueScreen_C_Fail_310E636941FBBEAF07D8309EC80FD66B Parms{};
 
 	Parms.Error = std::move(Error);
 
@@ -589,210 +328,471 @@ void UWidget_CommonContinueScreen_C::Fail_0D722042493414F39BACCEAD2A5ECA57(const
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ExecuteUbergraph_Widget_CommonContinueScreen
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_668D2AB547705A2D3A24E78BE4A9938B
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::ExecuteUbergraph_Widget_CommonContinueScreen(int32 EntryPoint)
+void UWidget_CommonContinueScreen_C::Fail_668D2AB547705A2D3A24E78BE4A9938B(const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ExecuteUbergraph_Widget_CommonContinueScreen");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_668D2AB547705A2D3A24E78BE4A9938B");
 
-	Params::Widget_CommonContinueScreen_C_ExecuteUbergraph_Widget_CommonContinueScreen Parms{};
+	Params::Widget_CommonContinueScreen_C_Fail_668D2AB547705A2D3A24E78BE4A9938B Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Error = std::move(Error);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_82A6D90D4C9B568C3A82E086F8AAC3BA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_CommonContinueScreen_C::Construct()
+void UWidget_CommonContinueScreen_C::Fail_82A6D90D4C9B568C3A82E086F8AAC3BA(const class FString& Error, const struct FBlueprintSessionResult& Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Construct");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_82A6D90D4C9B568C3A82E086F8AAC3BA");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_CommonContinueScreen_C_Fail_82A6D90D4C9B568C3A82E086F8AAC3BA Parms{};
+
+	Parms.Error = std::move(Error);
+	Parms.Result = std::move(Result);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ClearLoadingIndicator
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_B6684397495E22740104AEBD89F4D149
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Fail_B6684397495E22740104AEBD89F4D149(const class FString& TravelURL, const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_B6684397495E22740104AEBD89F4D149");
+
+	Params::Widget_CommonContinueScreen_C_Fail_B6684397495E22740104AEBD89F4D149 Parms{};
+
+	Parms.TravelURL = std::move(TravelURL);
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Fail_C8DC33074EB64552DA18F3823C40C860
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Fail_C8DC33074EB64552DA18F3823C40C860(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Fail_C8DC33074EB64552DA18F3823C40C860");
+
+	Params::Widget_CommonContinueScreen_C_Fail_C8DC33074EB64552DA18F3823C40C860 Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.FailedToJoinGame
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::FailedToJoinGame(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "FailedToJoinGame");
+
+	Params::Widget_CommonContinueScreen_C_FailedToJoinGame Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.GoToMainDungeon
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonContinueScreen_C::ClearLoadingIndicator()
+void UWidget_CommonContinueScreen_C::GoToMainDungeon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ClearLoadingIndicator");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "GoToMainDungeon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BuildSessionSettings
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TMap<class FName, struct FDMSessionSetting>*SessionSettings                                        (Parm, OutParm)
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.InitializeReconnect
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonContinueScreen_C::BuildSessionSettings(TMap<class FName, struct FDMSessionSetting>* SessionSettings)
+void UWidget_CommonContinueScreen_C::InitializeReconnect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BuildSessionSettings");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "InitializeReconnect");
 
-	Params::Widget_CommonContinueScreen_C_BuildSessionSettings Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SessionSettings != nullptr)
-		*SessionSettings = std::move(Parms.SessionSettings);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_3_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_2_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Reconnect_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonContinueScreen_C::BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonContinueScreen_C_BndEvt__Widget_CommonContinueScreen_Credits_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.AcceptEvent
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.JoinSession
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Input                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FString&                    SessionId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonContinueScreen_C::AcceptEvent(const class FText& Input)
+void UWidget_CommonContinueScreen_C::JoinSession(const class FString& SessionId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "AcceptEvent");
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "JoinSession");
 
-	Params::Widget_CommonContinueScreen_C_AcceptEvent Parms{};
+	Params::Widget_CommonContinueScreen_C_JoinSession Parms{};
 
-	Parms.Input = std::move(Input);
+	Parms.SessionId = std::move(SessionId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.LoginIfEOS
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::LoginIfEOS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "LoginIfEOS");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCancelJoin
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::OnCancelJoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "OnCancelJoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnCurrentSaveGameChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGame*                       CurrentSaveGame                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::OnCurrentSaveGameChanged(class URSaveGame* CurrentSaveGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "OnCurrentSaveGameChanged");
+
+	Params::Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged Parms{};
+
+	Parms.CurrentSaveGame = CurrentSaveGame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Play
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::Play()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Play");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.PlayFadeInAnimation
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::PlayFadeInAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "PlayFadeInAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.PlayOffline
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::PlayOffline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "PlayOffline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ReconnectToPreviousSession
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::ReconnectToPreviousSession()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ReconnectToPreviousSession");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.RetryPassword
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::RetryPassword()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "RetryPassword");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.ShowLoadingIndicator
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonContinueScreen_C::ShowLoadingIndicator()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "ShowLoadingIndicator");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_0D722042493414F39BACCEAD2A5ECA57
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_0D722042493414F39BACCEAD2A5ECA57(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_0D722042493414F39BACCEAD2A5ECA57");
+
+	Params::Widget_CommonContinueScreen_C_Success_0D722042493414F39BACCEAD2A5ECA57 Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_10AEA8054E757C7F60602496049155B3
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_10AEA8054E757C7F60602496049155B3(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_10AEA8054E757C7F60602496049155B3");
+
+	Params::Widget_CommonContinueScreen_C_Success_10AEA8054E757C7F60602496049155B3 Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_11720C654DE537088EB6F691B6CE867F
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_CommonContinueScreen_C::Success_11720C654DE537088EB6F691B6CE867F(const class FString& Error, const struct FBlueprintSessionResult& Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_11720C654DE537088EB6F691B6CE867F");
+
+	Params::Widget_CommonContinueScreen_C_Success_11720C654DE537088EB6F691B6CE867F Parms{};
+
+	Parms.Error = std::move(Error);
+	Parms.Result = std::move(Result);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_248933154BD1B24F482489AF96FBB2E4
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_248933154BD1B24F482489AF96FBB2E4(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_248933154BD1B24F482489AF96FBB2E4");
+
+	Params::Widget_CommonContinueScreen_C_Success_248933154BD1B24F482489AF96FBB2E4 Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_310E636941FBBEAF07D8309EC80FD66B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_310E636941FBBEAF07D8309EC80FD66B(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_310E636941FBBEAF07D8309EC80FD66B");
+
+	Params::Widget_CommonContinueScreen_C_Success_310E636941FBBEAF07D8309EC80FD66B Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_668D2AB547705A2D3A24E78BE4A9938B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_668D2AB547705A2D3A24E78BE4A9938B(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_668D2AB547705A2D3A24E78BE4A9938B");
+
+	Params::Widget_CommonContinueScreen_C_Success_668D2AB547705A2D3A24E78BE4A9938B Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_82A6D90D4C9B568C3A82E086F8AAC3BA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_CommonContinueScreen_C::Success_82A6D90D4C9B568C3A82E086F8AAC3BA(const class FString& Error, const struct FBlueprintSessionResult& Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_82A6D90D4C9B568C3A82E086F8AAC3BA");
+
+	Params::Widget_CommonContinueScreen_C_Success_82A6D90D4C9B568C3A82E086F8AAC3BA Parms{};
+
+	Parms.Error = std::move(Error);
+	Parms.Result = std::move(Result);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_B6684397495E22740104AEBD89F4D149
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_B6684397495E22740104AEBD89F4D149(const class FString& TravelURL, const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_B6684397495E22740104AEBD89F4D149");
+
+	Params::Widget_CommonContinueScreen_C_Success_B6684397495E22740104AEBD89F4D149 Parms{};
+
+	Parms.TravelURL = std::move(TravelURL);
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.Success_C8DC33074EB64552DA18F3823C40C860
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::Success_C8DC33074EB64552DA18F3823C40C860(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "Success_C8DC33074EB64552DA18F3823C40C860");
+
+	Params::Widget_CommonContinueScreen_C_Success_C8DC33074EB64552DA18F3823C40C860 Parms{};
+
+	Parms.Error = std::move(Error);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

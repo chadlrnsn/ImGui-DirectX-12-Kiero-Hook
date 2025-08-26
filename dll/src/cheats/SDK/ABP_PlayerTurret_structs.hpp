@@ -263,5 +263,13 @@ static_assert(offsetof(ABP_PlayerTurret::FAnimBlueprintGeneratedConstantData, An
 static_assert(offsetof(ABP_PlayerTurret::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult) == 0x0011B8, "Member 'ABP_PlayerTurret::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerTurret::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x0011E8, "Member 'ABP_PlayerTurret::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
 
+// ScriptStruct ABP_PlayerTurret.ABP_PlayerTurret_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_PlayerTurret::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_PlayerTurret::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_PlayerTurret::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_PlayerTurret::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_PlayerTurret::FAnimBlueprintGeneratedMutableData");
+
 }
 

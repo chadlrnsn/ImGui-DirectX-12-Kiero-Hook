@@ -43,17 +43,17 @@ public:
 	bool                                          PopOnAccept;                                       // 0x04F5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetupTexts();
-	void OnWidgetPopped();
-	void OnInitialized();
-	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& AcceptText_0, const class FText& CancelText_0, const class FText& InputFieldHintText_0, int32 MaxInputLength_0, bool NumbersOnly_0, bool PopOnAccept_0);
-	void ExecuteUbergraph_Widget_CommonInputDialog(int32 EntryPoint);
-	void DestructAnimationFinished();
-	void Construct();
-	void ClosePanel();
-	void BP_OnDeactivated();
-	void BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BP_OnDeactivated();
+	void ClosePanel();
+	void Construct();
+	void DestructAnimationFinished();
+	void ExecuteUbergraph_Widget_CommonInputDialog(int32 EntryPoint);
+	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& AcceptText_0, const class FText& CancelText_0, const class FText& InputFieldHintText_0, int32 MaxInputLength_0, bool NumbersOnly_0, bool PopOnAccept_0);
+	void OnInitialized();
+	void OnWidgetPopped();
+	void SetupTexts();
 
 public:
 	static class UClass* StaticClass()

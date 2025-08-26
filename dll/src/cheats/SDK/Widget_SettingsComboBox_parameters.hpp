@@ -16,79 +16,45 @@
 namespace SDK::Params
 {
 
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ToggleHighlight
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.AddOptions
+// 0x0048 (0x0048 - 0x0000)
+struct Widget_SettingsComboBox_C_AddOptions final
+{
+public:
+	TArray<class FText>                           Options;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x0020(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsComboBox_C_AddOptions) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_AddOptions");
+static_assert(sizeof(Widget_SettingsComboBox_C_AddOptions) == 0x000048, "Wrong size on Widget_SettingsComboBox_C_AddOptions");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Options) == 0x000000, "Member 'Widget_SettingsComboBox_C_AddOptions::Options' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Temp_int_Array_Index_Variable) == 0x000014, "Member 'Widget_SettingsComboBox_C_AddOptions::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_SettingsComboBox_C_AddOptions::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Array_Get_Item) == 0x000020, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
-struct Widget_SettingsComboBox_C_ToggleHighlight final
+struct Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature final
 {
 public:
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasUserFocus_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsComboBox_C_ToggleHighlight) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_ToggleHighlight");
-static_assert(sizeof(Widget_SettingsComboBox_C_ToggleHighlight) == 0x000018, "Wrong size on Widget_SettingsComboBox_C_ToggleHighlight");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_IsClosed_Variable) == 0x000000, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable) == 0x000001, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable_1) == 0x000002, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_HasUserFocus_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_HasUserFocus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_IsClosed_Variable_1) == 0x000011, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000012, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_BooleanOR_ReturnValue) == 0x000013, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct Widget_SettingsComboBox_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsComboBox_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsComboBox_C_Tick");
-static_assert(sizeof(Widget_SettingsComboBox_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsComboBox_C_Tick");
-static_assert(offsetof(Widget_SettingsComboBox_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsComboBox_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsComboBox_C_Tick::InDeltaTime' has a wrong offset!");
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.SetCurrentOption
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_SettingsComboBox_C_SetCurrentOption final
-{
-public:
-	class FText                                   Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsComboBox_C_SetCurrentOption) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_SetCurrentOption");
-static_assert(sizeof(Widget_SettingsComboBox_C_SetCurrentOption) == 0x000020, "Wrong size on Widget_SettingsComboBox_C_SetCurrentOption");
-static_assert(offsetof(Widget_SettingsComboBox_C_SetCurrentOption, Option) == 0x000000, "Member 'Widget_SettingsComboBox_C_SetCurrentOption::Option' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_SetCurrentOption, CallFunc_Conv_TextToString_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_SetCurrentOption::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingsComboBox_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsComboBox_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsComboBox_C_PreConstruct");
-static_assert(sizeof(Widget_SettingsComboBox_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsComboBox_C_PreConstruct");
-static_assert(offsetof(Widget_SettingsComboBox_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsComboBox_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.GetDesiredFocusSubwidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingsComboBox_C_GetDesiredFocusSubwidget final
-{
-public:
-	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_GetDesiredFocusSubwidget");
-static_assert(sizeof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsComboBox_C_GetDesiredFocusSubwidget");
-static_assert(offsetof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsComboBox_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
+static_assert(alignof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
+static_assert(sizeof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
+static_assert(offsetof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
 
 // Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ExecuteUbergraph_Widget_SettingsComboBox
 // 0x0080 (0x0080 - 0x0000)
@@ -122,45 +88,79 @@ static_assert(offsetof(Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_Setting
 static_assert(offsetof(Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox, K2Node_Event_MyGeometry) == 0x000040, "Member 'Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox::K2Node_Event_MyGeometry' has a wrong offset!");
 static_assert(offsetof(Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox, K2Node_Event_InDeltaTime) == 0x000078, "Member 'Widget_SettingsComboBox_C_ExecuteUbergraph_Widget_SettingsComboBox::K2Node_Event_InDeltaTime' has a wrong offset!");
 
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature final
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.GetDesiredFocusSubwidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingsComboBox_C_GetDesiredFocusSubwidget final
 {
 public:
-	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
-static_assert(sizeof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature) == 0x000018, "Wrong size on Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
-static_assert(offsetof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectedItem) == 0x000000, "Member 'Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectedItem' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature, SelectionType) == 0x000010, "Member 'Widget_SettingsComboBox_C_BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature::SelectionType' has a wrong offset!");
+static_assert(alignof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_GetDesiredFocusSubwidget");
+static_assert(sizeof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsComboBox_C_GetDesiredFocusSubwidget");
+static_assert(offsetof(Widget_SettingsComboBox_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsComboBox_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
 
-// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.AddOptions
-// 0x0048 (0x0048 - 0x0000)
-struct Widget_SettingsComboBox_C_AddOptions final
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingsComboBox_C_PreConstruct final
 {
 public:
-	TArray<class FText>                           Options;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0020(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsComboBox_C_AddOptions) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_AddOptions");
-static_assert(sizeof(Widget_SettingsComboBox_C_AddOptions) == 0x000048, "Wrong size on Widget_SettingsComboBox_C_AddOptions");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Options) == 0x000000, "Member 'Widget_SettingsComboBox_C_AddOptions::Options' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Temp_int_Array_Index_Variable) == 0x000014, "Member 'Widget_SettingsComboBox_C_AddOptions::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_SettingsComboBox_C_AddOptions::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Array_Get_Item) == 0x000020, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsComboBox_C_AddOptions, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'Widget_SettingsComboBox_C_AddOptions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_SettingsComboBox_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsComboBox_C_PreConstruct");
+static_assert(sizeof(Widget_SettingsComboBox_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsComboBox_C_PreConstruct");
+static_assert(offsetof(Widget_SettingsComboBox_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsComboBox_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.SetCurrentOption
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_SettingsComboBox_C_SetCurrentOption final
+{
+public:
+	class FText                                   Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsComboBox_C_SetCurrentOption) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_SetCurrentOption");
+static_assert(sizeof(Widget_SettingsComboBox_C_SetCurrentOption) == 0x000020, "Wrong size on Widget_SettingsComboBox_C_SetCurrentOption");
+static_assert(offsetof(Widget_SettingsComboBox_C_SetCurrentOption, Option) == 0x000000, "Member 'Widget_SettingsComboBox_C_SetCurrentOption::Option' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_SetCurrentOption, CallFunc_Conv_TextToString_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_SetCurrentOption::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct Widget_SettingsComboBox_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsComboBox_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsComboBox_C_Tick");
+static_assert(sizeof(Widget_SettingsComboBox_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsComboBox_C_Tick");
+static_assert(offsetof(Widget_SettingsComboBox_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsComboBox_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsComboBox_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function Widget_SettingsComboBox.Widget_SettingsComboBox_C.ToggleHighlight
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_SettingsComboBox_C_ToggleHighlight final
+{
+public:
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasUserFocus_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsComboBox_C_ToggleHighlight) == 0x000008, "Wrong alignment on Widget_SettingsComboBox_C_ToggleHighlight");
+static_assert(sizeof(Widget_SettingsComboBox_C_ToggleHighlight) == 0x000018, "Wrong size on Widget_SettingsComboBox_C_ToggleHighlight");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_IsClosed_Variable) == 0x000000, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable) == 0x000001, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable_1) == 0x000002, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_HasUserFocus_ReturnValue) == 0x000010, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_HasUserFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, Temp_bool_IsClosed_Variable_1) == 0x000011, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000012, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingsComboBox_C_ToggleHighlight, CallFunc_BooleanOR_ReturnValue) == 0x000013, "Member 'Widget_SettingsComboBox_C_ToggleHighlight::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 }
 

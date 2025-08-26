@@ -17,366 +17,59 @@
 namespace SDK
 {
 
-// Function BP_MusicManager.BP_MusicManager_C.UpdateIntensity
+// Function BP_MusicManager.BP_MusicManager_C.CalculateMultiplayerMix
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MusicManager_C::UpdateIntensity()
+void ABP_MusicManager_C::CalculateMultiplayerMix()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "UpdateIntensity");
+		Func = Class->GetFunction("BP_MusicManager_C", "CalculateMultiplayerMix");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MusicManager.BP_MusicManager_C.Spawn Ambience
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class URAreaData*                 Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MusicManager_C::Spawn_Ambience(const class URAreaData* Key)
+void ABP_MusicManager_C::ExecuteUbergraph_BP_MusicManager(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "Spawn Ambience");
+		Func = Class->GetFunction("BP_MusicManager_C", "ExecuteUbergraph_BP_MusicManager");
 
-	Params::BP_MusicManager_C_Spawn_Ambience Parms{};
+	Params::BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager Parms{};
 
-	Parms.Key = Key;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MusicManager.BP_MusicManager_C.Set MusicData Fallback
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::Set_MusicData_Fallback()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "Set MusicData Fallback");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_MusicManager_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PrintAllLevelIds
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::PrintAllLevelIds()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PrintAllLevelIds");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayEventMusic
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewAmbience
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USoundBase*                       Cue                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MusicManager_C::PlayEventMusic(class FName Event)
+void ABP_MusicManager_C::FadeOutAndPlayNewAmbience(class USoundBase* Cue, double StartTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PlayEventMusic");
+		Func = Class->GetFunction("BP_MusicManager_C", "FadeOutAndPlayNewAmbience");
 
-	Params::BP_MusicManager_C_PlayEventMusic Parms{};
+	Params::BP_MusicManager_C_FadeOutAndPlayNewAmbience Parms{};
 
-	Parms.Event = Event;
+	Parms.Cue = Cue;
+	Parms.StartTime = StartTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongImplementation
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const class USoundBase*                 EmoteSong                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const class ARPawnBase*                 RequestingPlayer                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::PlayEmoteSongImplementation(const class USoundBase* EmoteSong, const class ARPawnBase* RequestingPlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PlayEmoteSongImplementation");
-
-	Params::BP_MusicManager_C_PlayEmoteSongImplementation Parms{};
-
-	Parms.EmoteSong = EmoteSong;
-	Parms.RequestingPlayer = RequestingPlayer;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongAllPlayers
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::PlayEmoteSongAllPlayers()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PlayEmoteSongAllPlayers");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayCurrentLevelMusicBP
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::PlayCurrentLevelMusicBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PlayCurrentLevelMusicBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.PlayCurrentLevelMusic
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::PlayCurrentLevelMusic()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "PlayCurrentLevelMusic");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnSegmentStarted
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnSegmentStarted");
-
-	Params::BP_MusicManager_C_OnSegmentStarted Parms{};
-
-	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnSegmentCompleted
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnSegmentCompleted");
-
-	Params::BP_MusicManager_C_OnSegmentCompleted Parms{};
-
-	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnRep_Intensity
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::OnRep_Intensity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnRep_Intensity");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerPawnRespawned_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnPlayerPawnRespawned_Event(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerPawnRespawned_Event");
-
-	Params::BP_MusicManager_C_OnPlayerPawnRespawned_Event Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerDowned
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnPlayerDowned(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerDowned");
-
-	Params::BP_MusicManager_C_OnPlayerDowned Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnPlayerAlive
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnPlayerAlive(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerAlive");
-
-	Params::BP_MusicManager_C_OnPlayerAlive Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnLocalPlayerKilled
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnLocalPlayerKilled(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnLocalPlayerKilled");
-
-	Params::BP_MusicManager_C_OnLocalPlayerKilled Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnEmoteSongOver
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MusicManager_C::OnEmoteSongOver()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnEmoteSongOver");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.OnBossPhaseStarted
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::OnBossPhaseStarted(class FName NewState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "OnBossPhaseStarted");
-
-	Params::BP_MusicManager_C_OnBossPhaseStarted Parms{};
-
-	Parms.NewState = NewState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.K2_OnLevelChanged
-// (Event, Public, BlueprintEvent)
-
-void ABP_MusicManager_C::K2_OnLevelChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "K2_OnLevelChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MusicManager.BP_MusicManager_C.IsNotInSegment
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   RetValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MusicManager_C::IsNotInSegment(bool* RetValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "IsNotInSegment");
-
-	Params::BP_MusicManager_C_IsNotInSegment Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (RetValue != nullptr)
-		*RetValue = Parms.RetValue;
 }
 
 
@@ -406,57 +99,364 @@ void ABP_MusicManager_C::FadeOutAndPlayNewMusicCue(const class FText& SongName, 
 }
 
 
-// Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewAmbience
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MusicManager.BP_MusicManager_C.IsNotInSegment
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USoundBase*                       Cue                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   RetValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MusicManager_C::FadeOutAndPlayNewAmbience(class USoundBase* Cue, double StartTime)
+void ABP_MusicManager_C::IsNotInSegment(bool* RetValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "FadeOutAndPlayNewAmbience");
+		Func = Class->GetFunction("BP_MusicManager_C", "IsNotInSegment");
 
-	Params::BP_MusicManager_C_FadeOutAndPlayNewAmbience Parms{};
+	Params::BP_MusicManager_C_IsNotInSegment Parms{};
 
-	Parms.Cue = Cue;
-	Parms.StartTime = StartTime;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RetValue != nullptr)
+		*RetValue = Parms.RetValue;
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.K2_OnLevelChanged
+// (Event, Public, BlueprintEvent)
+
+void ABP_MusicManager_C::K2_OnLevelChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "K2_OnLevelChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnBossPhaseStarted
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnBossPhaseStarted(class FName NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnBossPhaseStarted");
+
+	Params::BP_MusicManager_C_OnBossPhaseStarted Parms{};
+
+	Parms.NewState = NewState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_MusicManager.BP_MusicManager_C.OnEmoteSongOver
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MusicManager_C::ExecuteUbergraph_BP_MusicManager(int32 EntryPoint)
+void ABP_MusicManager_C::OnEmoteSongOver()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "ExecuteUbergraph_BP_MusicManager");
+		Func = Class->GetFunction("BP_MusicManager_C", "OnEmoteSongOver");
 
-	Params::BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_MusicManager.BP_MusicManager_C.OnLocalPlayerKilled
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnLocalPlayerKilled(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnLocalPlayerKilled");
+
+	Params::BP_MusicManager_C_OnLocalPlayerKilled Parms{};
+
+	Parms.Player = Player;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MusicManager.BP_MusicManager_C.CalculateMultiplayerMix
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerAlive
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnPlayerAlive(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerAlive");
+
+	Params::BP_MusicManager_C_OnPlayerAlive Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerDowned
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnPlayerDowned(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerDowned");
+
+	Params::BP_MusicManager_C_OnPlayerDowned Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnPlayerPawnRespawned_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnPlayerPawnRespawned_Event(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnPlayerPawnRespawned_Event");
+
+	Params::BP_MusicManager_C_OnPlayerPawnRespawned_Event Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnRep_Intensity
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::OnRep_Intensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnRep_Intensity");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnSegmentCompleted
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnSegmentCompleted");
+
+	Params::BP_MusicManager_C_OnSegmentCompleted Parms{};
+
+	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.OnSegmentStarted
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "OnSegmentStarted");
+
+	Params::BP_MusicManager_C_OnSegmentStarted Parms{};
+
+	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayCurrentLevelMusic
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::PlayCurrentLevelMusic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "PlayCurrentLevelMusic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayCurrentLevelMusicBP
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::PlayCurrentLevelMusicBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "PlayCurrentLevelMusicBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongAllPlayers
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::PlayEmoteSongAllPlayers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "PlayEmoteSongAllPlayers");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongImplementation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class USoundBase*                 EmoteSong                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class ARPawnBase*                 RequestingPlayer                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::PlayEmoteSongImplementation(const class USoundBase* EmoteSong, const class ARPawnBase* RequestingPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "PlayEmoteSongImplementation");
+
+	Params::BP_MusicManager_C_PlayEmoteSongImplementation Parms{};
+
+	Parms.EmoteSong = EmoteSong;
+	Parms.RequestingPlayer = RequestingPlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PlayEventMusic
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::PlayEventMusic(class FName Event)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "PlayEventMusic");
+
+	Params::BP_MusicManager_C_PlayEventMusic Parms{};
+
+	Parms.Event = Event;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.PrintAllLevelIds
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MusicManager_C::CalculateMultiplayerMix()
+void ABP_MusicManager_C::PrintAllLevelIds()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicManager_C", "CalculateMultiplayerMix");
+		Func = Class->GetFunction("BP_MusicManager_C", "PrintAllLevelIds");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MusicManager_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.Set MusicData Fallback
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::Set_MusicData_Fallback()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "Set MusicData Fallback");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.Spawn Ambience
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class URAreaData*                 Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MusicManager_C::Spawn_Ambience(const class URAreaData* Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "Spawn Ambience");
+
+	Params::BP_MusicManager_C_Spawn_Ambience Parms{};
+
+	Parms.Key = Key;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.UpdateIntensity
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::UpdateIntensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "UpdateIntensity");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

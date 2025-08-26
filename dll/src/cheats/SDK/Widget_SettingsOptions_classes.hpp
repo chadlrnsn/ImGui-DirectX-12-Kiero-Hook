@@ -36,19 +36,19 @@ public:
 	int32                                         CurrentOption;                                     // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ToggleHighlight();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetPreviousOption();
-	void SetNextOption();
-	void Set_Value(int32 Index_0);
-	void Set_Current_Value_Text();
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_Widget_SettingsOptions(int32 EntryPoint);
-	void Construct();
-	void BP_IncreaseSettingValue();
-	void BP_DecreaseSettingValue();
-	void BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BP_DecreaseSettingValue();
+	void BP_IncreaseSettingValue();
+	void Construct();
+	void ExecuteUbergraph_Widget_SettingsOptions(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Set_Current_Value_Text();
+	void Set_Value(int32 Index_0);
+	void SetNextOption();
+	void SetPreviousOption();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ToggleHighlight();
 
 public:
 	static class UClass* StaticClass()

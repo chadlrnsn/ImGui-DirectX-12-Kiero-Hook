@@ -32,17 +32,17 @@ public:
 	TMulticastInlineDelegate<void(class FText NewOption, int32 Index)> OnOptionChanged;              // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ToggleHighlight();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetCurrentOption(const class FText& Option);
-	void PreConstruct(bool IsDesignTime);
-	void OnNavigationAccept();
-	void GetDesiredFocusSubwidget(class UWidget** Result);
-	void ExecuteUbergraph_Widget_SettingsComboBox(int32 EntryPoint);
-	void Construct();
-	void Clear_Options();
-	void BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
 	void AddOptions(TArray<class FText>& Options);
+	void BndEvt__Widget_SettingsComboBox_ComboBoxString_165_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
+	void Clear_Options();
+	void Construct();
+	void ExecuteUbergraph_Widget_SettingsComboBox(int32 EntryPoint);
+	void GetDesiredFocusSubwidget(class UWidget** Result);
+	void OnNavigationAccept();
+	void PreConstruct(bool IsDesignTime);
+	void SetCurrentOption(const class FText& Option);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void ToggleHighlight();
 
 public:
 	static class UClass* StaticClass()

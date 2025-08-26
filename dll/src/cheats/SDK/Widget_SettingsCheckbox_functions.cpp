@@ -17,113 +17,120 @@
 namespace SDK
 {
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ToggleValue
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SettingsCheckbox_C::ToggleValue()
+void UWidget_SettingsCheckbox_C::BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ToggleValue");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ToggleHighlight
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingsCheckbox_C::ToggleHighlight()
+void UWidget_SettingsCheckbox_C::BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ToggleHighlight");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+
+	Params::Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
+
+	Parms.bIsChecked = bIsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BP_DecreaseSettingValue
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingsCheckbox_C::BP_DecreaseSettingValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BP_DecreaseSettingValue");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsCheckbox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Tick");
-
-	Params::Widget_SettingsCheckbox_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.SetValue
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BP_IncreaseSettingValue
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingsCheckbox_C::SetValue(bool State)
+void UWidget_SettingsCheckbox_C::BP_IncreaseSettingValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "SetValue");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BP_IncreaseSettingValue");
 
-	Params::Widget_SettingsCheckbox_C_SetValue Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Set Text
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsCheckbox_C::Set_Text(bool Condition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Set Text");
-
-	Params::Widget_SettingsCheckbox_C_Set_Text Parms{};
-
-	Parms.Condition = Condition;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.PreConstruct
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingsCheckbox_C::PreConstruct(bool IsDesignTime)
+void UWidget_SettingsCheckbox_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Construct");
 
-	Params::Widget_SettingsCheckbox_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ExecuteUbergraph_Widget_SettingsCheckbox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsCheckbox_C::ExecuteUbergraph_Widget_SettingsCheckbox(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ExecuteUbergraph_Widget_SettingsCheckbox");
+
+	Params::Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.GetDesiredFocusSubwidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget**                         Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsCheckbox_C::GetDesiredFocusSubwidget(class UWidget** Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "GetDesiredFocusSubwidget");
+
+	Params::Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
 }
 
 
@@ -152,118 +159,111 @@ struct FEventReply UWidget_SettingsCheckbox_C::ImagePressed(const struct FGeomet
 }
 
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.GetDesiredFocusSubwidget
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget**                         Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsCheckbox_C::GetDesiredFocusSubwidget(class UWidget** Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "GetDesiredFocusSubwidget");
-
-	Params::Widget_SettingsCheckbox_C_GetDesiredFocusSubwidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ExecuteUbergraph_Widget_SettingsCheckbox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SettingsCheckbox_C::ExecuteUbergraph_Widget_SettingsCheckbox(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ExecuteUbergraph_Widget_SettingsCheckbox");
-
-	Params::Widget_SettingsCheckbox_C_ExecuteUbergraph_Widget_SettingsCheckbox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Construct
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_SettingsCheckbox_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BP_IncreaseSettingValue
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsCheckbox_C::BP_IncreaseSettingValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BP_IncreaseSettingValue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BP_DecreaseSettingValue
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_SettingsCheckbox_C::BP_DecreaseSettingValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BP_DecreaseSettingValue");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (BlueprintEvent)
 // Parameters:
-// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingsCheckbox_C::BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void UWidget_SettingsCheckbox_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "PreConstruct");
 
-	Params::Widget_SettingsCheckbox_C_BndEvt__Widget_SettingsCheckbox_CheckBox_148_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
+	Params::Widget_SettingsCheckbox_C_PreConstruct Parms{};
 
-	Parms.bIsChecked = bIsChecked;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Set Text
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SettingsCheckbox_C::BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+void UWidget_SettingsCheckbox_C::Set_Text(bool Condition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Set Text");
+
+	Params::Widget_SettingsCheckbox_C_Set_Text Parms{};
+
+	Parms.Condition = Condition;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.SetValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsCheckbox_C::SetValue(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "SetValue");
+
+	Params::Widget_SettingsCheckbox_C_SetValue Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SettingsCheckbox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "Tick");
+
+	Params::Widget_SettingsCheckbox_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ToggleHighlight
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingsCheckbox_C::ToggleHighlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ToggleHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SettingsCheckbox.Widget_SettingsCheckbox_C.ToggleValue
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_SettingsCheckbox_C::ToggleValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SettingsCheckbox_C", "ToggleValue");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

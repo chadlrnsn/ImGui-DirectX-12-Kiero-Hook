@@ -107,5 +107,13 @@ static_assert(offsetof(ABP_Generic_Chest::FAnimBlueprintGeneratedConstantData, A
 static_assert(offsetof(ABP_Generic_Chest::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x0003C0, "Member 'ABP_Generic_Chest::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
 static_assert(offsetof(ABP_Generic_Chest::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Inertialization) == 0x0003F0, "Member 'ABP_Generic_Chest::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Inertialization' has a wrong offset!");
 
+// ScriptStruct ABP_Generic_Chest.ABP_Generic_Chest_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_Generic_Chest::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_Generic_Chest::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Generic_Chest::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Generic_Chest::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Generic_Chest::FAnimBlueprintGeneratedMutableData");
+
 }
 

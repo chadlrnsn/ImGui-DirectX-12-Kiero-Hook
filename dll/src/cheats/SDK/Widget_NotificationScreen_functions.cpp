@@ -17,35 +17,15 @@
 namespace SDK
 {
 
-// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnShowHUDUpdated_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_NotificationScreen_C::OnShowHUDUpdated_Event_0(bool NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_NotificationScreen_C", "OnShowHUDUpdated_Event_0");
-
-	Params::Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0 Parms{};
-
-	Parms.NewValue = NewValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnInitialized
+// Function Widget_NotificationScreen.Widget_NotificationScreen_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_NotificationScreen_C::OnInitialized()
+void UWidget_NotificationScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_NotificationScreen_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_NotificationScreen_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,17 +51,37 @@ void UWidget_NotificationScreen_C::ExecuteUbergraph_Widget_NotificationScreen(in
 }
 
 
-// Function Widget_NotificationScreen.Widget_NotificationScreen_C.Construct
+// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_NotificationScreen_C::Construct()
+void UWidget_NotificationScreen_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_NotificationScreen_C", "Construct");
+		Func = Class->GetFunction("Widget_NotificationScreen_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnShowHUDUpdated_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_NotificationScreen_C::OnShowHUDUpdated_Event_0(bool NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_NotificationScreen_C", "OnShowHUDUpdated_Event_0");
+
+	Params::Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0 Parms{};
+
+	Parms.NewValue = NewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

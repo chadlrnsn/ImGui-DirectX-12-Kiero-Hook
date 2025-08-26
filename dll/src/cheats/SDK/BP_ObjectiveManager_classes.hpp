@@ -28,15 +28,15 @@ public:
 	class AREnemySpawnAreaSegment*                LatestEnemySpawnAreaSegment;                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void PushRoomObjectiveNotificationMessge(const class FText& Message);
-	void OnSpawnAreaSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
-	void OnRep_RandomizedObjectivePA_BP();
-	void OnObjectiveStarted_Event(class URGObjectiveScript* ObjectiveScript);
-	void OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag, bool bCompleted);
-	void OnLevelChanged();
-	void OnCorruptedEffectApplied(const TArray<class URNodeChoicePrimaryAsset*>& NodeChoicePAs, TArray<class URGScript*>& NodeChoiceScripts);
 	void ExecuteUbergraph_BP_ObjectiveManager(int32 EntryPoint);
+	void OnCorruptedEffectApplied(const TArray<class URNodeChoicePrimaryAsset*>& NodeChoicePAs, TArray<class URGScript*>& NodeChoiceScripts);
+	void OnLevelChanged();
+	void OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag, bool bCompleted);
+	void OnObjectiveStarted_Event(class URGObjectiveScript* ObjectiveScript);
+	void OnRep_RandomizedObjectivePA_BP();
+	void OnSpawnAreaSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void PushRoomObjectiveNotificationMessge(const class FText& Message);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

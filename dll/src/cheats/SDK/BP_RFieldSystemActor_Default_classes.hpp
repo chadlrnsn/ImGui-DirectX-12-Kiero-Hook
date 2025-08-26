@@ -26,11 +26,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void K2_OnApplyTransientfields(const struct FVector& FieldLocation, const float FieldRadius);
-	void ExecuteUbergraph_BP_RFieldSystemActor_Default(int32 EntryPoint);
-	void ApplyStrain(const struct FVector& FieldLocation, double FieldRadius);
-	void ApplyForce(const struct FVector& FieldLocation, double FieldRadius);
 	void AddFalloffAndCulling(double StrainMagnitudeInput, class UOperatorField* OperatorFieldInput, EFieldFalloffType FalloffTypeInput, const struct FVector& FieldLocation, double FieldRadius, class UCullingField** NewParam);
+	void ApplyForce(const struct FVector& FieldLocation, double FieldRadius);
+	void ApplyStrain(const struct FVector& FieldLocation, double FieldRadius);
+	void ExecuteUbergraph_BP_RFieldSystemActor_Default(int32 EntryPoint);
+	void K2_OnApplyTransientfields(const struct FVector& FieldLocation, const float FieldRadius);
 
 public:
 	static class UClass* StaticClass()

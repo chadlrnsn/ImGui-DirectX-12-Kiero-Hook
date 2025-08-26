@@ -40,32 +40,32 @@ public:
 	class UWidget_SettingsOptions_C*              VisualEffects;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetWidgetCurrentValues(bool bInit);
-	void SetupExplicitNavigations();
-	void ResetSettings();
-	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
-	void OnNavigationRight();
-	void OnNavigationLeft();
-	void NextWidgetSettingsValue(class UUserWidget* Widget);
-	void GetFocusedWidget(class UUserWidget** FocusedWidget);
-	ESlateVisibility Get_TSRSharpness_Visibility();
-	void ExecuteUbergraph_Widget_GraphicSettings(int32 EntryPoint);
-	void Construct();
-	void BP_GetScrollBoxWidget(class UScrollBox** Result);
-	void BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature(double Value, double Percent);
-	void BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State);
-	void BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(int32 Index_0);
-	void BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int32 Index_0);
 	void ApplySettings();
+	void BndEvt__Widget_GraphicSettings_AA_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_AAQuality_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_ButtonAutomaticQuality_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_GraphicSettings_DepthOfField_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_GraphicSettings_EnvDetail_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_GI_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_MotionBlur_K2Node_ComponentBoundEvent_12_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_GraphicSettings_Overall_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_PostProcessQuality_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_Shadows_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_TextDetail_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BndEvt__Widget_GraphicSettings_TSRSharpness_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature(double Value, double Percent);
+	void BndEvt__Widget_GraphicSettings_VisualEffects_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(int32 Index_0);
+	void BP_GetScrollBoxWidget(class UScrollBox** Result);
+	void Construct();
+	void ExecuteUbergraph_Widget_GraphicSettings(int32 EntryPoint);
+	ESlateVisibility Get_TSRSharpness_Visibility();
+	void GetFocusedWidget(class UUserWidget** FocusedWidget);
+	void NextWidgetSettingsValue(class UUserWidget* Widget);
+	void OnNavigationLeft();
+	void OnNavigationRight();
+	void PreviousWidgetSettingsValue(class UUserWidget* Widget);
+	void ResetSettings();
+	void SetupExplicitNavigations();
+	void SetWidgetCurrentValues(bool bInit);
 
 public:
 	static class UClass* StaticClass()

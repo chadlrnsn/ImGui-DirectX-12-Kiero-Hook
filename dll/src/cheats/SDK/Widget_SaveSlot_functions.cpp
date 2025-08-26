@@ -17,53 +17,141 @@
 namespace SDK
 {
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.YesEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_SaveSlot_C::YesEvent()
+void UWidget_SaveSlot_C::BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "YesEvent");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.Setup
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SaveSlot_C::Setup(class URSaveGame* SaveGame)
+void UWidget_SaveSlot_C::BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "Setup");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_SaveSlot_C_Setup Parms{};
+	Params::Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.SaveGame = SaveGame;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.OnRemovedFromFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
 
-void UWidget_SaveSlot_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_SaveSlot_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "OnRemovedFromFocusPath");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnEntryReleased");
 
-	Params::Widget_SaveSlot_C_OnRemovedFromFocusPath Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SaveSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnItemExpansionChanged");
+
+	Params::Widget_SaveSlot_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SaveSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnItemSelectionChanged");
+
+	Params::Widget_SaveSlot_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_SaveSlot_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.ExecuteUbergraph_Widget_SaveSlot
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SaveSlot_C::ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "ExecuteUbergraph_Widget_SaveSlot");
+
+	Params::Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UWidget_SaveSlot_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "OnAddedToFocusPath");
+
+	Params::Widget_SaveSlot_C_OnAddedToFocusPath Parms{};
 
 	Parms.InFocusEvent = std::move(InFocusEvent);
 
@@ -91,19 +179,19 @@ void UWidget_SaveSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 }
 
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.OnAddedToFocusPath
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnRemovedFromFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_SaveSlot_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_SaveSlot_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "OnAddedToFocusPath");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "OnRemovedFromFocusPath");
 
-	Params::Widget_SaveSlot_C_OnAddedToFocusPath Parms{};
+	Params::Widget_SaveSlot_C_OnRemovedFromFocusPath Parms{};
 
 	Parms.InFocusEvent = std::move(InFocusEvent);
 
@@ -111,123 +199,35 @@ void UWidget_SaveSlot_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEve
 }
 
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.ExecuteUbergraph_Widget_SaveSlot
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_SaveSlot.Widget_SaveSlot_C.Setup
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SaveSlot_C::ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint)
+void UWidget_SaveSlot_C::Setup(class URSaveGame* SaveGame)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "ExecuteUbergraph_Widget_SaveSlot");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "Setup");
 
-	Params::Widget_SaveSlot_C_ExecuteUbergraph_Widget_SaveSlot Parms{};
+	Params::Widget_SaveSlot_C_Setup Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.SaveGame = SaveGame;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SaveSlot.Widget_SaveSlot_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_SaveSlot.Widget_SaveSlot_C.YesEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_SaveSlot_C::Construct()
+void UWidget_SaveSlot_C::YesEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SaveSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnItemSelectionChanged");
-
-	Params::Widget_SaveSlot_C_BP_OnItemSelectionChanged Parms{};
-
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SaveSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnItemExpansionChanged");
-
-	Params::Widget_SaveSlot_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWidget_SaveSlot_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SaveSlot_C::BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_SaveSlot_C_BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SaveSlot.Widget_SaveSlot_C.BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_SaveSlot_C::BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SaveSlot_C", "BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_SaveSlot_C", "YesEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

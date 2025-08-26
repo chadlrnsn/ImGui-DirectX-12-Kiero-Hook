@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function Widget_VersionNumber.Widget_VersionNumber_C.PreConstruct
+// Function Widget_VersionNumber.Widget_VersionNumber_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_VersionNumber_C::PreConstruct(bool IsDesignTime)
+void UWidget_VersionNumber_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_VersionNumber_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_VersionNumber_C", "Construct");
 
-	Params::Widget_VersionNumber_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,17 +51,23 @@ void UWidget_VersionNumber_C::ExecuteUbergraph_Widget_VersionNumber(int32 EntryP
 }
 
 
-// Function Widget_VersionNumber.Widget_VersionNumber_C.Construct
+// Function Widget_VersionNumber.Widget_VersionNumber_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_VersionNumber_C::Construct()
+void UWidget_VersionNumber_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_VersionNumber_C", "Construct");
+		Func = Class->GetFunction("Widget_VersionNumber_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_VersionNumber_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

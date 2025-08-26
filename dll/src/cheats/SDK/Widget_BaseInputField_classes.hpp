@@ -39,12 +39,12 @@ public:
 	class FText                                   CachedSelection;                                   // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	struct FEventReply OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnClickedEvent();
-	void ExecuteUbergraph_Widget_BaseInputField(int32 EntryPoint);
-	void BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
+	void BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void ExecuteUbergraph_Widget_BaseInputField(int32 EntryPoint);
+	void OnClickedEvent();
+	struct FEventReply OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

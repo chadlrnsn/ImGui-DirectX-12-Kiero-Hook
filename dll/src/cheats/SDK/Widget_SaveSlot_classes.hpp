@@ -36,18 +36,18 @@ public:
 	TMulticastInlineDelegate<void()>              OnSaveSlotDeleted;                                 // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void YesEvent();
-	void Setup(class URSaveGame* SaveGame);
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint);
-	void Construct();
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnEntryReleased();
-	void BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_SaveSlot_W_Button_Icon_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void Construct();
+	void ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint);
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void Setup(class URSaveGame* SaveGame);
+	void YesEvent();
 
 public:
 	static class UClass* StaticClass()

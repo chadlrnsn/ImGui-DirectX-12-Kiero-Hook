@@ -32,19 +32,19 @@ public:
 	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateGamepadHelperIcon(const struct FInputChord& InputChord);
-	void SetIsGamepadInput(bool bIsGamepadInput);
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnInitialized();
-	void OnGamepadIconSchemeChanged_Event(EGamepadIconScheme NewIconScheme);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void IsSelectingKeyChanged();
-	void GetInputKeySelector(class UInputKeySelector** OutSelector);
-	void ExecuteUbergraph_Widget_Settings_KeybindInput(int32 EntryPoint);
-	void DesimulateLeftMouseClickForGamepad(const struct FInputChord& InputChord, struct FInputChord* OutInputChord);
-	void Construct();
-	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature();
 	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey);
+	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature();
+	void Construct();
+	void DesimulateLeftMouseClickForGamepad(const struct FInputChord& InputChord, struct FInputChord* OutInputChord);
+	void ExecuteUbergraph_Widget_Settings_KeybindInput(int32 EntryPoint);
+	void GetInputKeySelector(class UInputKeySelector** OutSelector);
+	void IsSelectingKeyChanged();
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnGamepadIconSchemeChanged_Event(EGamepadIconScheme NewIconScheme);
+	void OnInitialized();
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void SetIsGamepadInput(bool bIsGamepadInput);
+	void UpdateGamepadHelperIcon(const struct FInputChord& InputChord);
 
 public:
 	static class UClass* StaticClass()

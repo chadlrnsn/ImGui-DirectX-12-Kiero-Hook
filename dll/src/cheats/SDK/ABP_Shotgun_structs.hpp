@@ -64,5 +64,13 @@ static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGra
 static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x0001F8, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
 static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000228, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
 
+// ScriptStruct ABP_Shotgun.ABP_Shotgun_C.AnimBlueprintGeneratedMutableData
+// 0x0000 (0x0001 - 0x0001)
+struct ABP_Shotgun::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+};
+static_assert(alignof(ABP_Shotgun::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Shotgun::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Shotgun::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Shotgun::FAnimBlueprintGeneratedMutableData");
+
 }
 

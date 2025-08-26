@@ -24,10 +24,10 @@ public:
 	class UScrollBox*                             ScrollBox_0;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0);
-	void GetInputMappingsPanelWidget(class UPanelWidget** Result);
-	class UWidget* GetDesiredFocusWidget();
 	void BP_GetScrollBoxWidget(class UScrollBox** Result);
+	class UWidget* GetDesiredFocusWidget();
+	void GetInputMappingsPanelWidget(class UPanelWidget** Result);
+	void GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0);
 
 public:
 	static class UClass* StaticClass()

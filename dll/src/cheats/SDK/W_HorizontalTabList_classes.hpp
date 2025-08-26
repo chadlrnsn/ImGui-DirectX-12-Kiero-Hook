@@ -29,11 +29,11 @@ public:
 	bool                                          IsInitialConstruct;                                // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnInitialized();
-	void OnCultureChanged();
-	void ExecuteUbergraph_W_HorizontalTabList(int32 EntryPoint);
-	void CreateTab();
 	void Construct();
+	void CreateTab();
+	void ExecuteUbergraph_W_HorizontalTabList(int32 EntryPoint);
+	void OnCultureChanged();
+	void OnInitialized();
 
 public:
 	static class UClass* StaticClass()

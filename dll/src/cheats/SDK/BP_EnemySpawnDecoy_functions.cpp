@@ -17,6 +17,74 @@
 namespace SDK
 {
 
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.ExecuteUbergraph_BP_EnemySpawnDecoy
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnDecoy_C::ExecuteUbergraph_BP_EnemySpawnDecoy(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "ExecuteUbergraph_BP_EnemySpawnDecoy");
+
+	Params::BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.OnSpawnSequenceStarted
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnemySpawnDecoy_C::OnSpawnSequenceStarted(float Duration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "OnSpawnSequenceStarted");
+
+	Params::BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted Parms{};
+
+	Parms.Duration = Duration;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.SpawnTimeline__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_EnemySpawnDecoy_C::SpawnTimeline__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "SpawnTimeline__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.SpawnTimeline__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_EnemySpawnDecoy_C::SpawnTimeline__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "SpawnTimeline__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.StartSpawnSequence
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -42,74 +110,6 @@ void ABP_EnemySpawnDecoy_C::StartSpawnSequence(class USkeletalMesh* Mesh, const 
 	Parms.SpawnAnimation = SpawnAnimation;
 	Parms.DecoyMaterial = DecoyMaterial;
 	Parms.NiagaraSystemAsset = NiagaraSystemAsset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.SpawnTimeline__UpdateFunc
-// (BlueprintEvent)
-
-void ABP_EnemySpawnDecoy_C::SpawnTimeline__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "SpawnTimeline__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.SpawnTimeline__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_EnemySpawnDecoy_C::SpawnTimeline__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "SpawnTimeline__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.OnSpawnSequenceStarted
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnDecoy_C::OnSpawnSequenceStarted(float Duration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "OnSpawnSequenceStarted");
-
-	Params::BP_EnemySpawnDecoy_C_OnSpawnSequenceStarted Parms{};
-
-	Parms.Duration = Duration;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnemySpawnDecoy.BP_EnemySpawnDecoy_C.ExecuteUbergraph_BP_EnemySpawnDecoy
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnemySpawnDecoy_C::ExecuteUbergraph_BP_EnemySpawnDecoy(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnemySpawnDecoy_C", "ExecuteUbergraph_BP_EnemySpawnDecoy");
-
-	Params::BP_EnemySpawnDecoy_C_ExecuteUbergraph_BP_EnemySpawnDecoy Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

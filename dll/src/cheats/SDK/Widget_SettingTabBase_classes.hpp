@@ -26,14 +26,14 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnVisibilityChanged_Event(ESlateVisibility InVisibility);
-	void OnInitialized();
-	class UWidget* GetDesiredFocusWidget();
-	void ExecuteUbergraph_Widget_SettingTabBase(int32 EntryPoint);
-	void BP_IncreaseSettingValue();
-	void BP_GetScrollBoxWidget(class UScrollBox** Result);
-	void BP_GetFocusedWidget(class UUserWidget** Result);
 	void BP_DecreaseSettingValue();
+	void BP_GetFocusedWidget(class UUserWidget** Result);
+	void BP_GetScrollBoxWidget(class UScrollBox** Result);
+	void BP_IncreaseSettingValue();
+	void ExecuteUbergraph_Widget_SettingTabBase(int32 EntryPoint);
+	class UWidget* GetDesiredFocusWidget();
+	void OnInitialized();
+	void OnVisibilityChanged_Event(ESlateVisibility InVisibility);
 
 public:
 	static class UClass* StaticClass()

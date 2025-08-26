@@ -18,200 +18,212 @@
 namespace SDK::Params
 {
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.WindowModeDownNavigation
-// 0x0018 (0x0018 - 0x0000)
-struct Widget_DisplaySettings_C_WindowModeDownNavigation final
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.Add Resolutions To Combo Box
+// 0x00F8 (0x00F8 - 0x0000)
+struct Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box final
 {
 public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWindowMode                                   Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FText>                           Options;                                           // 0x0008(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FIntPoint                              CallFunc_GetDesktopResolution_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FIntPoint>                      CallFunc_GetSupportedFullscreenResolutions_Resolutions; // 0x0048(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetSupportedFullscreenResolutions_ReturnValue; // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIntPoint                              CallFunc_Array_Get_Item;                           // 0x006C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_ResolutionToString_ReturnValue;           // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FIntPoint>                      CallFunc_GetSupportedFullscreenResolutions_Resolutions_1; // 0x00A8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1; // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIntPoint                              CallFunc_Array_Get_Item_1;                         // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_ResolutionToString_ReturnValue_1;         // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00E0(0x0010)()
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x00F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x00F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x00F7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_WindowModeDownNavigation) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_WindowModeDownNavigation");
-static_assert(sizeof(Widget_DisplaySettings_C_WindowModeDownNavigation) == 0x000018, "Wrong size on Widget_DisplaySettings_C_WindowModeDownNavigation");
-static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, Navigation_0) == 0x000000, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, CallFunc_GetIsEnabled_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box");
+static_assert(sizeof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box) == 0x0000F8, "Wrong size on Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Selection) == 0x000000, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Selection' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Options) == 0x000008, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Options' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Array_Index_Variable) == 0x000024, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue) == 0x000028, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000030, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetDesktopResolution_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetDesktopResolution_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Loop_Counter_Variable_1) == 0x000040, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_Resolutions) == 0x000048, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_Resolutions' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_ReturnValue) == 0x000058, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Add_IntInt_ReturnValue_1) == 0x00005C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue) == 0x000064, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Array_Index_Variable_1) == 0x000068, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Get_Item) == 0x00006C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_ResolutionToString_ReturnValue) == 0x000078, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_ResolutionToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_1) == 0x000098, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Add_ReturnValue) == 0x00009C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000A0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000A1, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x0000A2, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_1) == 0x0000A3, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_2) == 0x0000A4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_3) == 0x0000A5, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_Resolutions_1) == 0x0000A8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_Resolutions_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1) == 0x0000B8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Get_Item_1) == 0x0000BC, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_ResolutionToString_ReturnValue_1) == 0x0000C8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_ResolutionToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000D8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000E0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Add_ReturnValue_1) == 0x0000F0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_2) == 0x0000F4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_3) == 0x0000F5, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_4) == 0x0000F6, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_5) == 0x0000F7, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.StringToResolution
-// 0x0050 (0x0050 - 0x0000)
-struct Widget_DisplaySettings_C_StringToResolution final
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
 {
 public:
-	class FString                                 InString;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FIntPoint                              Resolution_0;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Split_LeftS;                              // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Split_RightS;                             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Split_ReturnValue;                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIntPoint                              K2Node_MakeStruct_IntPoint;                        // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_StringToResolution) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_StringToResolution");
-static_assert(sizeof(Widget_DisplaySettings_C_StringToResolution) == 0x000050, "Wrong size on Widget_DisplaySettings_C_StringToResolution");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, InString) == 0x000000, "Member 'Widget_DisplaySettings_C_StringToResolution::InString' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, Resolution_0) == 0x000010, "Member 'Widget_DisplaySettings_C_StringToResolution::Resolution_0' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_LeftS) == 0x000018, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_LeftS' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_RightS) == 0x000028, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_RightS' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Conv_StringToInt_ReturnValue) == 0x00003C, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Conv_StringToInt_ReturnValue_1) == 0x000040, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Conv_StringToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, K2Node_MakeStruct_IntPoint) == 0x000044, "Member 'Widget_DisplaySettings_C_StringToResolution::K2Node_MakeStruct_IntPoint' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.SetWidgetCurrentValues
-// 0x0080 (0x0080 - 0x0000)
-struct Widget_DisplaySettings_C_SetWidgetCurrentValues final
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
 {
 public:
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_1;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EWindowMode                                   CallFunc_GetFullscreenMode_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVSyncEnabled_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetLockForegroundMaxFramerate_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetBackgroundMaxFramerate_ReturnValue;    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetForegroundMaxFramerate_ReturnValue;    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGamma_ReturnValue;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVSyncEnabled_ReturnValue_1;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized; // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_MinScaleValue; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetResolutionScaleInformationEx_MaxScaleValue; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast;            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_1;          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_2;          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SetValue_InValue_ImplicitCast_3;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector2D_X_ImplicitCast;              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector2D_Y_ImplicitCast;              // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_SetWidgetCurrentValues");
-static_assert(sizeof(Widget_DisplaySettings_C_SetWidgetCurrentValues) == 0x000080, "Wrong size on Widget_DisplaySettings_C_SetWidgetCurrentValues");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000008, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetFullscreenMode_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetFullscreenMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_IsVSyncEnabled_ReturnValue) == 0x000011, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_IsVSyncEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000014, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetLockForegroundMaxFramerate_ReturnValue) == 0x000018, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetLockForegroundMaxFramerate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetBackgroundMaxFramerate_ReturnValue) == 0x00001C, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetBackgroundMaxFramerate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetForegroundMaxFramerate_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetForegroundMaxFramerate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGamma_ReturnValue) == 0x000024, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGamma_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_IsVSyncEnabled_ReturnValue_1) == 0x000028, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_IsVSyncEnabled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized) == 0x00002C, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue) == 0x000030, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MinScaleValue) == 0x000034, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MinScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MaxScaleValue) == 0x000038, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MaxScaleValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_ReturnValue) == 0x000040, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast) == 0x000050, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_1) == 0x000058, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_2) == 0x000060, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_3) == 0x000068, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_X_ImplicitCast) == 0x000070, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_X_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_Y_ImplicitCast) == 0x000078, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_Y_ImplicitCast' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.SetDisplayedResolutionComboboxOption
-// 0x0028 (0x0028 - 0x0000)
-struct Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption final
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
 {
 public:
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FIntPoint                              CallFunc_GetScreenResolution_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_ResolutionToString_ReturnValue;           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FindOptionIndex_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption");
-static_assert(sizeof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption) == 0x000028, "Wrong size on Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption");
-static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_GetScreenResolution_ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_GetScreenResolution_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_ResolutionToString_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_ResolutionToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_FindOptionIndex_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_FindOptionIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_Less_IntInt_ReturnValue) == 0x000024, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.ResolutionToString
-// 0x0068 (0x0068 - 0x0000)
-struct Widget_DisplaySettings_C_ResolutionToString final
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
 {
 public:
-	struct FIntPoint                              IntPoint;                                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_ResolutionToString) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_ResolutionToString");
-static_assert(sizeof(Widget_DisplaySettings_C_ResolutionToString) == 0x000068, "Wrong size on Widget_DisplaySettings_C_ResolutionToString");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, IntPoint) == 0x000000, "Member 'Widget_DisplaySettings_C_ResolutionToString::IntPoint' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_ResolutionToString::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Conv_IntToString_ReturnValue) == 0x000018, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000028, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Concat_StrStr_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000048, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_MakeLiteralString_ReturnValue) == 0x000058, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::State' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.PreviousWidgetSettingsValue
-// 0x0028 (0x0028 - 0x0000)
-struct Widget_DisplaySettings_C_PreviousWidgetSettingsValue final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_PreviousWidgetSettingsValue");
-static_assert(sizeof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue) == 0x000028, "Wrong size on Widget_DisplaySettings_C_PreviousWidgetSettingsValue");
-static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000018, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess_1) == 0x000020, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.NextWidgetSettingsValue
-// 0x0028 (0x0028 - 0x0000)
-struct Widget_DisplaySettings_C_NextWidgetSettingsValue final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_NextWidgetSettingsValue");
-static_assert(sizeof(Widget_DisplaySettings_C_NextWidgetSettingsValue) == 0x000028, "Wrong size on Widget_DisplaySettings_C_NextWidgetSettingsValue");
-static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000018, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess_1) == 0x000020, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.GammaNavigationUp
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
-struct Widget_DisplaySettings_C_GammaNavigationUp final
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature final
 {
 public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_GammaNavigationUp) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_GammaNavigationUp");
-static_assert(sizeof(Widget_DisplaySettings_C_GammaNavigationUp) == 0x000018, "Wrong size on Widget_DisplaySettings_C_GammaNavigationUp");
-static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, Navigation_0) == 0x000000, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, CallFunc_GetIsEnabled_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BP_GetScrollBoxWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_DisplaySettings_C_BP_GetScrollBoxWidget final
+{
+public:
+	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BP_GetScrollBoxWidget");
+static_assert(sizeof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_DisplaySettings_C_BP_GetScrollBoxWidget");
+static_assert(offsetof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_DisplaySettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
 
 // Function Widget_DisplaySettings.Widget_DisplaySettings_C.ExecuteUbergraph_Widget_DisplaySettings
 // 0x0130 (0x0130 - 0x0000)
@@ -320,212 +332,200 @@ static_assert(offsetof(Widget_DisplaySettings_C_ExecuteUbergraph_Widget_DisplayS
 static_assert(offsetof(Widget_DisplaySettings_C_ExecuteUbergraph_Widget_DisplaySettings, CallFunc_SetForegroundMaxFramerate_newValue_ImplicitCast) == 0x000128, "Member 'Widget_DisplaySettings_C_ExecuteUbergraph_Widget_DisplaySettings::CallFunc_SetForegroundMaxFramerate_newValue_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Widget_DisplaySettings_C_ExecuteUbergraph_Widget_DisplaySettings, CallFunc_SetBackgroundMaxFramerate_newValue_ImplicitCast) == 0x00012C, "Member 'Widget_DisplaySettings_C_ExecuteUbergraph_Widget_DisplaySettings::CallFunc_SetBackgroundMaxFramerate_newValue_ImplicitCast' has a wrong offset!");
 
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BP_GetScrollBoxWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_DisplaySettings_C_BP_GetScrollBoxWidget final
-{
-public:
-	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_DisplaySettings_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_DisplaySettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_DisplaySettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000004, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Index_0) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_WindowMode_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_VSync_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ResolutionScale_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.GammaNavigationUp
 // 0x0018 (0x0018 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature final
+struct Widget_DisplaySettings_C_GammaNavigationUp final
 {
 public:
-	class FText                                   NewOption;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature) == 0x000018, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature, NewOption) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature::NewOption' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature, Index_0) == 0x000010, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Resolution_K2Node_ComponentBoundEvent_0_OnOptionChanged__DelegateSignature::Index_0' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_LockForegroundMaxFramerate_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature::State' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_Gamma_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_ForegroundMaxFrameRate_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_DisplaySettings_C_BndEvt__Widget_DisplaySettings_BackgroundMaxFrameRate_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
-
-// Function Widget_DisplaySettings.Widget_DisplaySettings_C.Add Resolutions To Combo Box
-// 0x00F8 (0x00F8 - 0x0000)
-struct Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box final
-{
-public:
-	EWindowMode                                   Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FText>                           Options;                                           // 0x0008(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FIntPoint                              CallFunc_GetDesktopResolution_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FIntPoint>                      CallFunc_GetSupportedFullscreenResolutions_Resolutions; // 0x0048(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetSupportedFullscreenResolutions_ReturnValue; // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FIntPoint                              CallFunc_Array_Get_Item;                           // 0x006C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_ResolutionToString_ReturnValue;           // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FIntPoint>                      CallFunc_GetSupportedFullscreenResolutions_Resolutions_1; // 0x00A8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1; // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FIntPoint                              CallFunc_Array_Get_Item_1;                         // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_ResolutionToString_ReturnValue_1;         // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00E0(0x0010)()
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x00F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x00F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x00F7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box");
-static_assert(sizeof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box) == 0x0000F8, "Wrong size on Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Selection) == 0x000000, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Selection' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Options) == 0x000008, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Options' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Array_Index_Variable) == 0x000024, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue) == 0x000028, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000030, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetDesktopResolution_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetDesktopResolution_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Loop_Counter_Variable_1) == 0x000040, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_Resolutions) == 0x000048, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_Resolutions' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_ReturnValue) == 0x000058, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Add_IntInt_ReturnValue_1) == 0x00005C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue) == 0x000064, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, Temp_int_Array_Index_Variable_1) == 0x000068, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Get_Item) == 0x00006C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_ResolutionToString_ReturnValue) == 0x000078, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_ResolutionToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_1) == 0x000098, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Add_ReturnValue) == 0x00009C, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000A0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000A1, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x0000A2, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_1) == 0x0000A3, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_2) == 0x0000A4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_3) == 0x0000A5, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_Resolutions_1) == 0x0000A8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_Resolutions_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1) == 0x0000B8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GetSupportedFullscreenResolutions_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Get_Item_1) == 0x0000BC, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_ResolutionToString_ReturnValue_1) == 0x0000C8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_ResolutionToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000D8, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000E0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_Array_Add_ReturnValue_1) == 0x0000F0, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_2) == 0x0000F4, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_GreaterEqual_IntInt_ReturnValue_3) == 0x0000F5, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_GreaterEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_4) == 0x0000F6, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box, CallFunc_BooleanAND_ReturnValue_5) == 0x0000F7, "Member 'Widget_DisplaySettings_C_Add_Resolutions_To_Combo_Box::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(alignof(Widget_DisplaySettings_C_GammaNavigationUp) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_GammaNavigationUp");
+static_assert(sizeof(Widget_DisplaySettings_C_GammaNavigationUp) == 0x000018, "Wrong size on Widget_DisplaySettings_C_GammaNavigationUp");
+static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, Navigation_0) == 0x000000, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::Navigation_0' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_GammaNavigationUp, CallFunc_GetIsEnabled_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_GammaNavigationUp::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.NextWidgetSettingsValue
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_DisplaySettings_C_NextWidgetSettingsValue final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_NextWidgetSettingsValue");
+static_assert(sizeof(Widget_DisplaySettings_C_NextWidgetSettingsValue) == 0x000028, "Wrong size on Widget_DisplaySettings_C_NextWidgetSettingsValue");
+static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000018, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess_1) == 0x000020, "Member 'Widget_DisplaySettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.PreviousWidgetSettingsValue
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_DisplaySettings_C_PreviousWidgetSettingsValue final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              K2Node_DynamicCast_AsWidget_Settings_Options;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_PreviousWidgetSettingsValue");
+static_assert(sizeof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue) == 0x000028, "Wrong size on Widget_DisplaySettings_C_PreviousWidgetSettingsValue");
+static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Options) == 0x000008, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Options' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000018, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess_1) == 0x000020, "Member 'Widget_DisplaySettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.ResolutionToString
+// 0x0068 (0x0068 - 0x0000)
+struct Widget_DisplaySettings_C_ResolutionToString final
+{
+public:
+	struct FIntPoint                              IntPoint;                                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_ResolutionToString) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_ResolutionToString");
+static_assert(sizeof(Widget_DisplaySettings_C_ResolutionToString) == 0x000068, "Wrong size on Widget_DisplaySettings_C_ResolutionToString");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, IntPoint) == 0x000000, "Member 'Widget_DisplaySettings_C_ResolutionToString::IntPoint' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_ResolutionToString::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Conv_IntToString_ReturnValue) == 0x000018, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000028, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Concat_StrStr_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000048, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_ResolutionToString, CallFunc_MakeLiteralString_ReturnValue) == 0x000058, "Member 'Widget_DisplaySettings_C_ResolutionToString::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.SetDisplayedResolutionComboboxOption
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption final
+{
+public:
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FIntPoint                              CallFunc_GetScreenResolution_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_ResolutionToString_ReturnValue;           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FindOptionIndex_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption");
+static_assert(sizeof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption) == 0x000028, "Wrong size on Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption");
+static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_GetScreenResolution_ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_GetScreenResolution_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_ResolutionToString_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_ResolutionToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_FindOptionIndex_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_FindOptionIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption, CallFunc_Less_IntInt_ReturnValue) == 0x000024, "Member 'Widget_DisplaySettings_C_SetDisplayedResolutionComboboxOption::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.SetWidgetCurrentValues
+// 0x0080 (0x0080 - 0x0000)
+struct Widget_DisplaySettings_C_SetWidgetCurrentValues final
+{
+public:
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue_1;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EWindowMode                                   CallFunc_GetFullscreenMode_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVSyncEnabled_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetLockForegroundMaxFramerate_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetBackgroundMaxFramerate_ReturnValue;    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetForegroundMaxFramerate_ReturnValue;    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGamma_ReturnValue;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVSyncEnabled_ReturnValue_1;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized; // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_MinScaleValue; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetResolutionScaleInformationEx_MaxScaleValue; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast;            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_1;          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_2;          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SetValue_InValue_ImplicitCast_3;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector2D_X_ImplicitCast;              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector2D_Y_ImplicitCast;              // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_SetWidgetCurrentValues");
+static_assert(sizeof(Widget_DisplaySettings_C_SetWidgetCurrentValues) == 0x000080, "Wrong size on Widget_DisplaySettings_C_SetWidgetCurrentValues");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000008, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetFullscreenMode_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetFullscreenMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_IsVSyncEnabled_ReturnValue) == 0x000011, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_IsVSyncEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000014, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetLockForegroundMaxFramerate_ReturnValue) == 0x000018, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetLockForegroundMaxFramerate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetBackgroundMaxFramerate_ReturnValue) == 0x00001C, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetBackgroundMaxFramerate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetForegroundMaxFramerate_ReturnValue) == 0x000020, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetForegroundMaxFramerate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetGamma_ReturnValue) == 0x000024, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetGamma_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_IsVSyncEnabled_ReturnValue_1) == 0x000028, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_IsVSyncEnabled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized) == 0x00002C, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleNormalized' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue) == 0x000030, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_CurrentScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MinScaleValue) == 0x000034, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MinScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_GetResolutionScaleInformationEx_MaxScaleValue) == 0x000038, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_GetResolutionScaleInformationEx_MaxScaleValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_ReturnValue) == 0x000040, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast) == 0x000050, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_1) == 0x000058, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_2) == 0x000060, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_SetValue_InValue_ImplicitCast_3) == 0x000068, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_SetValue_InValue_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_X_ImplicitCast) == 0x000070, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_X_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_SetWidgetCurrentValues, CallFunc_MakeVector2D_Y_ImplicitCast) == 0x000078, "Member 'Widget_DisplaySettings_C_SetWidgetCurrentValues::CallFunc_MakeVector2D_Y_ImplicitCast' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.StringToResolution
+// 0x0050 (0x0050 - 0x0000)
+struct Widget_DisplaySettings_C_StringToResolution final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FIntPoint                              Resolution_0;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Split_LeftS;                              // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Split_RightS;                             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Split_ReturnValue;                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FIntPoint                              K2Node_MakeStruct_IntPoint;                        // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_StringToResolution) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_StringToResolution");
+static_assert(sizeof(Widget_DisplaySettings_C_StringToResolution) == 0x000050, "Wrong size on Widget_DisplaySettings_C_StringToResolution");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, InString) == 0x000000, "Member 'Widget_DisplaySettings_C_StringToResolution::InString' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, Resolution_0) == 0x000010, "Member 'Widget_DisplaySettings_C_StringToResolution::Resolution_0' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_LeftS) == 0x000018, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_LeftS' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_RightS) == 0x000028, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_RightS' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Split_ReturnValue) == 0x000038, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Split_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Conv_StringToInt_ReturnValue) == 0x00003C, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, CallFunc_Conv_StringToInt_ReturnValue_1) == 0x000040, "Member 'Widget_DisplaySettings_C_StringToResolution::CallFunc_Conv_StringToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_StringToResolution, K2Node_MakeStruct_IntPoint) == 0x000044, "Member 'Widget_DisplaySettings_C_StringToResolution::K2Node_MakeStruct_IntPoint' has a wrong offset!");
+
+// Function Widget_DisplaySettings.Widget_DisplaySettings_C.WindowModeDownNavigation
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_DisplaySettings_C_WindowModeDownNavigation final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_DisplaySettings_C_WindowModeDownNavigation) == 0x000008, "Wrong alignment on Widget_DisplaySettings_C_WindowModeDownNavigation");
+static_assert(sizeof(Widget_DisplaySettings_C_WindowModeDownNavigation) == 0x000018, "Wrong size on Widget_DisplaySettings_C_WindowModeDownNavigation");
+static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, Navigation_0) == 0x000000, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::Navigation_0' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, ReturnValue) == 0x000008, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_DisplaySettings_C_WindowModeDownNavigation, CallFunc_GetIsEnabled_ReturnValue) == 0x000010, "Member 'Widget_DisplaySettings_C_WindowModeDownNavigation::CallFunc_GetIsEnabled_ReturnValue' has a wrong offset!");
 
 }
 

@@ -17,40 +17,19 @@
 namespace SDK
 {
 
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetMappableIMCs
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.BP_GetScrollBoxWidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class UInputMappingContext*>*    MappableIMCs_0                                         (Parm, OutParm)
+// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GamepadBindingSettings_C::GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0)
+void UWidget_GamepadBindingSettings_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "GetMappableIMCs");
+		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "BP_GetScrollBoxWidget");
 
-	Params::Widget_GamepadBindingSettings_C_GetMappableIMCs Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MappableIMCs_0 != nullptr)
-		*MappableIMCs_0 = std::move(Parms.MappableIMCs_0);
-}
-
-
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetInputMappingsPanelWidget
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UPanelWidget**                    Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GamepadBindingSettings_C::GetInputMappingsPanelWidget(class UPanelWidget** Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "GetInputMappingsPanelWidget");
-
-	Params::Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget Parms{};
+	Params::Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -79,24 +58,45 @@ class UWidget* UWidget_GamepadBindingSettings_C::GetDesiredFocusWidget()
 }
 
 
-// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.BP_GetScrollBoxWidget
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetInputMappingsPanelWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UPanelWidget**                    Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GamepadBindingSettings_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
+void UWidget_GamepadBindingSettings_C::GetInputMappingsPanelWidget(class UPanelWidget** Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "BP_GetScrollBoxWidget");
+		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "GetInputMappingsPanelWidget");
 
-	Params::Widget_GamepadBindingSettings_C_BP_GetScrollBoxWidget Parms{};
+	Params::Widget_GamepadBindingSettings_C_GetInputMappingsPanelWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	if (Result != nullptr)
 		*Result = Parms.Result;
+}
+
+
+// Function Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C.GetMappableIMCs
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UInputMappingContext*>*    MappableIMCs_0                                         (Parm, OutParm)
+
+void UWidget_GamepadBindingSettings_C::GetMappableIMCs(TArray<class UInputMappingContext*>* MappableIMCs_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GamepadBindingSettings_C", "GetMappableIMCs");
+
+	Params::Widget_GamepadBindingSettings_C_GetMappableIMCs Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MappableIMCs_0 != nullptr)
+		*MappableIMCs_0 = std::move(Parms.MappableIMCs_0);
 }
 
 }

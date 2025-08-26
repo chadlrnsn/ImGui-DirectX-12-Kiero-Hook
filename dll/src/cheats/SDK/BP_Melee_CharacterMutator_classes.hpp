@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_Activatable_CharacterMutator_classes.hpp"
 #include "Niagara_structs.hpp"
+#include "BP_Activatable_CharacterMutator_classes.hpp"
 
 
 namespace SDK

@@ -17,23 +17,21 @@
 namespace SDK
 {
 
-// Function Widget_CommonCredits.Widget_CommonCredits_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_CommonCredits.Widget_CommonCredits_C.BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonCredits_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWidget_CommonCredits_C::BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonCredits_C", "Tick");
+		Func = Class->GetFunction("Widget_CommonCredits_C", "BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonCredits_C_Tick Parms{};
+	Params::Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,21 +57,23 @@ void UWidget_CommonCredits_C::ExecuteUbergraph_Widget_CommonCredits(int32 EntryP
 }
 
 
-// Function Widget_CommonCredits.Widget_CommonCredits_C.BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_CommonCredits.Widget_CommonCredits_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonCredits_C::BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_CommonCredits_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonCredits_C", "BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_CommonCredits_C", "Tick");
 
-	Params::Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_CommonCredits_C_Tick Parms{};
 
-	Parms.Button = Button;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

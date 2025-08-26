@@ -17,51 +17,27 @@
 namespace SDK
 {
 
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.CalculateQuadGain
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CameraYaw                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FAudioParameter>*         Array                                                  (Parm, OutParm)
 
-void ABP_AmbiencePlayer_C::ReceiveTick(float DeltaSeconds)
+void ABP_AmbiencePlayer_C::CalculateQuadGain(double CameraYaw, TArray<struct FAudioParameter>* Array)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbiencePlayer_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_AmbiencePlayer_C", "CalculateQuadGain");
 
-	Params::BP_AmbiencePlayer_C_ReceiveTick Parms{};
+	Params::BP_AmbiencePlayer_C_CalculateQuadGain Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.CameraYaw = CameraYaw;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_AmbiencePlayer_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbiencePlayer_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.FadeOut
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_AmbiencePlayer_C::FadeOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbiencePlayer_C", "FadeOut");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Array != nullptr)
+		*Array = std::move(Parms.Array);
 }
 
 
@@ -85,27 +61,51 @@ void ABP_AmbiencePlayer_C::ExecuteUbergraph_BP_AmbiencePlayer(int32 EntryPoint)
 }
 
 
-// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.CalculateQuadGain
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  CameraYaw                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FAudioParameter>*         Array                                                  (Parm, OutParm)
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.FadeOut
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AmbiencePlayer_C::CalculateQuadGain(double CameraYaw, TArray<struct FAudioParameter>* Array)
+void ABP_AmbiencePlayer_C::FadeOut()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbiencePlayer_C", "CalculateQuadGain");
+		Func = Class->GetFunction("BP_AmbiencePlayer_C", "FadeOut");
 
-	Params::BP_AmbiencePlayer_C_CalculateQuadGain Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.CameraYaw = CameraYaw;
+
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_AmbiencePlayer_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbiencePlayer_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AmbiencePlayer.BP_AmbiencePlayer_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AmbiencePlayer_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbiencePlayer_C", "ReceiveTick");
+
+	Params::BP_AmbiencePlayer_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Array != nullptr)
-		*Array = std::move(Parms.Array);
 }
 
 }

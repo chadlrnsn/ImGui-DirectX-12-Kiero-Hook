@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnShowHUDUpdated_Event_0
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0 final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong alignment on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
-static_assert(sizeof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong size on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
-static_assert(offsetof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0, NewValue) == 0x000000, "Member 'Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0::NewValue' has a wrong offset!");
-
 // Function Widget_NotificationScreen.Widget_NotificationScreen_C.ExecuteUbergraph_Widget_NotificationScreen
 // 0x0040 (0x0040 - 0x0000)
 struct Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen final
@@ -58,6 +47,17 @@ static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_Notif
 static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000030, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, K2Node_CustomEvent_NewValue) == 0x000038, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::K2Node_CustomEvent_NewValue' has a wrong offset!");
 static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, K2Node_Select_Default) == 0x000039, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::K2Node_Select_Default' has a wrong offset!");
+
+// Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnShowHUDUpdated_Event_0
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0 final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong alignment on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
+static_assert(sizeof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong size on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
+static_assert(offsetof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0, NewValue) == 0x000000, "Member 'Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0::NewValue' has a wrong offset!");
 
 }
 

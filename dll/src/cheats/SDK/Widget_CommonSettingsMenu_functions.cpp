@@ -17,23 +17,248 @@
 namespace SDK
 {
 
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.Tab Highlighted
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSettingsMenu_C::Tab_Highlighted(int32 Index_0)
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "Tab Highlighted");
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonSettingsMenu_C_Tab_Highlighted Parms{};
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FName                             TabId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
+
+	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature Parms{};
+
+	Parms.TabId = TabId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.ExecuteUbergraph_Widget_CommonSettingsMenu
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::ExecuteUbergraph_Widget_CommonSettingsMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "ExecuteUbergraph_Widget_CommonSettingsMenu");
+
+	Params::Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.GetTabIndexById
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSettingsMenu_C::GetTabIndexById(int32* Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "GetTabIndexById");
+
+	Params::Widget_CommonSettingsMenu_C_GetTabIndexById Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateAccept
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateAccept()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateAccept");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateLeft
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateRight
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabLeft
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::NavigateTabLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "NavigateTabLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabRight
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSettingsMenu_C::NavigateTabRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "NavigateTabRight");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -62,246 +287,21 @@ struct FEventReply UWidget_CommonSettingsMenu_C::OnPreviewKeyDown(const struct F
 }
 
 
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabRight
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::NavigateTabRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "NavigateTabRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabLeft
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::NavigateTabLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "NavigateTabLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateRight
+// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.Tab Highlighted
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateLeft
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateAccept
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::HighlightedTabNavigateAccept()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "HighlightedTabNavigateAccept");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.GetTabIndexById
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSettingsMenu_C::GetTabIndexById(int32* Index_0)
+void UWidget_CommonSettingsMenu_C::Tab_Highlighted(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "GetTabIndexById");
+		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "Tab Highlighted");
 
-	Params::Widget_CommonSettingsMenu_C_GetTabIndexById Parms{};
+	Params::Widget_CommonSettingsMenu_C_Tab_Highlighted Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Index_0 != nullptr)
-		*Index_0 = Parms.Index_0;
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.ExecuteUbergraph_Widget_CommonSettingsMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::ExecuteUbergraph_Widget_CommonSettingsMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "ExecuteUbergraph_Widget_CommonSettingsMenu");
-
-	Params::Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_CommonSettingsMenu_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class FName                             TabId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature Parms{};
-
-	Parms.TabId = TabId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSettingsMenu_C::BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSettingsMenu_C", "BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

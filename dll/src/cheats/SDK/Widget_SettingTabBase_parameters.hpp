@@ -16,104 +16,20 @@
 namespace SDK::Params
 {
 
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnVisibilityChanged_Event
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_SettingTabBase_C_OnVisibilityChanged_Event final
-{
-public:
-	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingTabBase_C_OnVisibilityChanged_Event) == 0x000001, "Wrong alignment on Widget_SettingTabBase_C_OnVisibilityChanged_Event");
-static_assert(sizeof(Widget_SettingTabBase_C_OnVisibilityChanged_Event) == 0x000001, "Wrong size on Widget_SettingTabBase_C_OnVisibilityChanged_Event");
-static_assert(offsetof(Widget_SettingTabBase_C_OnVisibilityChanged_Event, InVisibility) == 0x000000, "Member 'Widget_SettingTabBase_C_OnVisibilityChanged_Event::InVisibility' has a wrong offset!");
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.GetDesiredFocusWidget
-// 0x0058 (0x0058 - 0x0000)
-struct Widget_SettingTabBase_C_GetDesiredFocusWidget final
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScrollBox*                             CallFunc_BP_GetScrollBoxWidget_Result;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_DynamicCast_AsUser_Widget;                  // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingTabBase_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_GetDesiredFocusWidget");
-static_assert(sizeof(Widget_SettingTabBase_C_GetDesiredFocusWidget) == 0x000058, "Wrong size on Widget_SettingTabBase_C_GetDesiredFocusWidget");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_BP_GetScrollBoxWidget_Result) == 0x000018, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_BP_GetScrollBoxWidget_Result' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_GetAllChildren_ReturnValue) == 0x000020, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Array_Get_Item) == 0x000038, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsUser_Widget) == 0x000040, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsUser_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Array_Length_ReturnValue) == 0x00004C, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.ExecuteUbergraph_Widget_SettingTabBase
-// 0x0028 (0x0028 - 0x0000)
-struct Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ESlateVisibility InVisibility)> K2Node_CreateDelegate_OutputDelegate;             // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_CustomEvent_InVisibility;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetDesiredFocusWidget_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase");
-static_assert(sizeof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase) == 0x000028, "Wrong size on Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, EntryPoint) == 0x000000, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, K2Node_CustomEvent_InVisibility) == 0x000014, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::K2Node_CustomEvent_InVisibility' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000015, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000016, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_GetDesiredFocusWidget_ReturnValue) == 0x000018, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_GetDesiredFocusWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_BooleanAND_ReturnValue) == 0x000020, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_IncreaseSettingValue
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_DecreaseSettingValue
 // 0x0018 (0x0018 - 0x0000)
-struct Widget_SettingTabBase_C_BP_IncreaseSettingValue final
+struct Widget_SettingTabBase_C_BP_DecreaseSettingValue final
 {
 public:
 	class UUserWidget*                            CallFunc_BP_GetFocusedWidget_Result;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget_SettingsBase_C*                 K2Node_DynamicCast_AsWidget_Settings_Base;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingTabBase_C_BP_IncreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_IncreaseSettingValue");
-static_assert(sizeof(Widget_SettingTabBase_C_BP_IncreaseSettingValue) == 0x000018, "Wrong size on Widget_SettingTabBase_C_BP_IncreaseSettingValue");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, CallFunc_BP_GetFocusedWidget_Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::CallFunc_BP_GetFocusedWidget_Result' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, K2Node_DynamicCast_AsWidget_Settings_Base) == 0x000008, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::K2Node_DynamicCast_AsWidget_Settings_Base' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_GetScrollBoxWidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingTabBase_C_BP_GetScrollBoxWidget final
-{
-public:
-	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_SettingTabBase_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
+static_assert(alignof(Widget_SettingTabBase_C_BP_DecreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_DecreaseSettingValue");
+static_assert(sizeof(Widget_SettingTabBase_C_BP_DecreaseSettingValue) == 0x000018, "Wrong size on Widget_SettingTabBase_C_BP_DecreaseSettingValue");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, CallFunc_BP_GetFocusedWidget_Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::CallFunc_BP_GetFocusedWidget_Result' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, K2Node_DynamicCast_AsWidget_Settings_Base) == 0x000008, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::K2Node_DynamicCast_AsWidget_Settings_Base' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_GetFocusedWidget
 // 0x0060 (0x0060 - 0x0000)
@@ -155,20 +71,104 @@ static_assert(offsetof(Widget_SettingTabBase_C_BP_GetFocusedWidget, CallFunc_Les
 static_assert(offsetof(Widget_SettingTabBase_C_BP_GetFocusedWidget, K2Node_DynamicCast_AsUser_Widget) == 0x000050, "Member 'Widget_SettingTabBase_C_BP_GetFocusedWidget::K2Node_DynamicCast_AsUser_Widget' has a wrong offset!");
 static_assert(offsetof(Widget_SettingTabBase_C_BP_GetFocusedWidget, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'Widget_SettingTabBase_C_BP_GetFocusedWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_DecreaseSettingValue
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_GetScrollBoxWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingTabBase_C_BP_GetScrollBoxWidget final
+{
+public:
+	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_GetScrollBoxWidget");
+static_assert(sizeof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_SettingTabBase_C_BP_GetScrollBoxWidget");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.BP_IncreaseSettingValue
 // 0x0018 (0x0018 - 0x0000)
-struct Widget_SettingTabBase_C_BP_DecreaseSettingValue final
+struct Widget_SettingTabBase_C_BP_IncreaseSettingValue final
 {
 public:
 	class UUserWidget*                            CallFunc_BP_GetFocusedWidget_Result;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget_SettingsBase_C*                 K2Node_DynamicCast_AsWidget_Settings_Base;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingTabBase_C_BP_DecreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_DecreaseSettingValue");
-static_assert(sizeof(Widget_SettingTabBase_C_BP_DecreaseSettingValue) == 0x000018, "Wrong size on Widget_SettingTabBase_C_BP_DecreaseSettingValue");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, CallFunc_BP_GetFocusedWidget_Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::CallFunc_BP_GetFocusedWidget_Result' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, K2Node_DynamicCast_AsWidget_Settings_Base) == 0x000008, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::K2Node_DynamicCast_AsWidget_Settings_Base' has a wrong offset!");
-static_assert(offsetof(Widget_SettingTabBase_C_BP_DecreaseSettingValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_SettingTabBase_C_BP_DecreaseSettingValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(Widget_SettingTabBase_C_BP_IncreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_BP_IncreaseSettingValue");
+static_assert(sizeof(Widget_SettingTabBase_C_BP_IncreaseSettingValue) == 0x000018, "Wrong size on Widget_SettingTabBase_C_BP_IncreaseSettingValue");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, CallFunc_BP_GetFocusedWidget_Result) == 0x000000, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::CallFunc_BP_GetFocusedWidget_Result' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, K2Node_DynamicCast_AsWidget_Settings_Base) == 0x000008, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::K2Node_DynamicCast_AsWidget_Settings_Base' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_BP_IncreaseSettingValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_SettingTabBase_C_BP_IncreaseSettingValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.ExecuteUbergraph_Widget_SettingTabBase
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ESlateVisibility InVisibility)> K2Node_CreateDelegate_OutputDelegate;             // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_CustomEvent_InVisibility;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetDesiredFocusWidget_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase");
+static_assert(sizeof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase) == 0x000028, "Wrong size on Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, EntryPoint) == 0x000000, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, K2Node_CustomEvent_InVisibility) == 0x000014, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::K2Node_CustomEvent_InVisibility' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000015, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000016, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_GetDesiredFocusWidget_ReturnValue) == 0x000018, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_GetDesiredFocusWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_BooleanAND_ReturnValue) == 0x000020, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'Widget_SettingTabBase_C_ExecuteUbergraph_Widget_SettingTabBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.GetDesiredFocusWidget
+// 0x0058 (0x0058 - 0x0000)
+struct Widget_SettingTabBase_C_GetDesiredFocusWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScrollBox*                             CallFunc_BP_GetScrollBoxWidget_Result;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_DynamicCast_AsUser_Widget;                  // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingTabBase_C_GetDesiredFocusWidget) == 0x000008, "Wrong alignment on Widget_SettingTabBase_C_GetDesiredFocusWidget");
+static_assert(sizeof(Widget_SettingTabBase_C_GetDesiredFocusWidget) == 0x000058, "Wrong size on Widget_SettingTabBase_C_GetDesiredFocusWidget");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, ReturnValue) == 0x000000, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_BP_GetScrollBoxWidget_Result) == 0x000018, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_BP_GetScrollBoxWidget_Result' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_GetAllChildren_ReturnValue) == 0x000020, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Array_Get_Item) == 0x000038, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, K2Node_DynamicCast_AsUser_Widget) == 0x000040, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::K2Node_DynamicCast_AsUser_Widget' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Array_Length_ReturnValue) == 0x00004C, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Widget_SettingTabBase_C_GetDesiredFocusWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'Widget_SettingTabBase_C_GetDesiredFocusWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingTabBase.Widget_SettingTabBase_C.OnVisibilityChanged_Event
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_SettingTabBase_C_OnVisibilityChanged_Event final
+{
+public:
+	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingTabBase_C_OnVisibilityChanged_Event) == 0x000001, "Wrong alignment on Widget_SettingTabBase_C_OnVisibilityChanged_Event");
+static_assert(sizeof(Widget_SettingTabBase_C_OnVisibilityChanged_Event) == 0x000001, "Wrong size on Widget_SettingTabBase_C_OnVisibilityChanged_Event");
+static_assert(offsetof(Widget_SettingTabBase_C_OnVisibilityChanged_Event, InVisibility) == 0x000000, "Member 'Widget_SettingTabBase_C_OnVisibilityChanged_Event::InVisibility' has a wrong offset!");
 
 }
 

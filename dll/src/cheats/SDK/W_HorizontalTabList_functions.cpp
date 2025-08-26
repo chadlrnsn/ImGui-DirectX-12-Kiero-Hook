@@ -17,29 +17,29 @@
 namespace SDK
 {
 
-// Function W_HorizontalTabList.W_HorizontalTabList_C.OnInitialized
+// Function W_HorizontalTabList.W_HorizontalTabList_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UW_HorizontalTabList_C::OnInitialized()
+void UW_HorizontalTabList_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_HorizontalTabList_C", "OnInitialized");
+		Func = Class->GetFunction("W_HorizontalTabList_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function W_HorizontalTabList.W_HorizontalTabList_C.OnCultureChanged
-// (BlueprintCallable, BlueprintEvent)
+// Function W_HorizontalTabList.W_HorizontalTabList_C.CreateTab
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UW_HorizontalTabList_C::OnCultureChanged()
+void UW_HorizontalTabList_C::CreateTab()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_HorizontalTabList_C", "OnCultureChanged");
+		Func = Class->GetFunction("W_HorizontalTabList_C", "CreateTab");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,29 +65,29 @@ void UW_HorizontalTabList_C::ExecuteUbergraph_W_HorizontalTabList(int32 EntryPoi
 }
 
 
-// Function W_HorizontalTabList.W_HorizontalTabList_C.CreateTab
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function W_HorizontalTabList.W_HorizontalTabList_C.OnCultureChanged
+// (BlueprintCallable, BlueprintEvent)
 
-void UW_HorizontalTabList_C::CreateTab()
+void UW_HorizontalTabList_C::OnCultureChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_HorizontalTabList_C", "CreateTab");
+		Func = Class->GetFunction("W_HorizontalTabList_C", "OnCultureChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function W_HorizontalTabList.W_HorizontalTabList_C.Construct
+// Function W_HorizontalTabList.W_HorizontalTabList_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UW_HorizontalTabList_C::Construct()
+void UW_HorizontalTabList_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_HorizontalTabList_C", "Construct");
+		Func = Class->GetFunction("W_HorizontalTabList_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

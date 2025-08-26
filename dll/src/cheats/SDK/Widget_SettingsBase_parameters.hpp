@@ -16,39 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Widget_SettingsBase.Widget_SettingsBase_C.OnRemovedFromFocusPath
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingsBase_C_OnRemovedFromFocusPath final
-{
-public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-static_assert(alignof(Widget_SettingsBase_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_SettingsBase_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_SettingsBase_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_SettingsBase_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_SettingsBase_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SettingsBase_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
-
-// Function Widget_SettingsBase.Widget_SettingsBase_C.OnAddedToFocusPath
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingsBase_C_OnAddedToFocusPath final
-{
-public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-static_assert(alignof(Widget_SettingsBase_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_SettingsBase_C_OnAddedToFocusPath");
-static_assert(sizeof(Widget_SettingsBase_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_SettingsBase_C_OnAddedToFocusPath");
-static_assert(offsetof(Widget_SettingsBase_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SettingsBase_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
-
-// Function Widget_SettingsBase.Widget_SettingsBase_C.GetDesiredFocusSubwidget
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SettingsBase_C_GetDesiredFocusSubwidget final
-{
-public:
-	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SettingsBase_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsBase_C_GetDesiredFocusSubwidget");
-static_assert(sizeof(Widget_SettingsBase_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsBase_C_GetDesiredFocusSubwidget");
-static_assert(offsetof(Widget_SettingsBase_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsBase_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
-
 // Function Widget_SettingsBase.Widget_SettingsBase_C.ExecuteUbergraph_Widget_SettingsBase
 // 0x0028 (0x0028 - 0x0000)
 struct Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase final
@@ -72,6 +39,39 @@ static_assert(offsetof(Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBas
 static_assert(offsetof(Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase, K2Node_Event_InFocusEvent_1) == 0x000010, "Member 'Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase::K2Node_Event_InFocusEvent_1' has a wrong offset!");
 static_assert(offsetof(Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase, CallFunc_GetDesiredFocusSubwidget_Result) == 0x000018, "Member 'Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase::CallFunc_GetDesiredFocusSubwidget_Result' has a wrong offset!");
 static_assert(offsetof(Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'Widget_SettingsBase_C_ExecuteUbergraph_Widget_SettingsBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function Widget_SettingsBase.Widget_SettingsBase_C.GetDesiredFocusSubwidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingsBase_C_GetDesiredFocusSubwidget final
+{
+public:
+	class UWidget*                                Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Widget_SettingsBase_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong alignment on Widget_SettingsBase_C_GetDesiredFocusSubwidget");
+static_assert(sizeof(Widget_SettingsBase_C_GetDesiredFocusSubwidget) == 0x000008, "Wrong size on Widget_SettingsBase_C_GetDesiredFocusSubwidget");
+static_assert(offsetof(Widget_SettingsBase_C_GetDesiredFocusSubwidget, Result) == 0x000000, "Member 'Widget_SettingsBase_C_GetDesiredFocusSubwidget::Result' has a wrong offset!");
+
+// Function Widget_SettingsBase.Widget_SettingsBase_C.OnAddedToFocusPath
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingsBase_C_OnAddedToFocusPath final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(Widget_SettingsBase_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_SettingsBase_C_OnAddedToFocusPath");
+static_assert(sizeof(Widget_SettingsBase_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_SettingsBase_C_OnAddedToFocusPath");
+static_assert(offsetof(Widget_SettingsBase_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SettingsBase_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+
+// Function Widget_SettingsBase.Widget_SettingsBase_C.OnRemovedFromFocusPath
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SettingsBase_C_OnRemovedFromFocusPath final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(Widget_SettingsBase_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_SettingsBase_C_OnRemovedFromFocusPath");
+static_assert(sizeof(Widget_SettingsBase_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_SettingsBase_C_OnRemovedFromFocusPath");
+static_assert(offsetof(Widget_SettingsBase_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_SettingsBase_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
 
 }
 

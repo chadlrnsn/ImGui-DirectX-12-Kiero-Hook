@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_WeaponBase_Script_classes.hpp"
 #include "RGame_structs.hpp"
+#include "BP_WeaponBase_Script_classes.hpp"
 
 
 namespace SDK

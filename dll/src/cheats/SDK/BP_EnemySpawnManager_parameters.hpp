@@ -16,172 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.UpdateEnemyOutline
-// 0x0010 (0x0010 - 0x0000)
-struct BP_EnemySpawnManager_C_UpdateEnemyOutline final
-{
-public:
-	class ARPawnBase*                             EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          renderDepth;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_UpdateEnemyOutline) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_UpdateEnemyOutline");
-static_assert(sizeof(BP_EnemySpawnManager_C_UpdateEnemyOutline) == 0x000010, "Wrong size on BP_EnemySpawnManager_C_UpdateEnemyOutline");
-static_assert(offsetof(BP_EnemySpawnManager_C_UpdateEnemyOutline, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_UpdateEnemyOutline::EnemyPawn' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_UpdateEnemyOutline, renderDepth) == 0x000008, "Member 'BP_EnemySpawnManager_C_UpdateEnemyOutline::renderDepth' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveOnEnemySpawnPrimed
-// 0x0070 (0x0070 - 0x0000)
-struct BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed final
-{
-public:
-	class UClass*                                 EnemyClass;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         SpawnDuration;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed) == 0x000010, "Wrong alignment on BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed");
-static_assert(sizeof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed) == 0x000070, "Wrong size on BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed");
-static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, EnemyClass) == 0x000000, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::EnemyClass' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, SpawnDuration) == 0x000008, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::SpawnDuration' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, SpawnTransform) == 0x000010, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::SpawnTransform' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.PopulatePool
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_EnemySpawnManager_C_PopulatePool final
-{
-public:
-	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_First_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Last_Index_Variable;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_EnemySpawnDecoy_C*                  CallFunc_FinishSpawningActor_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_PopulatePool) == 0x000010, "Wrong alignment on BP_EnemySpawnManager_C_PopulatePool");
-static_assert(sizeof(BP_EnemySpawnManager_C_PopulatePool) == 0x0000A0, "Wrong size on BP_EnemySpawnManager_C_PopulatePool");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Num) == 0x000000, "Member 'BP_EnemySpawnManager_C_PopulatePool::Num' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Temp_int_First_Index_Variable) == 0x000004, "Member 'BP_EnemySpawnManager_C_PopulatePool::Temp_int_First_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Temp_int_Last_Index_Variable) == 0x000008, "Member 'BP_EnemySpawnManager_C_PopulatePool::Temp_int_Last_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_MakeTransform_ReturnValue) == 0x000020, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000080, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_FinishSpawningActor_ReturnValue) == 0x000088, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnSpawned
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EnemySpawnManager_C_OnSpawned final
-{
-public:
-	class ARNPCPawnBase*                          EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_OnSpawned) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_OnSpawned");
-static_assert(sizeof(BP_EnemySpawnManager_C_OnSpawned) == 0x000008, "Wrong size on BP_EnemySpawnManager_C_OnSpawned");
-static_assert(offsetof(BP_EnemySpawnManager_C_OnSpawned, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_OnSpawned::EnemyPawn' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnKilled
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EnemySpawnManager_C_OnKilled final
-{
-public:
-	class ARNPCPawnBase*                          EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_OnKilled) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_OnKilled");
-static_assert(sizeof(BP_EnemySpawnManager_C_OnKilled) == 0x000008, "Wrong size on BP_EnemySpawnManager_C_OnKilled");
-static_assert(offsetof(BP_EnemySpawnManager_C_OnKilled, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_OnKilled::EnemyPawn' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetVFXAssets
-// 0x0028 (0x0028 - 0x0000)
-struct BP_EnemySpawnManager_C_GetVFXAssets final
-{
-public:
-	class UMaterialInstance*                      DecoyMaterial;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetAreaIndex_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_GetVFXAssets) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetVFXAssets");
-static_assert(sizeof(BP_EnemySpawnManager_C_GetVFXAssets) == 0x000028, "Wrong size on BP_EnemySpawnManager_C_GetVFXAssets");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, DecoyMaterial) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::DecoyMaterial' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, NiagaraSystemAsset) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::NiagaraSystemAsset' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_GetOverworldManager_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_GetAreaIndex_ReturnValue) == 0x00001C, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_GetAreaIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, K2Node_SwitchInteger_CmpSuccess) == 0x000020, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetPooledSpawnBP
-// 0x0058 (0x0058 - 0x0000)
-struct BP_EnemySpawnManager_C_GetPooledSpawnBP final
-{
-public:
-	class ABP_EnemySpawnDecoy_C*                  SpawnBP;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_EnemySpawnDecoy_C*                  CallFunc_GetPooledSpawnBP_SpawnBP;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_EnemySpawnDecoy_C*                  CallFunc_GetPooledSpawnBP_SpawnBP_1;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_EnemySpawnDecoy_C*                  CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_EnemySpawnDecoy_C*                  CallFunc_Array_Get_Item_1;                         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_GetPooledSpawnBP) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetPooledSpawnBP");
-static_assert(sizeof(BP_EnemySpawnManager_C_GetPooledSpawnBP) == 0x000058, "Wrong size on BP_EnemySpawnManager_C_GetPooledSpawnBP");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, SpawnBP) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::SpawnBP' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Array_Index_Variable_1) == 0x000014, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Loop_Counter_Variable_1) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_GetPooledSpawnBP_SpawnBP) == 0x000020, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_GetPooledSpawnBP_SpawnBP' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_GetPooledSpawnBP_SpawnBP_1) == 0x000028, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_GetPooledSpawnBP_SpawnBP_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Less_IntInt_ReturnValue) == 0x00003D, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Length_ReturnValue_1) == 0x000040, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Get_Item_1) == 0x000048, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Less_IntInt_ReturnValue_1) == 0x000050, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_IsValid_ReturnValue_1) == 0x000051, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-
-// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetEliteVFXAssets
-// 0x0020 (0x0020 - 0x0000)
-struct BP_EnemySpawnManager_C_GetEliteVFXAssets final
-{
-public:
-	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetAreaIndex_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EnemySpawnManager_C_GetEliteVFXAssets) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetEliteVFXAssets");
-static_assert(sizeof(BP_EnemySpawnManager_C_GetEliteVFXAssets) == 0x000020, "Wrong size on BP_EnemySpawnManager_C_GetEliteVFXAssets");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, NiagaraSystemAsset) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::NiagaraSystemAsset' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_GetOverworldManager_ReturnValue) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_GetAreaIndex_ReturnValue) == 0x000014, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_GetAreaIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
 // Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ExecuteUbergraph_BP_EnemySpawnManager
 // 0x0330 (0x0330 - 0x0000)
 struct BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager final
@@ -354,6 +188,172 @@ static_assert(offsetof(BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnMana
 static_assert(offsetof(BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager, CallFunc_GetCurrentSpawnAreaSegment_ReturnValue) == 0x000320, "Member 'BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager::CallFunc_GetCurrentSpawnAreaSegment_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager, CallFunc_IsValid_ReturnValue_1) == 0x000328, "Member 'BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager, CallFunc_Not_PreBool_ReturnValue) == 0x000329, "Member 'BP_EnemySpawnManager_C_ExecuteUbergraph_BP_EnemySpawnManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetEliteVFXAssets
+// 0x0020 (0x0020 - 0x0000)
+struct BP_EnemySpawnManager_C_GetEliteVFXAssets final
+{
+public:
+	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetAreaIndex_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_GetEliteVFXAssets) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetEliteVFXAssets");
+static_assert(sizeof(BP_EnemySpawnManager_C_GetEliteVFXAssets) == 0x000020, "Wrong size on BP_EnemySpawnManager_C_GetEliteVFXAssets");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, NiagaraSystemAsset) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::NiagaraSystemAsset' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_GetOverworldManager_ReturnValue) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, CallFunc_GetAreaIndex_ReturnValue) == 0x000014, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::CallFunc_GetAreaIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetEliteVFXAssets, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetEliteVFXAssets::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetPooledSpawnBP
+// 0x0058 (0x0058 - 0x0000)
+struct BP_EnemySpawnManager_C_GetPooledSpawnBP final
+{
+public:
+	class ABP_EnemySpawnDecoy_C*                  SpawnBP;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_EnemySpawnDecoy_C*                  CallFunc_GetPooledSpawnBP_SpawnBP;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_EnemySpawnDecoy_C*                  CallFunc_GetPooledSpawnBP_SpawnBP_1;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_EnemySpawnDecoy_C*                  CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_EnemySpawnDecoy_C*                  CallFunc_Array_Get_Item_1;                         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_GetPooledSpawnBP) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetPooledSpawnBP");
+static_assert(sizeof(BP_EnemySpawnManager_C_GetPooledSpawnBP) == 0x000058, "Wrong size on BP_EnemySpawnManager_C_GetPooledSpawnBP");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, SpawnBP) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::SpawnBP' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Array_Index_Variable_1) == 0x000014, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, Temp_int_Loop_Counter_Variable_1) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_GetPooledSpawnBP_SpawnBP) == 0x000020, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_GetPooledSpawnBP_SpawnBP' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_GetPooledSpawnBP_SpawnBP_1) == 0x000028, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_GetPooledSpawnBP_SpawnBP_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Less_IntInt_ReturnValue) == 0x00003D, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Length_ReturnValue_1) == 0x000040, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Array_Get_Item_1) == 0x000048, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_Less_IntInt_ReturnValue_1) == 0x000050, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetPooledSpawnBP, CallFunc_IsValid_ReturnValue_1) == 0x000051, "Member 'BP_EnemySpawnManager_C_GetPooledSpawnBP::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetVFXAssets
+// 0x0028 (0x0028 - 0x0000)
+struct BP_EnemySpawnManager_C_GetVFXAssets final
+{
+public:
+	class UMaterialInstance*                      DecoyMaterial;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NiagaraSystemAsset;                                // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetAreaIndex_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_GetVFXAssets) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_GetVFXAssets");
+static_assert(sizeof(BP_EnemySpawnManager_C_GetVFXAssets) == 0x000028, "Wrong size on BP_EnemySpawnManager_C_GetVFXAssets");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, DecoyMaterial) == 0x000000, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::DecoyMaterial' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, NiagaraSystemAsset) == 0x000008, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::NiagaraSystemAsset' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_GetOverworldManager_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, CallFunc_GetAreaIndex_ReturnValue) == 0x00001C, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::CallFunc_GetAreaIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_GetVFXAssets, K2Node_SwitchInteger_CmpSuccess) == 0x000020, "Member 'BP_EnemySpawnManager_C_GetVFXAssets::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnKilled
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EnemySpawnManager_C_OnKilled final
+{
+public:
+	class ARNPCPawnBase*                          EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_OnKilled) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_OnKilled");
+static_assert(sizeof(BP_EnemySpawnManager_C_OnKilled) == 0x000008, "Wrong size on BP_EnemySpawnManager_C_OnKilled");
+static_assert(offsetof(BP_EnemySpawnManager_C_OnKilled, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_OnKilled::EnemyPawn' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.OnSpawned
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EnemySpawnManager_C_OnSpawned final
+{
+public:
+	class ARNPCPawnBase*                          EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_OnSpawned) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_OnSpawned");
+static_assert(sizeof(BP_EnemySpawnManager_C_OnSpawned) == 0x000008, "Wrong size on BP_EnemySpawnManager_C_OnSpawned");
+static_assert(offsetof(BP_EnemySpawnManager_C_OnSpawned, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_OnSpawned::EnemyPawn' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.PopulatePool
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_EnemySpawnManager_C_PopulatePool final
+{
+public:
+	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_First_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Last_Index_Variable;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_EnemySpawnDecoy_C*                  CallFunc_FinishSpawningActor_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_PopulatePool) == 0x000010, "Wrong alignment on BP_EnemySpawnManager_C_PopulatePool");
+static_assert(sizeof(BP_EnemySpawnManager_C_PopulatePool) == 0x0000A0, "Wrong size on BP_EnemySpawnManager_C_PopulatePool");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Num) == 0x000000, "Member 'BP_EnemySpawnManager_C_PopulatePool::Num' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Temp_int_First_Index_Variable) == 0x000004, "Member 'BP_EnemySpawnManager_C_PopulatePool::Temp_int_First_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, Temp_int_Last_Index_Variable) == 0x000008, "Member 'BP_EnemySpawnManager_C_PopulatePool::Temp_int_Last_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_MakeTransform_ReturnValue) == 0x000020, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000080, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_FinishSpawningActor_ReturnValue) == 0x000088, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_PopulatePool, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'BP_EnemySpawnManager_C_PopulatePool::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.ReceiveOnEnemySpawnPrimed
+// 0x0070 (0x0070 - 0x0000)
+struct BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed final
+{
+public:
+	class UClass*                                 EnemyClass;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         SpawnDuration;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed) == 0x000010, "Wrong alignment on BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed");
+static_assert(sizeof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed) == 0x000070, "Wrong size on BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed");
+static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, EnemyClass) == 0x000000, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::EnemyClass' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, SpawnDuration) == 0x000008, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::SpawnDuration' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed, SpawnTransform) == 0x000010, "Member 'BP_EnemySpawnManager_C_ReceiveOnEnemySpawnPrimed::SpawnTransform' has a wrong offset!");
+
+// Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.UpdateEnemyOutline
+// 0x0010 (0x0010 - 0x0000)
+struct BP_EnemySpawnManager_C_UpdateEnemyOutline final
+{
+public:
+	class ARPawnBase*                             EnemyPawn;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          renderDepth;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EnemySpawnManager_C_UpdateEnemyOutline) == 0x000008, "Wrong alignment on BP_EnemySpawnManager_C_UpdateEnemyOutline");
+static_assert(sizeof(BP_EnemySpawnManager_C_UpdateEnemyOutline) == 0x000010, "Wrong size on BP_EnemySpawnManager_C_UpdateEnemyOutline");
+static_assert(offsetof(BP_EnemySpawnManager_C_UpdateEnemyOutline, EnemyPawn) == 0x000000, "Member 'BP_EnemySpawnManager_C_UpdateEnemyOutline::EnemyPawn' has a wrong offset!");
+static_assert(offsetof(BP_EnemySpawnManager_C_UpdateEnemyOutline, renderDepth) == 0x000008, "Member 'BP_EnemySpawnManager_C_UpdateEnemyOutline::renderDepth' has a wrong offset!");
 
 }
 

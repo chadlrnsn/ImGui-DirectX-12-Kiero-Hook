@@ -36,9 +36,9 @@ public:
 	double                                        ScrollSpeed;                                       // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_Widget_CommonCredits(int32 EntryPoint);
 	void BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void ExecuteUbergraph_Widget_CommonCredits(int32 EntryPoint);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

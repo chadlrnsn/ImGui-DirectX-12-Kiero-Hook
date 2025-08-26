@@ -17,127 +17,23 @@
 namespace SDK
 {
 
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ObjectiveManager_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.PushRoomObjectiveNotificationMessge
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.ExecuteUbergraph_BP_ObjectiveManager
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      Message                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ObjectiveManager_C::PushRoomObjectiveNotificationMessge(const class FText& Message)
+void ABP_ObjectiveManager_C::ExecuteUbergraph_BP_ObjectiveManager(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "PushRoomObjectiveNotificationMessge");
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "ExecuteUbergraph_BP_ObjectiveManager");
 
-	Params::BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge Parms{};
+	Params::BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager Parms{};
 
-	Parms.Message = std::move(Message);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnSpawnAreaSegmentStarted
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ObjectiveManager_C::OnSpawnAreaSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnSpawnAreaSegmentStarted");
-
-	Params::BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted Parms{};
-
-	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnRep_RandomizedObjectivePA_BP
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_ObjectiveManager_C::OnRep_RandomizedObjectivePA_BP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnRep_RandomizedObjectivePA_BP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveStarted_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URGObjectiveScript*               ObjectiveScript                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ObjectiveManager_C::OnObjectiveStarted_Event(class URGObjectiveScript* ObjectiveScript)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnObjectiveStarted_Event");
-
-	Params::BP_ObjectiveManager_C_OnObjectiveStarted_Event Parms{};
-
-	Parms.ObjectiveScript = ObjectiveScript;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveEnded_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              ObjectiveTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// bool                                    bCompleted                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ObjectiveManager_C::OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag, bool bCompleted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnObjectiveEnded_Event");
-
-	Params::BP_ObjectiveManager_C_OnObjectiveEnded_Event Parms{};
-
-	Parms.ObjectiveTag = std::move(ObjectiveTag);
-	Parms.bCompleted = bCompleted;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnLevelChanged
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ObjectiveManager_C::OnLevelChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnLevelChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -165,23 +61,127 @@ void ABP_ObjectiveManager_C::OnCorruptedEffectApplied(const TArray<class URNodeC
 }
 
 
-// Function BP_ObjectiveManager.BP_ObjectiveManager_C.ExecuteUbergraph_BP_ObjectiveManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnLevelChanged
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ObjectiveManager_C::ExecuteUbergraph_BP_ObjectiveManager(int32 EntryPoint)
+void ABP_ObjectiveManager_C::OnLevelChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ObjectiveManager_C", "ExecuteUbergraph_BP_ObjectiveManager");
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnLevelChanged");
 
-	Params::BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveEnded_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              ObjectiveTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// bool                                    bCompleted                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ObjectiveManager_C::OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag, bool bCompleted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnObjectiveEnded_Event");
+
+	Params::BP_ObjectiveManager_C_OnObjectiveEnded_Event Parms{};
+
+	Parms.ObjectiveTag = std::move(ObjectiveTag);
+	Parms.bCompleted = bCompleted;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveStarted_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URGObjectiveScript*               ObjectiveScript                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ObjectiveManager_C::OnObjectiveStarted_Event(class URGObjectiveScript* ObjectiveScript)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnObjectiveStarted_Event");
+
+	Params::BP_ObjectiveManager_C_OnObjectiveStarted_Event Parms{};
+
+	Parms.ObjectiveScript = ObjectiveScript;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnRep_RandomizedObjectivePA_BP
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_ObjectiveManager_C::OnRep_RandomizedObjectivePA_BP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnRep_RandomizedObjectivePA_BP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnSpawnAreaSegmentStarted
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AREnemySpawnAreaSegment*          EnemySpawnAreaSegment                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ObjectiveManager_C::OnSpawnAreaSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "OnSpawnAreaSegmentStarted");
+
+	Params::BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted Parms{};
+
+	Parms.EnemySpawnAreaSegment = EnemySpawnAreaSegment;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.PushRoomObjectiveNotificationMessge
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Message                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_ObjectiveManager_C::PushRoomObjectiveNotificationMessge(const class FText& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "PushRoomObjectiveNotificationMessge");
+
+	Params::BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge Parms{};
+
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ObjectiveManager.BP_ObjectiveManager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ObjectiveManager_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ObjectiveManager_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

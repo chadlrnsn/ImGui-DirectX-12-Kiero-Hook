@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C.SetLoadingIndicatorVisibility
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C.ExecuteUbergraph_Widget_LoadingIndicator_Common
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_LoadingIndicator_Common_C::SetLoadingIndicatorVisibility(bool Visible)
+void UWidget_LoadingIndicator_Common_C::ExecuteUbergraph_Widget_LoadingIndicator_Common(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_LoadingIndicator_Common_C", "SetLoadingIndicatorVisibility");
+		Func = Class->GetFunction("Widget_LoadingIndicator_Common_C", "ExecuteUbergraph_Widget_LoadingIndicator_Common");
 
-	Params::Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility Parms{};
+	Params::Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common Parms{};
 
-	Parms.Visible = Visible;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,21 +51,21 @@ void UWidget_LoadingIndicator_Common_C::OnInitialized()
 }
 
 
-// Function Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C.ExecuteUbergraph_Widget_LoadingIndicator_Common
-// (Final, UbergraphFunction)
+// Function Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C.SetLoadingIndicatorVisibility
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_LoadingIndicator_Common_C::ExecuteUbergraph_Widget_LoadingIndicator_Common(int32 EntryPoint)
+void UWidget_LoadingIndicator_Common_C::SetLoadingIndicatorVisibility(bool Visible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_LoadingIndicator_Common_C", "ExecuteUbergraph_Widget_LoadingIndicator_Common");
+		Func = Class->GetFunction("Widget_LoadingIndicator_Common_C", "SetLoadingIndicatorVisibility");
 
-	Params::Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common Parms{};
+	Params::Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

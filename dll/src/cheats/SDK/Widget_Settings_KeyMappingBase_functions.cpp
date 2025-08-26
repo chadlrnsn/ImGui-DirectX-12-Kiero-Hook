@@ -17,51 +17,155 @@
 namespace SDK
 {
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.UpdateMapping
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Mapping_Name                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EPlayerMappableKeySlot                  Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FKey&                      New_Key                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class UInputKeySelector*                KeySelector                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_Settings_KeyMappingBase_C::UpdateMapping(class FName Mapping_Name, EPlayerMappableKeySlot Slot_0, const struct FKey& New_Key, class UInputKeySelector* KeySelector)
+void UWidget_Settings_KeyMappingBase_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "UpdateMapping");
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "Construct");
 
-	Params::Widget_Settings_KeyMappingBase_C_UpdateMapping Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Mapping_Name = Mapping_Name;
-	Parms.Slot_0 = Slot_0;
-	Parms.New_Key = std::move(New_Key);
-	Parms.KeySelector = KeySelector;
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ExecuteUbergraph_Widget_Settings_KeyMappingBase
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Settings_KeyMappingBase_C::ExecuteUbergraph_Widget_Settings_KeyMappingBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ExecuteUbergraph_Widget_Settings_KeyMappingBase");
+
+	Params::Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ToggleHighlight
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetEnhancedUserSettings
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UImage*                           ImageToHighlight                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    bShouldHighlight                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UEnhancedInputUserSettings**      UserSettings                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Settings_KeyMappingBase_C::ToggleHighlight(class UImage* ImageToHighlight, bool bShouldHighlight)
+void UWidget_Settings_KeyMappingBase_C::GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ToggleHighlight");
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "GetEnhancedUserSettings");
 
-	Params::Widget_Settings_KeyMappingBase_C_ToggleHighlight Parms{};
-
-	Parms.ImageToHighlight = ImageToHighlight;
-	Parms.bShouldHighlight = bShouldHighlight;
+	Params::Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (UserSettings != nullptr)
+		*UserSettings = Parms.UserSettings;
+}
+
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetInputKeySelector
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UInputKeySelector**               OutSelector                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Settings_KeyMappingBase_C::GetInputKeySelector(class UInputKeySelector** OutSelector)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "GetInputKeySelector");
+
+	Params::Widget_Settings_KeyMappingBase_C_GetInputKeySelector Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutSelector != nullptr)
+		*OutSelector = Parms.OutSelector;
+}
+
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsNewKeyValid
+// (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPlayerMappableKeySlot                  VarSlot                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FKey&                      NewKey_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UInputKeySelector*                InputKeySelector                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Valid                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Settings_KeyMappingBase_C::IsNewKeyValid(EPlayerMappableKeySlot VarSlot, const struct FKey& NewKey_0, class UInputKeySelector* InputKeySelector, bool* Valid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "IsNewKeyValid");
+
+	Params::Widget_Settings_KeyMappingBase_C_IsNewKeyValid Parms{};
+
+	Parms.VarSlot = VarSlot;
+	Parms.NewKey_0 = std::move(NewKey_0);
+	Parms.InputKeySelector = InputKeySelector;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Valid != nullptr)
+		*Valid = Parms.Valid;
+}
+
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsSelectingKeyChanged
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Settings_KeyMappingBase_C::IsSelectingKeyChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "IsSelectingKeyChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.KeySelected
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FInputChord&               InputChord                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void UWidget_Settings_KeyMappingBase_C::KeySelected(const struct FInputChord& InputChord)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "KeySelected");
+
+	Params::Widget_Settings_KeyMappingBase_C_KeySelected Parms{};
+
+	Parms.InputChord = std::move(InputChord);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ResetKeyMapping
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Settings_KeyMappingBase_C::ResetKeyMapping()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ResetKeyMapping");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -101,155 +205,51 @@ void UWidget_Settings_KeyMappingBase_C::SelectInputFromSlot(EPlayerMappableKeySl
 }
 
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ResetKeyMapping
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_Settings_KeyMappingBase_C::ResetKeyMapping()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ResetKeyMapping");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.KeySelected
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ToggleHighlight
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FInputChord&               InputChord                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class UImage*                           ImageToHighlight                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShouldHighlight                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Settings_KeyMappingBase_C::KeySelected(const struct FInputChord& InputChord)
+void UWidget_Settings_KeyMappingBase_C::ToggleHighlight(class UImage* ImageToHighlight, bool bShouldHighlight)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "KeySelected");
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ToggleHighlight");
 
-	Params::Widget_Settings_KeyMappingBase_C_KeySelected Parms{};
+	Params::Widget_Settings_KeyMappingBase_C_ToggleHighlight Parms{};
 
-	Parms.InputChord = std::move(InputChord);
+	Parms.ImageToHighlight = ImageToHighlight;
+	Parms.bShouldHighlight = bShouldHighlight;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsSelectingKeyChanged
-// (Protected, BlueprintCallable, BlueprintEvent)
-
-void UWidget_Settings_KeyMappingBase_C::IsSelectingKeyChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "IsSelectingKeyChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.IsNewKeyValid
-// (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.UpdateMapping
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EPlayerMappableKeySlot                  VarSlot                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FKey&                      NewKey_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class UInputKeySelector*                InputKeySelector                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Valid                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Mapping_Name                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPlayerMappableKeySlot                  Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FKey&                      New_Key                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UInputKeySelector*                KeySelector                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Settings_KeyMappingBase_C::IsNewKeyValid(EPlayerMappableKeySlot VarSlot, const struct FKey& NewKey_0, class UInputKeySelector* InputKeySelector, bool* Valid)
+void UWidget_Settings_KeyMappingBase_C::UpdateMapping(class FName Mapping_Name, EPlayerMappableKeySlot Slot_0, const struct FKey& New_Key, class UInputKeySelector* KeySelector)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "IsNewKeyValid");
+		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "UpdateMapping");
 
-	Params::Widget_Settings_KeyMappingBase_C_IsNewKeyValid Parms{};
+	Params::Widget_Settings_KeyMappingBase_C_UpdateMapping Parms{};
 
-	Parms.VarSlot = VarSlot;
-	Parms.NewKey_0 = std::move(NewKey_0);
-	Parms.InputKeySelector = InputKeySelector;
+	Parms.Mapping_Name = Mapping_Name;
+	Parms.Slot_0 = Slot_0;
+	Parms.New_Key = std::move(New_Key);
+	Parms.KeySelector = KeySelector;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Valid != nullptr)
-		*Valid = Parms.Valid;
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetInputKeySelector
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UInputKeySelector**               OutSelector                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Settings_KeyMappingBase_C::GetInputKeySelector(class UInputKeySelector** OutSelector)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "GetInputKeySelector");
-
-	Params::Widget_Settings_KeyMappingBase_C_GetInputKeySelector Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutSelector != nullptr)
-		*OutSelector = Parms.OutSelector;
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.GetEnhancedUserSettings
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UEnhancedInputUserSettings**      UserSettings                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Settings_KeyMappingBase_C::GetEnhancedUserSettings(class UEnhancedInputUserSettings** UserSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "GetEnhancedUserSettings");
-
-	Params::Widget_Settings_KeyMappingBase_C_GetEnhancedUserSettings Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (UserSettings != nullptr)
-		*UserSettings = Parms.UserSettings;
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.ExecuteUbergraph_Widget_Settings_KeyMappingBase
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Settings_KeyMappingBase_C::ExecuteUbergraph_Widget_Settings_KeyMappingBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "ExecuteUbergraph_Widget_Settings_KeyMappingBase");
-
-	Params::Widget_Settings_KeyMappingBase_C_ExecuteUbergraph_Widget_Settings_KeyMappingBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_Settings_KeyMappingBase_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_KeyMappingBase_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

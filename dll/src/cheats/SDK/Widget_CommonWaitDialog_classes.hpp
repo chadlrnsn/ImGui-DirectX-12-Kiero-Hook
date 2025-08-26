@@ -34,13 +34,13 @@ public:
 	TMulticastInlineDelegate<void()>              OkEvent;                                           // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetInfo(const class FText& Header_0, const class FText& Descript, const class FText& OkText_0);
-	void FinishedWaiting(bool PopWidget_0);
-	void ExecuteUbergraph_Widget_CommonWaitDialog(int32 EntryPoint);
-	void DestructAnimationFinished();
-	void Construct();
-	void ClosePanel();
 	void BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void ClosePanel();
+	void Construct();
+	void DestructAnimationFinished();
+	void ExecuteUbergraph_Widget_CommonWaitDialog(int32 EntryPoint);
+	void FinishedWaiting(bool PopWidget_0);
+	void SetInfo(const class FText& Header_0, const class FText& Descript, const class FText& OkText_0);
 
 public:
 	static class UClass* StaticClass()

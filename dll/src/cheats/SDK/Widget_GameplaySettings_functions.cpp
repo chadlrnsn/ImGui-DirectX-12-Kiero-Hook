@@ -17,160 +17,583 @@
 namespace SDK
 {
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetWidgetCurrentValues
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_GameplaySettings_C::SetWidgetCurrentValues()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "SetWidgetCurrentValues");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetIconSchemeOptions
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_GameplaySettings_C::SetIconSchemeOptions()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "SetIconSchemeOptions");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.ResetSettings
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_GameplaySettings_C::ResetSettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "ResetSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.PreviousWidgetSettingsValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::PreviousWidgetSettingsValue(class UUserWidget* Widget)
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature(double Value, double Percent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "PreviousWidgetSettingsValue");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
 
-	Params::Widget_GameplaySettings_C_PreviousWidgetSettingsValue Parms{};
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature Parms{};
 
-	Parms.Widget = Widget;
+	Parms.Value = Value;
+	Parms.Percent = Percent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_GameplaySettings_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.NextWidgetSettingsValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::NextWidgetSettingsValue(class UUserWidget* Widget)
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature(double Value, double Percent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "NextWidgetSettingsValue");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
 
-	Params::Widget_GameplaySettings_C_NextWidgetSettingsValue Parms{};
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature Parms{};
 
-	Parms.Widget = Widget;
+	Parms.Value = Value;
+	Parms.Percent = Percent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDesiredFocusWidget
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWidget_GameplaySettings_C::GetDesiredFocusWidget()
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature(double Value, double Percent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDesiredFocusWidget");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
 
-	Params::Widget_GameplaySettings_C_GetDesiredFocusWidget Parms{};
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersOptionByIndex
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature(double Value, double Percent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EDamageNumbersOption*                   Option                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::GetDamageNumbersOptionByIndex(int32 Index_0, EDamageNumbersOption* Option)
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDamageNumbersOptionByIndex");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
 
-	Params::Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex Parms{};
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature Parms{};
 
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Option != nullptr)
-		*Option = Parms.Option;
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersIndexByOption
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// EDamageNumbersOption                    Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::GetDamageNumbersIndexByOption(EDamageNumbersOption Option, int32* Index_0)
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDamageNumbersIndexByOption");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
 
-	Params::Widget_GameplaySettings_C_GetDamageNumbersIndexByOption Parms{};
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(double Value, double Percent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      NewOption                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature Parms{};
+
+	Parms.NewOption = std::move(NewOption);
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature(double Value, double Percent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FText&                      NewOption                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature Parms{};
+
+	Parms.NewOption = std::move(NewOption);
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+	Parms.Percent = Percent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_GetScrollBoxWidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BP_GetScrollBoxWidget");
+
+	Params::Widget_GameplaySettings_C_BP_GetScrollBoxWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_OnWidgetDeactivated_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_GameplaySettings_C::BP_OnWidgetDeactivated_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BP_OnWidgetDeactivated_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_GameplaySettings_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.ExecuteUbergraph_Widget_GameplaySettings
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::ExecuteUbergraph_Widget_GameplaySettings(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "ExecuteUbergraph_Widget_GameplaySettings");
+
+	Params::Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetAvailableLanguages
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_GameplaySettings_C::GetAvailableLanguages()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetAvailableLanguages");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentIndexByOption
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ECrosshairAlignmentOption               Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::GetCrosshairAlignmentIndexByOption(ECrosshairAlignmentOption Option, int32* Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetCrosshairAlignmentIndexByOption");
+
+	Params::Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption Parms{};
 
 	Parms.Option = Option;
 
@@ -205,20 +628,20 @@ void UWidget_GameplaySettings_C::GetCrosshairAlignmentOptionByIndex(int32 Index_
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetCrosshairAlignmentIndexByOption
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersIndexByOption
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ECrosshairAlignmentOption               Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EDamageNumbersOption                    Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::GetCrosshairAlignmentIndexByOption(ECrosshairAlignmentOption Option, int32* Index_0)
+void UWidget_GameplaySettings_C::GetDamageNumbersIndexByOption(EDamageNumbersOption Option, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetCrosshairAlignmentIndexByOption");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDamageNumbersIndexByOption");
 
-	Params::Widget_GameplaySettings_C_GetCrosshairAlignmentIndexByOption Parms{};
+	Params::Widget_GameplaySettings_C_GetDamageNumbersIndexByOption Parms{};
 
 	Parms.Option = Option;
 
@@ -229,566 +652,143 @@ void UWidget_GameplaySettings_C::GetCrosshairAlignmentIndexByOption(ECrosshairAl
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetAvailableLanguages
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDamageNumbersOptionByIndex
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EDamageNumbersOption*                   Option                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::GetAvailableLanguages()
+void UWidget_GameplaySettings_C::GetDamageNumbersOptionByIndex(int32 Index_0, EDamageNumbersOption* Option)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetAvailableLanguages");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDamageNumbersOptionByIndex");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_GameplaySettings_C_GetDamageNumbersOptionByIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Option != nullptr)
+		*Option = Parms.Option;
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.ExecuteUbergraph_Widget_GameplaySettings
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.GetDesiredFocusWidget
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::ExecuteUbergraph_Widget_GameplaySettings(int32 EntryPoint)
+class UWidget* UWidget_GameplaySettings_C::GetDesiredFocusWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "ExecuteUbergraph_Widget_GameplaySettings");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "GetDesiredFocusWidget");
 
-	Params::Widget_GameplaySettings_C_ExecuteUbergraph_Widget_GameplaySettings Parms{};
+	Params::Widget_GameplaySettings_C_GetDesiredFocusWidget Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.NextWidgetSettingsValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::NextWidgetSettingsValue(class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "NextWidgetSettingsValue");
+
+	Params::Widget_GameplaySettings_C_NextWidgetSettingsValue Parms{};
+
+	Parms.Widget = Widget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.Construct
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_GameplaySettings_C::Construct()
+void UWidget_GameplaySettings_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "Construct");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_OnWidgetDeactivated_Event
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.PreviousWidgetSettingsValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_GameplaySettings_C::BP_OnWidgetDeactivated_Event()
+void UWidget_GameplaySettings_C::PreviousWidgetSettingsValue(class UUserWidget* Widget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BP_OnWidgetDeactivated_Event");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "PreviousWidgetSettingsValue");
+
+	Params::Widget_GameplaySettings_C_PreviousWidgetSettingsValue Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.ResetSettings
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_GameplaySettings_C::ResetSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "ResetSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BP_GetScrollBoxWidget
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UScrollBox**                      Result                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetIconSchemeOptions
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_GameplaySettings_C::BP_GetScrollBoxWidget(class UScrollBox** Result)
+void UWidget_GameplaySettings_C::SetIconSchemeOptions()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BP_GetScrollBoxWidget");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "SetIconSchemeOptions");
 
-	Params::Widget_GameplaySettings_C_BP_GetScrollBoxWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.SetWidgetCurrentValues
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent)
+void UWidget_GameplaySettings_C::SetWidgetCurrentValues()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "SetWidgetCurrentValues");
 
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      NewOption                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature Parms{};
-
-	Parms.NewOption = std::move(NewOption);
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ScopedSensitivity_K2Node_ComponentBoundEvent_11_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerNames_K2Node_ComponentBoundEvent_9_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_PlayerHUD_K2Node_ComponentBoundEvent_7_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_LANGUAGE_FILTERING_K2Node_ComponentBoundEvent_18_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedYAxis_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_InvertedXAxis_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      NewOption                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ICON_SCHEME_K2Node_ComponentBoundEvent_23_OnOptionChanged__DelegateSignature Parms{};
-
-	Parms.NewOption = std::move(NewOption);
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_HealthBars_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_FOV_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DashIndicator_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_DamageNumbers_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_CrosshairAlignment_K2Node_ComponentBoundEvent_19_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Crosshair_K2Node_ComponentBoundEvent_6_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerYSensitivity_K2Node_ComponentBoundEvent_13_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerXSensitivity_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedYSensitivity_K2Node_ComponentBoundEvent_15_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerScopedXSensitivity_K2Node_ComponentBoundEvent_14_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Percent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature(double Value, double Percent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature");
-
-	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature Parms{};
-
-	Parms.Value = Value;
-	Parms.Percent = Percent;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

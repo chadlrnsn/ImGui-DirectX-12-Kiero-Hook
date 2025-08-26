@@ -17,84 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.K2_OnApplyTransientfields
-// 0x0020 (0x0020 - 0x0000)
-struct BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields final
-{
-public:
-	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FieldRadius;                                       // 0x0018(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields");
-static_assert(sizeof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields) == 0x000020, "Wrong size on BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields::FieldLocation' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields::FieldRadius' has a wrong offset!");
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ExecuteUbergraph_BP_RFieldSystemActor_Default
-// 0x0038 (0x0038 - 0x0000)
-struct BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_FieldLocation;                        // 0x0008(0x0018)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_FieldRadius;                          // 0x0020(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_ApplyStrain_FieldRadius_ImplicitCast;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_ApplyForce_FieldRadius_ImplicitCast;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default");
-static_assert(sizeof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default) == 0x000038, "Wrong size on BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, EntryPoint) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, K2Node_Event_FieldLocation) == 0x000008, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::K2Node_Event_FieldLocation' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, K2Node_Event_FieldRadius) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::K2Node_Event_FieldRadius' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, CallFunc_ApplyStrain_FieldRadius_ImplicitCast) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::CallFunc_ApplyStrain_FieldRadius_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, CallFunc_ApplyForce_FieldRadius_ImplicitCast) == 0x000030, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::CallFunc_ApplyForce_FieldRadius_ImplicitCast' has a wrong offset!");
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyStrain
-// 0x0030 (0x0030 - 0x0000)
-struct BP_RFieldSystemActor_Default_C_ApplyStrain final
-{
-public:
-	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FieldRadius;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCullingField*                          CallFunc_AddFalloffAndCulling_NewParam;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_RFieldSystemActor_Default_C_ApplyStrain) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ApplyStrain");
-static_assert(sizeof(BP_RFieldSystemActor_Default_C_ApplyStrain) == 0x000030, "Wrong size on BP_RFieldSystemActor_Default_C_ApplyStrain");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::FieldLocation' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::FieldRadius' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, CallFunc_AddFalloffAndCulling_NewParam) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::CallFunc_AddFalloffAndCulling_NewParam' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast' has a wrong offset!");
-
-// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyForce
-// 0x0058 (0x0058 - 0x0000)
-struct BP_RFieldSystemActor_Default_C_ApplyForce final
-{
-public:
-	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FieldRadius;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URadialVector*                          CallFunc_SetRadialVector_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOperatorField*                         CallFunc_SetOperatorField_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCullingField*                          CallFunc_AddFalloffAndCulling_NewParam;            // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRadialVector_Magnitude_ImplicitCast;   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_RFieldSystemActor_Default_C_ApplyForce) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ApplyForce");
-static_assert(sizeof(BP_RFieldSystemActor_Default_C_ApplyForce) == 0x000058, "Wrong size on BP_RFieldSystemActor_Default_C_ApplyForce");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::FieldLocation' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::FieldRadius' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetRadialVector_ReturnValue) == 0x000030, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetRadialVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetOperatorField_ReturnValue) == 0x000038, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetOperatorField_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_AddFalloffAndCulling_NewParam) == 0x000040, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_AddFalloffAndCulling_NewParam' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetRadialVector_Magnitude_ImplicitCast) == 0x000050, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetRadialVector_Magnitude_ImplicitCast' has a wrong offset!");
-
 // Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.AddFalloffAndCulling
 // 0x0070 (0x0070 - 0x0000)
 struct BP_RFieldSystemActor_Default_C_AddFalloffAndCulling final
@@ -130,6 +52,84 @@ static_assert(offsetof(BP_RFieldSystemActor_Default_C_AddFalloffAndCulling, Call
 static_assert(offsetof(BP_RFieldSystemActor_Default_C_AddFalloffAndCulling, CallFunc_SetRadialFalloff_Radius_ImplicitCast) == 0x000060, "Member 'BP_RFieldSystemActor_Default_C_AddFalloffAndCulling::CallFunc_SetRadialFalloff_Radius_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_RFieldSystemActor_Default_C_AddFalloffAndCulling, CallFunc_SetRadialFalloff_Radius_ImplicitCast_1) == 0x000064, "Member 'BP_RFieldSystemActor_Default_C_AddFalloffAndCulling::CallFunc_SetRadialFalloff_Radius_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_RFieldSystemActor_Default_C_AddFalloffAndCulling, CallFunc_SetRadialFalloff_Magnitude_ImplicitCast) == 0x000068, "Member 'BP_RFieldSystemActor_Default_C_AddFalloffAndCulling::CallFunc_SetRadialFalloff_Magnitude_ImplicitCast' has a wrong offset!");
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyForce
+// 0x0058 (0x0058 - 0x0000)
+struct BP_RFieldSystemActor_Default_C_ApplyForce final
+{
+public:
+	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FieldRadius;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URadialVector*                          CallFunc_SetRadialVector_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UOperatorField*                         CallFunc_SetOperatorField_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCullingField*                          CallFunc_AddFalloffAndCulling_NewParam;            // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRadialVector_Magnitude_ImplicitCast;   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_RFieldSystemActor_Default_C_ApplyForce) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ApplyForce");
+static_assert(sizeof(BP_RFieldSystemActor_Default_C_ApplyForce) == 0x000058, "Wrong size on BP_RFieldSystemActor_Default_C_ApplyForce");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::FieldLocation' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::FieldRadius' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetRadialVector_ReturnValue) == 0x000030, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetRadialVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetOperatorField_ReturnValue) == 0x000038, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetOperatorField_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_AddFalloffAndCulling_NewParam) == 0x000040, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_AddFalloffAndCulling_NewParam' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyForce, CallFunc_SetRadialVector_Magnitude_ImplicitCast) == 0x000050, "Member 'BP_RFieldSystemActor_Default_C_ApplyForce::CallFunc_SetRadialVector_Magnitude_ImplicitCast' has a wrong offset!");
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ApplyStrain
+// 0x0030 (0x0030 - 0x0000)
+struct BP_RFieldSystemActor_Default_C_ApplyStrain final
+{
+public:
+	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FieldRadius;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCullingField*                          CallFunc_AddFalloffAndCulling_NewParam;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_RFieldSystemActor_Default_C_ApplyStrain) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ApplyStrain");
+static_assert(sizeof(BP_RFieldSystemActor_Default_C_ApplyStrain) == 0x000030, "Wrong size on BP_RFieldSystemActor_Default_C_ApplyStrain");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::FieldLocation' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::FieldRadius' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, CallFunc_AddFalloffAndCulling_NewParam) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::CallFunc_AddFalloffAndCulling_NewParam' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ApplyStrain, CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ApplyStrain::CallFunc_AddFalloffAndCulling_StrainMagnitudeInput_ImplicitCast' has a wrong offset!");
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.ExecuteUbergraph_BP_RFieldSystemActor_Default
+// 0x0038 (0x0038 - 0x0000)
+struct BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_Event_FieldLocation;                        // 0x0008(0x0018)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_FieldRadius;                          // 0x0020(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_ApplyStrain_FieldRadius_ImplicitCast;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ApplyForce_FieldRadius_ImplicitCast;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default");
+static_assert(sizeof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default) == 0x000038, "Wrong size on BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, EntryPoint) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, K2Node_Event_FieldLocation) == 0x000008, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::K2Node_Event_FieldLocation' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, K2Node_Event_FieldRadius) == 0x000020, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::K2Node_Event_FieldRadius' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, CallFunc_ApplyStrain_FieldRadius_ImplicitCast) == 0x000028, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::CallFunc_ApplyStrain_FieldRadius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default, CallFunc_ApplyForce_FieldRadius_ImplicitCast) == 0x000030, "Member 'BP_RFieldSystemActor_Default_C_ExecuteUbergraph_BP_RFieldSystemActor_Default::CallFunc_ApplyForce_FieldRadius_ImplicitCast' has a wrong offset!");
+
+// Function BP_RFieldSystemActor_Default.BP_RFieldSystemActor_Default_C.K2_OnApplyTransientfields
+// 0x0020 (0x0020 - 0x0000)
+struct BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields final
+{
+public:
+	struct FVector                                FieldLocation;                                     // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FieldRadius;                                       // 0x0018(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields) == 0x000008, "Wrong alignment on BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields");
+static_assert(sizeof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields) == 0x000020, "Wrong size on BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields, FieldLocation) == 0x000000, "Member 'BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields::FieldLocation' has a wrong offset!");
+static_assert(offsetof(BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields, FieldRadius) == 0x000018, "Member 'BP_RFieldSystemActor_Default_C_K2_OnApplyTransientfields::FieldRadius' has a wrong offset!");
 
 }
 

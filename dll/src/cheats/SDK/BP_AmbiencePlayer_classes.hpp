@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_AmbiencePlayer.BP_AmbiencePlayer_C
 // 0x0038 (0x02E0 - 0x02A8)
-class ABP_AmbiencePlayer_C : public AActor
+class ABP_AmbiencePlayer_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -32,11 +32,11 @@ public:
 	bool                                          Debug;                                             // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void FadeOut();
-	void ExecuteUbergraph_BP_AmbiencePlayer(int32 EntryPoint);
 	void CalculateQuadGain(double CameraYaw, TArray<struct FAudioParameter>* Array);
+	void ExecuteUbergraph_BP_AmbiencePlayer(int32 EntryPoint);
+	void FadeOut();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

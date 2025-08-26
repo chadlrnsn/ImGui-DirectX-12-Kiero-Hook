@@ -30,12 +30,12 @@ public:
 	bool                                          bFromSettings;                                     // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnInitialized();
-	void ExecuteUbergraph_Widget_TelemetryConsentScreen(int32 EntryPoint);
-	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void ExecuteUbergraph_Widget_TelemetryConsentScreen(int32 EntryPoint);
+	void OnInitialized();
 
 public:
 	static class UClass* StaticClass()
