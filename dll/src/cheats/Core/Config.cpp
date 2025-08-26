@@ -63,7 +63,7 @@ namespace Cheat {
         namespace Features {
             bool GodMode = true;             // CheatManager->God() invincibility
             bool SpeedHack = false;           // CheatManager->Slomo(2) speed boost
-            bool EngineRifleHeatManagement = false; // Prevent overheating
+            bool NoHeatBuildup = false; // Prevent overheating
             bool AutoCheatManager = true;     // Auto-enable cheat manager
 
             // Speed hack configuration
@@ -155,7 +155,7 @@ namespace Cheat {
             // Feature flags
             LOG_INFO("Features:");
             LOG_INFO("- God Mode: %s", Features::GodMode ? "Enabled" : "Disabled");
-            LOG_INFO("- Engine Rifle Heat Management: %s", Features::EngineRifleHeatManagement ? "Enabled" : "Disabled");
+            LOG_INFO("- No Heat: %s", Features::NoHeatBuildup ? "Enabled" : "Disabled");
         }
 
         void UpdateGameState() {
