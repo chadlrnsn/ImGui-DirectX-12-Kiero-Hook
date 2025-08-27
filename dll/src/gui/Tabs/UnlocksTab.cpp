@@ -1,8 +1,8 @@
 #include "UnlocksTab.h"
 #include <imgui.h>
-#include "../../cheats/Features/UnlockService.h"
-#include "../../cheats/Features/SaveService.h"
-#include "../../cheats/Features/ResourceService.h"
+#include "../../cheats/Services/UnlockService.h"
+#include "../../cheats/Services/SaveService.h"
+#include "../../cheats/Services/ResourceService.h"
 #include <dev/logger.h>
 
 namespace CheatMenu { namespace Tabs {
@@ -14,19 +14,19 @@ void UnlocksTab() {
     // Unlocks section
     ImGui::Text("Unlocks");
     if (ImGui::Button("Unlock All Abilities")) {
-        Cheat::Features::UnlockService::UnlockAllAbilities();
+        Cheat::Services::UnlockService::UnlockAllAbilities();
         LOG_INFO("GUI: UnlockAllAbilities() invoked");
     }
     if (ImGui::Button("Unlock All Locked Content")) {
-        Cheat::Features::UnlockService::UnlockAllLockedContent();
+        Cheat::Services::UnlockService::UnlockAllLockedContent();
         LOG_INFO("GUI: UnlockAllLockedContent() invoked");
     }
     if (ImGui::Button("Unlock All Mutators")) {
-        Cheat::Features::UnlockService::UnlockAllMutators();
+        Cheat::Services::UnlockService::UnlockAllMutators();
         LOG_INFO("GUI: UnlockAllMutators() invoked");
     }
     if (ImGui::Button("Unlock All Weapon Mods")) {
-        Cheat::Features::UnlockService::UnlockAllWeaponMods();
+        Cheat::Services::UnlockService::UnlockAllWeaponMods();
         LOG_INFO("GUI: UnlockAllWeaponMods() invoked");
     }
 
@@ -35,10 +35,10 @@ void UnlocksTab() {
     // Savegame / Soul Fragments
     ImGui::Text("Resources");
     int32_t soulFragments = -1;
-    if (Cheat::Features::SaveService::TryGetSoulFragments(soulFragments)) {
+    if (Cheat::Services::SaveService::TryGetSoulFragments(soulFragments)) {
         ImGui::Text("Soul Fragments: %d", soulFragments);
         if (ImGui::Button("+1 Soul Fragment")) {
-            Cheat::Features::SaveService::IncrementSoulFragments(1);
+            Cheat::Services::SaveService::IncrementSoulFragments(1);
         }
         static int32_t setSoulValue = 10;
         ImGui::Text("Set to:");
@@ -53,7 +53,7 @@ void UnlocksTab() {
         }
         ImGui::SameLine();
         if (ImGui::Button("Apply")) {
-            Cheat::Features::SaveService::SetSoulFragments(setSoulValue);
+            Cheat::Services::SaveService::SetSoulFragments(setSoulValue);
         }
     } else {
         ImGui::Text("Soul Fragments: <unavailable>");
@@ -77,7 +77,7 @@ void UnlocksTab() {
         }
         ImGui::SameLine();
         if (ImGui::Button("Apply##Gold")) {
-            Cheat::Features::ResourceService::AddGold(goldToAdd);
+            Cheat::Services::ResourceService::AddGold(goldToAdd);
             LOG_INFO("GUI: AddGold(%d) invoked", goldToAdd);
         }
     }
@@ -96,7 +96,7 @@ void UnlocksTab() {
         }
         ImGui::SameLine();
         if (ImGui::Button("Apply##Keys")) {
-            Cheat::Features::ResourceService::AddKeys(keysToAdd);
+            Cheat::Services::ResourceService::AddKeys(keysToAdd);
             LOG_INFO("GUI: AddKeys(%d) invoked", keysToAdd);
         }
     }

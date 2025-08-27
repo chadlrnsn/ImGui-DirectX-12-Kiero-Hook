@@ -1,9 +1,8 @@
 #include "SaveService.h"
-#include "../Services/GameServices.h"
+#include "GameServices.h"
 #include <dev/logger.h>
 
-namespace Cheat {
-namespace Features {
+namespace Cheat { namespace Services {
 
 static inline SDK::URSaveGame* GetCurrentSave() {
     auto* world = Services::GameServices::GetWorld();
@@ -15,7 +14,6 @@ static inline SDK::URSaveGame* GetCurrentSave() {
     if (!rgi) return nullptr;
     return rgi->CurrentSaveGame;
 }
-
 
 bool SaveService::TryGetSoulFragments(int32_t& outSoulFragments) {
     auto* save = GetCurrentSave();
@@ -45,6 +43,5 @@ bool SaveService::SetSoulFragments(int32_t value) {
     return true;
 }
 
-} // namespace Features
-} // namespace Cheat
+} } // namespace Cheat::Services
 

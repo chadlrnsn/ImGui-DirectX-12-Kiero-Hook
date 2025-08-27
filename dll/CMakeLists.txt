@@ -43,18 +43,16 @@ add_library(${DLL_NAME} SHARED
     src/cheats/Core/CheatMain.cpp
     src/cheats/Core/Config.cpp
 
-    # Cheat system features
-    src/cheats/Features/WeaponService.cpp
-    src/cheats/Features/UnlockService.cpp
-    src/cheats/Features/SaveService.cpp
-    src/cheats/Features/ResourceService.cpp
-
-    # Services
+    # Services (cheat runtime)
     src/cheats/Services/GameServices.cpp
     src/cheats/Services/PlayerEffectsService.cpp
     src/cheats/Services/AimbotService.cpp
     src/cheats/Services/TargetingService.cpp
     src/cheats/Services/BoneService.cpp
+    src/cheats/Services/WeaponService.cpp
+    src/cheats/Services/UnlockService.cpp
+    src/cheats/Services/SaveService.cpp
+    src/cheats/Services/ResourceService.cpp
 
     # GUI
     src/gui/CheatMenu.cpp

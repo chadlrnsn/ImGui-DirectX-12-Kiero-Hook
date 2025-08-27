@@ -1,9 +1,8 @@
 #include "UnlockService.h"
-#include "../Services/GameServices.h"
+#include "GameServices.h"
 #include <dev/logger.h>
 
-namespace Cheat {
-namespace Features {
+namespace Cheat { namespace Services {
 
 void UnlockService::Initialize() {
     LOG_INFO("UnlockService initialized");
@@ -60,6 +59,5 @@ void UnlockService::UnlockAll() {
     UnlockAllWeaponMods();
 }
 
-} // namespace Features
-} // namespace Cheat
+} } // namespace Cheat::Services
 
