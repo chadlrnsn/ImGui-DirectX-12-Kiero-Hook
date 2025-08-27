@@ -57,6 +57,12 @@ void UnlocksTab() {
     } else {
         ImGui::Text("Soul Fragments: <unavailable>");
     }
+    if (ImGui::Button("Add Gold")) {
+        Cheat::Features::SaveService::AddGold(10);
+    }
+    if (ImGui::Button("Add Keys")) {
+        Cheat::Features::SaveService::AddKeys(10);
+    }
 }
 
 } } // namespace CheatMenu::Tabs
