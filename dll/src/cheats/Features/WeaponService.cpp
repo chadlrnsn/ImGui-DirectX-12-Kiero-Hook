@@ -186,12 +186,12 @@ void WeaponService::ApplyWeaponSettingsFor(SDK::URGWeaponScript* weaponScript, b
     // Rate of Fire
     if (RateOfFireOverride) {
         float minV = orig.BaseRateOfFireMinRange;
-        float maxV = orig.BaseRateOfFireMaxRange;
+        float maxV = 100.0f;
         float v = RateOfFireValue;
         if (v <= 0.0f) v = orig.BaseRateOfFire;
         ws->BaseRateOfFire.BaseValue = Clampf(v, minV, maxV);
         ws->BaseRateOfFire.MinMaxRange.X = minV;
-        ws->BaseRateOfFire.MinMaxRange.Y = maxV;
+        ws->BaseRateOfFire.MinMaxRange.Y = 100.0f;
     } else {
         ws->BaseRateOfFire.BaseValue = orig.BaseRateOfFire;
         ws->BaseRateOfFire.MinMaxRange.X = orig.BaseRateOfFireMinRange;
