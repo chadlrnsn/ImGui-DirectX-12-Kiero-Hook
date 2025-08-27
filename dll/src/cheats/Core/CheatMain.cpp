@@ -172,7 +172,26 @@ namespace Cheat {
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
                 Services::BoneService::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
-                Services::BoneService::DumpPlayerBones(Cheat::Services::GameServices::GetRPlayerPawn());
+                // Services::BoneService::DumpPlayerBones(Cheat::Services::GameServices::GetRPlayerPawn());
+                auto healthComponent = Cheat::Services::GameServices::GetRPlayerPawn()->GetHealthComponent();
+                /** Dump the invulnerable state of the player. Currentvalue, value, absolute, and range
+                 * struct alignas(0x08) FRMutableInteger final
+{
+public:
+	int32                                         CurrentValue;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AbsoluteValue;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              MinMaxRange;                                       // 0x000C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x10C];                                     // 0x0014(0x010C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+                 */
+SDK::FRMutableInteger invuln = healthComponent->Invulnerable;
+LOG_INFO("Invulnerable: %d", invuln.CurrentValue);
+LOG_INFO("Invulnerable: %d", invuln.Value);
+LOG_INFO("Invulnerable: %d", invuln.AbsoluteValue);
+LOG_INFO("Invulnerable: %d", invuln.MinMaxRange.X);
+LOG_INFO("Invulnerable: %d", invuln.MinMaxRange.Y);
+
 
             }
 
