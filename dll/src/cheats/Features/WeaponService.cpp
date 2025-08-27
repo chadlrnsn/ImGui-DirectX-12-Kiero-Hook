@@ -41,7 +41,7 @@ void WeaponService::OnWeaponSettingsChanged() {
 
 bool WeaponService::AnyModsEnabled() {
     using namespace Cheat::Config::Features;
-    return InfiniteAmmo || IncreasedDamage || HighCritMultiplier || FastRateOfFire || NoCooldown || NoRecoil || InstantReload || RateOfFireOverride;
+    return InfiniteAmmo || IncreasedDamage || HighCritMultiplier || NoCooldown || NoRecoil || InstantReload || RateOfFireOverride;
 }
 
 void WeaponService::Update() {
@@ -136,201 +136,120 @@ void WeaponService::ManageEngineRifleHeat() {
 static float Clampf(float v, float minv, float maxv) { if (v < minv) return minv; if (v > maxv) return maxv; return v; }
 
 void WeaponService::ApplyWeaponSettings(SDK::URGWeaponScript* weaponScript) {
-    using namespace Cheat::Config::Features;
-
-    auto primary = GetPrimarySettings(weaponScript);
-    if (!primary) { LOG_ERROR("Failed to get primary weapon settings"); return; }
+    if (!weaponScript) return;
 
     // Ensure originals are saved once when enabling
-    if (!s_primaryOriginalSaved && AnyModsEnabled()) {
+    if ((!s_primaryOriginalSaved || !s_secondaryOriginalSaved) && AnyModsEnabled()) {
         SaveOriginalSettings(weaponScript);
         s_primaryOriginalSaved = true;
         s_secondaryOriginalSaved = true;
     }
 
-    // Apply primary settings
-    primary->BaseAmmoCost.BaseValue = InfiniteAmmo ? 0 : s_originalPrimarySettings.BaseAmmoCost;
+    // Apply for primary and secondary independently
+    ApplyWeaponSettingsFor(weaponScript, true);
+    ApplyWeaponSettingsFor(weaponScript, false);
+}
 
+
+void WeaponService::ApplyWeaponSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary) {
+    using namespace Cheat::Config::Features;
+    SDK::URBaseWeaponSettings* ws = isPrimary ? GetPrimarySettings(weaponScript) : GetSecondarySettings(weaponScript);
+    if (!ws) return;
+
+    OriginalWeaponSettings& orig = isPrimary ? s_originalPrimarySettings : s_originalSecondarySettings;
+
+    // Ammo
+    ws->BaseAmmoCost.BaseValue = InfiniteAmmo ? 0 : orig.BaseAmmoCost;
+
+    // Damage
     if (IncreasedDamage) {
-        const float minV = s_originalPrimarySettings.BaseWeaponDamageMinRange;
-        const float maxV = s_originalPrimarySettings.BaseWeaponDamageMaxRange;
-        primary->BaseWeaponDamage.BaseValue = Clampf(s_originalPrimarySettings.BaseWeaponDamage * DamageMultiplier, minV, maxV);
+        const float minV = orig.BaseWeaponDamageMinRange;
+        const float maxV = 9999.0f;
+        ws->BaseWeaponDamage.BaseValue = Clampf(orig.BaseWeaponDamage * DamageMultiplier, minV, maxV);
     } else {
-        primary->BaseWeaponDamage.BaseValue = s_originalPrimarySettings.BaseWeaponDamage;
+        ws->BaseWeaponDamage.BaseValue = orig.BaseWeaponDamage;
     }
-    primary->BaseWeaponDamage.MinMaxRange.X = s_originalPrimarySettings.BaseWeaponDamageMinRange;
-    primary->BaseWeaponDamage.MinMaxRange.Y = s_originalPrimarySettings.BaseWeaponDamageMaxRange;
+    ws->BaseWeaponDamage.MinMaxRange.X = orig.BaseWeaponDamageMinRange;
+    ws->BaseWeaponDamage.MinMaxRange.Y = IncreasedDamage ? 9999.0f : orig.BaseWeaponDamageMaxRange;
 
+    // Crit
     if (HighCritMultiplier) {
-        const float minV = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMinRange;
-        const float maxV = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMaxRange;
-        primary->BaseWeaponCriticalMultiplier.BaseValue = Clampf(s_originalPrimarySettings.BaseWeaponCriticalMultiplier * CritMultiplier, minV, maxV);
+        const float minV = orig.BaseWeaponCriticalMultiplierMinRange;
+        const float maxV = orig.BaseWeaponCriticalMultiplierMaxRange;
+        ws->BaseWeaponCriticalMultiplier.BaseValue = Clampf(orig.BaseWeaponCriticalMultiplier * CritMultiplier, minV, maxV);
     } else {
-        primary->BaseWeaponCriticalMultiplier.BaseValue = s_originalPrimarySettings.BaseWeaponCriticalMultiplier;
+        ws->BaseWeaponCriticalMultiplier.BaseValue = orig.BaseWeaponCriticalMultiplier;
     }
-    primary->BaseWeaponCriticalMultiplier.MinMaxRange.X = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMinRange;
-    primary->BaseWeaponCriticalMultiplier.MinMaxRange.Y = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMaxRange;
+    ws->BaseWeaponCriticalMultiplier.MinMaxRange.X = orig.BaseWeaponCriticalMultiplierMinRange;
+    ws->BaseWeaponCriticalMultiplier.MinMaxRange.Y = orig.BaseWeaponCriticalMultiplierMaxRange;
 
+    // Rate of Fire
     if (RateOfFireOverride) {
-        float minV = s_originalPrimarySettings.BaseRateOfFireMinRange;
-        float maxV = s_originalPrimarySettings.BaseRateOfFireMaxRange;
+        float minV = orig.BaseRateOfFireMinRange;
+        float maxV = orig.BaseRateOfFireMaxRange;
         float v = RateOfFireValue;
-        if (v <= 0.0f) v = s_originalPrimarySettings.BaseRateOfFire;
-        primary->BaseRateOfFire.BaseValue = Clampf(v, minV, maxV);
-        primary->BaseRateOfFire.MinMaxRange.X = minV;
-        primary->BaseRateOfFire.MinMaxRange.Y = maxV;
-    } else if (FastRateOfFire) {
-        primary->BaseRateOfFire.BaseValue = s_originalPrimarySettings.BaseRateOfFireMaxRange;
-        primary->BaseRateOfFire.MinMaxRange.X = s_originalPrimarySettings.BaseRateOfFireMinRange;
-        primary->BaseRateOfFire.MinMaxRange.Y = s_originalPrimarySettings.BaseRateOfFireMaxRange;
+        if (v <= 0.0f) v = orig.BaseRateOfFire;
+        ws->BaseRateOfFire.BaseValue = Clampf(v, minV, maxV);
+        ws->BaseRateOfFire.MinMaxRange.X = minV;
+        ws->BaseRateOfFire.MinMaxRange.Y = maxV;
     } else {
-        primary->BaseRateOfFire.BaseValue = s_originalPrimarySettings.BaseRateOfFire;
-        primary->BaseRateOfFire.MinMaxRange.X = s_originalPrimarySettings.BaseRateOfFireMinRange;
-        primary->BaseRateOfFire.MinMaxRange.Y = s_originalPrimarySettings.BaseRateOfFireMaxRange;
+        ws->BaseRateOfFire.BaseValue = orig.BaseRateOfFire;
+        ws->BaseRateOfFire.MinMaxRange.X = orig.BaseRateOfFireMinRange;
+        ws->BaseRateOfFire.MinMaxRange.Y = orig.BaseRateOfFireMaxRange;
     }
 
+    // Cooldown
     if (NoCooldown) {
-        primary->BaseCooldown.BaseValue = 0.0f;
-        primary->BaseCooldown.MinMaxRange.X = 0.0f;
-        primary->BaseCooldown.MinMaxRange.Y = 0.0f;
+        ws->BaseCooldown.BaseValue = 0.0f;
+        ws->BaseCooldown.MinMaxRange.X = 0.0f;
+        ws->BaseCooldown.MinMaxRange.Y = 0.0f;
     } else {
-        primary->BaseCooldown.BaseValue = s_originalPrimarySettings.BaseCooldown;
-        primary->BaseCooldown.MinMaxRange.X = s_originalPrimarySettings.BaseCooldownMinRange;
-        primary->BaseCooldown.MinMaxRange.Y = s_originalPrimarySettings.BaseCooldownMaxRange;
+        ws->BaseCooldown.BaseValue = orig.BaseCooldown;
+        ws->BaseCooldown.MinMaxRange.X = orig.BaseCooldownMinRange;
+        ws->BaseCooldown.MinMaxRange.Y = orig.BaseCooldownMaxRange;
     }
 
+    // Recoil/Recovery/Spread
     if (NoRecoil) {
-        primary->BaseRecoil.BaseValue = 0.0f;
-        primary->BaseRecoil.MinMaxRange.X = 0.0f;
-        primary->BaseRecoil.MinMaxRange.Y = 0.0f;
-        primary->BaseRecoilRecovery.BaseValue = 100.0f;
-        primary->BaseRecoilRecovery.MinMaxRange.X = 0.0f;
-        primary->BaseRecoilRecovery.MinMaxRange.Y = 9999.0f;
-        primary->BaseSpread.BaseValue = 0.0f;
-        primary->BaseSpread.MinMaxRange.X = 0.0f;
-        primary->BaseSpread.MinMaxRange.Y = 0.0f;
+        ws->BaseRecoil.BaseValue = 0.0f;
+        ws->BaseRecoil.MinMaxRange.X = 0.0f;
+        ws->BaseRecoil.MinMaxRange.Y = 0.0f;
+        ws->BaseRecoilRecovery.BaseValue = 100.0f;
+        ws->BaseRecoilRecovery.MinMaxRange.X = 0.0f;
+        ws->BaseRecoilRecovery.MinMaxRange.Y = 9999.0f;
+        ws->BaseSpread.BaseValue = 0.0f;
+        ws->BaseSpread.MinMaxRange.X = 0.0f;
+        ws->BaseSpread.MinMaxRange.Y = 0.0f;
     } else {
-        primary->BaseRecoil.BaseValue = s_originalPrimarySettings.BaseRecoil;
-        primary->BaseRecoil.MinMaxRange.X = s_originalPrimarySettings.BaseRecoilMinRange;
-        primary->BaseRecoil.MinMaxRange.Y = s_originalPrimarySettings.BaseRecoilMaxRange;
-        primary->BaseRecoilRecovery.BaseValue = s_originalPrimarySettings.BaseRecoilRecovery;
-        primary->BaseRecoilRecovery.MinMaxRange.X = s_originalPrimarySettings.BaseRecoilRecoveryMinRange;
-        primary->BaseRecoilRecovery.MinMaxRange.Y = s_originalPrimarySettings.BaseRecoilRecoveryMaxRange;
-        primary->BaseSpread.BaseValue = s_originalPrimarySettings.BaseSpread;
-        primary->BaseSpread.MinMaxRange.X = s_originalPrimarySettings.BaseSpreadMinRange;
-        primary->BaseSpread.MinMaxRange.Y = s_originalPrimarySettings.BaseSpreadMaxRange;
+        ws->BaseRecoil.BaseValue = orig.BaseRecoil;
+        ws->BaseRecoil.MinMaxRange.X = orig.BaseRecoilMinRange;
+        ws->BaseRecoil.MinMaxRange.Y = orig.BaseRecoilMaxRange;
+        ws->BaseRecoilRecovery.BaseValue = orig.BaseRecoilRecovery;
+        ws->BaseRecoilRecovery.MinMaxRange.X = orig.BaseRecoilRecoveryMinRange;
+        ws->BaseRecoilRecovery.MinMaxRange.Y = orig.BaseRecoilRecoveryMaxRange;
+        ws->BaseSpread.BaseValue = orig.BaseSpread;
+        ws->BaseSpread.MinMaxRange.X = orig.BaseSpreadMinRange;
+        ws->BaseSpread.MinMaxRange.Y = orig.BaseSpreadMaxRange;
     }
 
+    // Reload
     if (InstantReload) {
-        primary->BaseReloadTime.BaseValue = 0.1f;
-        primary->BaseReloadTime.MinMaxRange.X = 0.1f;
-        primary->BaseReloadTime.MinMaxRange.Y = 1.6f;
-        primary->ReloadTimeDelta = 0.1f;
+        ws->BaseReloadTime.BaseValue = 0.1f;
+        ws->BaseReloadTime.MinMaxRange.X = 0.1f;
+        ws->BaseReloadTime.MinMaxRange.Y = 1.6f;
+        ws->ReloadTimeDelta = 0.1f;
     } else {
-        primary->BaseReloadTime.BaseValue = s_originalPrimarySettings.BaseReloadTime;
-        primary->BaseReloadTime.MinMaxRange.X = s_originalPrimarySettings.BaseReloadTimeMinRange;
-        primary->BaseReloadTime.MinMaxRange.Y = s_originalPrimarySettings.BaseReloadTimeMaxRange;
-        primary->ReloadTimeDelta = s_originalPrimarySettings.ReloadTimeDelta;
+        ws->BaseReloadTime.BaseValue = orig.BaseReloadTime;
+        ws->BaseReloadTime.MinMaxRange.X = orig.BaseReloadTimeMinRange;
+        ws->BaseReloadTime.MinMaxRange.Y = orig.BaseReloadTimeMaxRange;
+        ws->ReloadTimeDelta = orig.ReloadTimeDelta;
     }
 
-    weaponScript->SetBaseWeaponSettings(primary);
-
-    // Apply to secondary generically if present
-    if (auto secondary = GetSecondarySettings(weaponScript)) {
-        // Ammo
-        secondary->BaseAmmoCost.BaseValue = InfiniteAmmo ? 0 : s_originalSecondarySettings.BaseAmmoCost;
-
-        // Damage
-        if (IncreasedDamage) {
-            const float minV = s_originalSecondarySettings.BaseWeaponDamageMinRange;
-            const float maxV = s_originalSecondarySettings.BaseWeaponDamageMaxRange;
-            secondary->BaseWeaponDamage.BaseValue = Clampf(s_originalSecondarySettings.BaseWeaponDamage * DamageMultiplier, minV, maxV);
-        } else {
-            secondary->BaseWeaponDamage.BaseValue = s_originalSecondarySettings.BaseWeaponDamage;
-        }
-        secondary->BaseWeaponDamage.MinMaxRange.X = s_originalSecondarySettings.BaseWeaponDamageMinRange;
-        secondary->BaseWeaponDamage.MinMaxRange.Y = s_originalSecondarySettings.BaseWeaponDamageMaxRange;
-
-        // Crit
-        if (HighCritMultiplier) {
-            const float minV = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMinRange;
-            const float maxV = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMaxRange;
-            secondary->BaseWeaponCriticalMultiplier.BaseValue = Clampf(s_originalSecondarySettings.BaseWeaponCriticalMultiplier * CritMultiplier, minV, maxV);
-        } else {
-            secondary->BaseWeaponCriticalMultiplier.BaseValue = s_originalSecondarySettings.BaseWeaponCriticalMultiplier;
-        }
-        secondary->BaseWeaponCriticalMultiplier.MinMaxRange.X = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMinRange;
-        secondary->BaseWeaponCriticalMultiplier.MinMaxRange.Y = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMaxRange;
-
-        // Rate of Fire
-        if (RateOfFireOverride) {
-            float minV = s_originalSecondarySettings.BaseRateOfFireMinRange;
-            float maxV = s_originalSecondarySettings.BaseRateOfFireMaxRange;
-            float v = RateOfFireValue;
-            if (v <= 0.0f) v = s_originalSecondarySettings.BaseRateOfFire;
-            secondary->BaseRateOfFire.BaseValue = Clampf(v, minV, maxV);
-            secondary->BaseRateOfFire.MinMaxRange.X = minV;
-            secondary->BaseRateOfFire.MinMaxRange.Y = maxV;
-        } else if (FastRateOfFire) {
-            secondary->BaseRateOfFire.BaseValue = s_originalSecondarySettings.BaseRateOfFireMaxRange;
-            secondary->BaseRateOfFire.MinMaxRange.X = s_originalSecondarySettings.BaseRateOfFireMinRange;
-            secondary->BaseRateOfFire.MinMaxRange.Y = s_originalSecondarySettings.BaseRateOfFireMaxRange;
-        } else {
-            secondary->BaseRateOfFire.BaseValue = s_originalSecondarySettings.BaseRateOfFire;
-            secondary->BaseRateOfFire.MinMaxRange.X = s_originalSecondarySettings.BaseRateOfFireMinRange;
-            secondary->BaseRateOfFire.MinMaxRange.Y = s_originalSecondarySettings.BaseRateOfFireMaxRange;
-        }
-
-        // Cooldown
-        if (NoCooldown) {
-            secondary->BaseCooldown.BaseValue = 0.0f;
-            secondary->BaseCooldown.MinMaxRange.X = 0.0f;
-            secondary->BaseCooldown.MinMaxRange.Y = 0.0f;
-        } else {
-            secondary->BaseCooldown.BaseValue = s_originalSecondarySettings.BaseCooldown;
-            secondary->BaseCooldown.MinMaxRange.X = s_originalSecondarySettings.BaseCooldownMinRange;
-            secondary->BaseCooldown.MinMaxRange.Y = s_originalSecondarySettings.BaseCooldownMaxRange;
-        }
-
-        // Recoil/Recovery/Spread
-        if (NoRecoil) {
-            secondary->BaseRecoil.BaseValue = 0.0f;
-            secondary->BaseRecoil.MinMaxRange.X = 0.0f;
-            secondary->BaseRecoil.MinMaxRange.Y = 0.0f;
-            secondary->BaseRecoilRecovery.BaseValue = 100.0f;
-            secondary->BaseRecoilRecovery.MinMaxRange.X = 0.0f;
-            secondary->BaseRecoilRecovery.MinMaxRange.Y = 9999.0f;
-            secondary->BaseSpread.BaseValue = 0.0f;
-            secondary->BaseSpread.MinMaxRange.X = 0.0f;
-            secondary->BaseSpread.MinMaxRange.Y = 0.0f;
-        } else {
-            secondary->BaseRecoil.BaseValue = s_originalSecondarySettings.BaseRecoil;
-            secondary->BaseRecoil.MinMaxRange.X = s_originalSecondarySettings.BaseRecoilMinRange;
-            secondary->BaseRecoil.MinMaxRange.Y = s_originalSecondarySettings.BaseRecoilMaxRange;
-            secondary->BaseRecoilRecovery.BaseValue = s_originalSecondarySettings.BaseRecoilRecovery;
-            secondary->BaseRecoilRecovery.MinMaxRange.X = s_originalSecondarySettings.BaseRecoilRecoveryMinRange;
-            secondary->BaseRecoilRecovery.MinMaxRange.Y = s_originalSecondarySettings.BaseRecoilRecoveryMaxRange;
-            secondary->BaseSpread.BaseValue = s_originalSecondarySettings.BaseSpread;
-            secondary->BaseSpread.MinMaxRange.X = s_originalSecondarySettings.BaseSpreadMinRange;
-            secondary->BaseSpread.MinMaxRange.Y = s_originalSecondarySettings.BaseSpreadMaxRange;
-        }
-
-        // Reload
-        if (InstantReload) {
-            secondary->BaseReloadTime.BaseValue = 0.1f;
-            secondary->BaseReloadTime.MinMaxRange.X = 0.1f;
-            secondary->BaseReloadTime.MinMaxRange.Y = 1.6f;
-            secondary->ReloadTimeDelta = 0.1f;
-        } else {
-            secondary->BaseReloadTime.BaseValue = s_originalSecondarySettings.BaseReloadTime;
-            secondary->BaseReloadTime.MinMaxRange.X = s_originalSecondarySettings.BaseReloadTimeMinRange;
-            secondary->BaseReloadTime.MinMaxRange.Y = s_originalSecondarySettings.BaseReloadTimeMaxRange;
-            secondary->ReloadTimeDelta = s_originalSecondarySettings.ReloadTimeDelta;
-        }
-
-        if (weaponScript->SecondaryWeaponModScript) {
-            weaponScript->SecondaryWeaponModScript->ApplyFireSettings(secondary);
-        }
+    // Push to the correct mod script for runtime effect
+    if (isPrimary && weaponScript->PrimaryWeaponModScript) {
+        weaponScript->PrimaryWeaponModScript->ApplyFireSettings(ws);
+    } else if (!isPrimary && weaponScript->SecondaryWeaponModScript) {
+        weaponScript->SecondaryWeaponModScript->ApplyFireSettings(ws);
     }
 }
 
@@ -409,75 +328,52 @@ void WeaponService::SaveOriginalSettings(SDK::URGWeaponScript* weaponScript) {
 void WeaponService::RestoreOriginalSettings(SDK::URGWeaponScript* weaponScript) {
     if (!s_originalPrimarySettings.isValid) { LOG_ERROR("No valid original PRIMARY settings to restore"); return; }
 
-    auto primary = GetPrimarySettings(weaponScript);
-    if (!primary) { LOG_ERROR("Failed to get primary weapon settings for restoration"); return; }
-
-    LOG_INFO("Restoring original primary/secondary weapon settings...");
-    primary->BaseAmmoCost.BaseValue = s_originalPrimarySettings.BaseAmmoCost;
-    primary->BaseWeaponDamage.BaseValue = s_originalPrimarySettings.BaseWeaponDamage;
-    primary->BaseWeaponDamage.MinMaxRange.X = s_originalPrimarySettings.BaseWeaponDamageMinRange;
-    primary->BaseWeaponDamage.MinMaxRange.Y = s_originalPrimarySettings.BaseWeaponDamageMaxRange;
-    primary->BaseWeaponCriticalMultiplier.BaseValue = s_originalPrimarySettings.BaseWeaponCriticalMultiplier;
-    primary->BaseWeaponCriticalMultiplier.MinMaxRange.X = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMinRange;
-    primary->BaseWeaponCriticalMultiplier.MinMaxRange.Y = s_originalPrimarySettings.BaseWeaponCriticalMultiplierMaxRange;
-    primary->BaseRateOfFire.BaseValue = s_originalPrimarySettings.BaseRateOfFire;
-    primary->BaseRateOfFire.MinMaxRange.X = s_originalPrimarySettings.BaseRateOfFireMinRange;
-    primary->BaseRateOfFire.MinMaxRange.Y = s_originalPrimarySettings.BaseRateOfFireMaxRange;
-    primary->BaseCooldown.BaseValue = s_originalPrimarySettings.BaseCooldown;
-    primary->BaseCooldown.MinMaxRange.X = s_originalPrimarySettings.BaseCooldownMinRange;
-    primary->BaseCooldown.MinMaxRange.Y = s_originalPrimarySettings.BaseCooldownMaxRange;
-    primary->BaseRecoil.BaseValue = s_originalPrimarySettings.BaseRecoil;
-    primary->BaseRecoil.MinMaxRange.X = s_originalPrimarySettings.BaseRecoilMinRange;
-    primary->BaseRecoil.MinMaxRange.Y = s_originalPrimarySettings.BaseRecoilMaxRange;
-    primary->BaseRecoilRecovery.BaseValue = s_originalPrimarySettings.BaseRecoilRecovery;
-    primary->BaseRecoilRecovery.MinMaxRange.X = s_originalPrimarySettings.BaseRecoilRecoveryMinRange;
-    primary->BaseRecoilRecovery.MinMaxRange.Y = s_originalPrimarySettings.BaseRecoilRecoveryMaxRange;
-    primary->BaseSpread.BaseValue = s_originalPrimarySettings.BaseSpread;
-    primary->BaseSpread.MinMaxRange.X = s_originalPrimarySettings.BaseSpreadMinRange;
-    primary->BaseSpread.MinMaxRange.Y = s_originalPrimarySettings.BaseSpreadMaxRange;
-    primary->BaseReloadTime.BaseValue = s_originalPrimarySettings.BaseReloadTime;
-    primary->BaseReloadTime.MinMaxRange.X = s_originalPrimarySettings.BaseReloadTimeMinRange;
-    primary->BaseReloadTime.MinMaxRange.Y = s_originalPrimarySettings.BaseReloadTimeMaxRange;
-    primary->ReloadTimeDelta = s_originalPrimarySettings.ReloadTimeDelta;
-
-    weaponScript->SetBaseWeaponSettings(primary);
-
-    if (s_originalSecondarySettings.isValid) {
-        if (auto secondary = GetSecondarySettings(weaponScript)) {
-            secondary->BaseAmmoCost.BaseValue = s_originalSecondarySettings.BaseAmmoCost;
-            secondary->BaseWeaponDamage.BaseValue = s_originalSecondarySettings.BaseWeaponDamage;
-            secondary->BaseWeaponDamage.MinMaxRange.X = s_originalSecondarySettings.BaseWeaponDamageMinRange;
-            secondary->BaseWeaponDamage.MinMaxRange.Y = s_originalSecondarySettings.BaseWeaponDamageMaxRange;
-            secondary->BaseWeaponCriticalMultiplier.BaseValue = s_originalSecondarySettings.BaseWeaponCriticalMultiplier;
-            secondary->BaseWeaponCriticalMultiplier.MinMaxRange.X = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMinRange;
-            secondary->BaseWeaponCriticalMultiplier.MinMaxRange.Y = s_originalSecondarySettings.BaseWeaponCriticalMultiplierMaxRange;
-            secondary->BaseRateOfFire.BaseValue = s_originalSecondarySettings.BaseRateOfFire;
-            secondary->BaseRateOfFire.MinMaxRange.X = s_originalSecondarySettings.BaseRateOfFireMinRange;
-            secondary->BaseRateOfFire.MinMaxRange.Y = s_originalSecondarySettings.BaseRateOfFireMaxRange;
-            secondary->BaseCooldown.BaseValue = s_originalSecondarySettings.BaseCooldown;
-            secondary->BaseCooldown.MinMaxRange.X = s_originalSecondarySettings.BaseCooldownMinRange;
-            secondary->BaseCooldown.MinMaxRange.Y = s_originalSecondarySettings.BaseCooldownMaxRange;
-            secondary->BaseRecoil.BaseValue = s_originalSecondarySettings.BaseRecoil;
-            secondary->BaseRecoil.MinMaxRange.X = s_originalSecondarySettings.BaseRecoilMinRange;
-            secondary->BaseRecoil.MinMaxRange.Y = s_originalSecondarySettings.BaseRecoilMaxRange;
-            secondary->BaseRecoilRecovery.BaseValue = s_originalSecondarySettings.BaseRecoilRecovery;
-            secondary->BaseRecoilRecovery.MinMaxRange.X = s_originalSecondarySettings.BaseRecoilRecoveryMinRange;
-            secondary->BaseRecoilRecovery.MinMaxRange.Y = s_originalSecondarySettings.BaseRecoilRecoveryMaxRange;
-            secondary->BaseSpread.BaseValue = s_originalSecondarySettings.BaseSpread;
-            secondary->BaseSpread.MinMaxRange.X = s_originalSecondarySettings.BaseSpreadMinRange;
-            secondary->BaseSpread.MinMaxRange.Y = s_originalSecondarySettings.BaseSpreadMaxRange;
-            secondary->BaseReloadTime.BaseValue = s_originalSecondarySettings.BaseReloadTime;
-            secondary->BaseReloadTime.MinMaxRange.X = s_originalSecondarySettings.BaseReloadTimeMinRange;
-            secondary->BaseReloadTime.MinMaxRange.Y = s_originalSecondarySettings.BaseReloadTimeMaxRange;
-            secondary->ReloadTimeDelta = s_originalSecondarySettings.ReloadTimeDelta;
-
-            // If the secondary script exposes ApplyFireSettings, apply to ensure runtime takes effect
-            if (weaponScript->SecondaryWeaponModScript) {
-                weaponScript->SecondaryWeaponModScript->ApplyFireSettings(secondary);
-            }
-        }
-    }
+    LOG_INFO("Restoring original weapon settings (primary/secondary)...");
+    RestoreSettingsFor(weaponScript, true);
+    RestoreSettingsFor(weaponScript, false);
     LOG_INFO("Original weapon settings restored successfully");
+}
+
+
+void WeaponService::RestoreSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary) {
+    SDK::URBaseWeaponSettings* ws = isPrimary ? GetPrimarySettings(weaponScript) : GetSecondarySettings(weaponScript);
+    if (!ws) return;
+    OriginalWeaponSettings& orig = isPrimary ? s_originalPrimarySettings : s_originalSecondarySettings;
+    if (!orig.isValid) return;
+
+    ws->BaseAmmoCost.BaseValue = orig.BaseAmmoCost;
+    ws->BaseWeaponDamage.BaseValue = orig.BaseWeaponDamage;
+    ws->BaseWeaponDamage.MinMaxRange.X = orig.BaseWeaponDamageMinRange;
+    ws->BaseWeaponDamage.MinMaxRange.Y = orig.BaseWeaponDamageMaxRange;
+    ws->BaseWeaponCriticalMultiplier.BaseValue = orig.BaseWeaponCriticalMultiplier;
+    ws->BaseWeaponCriticalMultiplier.MinMaxRange.X = orig.BaseWeaponCriticalMultiplierMinRange;
+    ws->BaseWeaponCriticalMultiplier.MinMaxRange.Y = orig.BaseWeaponCriticalMultiplierMaxRange;
+    ws->BaseRateOfFire.BaseValue = orig.BaseRateOfFire;
+    ws->BaseRateOfFire.MinMaxRange.X = orig.BaseRateOfFireMinRange;
+    ws->BaseRateOfFire.MinMaxRange.Y = orig.BaseRateOfFireMaxRange;
+    ws->BaseCooldown.BaseValue = orig.BaseCooldown;
+    ws->BaseCooldown.MinMaxRange.X = orig.BaseCooldownMinRange;
+    ws->BaseCooldown.MinMaxRange.Y = orig.BaseCooldownMaxRange;
+    ws->BaseRecoil.BaseValue = orig.BaseRecoil;
+    ws->BaseRecoil.MinMaxRange.X = orig.BaseRecoilMinRange;
+    ws->BaseRecoil.MinMaxRange.Y = orig.BaseRecoilMaxRange;
+    ws->BaseRecoilRecovery.BaseValue = orig.BaseRecoilRecovery;
+    ws->BaseRecoilRecovery.MinMaxRange.X = orig.BaseRecoilRecoveryMinRange;
+    ws->BaseRecoilRecovery.MinMaxRange.Y = orig.BaseRecoilRecoveryMaxRange;
+    ws->BaseSpread.BaseValue = orig.BaseSpread;
+    ws->BaseSpread.MinMaxRange.X = orig.BaseSpreadMinRange;
+    ws->BaseSpread.MinMaxRange.Y = orig.BaseSpreadMaxRange;
+    ws->BaseReloadTime.BaseValue = orig.BaseReloadTime;
+    ws->BaseReloadTime.MinMaxRange.X = orig.BaseReloadTimeMinRange;
+    ws->BaseReloadTime.MinMaxRange.Y = orig.BaseReloadTimeMaxRange;
+    ws->ReloadTimeDelta = orig.ReloadTimeDelta;
+
+    // Push to the correct mod script for runtime effect
+    if (isPrimary && weaponScript->PrimaryWeaponModScript) {
+        weaponScript->PrimaryWeaponModScript->ApplyFireSettings(ws);
+    } else if (!isPrimary && weaponScript->SecondaryWeaponModScript) {
+        weaponScript->SecondaryWeaponModScript->ApplyFireSettings(ws);
+    }
 }
 
 
@@ -494,13 +390,12 @@ void WeaponService::PrintWeaponInfo(SDK::ARWeapon* weapon) {
 
 // Helpers
 SDK::URBaseWeaponSettings* WeaponService::GetPrimarySettings(SDK::URGWeaponScript* ws) {
-    if (!ws) return nullptr;
-    return ws->GetBaseWeaponSettings();
+    if (!ws || !ws->PrimaryWeaponModScript) return nullptr;
+    return ws->PrimaryWeaponModScript->WeaponModStats;
 }
 
 SDK::URBaseWeaponSettings* WeaponService::GetSecondarySettings(SDK::URGWeaponScript* ws) {
-    if (!ws) return nullptr;
-    if (!ws->SecondaryWeaponModScript) return nullptr;
+    if (!ws || !ws->SecondaryWeaponModScript) return nullptr;
     return ws->SecondaryWeaponModScript->WeaponModStats;
 }
 

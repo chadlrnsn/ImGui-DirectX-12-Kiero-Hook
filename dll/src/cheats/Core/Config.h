@@ -145,7 +145,6 @@ namespace Cheat {
             extern bool InfiniteAmmo;        // No ammo cost
             extern bool IncreasedDamage;     // Massively increased damage
             extern bool HighCritMultiplier;  // Extremely high critical hit multiplier
-            extern bool FastRateOfFire;      // Super fast rate of fire
             extern bool NoCooldown;          // No cooldown
             extern bool NoRecoil;            // No recoil, instant recovery, and perfect accuracy
             extern bool InstantReload;       // Instant reload

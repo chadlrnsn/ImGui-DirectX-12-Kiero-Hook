@@ -99,6 +99,10 @@ namespace Cheat {
             static SDK::URBaseWeaponSettings* GetSecondarySettings(SDK::URGWeaponScript* ws);
             static void SaveOriginalSettingsFor(SDK::URBaseWeaponSettings* src, OriginalWeaponSettings& out);
 
+            // New DRY helpers: apply/restore for a given side
+            static void ApplyWeaponSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary);
+            static void RestoreSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary);
+
             static bool AnyModsEnabled();
         };
 

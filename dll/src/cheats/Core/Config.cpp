@@ -91,7 +91,6 @@ namespace Cheat {
             bool InfiniteAmmo = false;        // No ammo cost
             bool IncreasedDamage = false;     // Massively increased damage
             bool HighCritMultiplier = false;  // Extremely high critical hit multiplier
-            bool FastRateOfFire = false;      // Super fast rate of fire
             bool NoCooldown = false;          // No cooldown
             bool NoRecoil = false;            // No recoil, instant recovery, and perfect accuracy
             bool InstantReload = false;       // Instant reload
@@ -100,7 +99,7 @@ namespace Cheat {
             float DamageMultiplier = 2.0f;     // 2x damage by default
             float CritMultiplier = 2.0f;       // 2x crit multiplier by default
 
-            bool RateOfFireOverride = false;   // off by default; use FastRateOfFire instead
+            bool RateOfFireOverride = false;   // off by default;
             float RateOfFireValue = 0.0f;      // will be clamped between Min..Max at apply-time
         }
 
