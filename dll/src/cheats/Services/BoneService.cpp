@@ -19,6 +19,10 @@ void BoneService::DisplayBoneDatabase() {
     BoneAnalyzer::DisplayBoneDatabase();
 }
 
+void BoneService::DumpPlayerBones(SDK::ARPlayerPawn* playerPawn) {
+    BoneAnalyzer::DumpBones(playerPawn->GetSkeletalMeshComponent());
+}
+
 int BoneService::GetTargetBoneIndex(const std::string& enemyKey) {
     return BoneAnalyzer::GetTargetBoneIndex(enemyKey);
 }

@@ -15,6 +15,7 @@ public:
     // Analysis actions
     static void DumpUniqueEnemyBones(SDK::UWorld* world);
     static void DisplayBoneDatabase();
+    static void DumpPlayerBones(SDK::ARPlayerPawn* playerPawn);
 
     // Queries
     static int GetTargetBoneIndex(const std::string& enemyKey);

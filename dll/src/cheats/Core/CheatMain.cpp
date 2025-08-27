@@ -172,6 +172,8 @@ namespace Cheat {
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
                 Services::BoneService::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
+                Services::BoneService::DumpPlayerBones(Cheat::Services::GameServices::GetRPlayerPawn());
+
             }
 
             // Handle display bone database key
