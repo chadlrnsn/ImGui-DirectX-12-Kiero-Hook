@@ -32,7 +32,7 @@ void UnlocksTab() {
     ImGui::Separator();
 
     // Savegame / Soul Fragments
-    ImGui::Text("Savegame");
+    ImGui::Text("Resources");
     int32_t soulFragments = -1;
     if (Cheat::Features::SaveService::TryGetSoulFragments(soulFragments)) {
         ImGui::Text("Soul Fragments: %d", soulFragments);
@@ -57,6 +57,7 @@ void UnlocksTab() {
     } else {
         ImGui::Text("Soul Fragments: <unavailable>");
     }
+    
     if (ImGui::Button("Add Gold")) {
         Cheat::Features::SaveService::AddGold(10);
     }
