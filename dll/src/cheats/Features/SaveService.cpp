@@ -16,25 +16,6 @@ static inline SDK::URSaveGame* GetCurrentSave() {
     return rgi->CurrentSaveGame;
 }
 
-bool SaveService::AddGold(int32_t amount) {
-        auto* world = Services::GameServices::GetWorld();
-        if (!world) return false;
-        auto* playerState = SDK::UGameplayStatics::GetPlayerState(world, 0);
-        if (!playerState) return false;
-        SDK::ARPlayerState* rPlayerState = static_cast<SDK::ARPlayerState*>(playerState);
-        rPlayerState->AddGold(amount);
-        return true;
-}
-
-bool SaveService::AddKeys(int32_t amount) {
-        auto* world = Services::GameServices::GetWorld();
-        if (!world) return false;
-        auto* playerState = SDK::UGameplayStatics::GetPlayerState(world, 0);
-        if (!playerState) return false;
-        SDK::ARPlayerState* rPlayerState = static_cast<SDK::ARPlayerState*>(playerState);
-        rPlayerState->AddKeys(amount);
-        return true;
-}
 
 bool SaveService::TryGetSoulFragments(int32_t& outSoulFragments) {
     auto* save = GetCurrentSave();

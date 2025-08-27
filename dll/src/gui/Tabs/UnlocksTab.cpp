@@ -2,6 +2,7 @@
 #include <imgui.h>
 #include "../../cheats/Features/UnlockService.h"
 #include "../../cheats/Features/SaveService.h"
+#include "../../cheats/Features/ResourceService.h"
 #include <dev/logger.h>
 
 namespace CheatMenu { namespace Tabs {
@@ -57,12 +58,47 @@ void UnlocksTab() {
     } else {
         ImGui::Text("Soul Fragments: <unavailable>");
     }
-    
-    if (ImGui::Button("Add Gold")) {
-        Cheat::Features::SaveService::AddGold(10);
+
+    // In-run resources (temporary): Gold and Keys
+    static int32_t goldToAdd = 1000;
+    static int32_t keysToAdd = 5;
+
+    // Gold input + apply
+    ImGui::Text("Add Gold:");
+    ImGui::SameLine();
+    {
+        float avail = ImGui::GetContentRegionAvail().x;
+        float width = avail * 0.20f;
+        if (width < 150.0f) width = 150.0f;
+        if (width > 260.0f) width = 260.0f;
+        ImGui::SetNextItemWidth(width);
+        if (ImGui::InputInt("##GoldToAdd", &goldToAdd)) {
+            if (goldToAdd < 0) goldToAdd = 0;
+        }
+        ImGui::SameLine();
+        if (ImGui::Button("Apply##Gold")) {
+            Cheat::Features::ResourceService::AddGold(goldToAdd);
+            LOG_INFO("GUI: AddGold(%d) invoked", goldToAdd);
+        }
     }
-    if (ImGui::Button("Add Keys")) {
-        Cheat::Features::SaveService::AddKeys(10);
+
+    // Keys input + apply
+    ImGui::Text("Add Keys:");
+    ImGui::SameLine();
+    {
+        float avail = ImGui::GetContentRegionAvail().x;
+        float width = avail * 0.20f;
+        if (width < 150.0f) width = 150.0f;
+        if (width > 260.0f) width = 260.0f;
+        ImGui::SetNextItemWidth(width);
+        if (ImGui::InputInt("##KeysToAdd", &keysToAdd)) {
+            if (keysToAdd < 0) keysToAdd = 0;
+        }
+        ImGui::SameLine();
+        if (ImGui::Button("Apply##Keys")) {
+            Cheat::Features::ResourceService::AddKeys(keysToAdd);
+            LOG_INFO("GUI: AddKeys(%d) invoked", keysToAdd);
+        }
     }
 }
 

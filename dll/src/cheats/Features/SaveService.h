@@ -16,9 +16,6 @@ public:
 
     // Set soul fragments to an absolute value; returns false if chain is invalid
     static bool SetSoulFragments(int32_t value);
-
-    static bool AddGold(int32_t amount);
-    static bool AddKeys(int32_t amount);
 };
 
 } // namespace Features
