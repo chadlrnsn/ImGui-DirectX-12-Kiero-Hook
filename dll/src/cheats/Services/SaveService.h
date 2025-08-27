@@ -3,8 +3,7 @@
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
 
-namespace Cheat {
-namespace Features {
+namespace Cheat { namespace Services {
 
 class SaveService {
 public:
@@ -18,6 +17,5 @@ public:
     static bool SetSoulFragments(int32_t value);
 };
 
-} // namespace Features
-} // namespace Cheat
+} } // namespace Cheat::Services
 

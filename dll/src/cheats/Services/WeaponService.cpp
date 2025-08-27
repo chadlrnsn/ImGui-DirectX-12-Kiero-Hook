@@ -1,14 +1,12 @@
 #include "WeaponService.h"
 #include "../Core/Config.h"
 #include "../Utils/Console.h"
-#include "../Services/GameServices.h"
+#include "GameServices.h"
 #include <dev/logger.h>
 
-namespace Cheat {
-namespace Features {
+namespace Cheat { namespace Services {
 
-// Keep implementation identical to WeaponManager.cpp, only class/filename names updated
-
+// Keep implementation identical; copy from Features version
 SDK::ARPlayerPawn* WeaponService::s_cachedPlayerPawn = nullptr;
 SDK::ARWeapon* WeaponService::s_cachedWeapon = nullptr;
 SDK::URGWeaponScript* WeaponService::s_cachedWeaponScript = nullptr;
@@ -132,7 +130,6 @@ void WeaponService::ManageEngineRifleHeat() {
     }
 }
 
-
 static float Clampf(float v, float minv, float maxv) { if (v < minv) return minv; if (v > maxv) return maxv; return v; }
 
 void WeaponService::ApplyWeaponSettings(SDK::URGWeaponScript* weaponScript) {
@@ -149,7 +146,6 @@ void WeaponService::ApplyWeaponSettings(SDK::URGWeaponScript* weaponScript) {
     ApplyWeaponSettingsFor(weaponScript, true);
     ApplyWeaponSettingsFor(weaponScript, false);
 }
-
 
 void WeaponService::ApplyWeaponSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary) {
     using namespace Cheat::Config::Features;
@@ -334,7 +330,6 @@ void WeaponService::RestoreOriginalSettings(SDK::URGWeaponScript* weaponScript) 
     LOG_INFO("Original weapon settings restored successfully");
 }
 
-
 void WeaponService::RestoreSettingsFor(SDK::URGWeaponScript* weaponScript, bool isPrimary) {
     SDK::URBaseWeaponSettings* ws = isPrimary ? GetPrimarySettings(weaponScript) : GetSecondarySettings(weaponScript);
     if (!ws) return;
@@ -376,6 +371,16 @@ void WeaponService::RestoreSettingsFor(SDK::URGWeaponScript* weaponScript, bool 
     }
 }
 
+// Helpers
+SDK::URBaseWeaponSettings* WeaponService::GetPrimarySettings(SDK::URGWeaponScript* ws) {
+    if (!ws || !ws->PrimaryWeaponModScript) return nullptr;
+    return ws->PrimaryWeaponModScript->WeaponModStats;
+}
+
+SDK::URBaseWeaponSettings* WeaponService::GetSecondarySettings(SDK::URGWeaponScript* ws) {
+    if (!ws || !ws->SecondaryWeaponModScript) return nullptr;
+    return ws->SecondaryWeaponModScript->WeaponModStats;
+}
 
 void WeaponService::PrintWeaponInfo(SDK::ARWeapon* weapon) {
     LOG_INFO("Current ammo: %d", weapon->RuntimeWeaponScript->GetAmmoInClip());
@@ -386,17 +391,6 @@ void WeaponService::PrintWeaponInfo(SDK::ARWeapon* weapon) {
     } else {
         LOG_INFO("Weapon is NOT a BP_EngineRifle_Script");
     }
-}
-
-// Helpers
-SDK::URBaseWeaponSettings* WeaponService::GetPrimarySettings(SDK::URGWeaponScript* ws) {
-    if (!ws || !ws->PrimaryWeaponModScript) return nullptr;
-    return ws->PrimaryWeaponModScript->WeaponModStats;
-}
-
-SDK::URBaseWeaponSettings* WeaponService::GetSecondarySettings(SDK::URGWeaponScript* ws) {
-    if (!ws || !ws->SecondaryWeaponModScript) return nullptr;
-    return ws->SecondaryWeaponModScript->WeaponModStats;
 }
 
 void WeaponService::SaveOriginalSettingsFor(SDK::URBaseWeaponSettings* ws, OriginalWeaponSettings& out) {
@@ -430,7 +424,5 @@ void WeaponService::SaveOriginalSettingsFor(SDK::URBaseWeaponSettings* ws, Origi
     out.isValid = true;
 }
 
-
-} // namespace Features
-} // namespace Cheat
+} } // namespace Cheat::Services
 

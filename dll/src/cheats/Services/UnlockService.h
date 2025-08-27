@@ -3,8 +3,7 @@
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
 
-namespace Cheat {
-namespace Features {
+namespace Cheat { namespace Services {
 
 class UnlockService {
 public:
@@ -22,6 +21,5 @@ public:
     static void UnlockAll();
 };
 
-} // namespace Features
-} // namespace Cheat
+} } // namespace Cheat::Services
 

@@ -148,8 +148,11 @@ namespace Cheat {
 
             // Handle God Mode - direct health manipulation
             if (Cheat::Config::Features::GodMode && playerPawn && playerPawn->HealthComponent) {
-                float maxHealth = playerPawn->HealthComponent->GetMaxHealth();
-                playerPawn->HealthComponent->currentHealth = maxHealth;
+                playerPawn->HealthComponent->currentHealth = playerPawn->HealthComponent->GetMaxHealth();
+                playerPawn->HealthComponent->CurrentBarrier =  playerPawn->HealthComponent->GetMaxBarrier();
+                playerPawn->HealthComponent->currentPlatings = playerPawn->HealthComponent->GetMaxPlatings();
+                playerPawn->HealthComponent->CurrentArmor = playerPawn->HealthComponent->GetMaxArmor();
+
 
                 // Log state change
                 if (Cheat::Config::Features::GodMode != lastGodModeState) {
