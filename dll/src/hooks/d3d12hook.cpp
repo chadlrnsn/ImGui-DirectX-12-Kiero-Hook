@@ -146,7 +146,7 @@ void InitImGui()
     ImGui::CreateContext();
     ImGuiIO &io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-
+    io.ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange;  // prevent system cursor flicker on exit
     ImGui::StyleColorsLight();
 
     ImGui_ImplWin32_Init(window);
