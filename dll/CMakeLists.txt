@@ -14,6 +14,7 @@ set(IMGUI_SOURCES
     ${imgui_SOURCE_DIR}/imgui_tables.cpp
     ${imgui_SOURCE_DIR}/imgui_widgets.cpp
     ${imgui_SOURCE_DIR}/backends/imgui_impl_dx12.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_dx11.cpp
     ${imgui_SOURCE_DIR}/backends/imgui_impl_win32.cpp
 )
 
@@ -37,6 +38,7 @@ add_library(${DLL_NAME} SHARED
     src/dllmain.cpp
     ${CMAKE_SOURCE_DIR}/vendor/kiero/kiero.cpp
     src/hooks/d3d12hook.cpp
+    src/hooks/d3d11hook.cpp
     src/dev/Console.cpp
 
     # Cheat system core
@@ -90,6 +92,7 @@ target_link_libraries(${DLL_NAME} PRIVATE
     minhook
     fmt::fmt
     d3d12.lib
+    d3d11.lib
     dxgi.lib
 )
 

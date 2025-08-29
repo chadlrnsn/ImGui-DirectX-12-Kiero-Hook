@@ -1,5 +1,8 @@
 ﻿#include <includes.h>
 #include <hooks/d3d12hook.h>
+#include <hooks/d3d11hook.h>
+#include <hooks/hook_config.h>
+#include <kiero.h>
 #include <dev/Console.h>
 #include <dev/logger.h>
 
@@ -27,7 +30,10 @@ namespace Hook
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
             // Release DirectX resources
-            ReleaseD3D12Hook();
+            if (kiero::getRenderType() == kiero::RenderType::D3D12)
+                ReleaseD3D12Hook();
+            else if (kiero::getRenderType() == kiero::RenderType::D3D11)
+                ReleaseD3D11Hook();
 
             g_cleanup_done = true;
             LOG_INFO("Cleanup complete");
@@ -37,16 +43,29 @@ namespace Hook
 
     bool Initialize()
     {
-        LOG_INFO("Initializing hooks...");
+        using Hook::Backend;
+        LOG_INFO("Initializing hooks (forced backend)...");
 
-        if (!InitD3D12Hook())
+        if (Hook::g_ForceBackend == Backend::D3D12)
         {
-            LOG_ERROR("Failed to initialize DirectX 12 hook");
-            return false;
+            LOG_INFO("Forcing D3D12 hook");
+            if (!InitD3D12Hook())
+            {
+                LOG_ERROR("Failed to initialize DirectX 12 hook (forced)");
+                return false;
+            }
+            return true;
         }
-
-        LOG_INFO("Hooks initialized successfully");
-        return true;
+        else
+        {
+            LOG_INFO("Forcing D3D11 hook");
+            if (!InitD3D11Hook())
+            {
+                LOG_ERROR("Failed to initialize DirectX 11 hook (forced)");
+                return false;
+            }
+            return true;
+        }
     }
 }
 
