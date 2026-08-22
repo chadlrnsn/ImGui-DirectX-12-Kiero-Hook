@@ -1,0 +1,117 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "ninja-clang-debug",
+            "displayName": "Ninja + Clang (Debug)",
+            "description": "Build using Ninja generator with LLVM clang/clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang.exe",
+                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang++.exe",
+                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+            }
+        },
+        {
+            "name": "ninja-clang-release",
+            "displayName": "Ninja + Clang (Release)",
+            "description": "Build using Ninja generator with LLVM clang/clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang.exe",
+                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang++.exe",
+                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+            }
+        },
+        {
+            "name": "ninja-clangcl-debug",
+            "displayName": "Ninja + Clang-CL (Debug)",
+            "description": "Build using Ninja generator with LLVM clang-cl driver",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang-cl.exe",
+                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang-cl.exe",
+                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+            }
+        },
+        {
+            "name": "ninja-msvc-debug",
+            "displayName": "Ninja + MSVC (Debug)",
+            "description": "Build using Ninja generator with MSVC cl compiler",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+            }
+        },
+        {
+            "name": "ninja-msvc-release",
+            "displayName": "Ninja + MSVC (Release)",
+            "description": "Build using Ninja generator with MSVC cl compiler",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "ninja-clang-debug",
+            "configurePreset": "ninja-clang-debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-clang-release",
+            "configurePreset": "ninja-clang-release",
+            "configuration": "Release"
+        },
+        {
+            "name": "ninja-clangcl-debug",
+            "configurePreset": "ninja-clangcl-debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-msvc-debug",
+            "configurePreset": "ninja-msvc-debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-msvc-release",
+            "configurePreset": "ninja-msvc-release",
+            "configuration": "Release"
+        }
+    ]
+}
