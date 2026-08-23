@@ -406,6 +406,13 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
+    // Wait for this frame's previous GPU work to finish before reusing its allocator
+    if (frameCtx.FenceValue != 0 && g_fence && g_fence->GetCompletedValue() < frameCtx.FenceValue)
+    {
+        g_fence->SetEventOnCompletion(frameCtx.FenceValue, g_fenceEvent);
+        WaitForSingleObject(g_fenceEvent, 5000);
+    }
+
     // Begin ImGui frame
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
@@ -463,22 +470,12 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
 
     g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList *const *>(&g_pd3dCommandList));
 
-    // Signal and WAIT for our GPU work to complete before returning to the app
+    // Signal fence for this frame — do NOT wait here.
+    // We wait at the TOP of the next frame that reuses this same backBufferIdx.
+    // Blocking here would stall the entire game render pipeline → TDR → DEVICE_REMOVED.
     g_fenceValue++;
-    HRESULT hrSig = g_pd3dCommandQueue->Signal(g_fence, g_fenceValue);
-    if (FAILED(hrSig))
-    {
-        LOG_ERROR("[hkPresent] frame %u: Signal FAILED: 0x%08X", g_presentCallCount, hrSig);
-        LogDeviceState("Present-Signal");
-    }
-    else
-    {
-        if (g_fence->GetCompletedValue() < g_fenceValue)
-        {
-            g_fence->SetEventOnCompletion(g_fenceValue, g_fenceEvent);
-            WaitForSingleObject(g_fenceEvent, INFINITE);
-        }
-    }
+    g_pd3dCommandQueue->Signal(g_fence, g_fenceValue);
+    frameCtx.FenceValue = g_fenceValue;
 
     return oPresent(pSwapChain, SyncInterval, Flags);
 }

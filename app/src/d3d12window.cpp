@@ -101,8 +101,8 @@ void D3D12HelloWindow::LoadPipeline()
         &swapChain
         ));
 
-    // This sample does not support fullscreen transitions.
-    ThrowIfFailed(factory->MakeWindowAssociation(Win32Application::GetHwnd(), DXGI_MWA_NO_ALT_ENTER));
+    // Allow standard DXGI fullscreen window association (Alt+Enter)
+    ThrowIfFailed(factory->MakeWindowAssociation(Win32Application::GetHwnd(), 0));
 
     ThrowIfFailed(swapChain.As(&m_swapChain));
     m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
@@ -304,16 +304,21 @@ void D3D12HelloWindow::ToggleFullscreen()
 {
     if (m_fullscreenMode)
     {
-        // Switch to windowed mode
+        // Restore windowed style
         SetWindowLongPtr(Win32Application::GetHwnd(), GWL_STYLE, WS_OVERLAPPEDWINDOW);
-        SetWindowPos(Win32Application::GetHwnd(), HWND_TOP, 100, 100, m_windowWidth, m_windowHeight, SWP_FRAMECHANGED | SWP_SHOWWINDOW);
+        SetWindowPos(Win32Application::GetHwnd(), HWND_TOP, 100, 100, 1280, 720, SWP_FRAMECHANGED | SWP_NOACTIVATE | SWP_SHOWWINDOW);
         m_fullscreenMode = false;
+        OnResize(1280, 720);
     }
     else
     {
-        // Switch to fullscreen mode
+        // Switch to borderless fullscreen mode
+        int screenWidth = GetSystemMetrics(SM_CXSCREEN);
+        int screenHeight = GetSystemMetrics(SM_CYSCREEN);
+
         SetWindowLongPtr(Win32Application::GetHwnd(), GWL_STYLE, WS_POPUP);
-        SetWindowPos(Win32Application::GetHwnd(), HWND_TOP, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN), SWP_FRAMECHANGED | SWP_SHOWWINDOW);
+        SetWindowPos(Win32Application::GetHwnd(), HWND_TOP, 0, 0, screenWidth, screenHeight, SWP_FRAMECHANGED | SWP_NOACTIVATE | SWP_SHOWWINDOW);
         m_fullscreenMode = true;
+        OnResize(screenWidth, screenHeight);
     }
 }
