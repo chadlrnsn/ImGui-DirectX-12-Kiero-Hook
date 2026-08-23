@@ -39,11 +39,17 @@ jobs:
     - name: Build
       run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }} --parallel
 
+    - name: Stage Artifacts
+      shell: pwsh
+      run: |
+        New-Item -ItemType Directory -Path ${{ github.workspace }}/staging -Force
+        Get-ChildItem -Path .bin -Recurse -Include DirectX12-Example.exe, DirectX12-Example-ImGui.dll | Copy-Item -Destination ${{ github.workspace }}/staging/
+
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: DirectX12-ImGui-Hook-${{ github.sha }}
         path: |
-          .bin/**/DirectX12-Example.exe
-          .bin/**/DirectX12-Example-ImGui.dll
+          staging/DirectX12-Example.exe
+          staging/DirectX12-Example-ImGui.dll
         if-no-files-found: error
