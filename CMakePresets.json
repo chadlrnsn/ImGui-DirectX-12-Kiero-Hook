@@ -2,54 +2,31 @@
     "version": 6,
     "configurePresets": [
         {
-            "name": "ninja-clang-debug",
-            "displayName": "Ninja + Clang (Debug)",
-            "description": "Build using Ninja generator with LLVM clang/clang++",
-            "generator": "Ninja",
+            "name": "vs2022-x64-debug",
+            "displayName": "Visual Studio 2022 (Debug x64)",
+            "description": "Build using Visual Studio 2022 generator for x64",
+            "generator": "Visual Studio 17 2022",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "architecture": {
                 "value": "x64",
                 "strategy": "external"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang.exe",
-                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang++.exe",
-                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+                "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
-            "name": "ninja-clang-release",
-            "displayName": "Ninja + Clang (Release)",
-            "description": "Build using Ninja generator with LLVM clang/clang++",
-            "generator": "Ninja",
+            "name": "vs2022-x64-release",
+            "displayName": "Visual Studio 2022 (Release x64)",
+            "description": "Build using Visual Studio 2022 generator for x64",
+            "generator": "Visual Studio 17 2022",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "architecture": {
                 "value": "x64",
                 "strategy": "external"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang.exe",
-                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang++.exe",
-                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
-            }
-        },
-        {
-            "name": "ninja-clangcl-debug",
-            "displayName": "Ninja + Clang-CL (Debug)",
-            "description": "Build using Ninja generator with LLVM clang-cl driver",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "architecture": {
-                "value": "x64",
-                "strategy": "external"
-            },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "D:/LLVM/bin/clang-cl.exe",
-                "CMAKE_CXX_COMPILER": "D:/LLVM/bin/clang-cl.exe",
-                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+                "CMAKE_BUILD_TYPE": "Release"
             }
         },
         {
@@ -64,9 +41,8 @@
             },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+                "CMAKE_C_COMPILER": "cl",
+                "CMAKE_CXX_COMPILER": "cl"
             }
         },
         {
@@ -81,13 +57,80 @@
             },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_MAKE_PROGRAM": "C:/Users/mark/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe"
+                "CMAKE_C_COMPILER": "cl",
+                "CMAKE_CXX_COMPILER": "cl"
+            }
+        },
+        {
+            "name": "ninja-clang-debug",
+            "displayName": "Ninja + Clang (Debug)",
+            "description": "Build using Ninja generator with LLVM clang/clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        },
+        {
+            "name": "ninja-clang-release",
+            "displayName": "Ninja + Clang (Release)",
+            "description": "Build using Ninja generator with LLVM clang/clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        },
+        {
+            "name": "ninja-clangcl-debug",
+            "displayName": "Ninja + Clang-CL (Debug)",
+            "description": "Build using Ninja generator with LLVM clang-cl driver",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang-cl",
+                "CMAKE_CXX_COMPILER": "clang-cl"
             }
         }
     ],
     "buildPresets": [
+        {
+            "name": "vs2022-x64-debug",
+            "configurePreset": "vs2022-x64-debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs2022-x64-release",
+            "configurePreset": "vs2022-x64-release",
+            "configuration": "Release"
+        },
+        {
+            "name": "ninja-msvc-debug",
+            "configurePreset": "ninja-msvc-debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-msvc-release",
+            "configurePreset": "ninja-msvc-release",
+            "configuration": "Release"
+        },
         {
             "name": "ninja-clang-debug",
             "configurePreset": "ninja-clang-debug",
@@ -102,16 +145,6 @@
             "name": "ninja-clangcl-debug",
             "configurePreset": "ninja-clangcl-debug",
             "configuration": "Debug"
-        },
-        {
-            "name": "ninja-msvc-debug",
-            "configurePreset": "ninja-msvc-debug",
-            "configuration": "Debug"
-        },
-        {
-            "name": "ninja-msvc-release",
-            "configurePreset": "ninja-msvc-release",
-            "configuration": "Release"
         }
     ]
 }

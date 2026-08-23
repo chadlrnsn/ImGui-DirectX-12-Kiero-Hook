@@ -1,0 +1,55 @@
+name: Release on Tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & Publish Release
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Cache CMake dependencies
+      uses: actions/cache@v4
+      with:
+        path: ${{ github.workspace }}/build/_deps
+        key: ${{ runner.os }}-cmake-deps-${{ hashFiles('**/CMakeLists.txt', 'cmake/*.cmake') }}
+        restore-keys: |
+          ${{ runner.os }}-cmake-deps-
+
+    - name: Configure CMake
+      run: >
+        cmake -B ${{ github.workspace }}/build 
+        -DCMAKE_BUILD_TYPE=Release 
+        -A x64
+
+    - name: Build Project
+      run: cmake --build ${{ github.workspace }}/build --config Release --parallel
+
+    - name: Package Release
+      shell: pwsh
+      run: |
+        New-Item -ItemType Directory -Path ${{ github.workspace }}/pkg -Force
+        Get-ChildItem -Path .bin -Recurse -Include DirectX12-Example.exe, DirectX12-Example-ImGui.dll | Copy-Item -Destination ${{ github.workspace }}/pkg/
+        Compress-Archive -Path ${{ github.workspace }}/pkg/* -DestinationPath ${{ github.workspace }}/DirectX12-ImGui-Hook-${{ github.ref_name }}.zip
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          DirectX12-ImGui-Hook-${{ github.ref_name }}.zip
+          ${{ github.workspace }}/pkg/DirectX12-Example.exe
+          ${{ github.workspace }}/pkg/DirectX12-Example-ImGui.dll
+        generate_release_notes: true
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
