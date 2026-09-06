@@ -50,6 +50,7 @@ static IDXGISwapChain3 *g_pSwapChain = nullptr;
 static bool g_isResizing = false;
 static bool g_initDone = false;
 static UINT g_presentCallCount = 0;
+static DWORD g_presentThreadId = 0;
 
 bool show_demo_window = true;
 bool bShould_render = true;
@@ -231,6 +232,10 @@ void InitImGui()
 HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT Flags)
 {
     g_presentCallCount++;
+
+    if (g_presentThreadId == 0) {
+        g_presentThreadId = GetCurrentThreadId();
+    }
 
     if (!g_initDone)
     {
@@ -482,7 +487,8 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
 
 void __fastcall hkExecuteCommandLists(ID3D12CommandQueue *pCommandQueue, UINT NumCommandLists, ID3D12CommandList *const *ppCommandLists)
 {
-    if (!g_pd3dCommandQueue && pCommandQueue)
+    // FIX: only capture the queue if this call is from the Present thread
+    if (!g_pd3dCommandQueue && pCommandQueue && GetCurrentThreadId() == g_presentThreadId)
     {
         D3D12_COMMAND_QUEUE_DESC desc = pCommandQueue->GetDesc();
         if (desc.Type == D3D12_COMMAND_LIST_TYPE_DIRECT)
