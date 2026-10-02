@@ -28,9 +28,10 @@ WNDPROC oWndProc = nullptr;
 
 struct FrameContext
 {
-    ID3D12CommandAllocator *CommandAllocator = nullptr;
+    ID3D12CommandAllocator* CommandAllocator = nullptr;
+    ID3D12GraphicsCommandList* CommandList = nullptr;   // once per frame
     UINT64 FenceValue = 0;
-    ID3D12Resource *g_mainRenderTargetResource = nullptr;
+    ID3D12Resource* g_mainRenderTargetResource = nullptr;
     D3D12_CPU_DESCRIPTOR_HANDLE g_mainRenderTargetDescriptor = {};
 };
 
@@ -41,9 +42,10 @@ static UINT64 g_fenceValue = 0;
 static ID3D12Device *g_pd3dDevice = nullptr;
 static ID3D12DescriptorHeap *g_pd3dRtvDescHeap = nullptr;
 static ID3D12DescriptorHeap *g_pd3dSrvDescHeap = nullptr;
-static ID3D12CommandQueue *g_pd3dCommandQueue = nullptr;
-static ID3D12GraphicsCommandList *g_pd3dCommandList = nullptr;
-static ID3D12Fence *g_fence = nullptr;
+static ID3D12CommandQueue* g_pd3dCommandQueue = nullptr;
+static ID3D12CommandQueue* g_pendingQueue = nullptr;    // stash it until we can verify it belongs to our device else DEVICE_REMOVED ofc
+static IUnknown* g_swapchainIdentity = nullptr; // so we can ignore Present from other swapchains
+static ID3D12Fence* g_fence = nullptr;
 static HANDLE g_fenceEvent = nullptr;
 static IDXGISwapChain3 *g_pSwapChain = nullptr;
 
@@ -64,6 +66,22 @@ static void LogDeviceState(const char* context)
     {
         LOG_ERROR("[%s] DEVICE REMOVED! Reason: 0x%08X", context, reason);
     }
+}
+
+// Helper: compare swapchains. Basically identity check with IUnknown
+static bool IsSameSwapchain(IDXGISwapChain* a, IDXGISwapChain* b)
+{
+    IUnknown* ia = nullptr;
+    IUnknown* ib = nullptr;
+    if (FAILED(a->QueryInterface(IID_PPV_ARGS(&ia))) || !ia) return false;
+    if (FAILED(b->QueryInterface(IID_PPV_ARGS(&ib))) || !ib) { 
+        ia->Release(); 
+        return false; 
+    }
+    const bool same = (ia == ib);   // dxgi can give different interfaces for the same object. That's why we compare it like this.
+    ia->Release();
+    ib->Release();
+    return same;
 }
 
 void CreateRenderTarget()
@@ -220,12 +238,12 @@ void InitImGui()
 
     LOG_DEBUG("[InitImGui] format=%u numFrames=%d", format, NUM_BACK_BUFFERS);
 
-    ImGui_ImplDX12_Init(g_pd3dDevice, NUM_BACK_BUFFERS > 0 ? NUM_BACK_BUFFERS : 2,
-                        format,
-                        g_pd3dSrvDescHeap,
-                        g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(),
-                        g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
+    // Force fonts build. I thought ImGui_ImplDX12_Init does this for us, ig not.
+    io.Fonts->Build();
 
+    const int framesInFlight = (NUM_BACK_BUFFERS > 0 ? NUM_BACK_BUFFERS : 2) + 1;
+    ImGui_ImplDX12_Init(g_pd3dDevice, framesInFlight, format, g_pd3dSrvDescHeap, g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(), g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
+    ImGui_ImplDX12_CreateDeviceObjects();   // 6-arg init does NOT build the font texture. skip this and we crash on first draw
     LOG_INFO("[InitImGui] done");
 }
 
@@ -239,10 +257,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
 
     if (!g_initDone)
     {
-        if (!g_pd3dCommandQueue)
-            return oPresent(pSwapChain, SyncInterval, Flags);
-
-        LOG_INFO("[hkPresent] init: commandQueue captured=%p", g_pd3dCommandQueue);
+        if (!g_pendingQueue) return oPresent(pSwapChain, SyncInterval, Flags);
 
         if (FAILED(pSwapChain->QueryInterface(IID_PPV_ARGS(&g_pSwapChain))))
         {
@@ -250,9 +265,32 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
             return oPresent(pSwapChain, SyncInterval, Flags);
         }
 
-        if (SUCCEEDED(g_pSwapChain->GetDevice(__uuidof(ID3D12Device), (void **)&g_pd3dDevice)))
+        if (SUCCEEDED(g_pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&g_pd3dDevice)))
         {
+            if (!g_swapchainIdentity)
+            {
+                // capture our swapchain identity. Then we can compare with imposter swapchains.
+                pSwapChain->QueryInterface(IID_PPV_ARGS(&g_swapchainIdentity));
+            }
+
             LOG_INFO("[hkPresent] init: device=%p", g_pd3dDevice);
+
+            // ignore pending queue if its not from swapchain device
+            if (!g_pd3dCommandQueue)
+            {
+                ID3D12Device* queueDevice = nullptr;
+                if (SUCCEEDED(g_pendingQueue->GetDevice(IID_PPV_ARGS(&queueDevice))) && queueDevice)
+                {
+                    if (queueDevice == g_pd3dDevice)
+                    {
+                        g_pd3dCommandQueue = g_pendingQueue;
+                        LOG_INFO("[hkPresent] init: commandQueue captured=%p", g_pd3dCommandQueue);
+                    }
+                    queueDevice->Release();
+                }
+
+                if (!g_pd3dCommandQueue) return oPresent(pSwapChain, SyncInterval, Flags);
+            }
 
             DXGI_SWAP_CHAIN_DESC sdesc;
             if (SUCCEEDED(g_pSwapChain->GetDesc(&sdesc)))
@@ -307,6 +345,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
             for (UINT i = 0; i < (UINT)NUM_BACK_BUFFERS; i++)
             {
                 g_frameContext[i].CommandAllocator = nullptr;
+                g_frameContext[i].CommandList = nullptr;
                 g_frameContext[i].FenceValue = 0;
                 HRESULT hr = g_pd3dDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&g_frameContext[i].CommandAllocator));
                 if (FAILED(hr))
@@ -318,14 +357,15 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
             LOG_DEBUG("[hkPresent] init: created %d command allocators", NUM_BACK_BUFFERS);
 
             // Command List
+            for (UINT i = 0; i < (UINT)NUM_BACK_BUFFERS; i++)
             {
-                HRESULT hr = g_pd3dDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, g_frameContext[0].CommandAllocator, nullptr, IID_PPV_ARGS(&g_pd3dCommandList));
+                HRESULT hr = g_pd3dDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, g_frameContext[i].CommandAllocator, nullptr, IID_PPV_ARGS(&g_frameContext[i].CommandList));
                 if (FAILED(hr))
                 {
-                    LOG_ERROR("[hkPresent] init: CreateCommandList FAILED: 0x%08X", hr);
+                    LOG_ERROR("[hkPresent] init: CreateCommandList[%u] FAILED: 0x%08X", i, hr);
                     return oPresent(pSwapChain, SyncInterval, Flags);
                 }
-                g_pd3dCommandList->Close();
+                g_frameContext[i].CommandList->Close();
             }
 
             // Fence & Event
@@ -367,7 +407,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
 
     // --- Per-frame rendering ---
 
-    if (!g_pd3dCommandQueue || !g_pd3dDevice || !g_frameContext || !g_pd3dSrvDescHeap || !g_pSwapChain)
+    if (!g_pd3dDevice || !g_frameContext || !g_pd3dSrvDescHeap || !g_pSwapChain)
     {
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
@@ -377,6 +417,9 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
         LOG_DEBUG("[hkPresent] frame %u: SKIPPED (resizing)", g_presentCallCount);
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
+
+    // ignore present from any swapchain except the one we hooked
+    if (g_swapchainIdentity && !IsSameSwapchain(pSwapChain, g_pSwapChain)) return oPresent(pSwapChain, SyncInterval, Flags);
 
     // Check device health
     {
@@ -410,17 +453,22 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
         LOG_ERROR("[hkPresent] frame %u: RenderTarget[%u] is NULL!", g_presentCallCount, backBufferIdx);
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
+    if (!frameCtx.CommandList)
+    {
+        LOG_ERROR("[hkPresent] frame %u: CommandList[%u] is NULL!", g_presentCallCount, backBufferIdx);
+        return oPresent(pSwapChain, SyncInterval, Flags);
+    }
 
     // Wait for this frame's previous GPU work to finish before reusing its allocator
     if (frameCtx.FenceValue != 0 && g_fence && g_fence->GetCompletedValue() < frameCtx.FenceValue)
     {
         g_fence->SetEventOnCompletion(frameCtx.FenceValue, g_fenceEvent);
-        WaitForSingleObject(g_fenceEvent, 5000);
+        WaitForSingleObject(g_fenceEvent, INFINITE);
     }
 
     // Begin ImGui frame
+    ImGui_ImplWin32_NewFrame(); // platform first then renderer
     ImGui_ImplDX12_NewFrame();
-    ImGui_ImplWin32_NewFrame();
     ImGui::NewFrame();
 
     ImGui::GetIO().MouseDrawCursor = show_demo_window;
@@ -437,7 +485,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
-    HRESULT hrListReset = g_pd3dCommandList->Reset(frameCtx.CommandAllocator, nullptr);
+    HRESULT hrListReset = frameCtx.CommandList->Reset(frameCtx.CommandAllocator, nullptr);
     if (FAILED(hrListReset))
     {
         LOG_ERROR("[hkPresent] frame %u: CommandList->Reset() FAILED: 0x%08X", g_presentCallCount, hrListReset);
@@ -454,18 +502,18 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_PRESENT;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_RENDER_TARGET;
 
-    g_pd3dCommandList->ResourceBarrier(1, &barrier);
-    g_pd3dCommandList->OMSetRenderTargets(1, &frameCtx.g_mainRenderTargetDescriptor, FALSE, nullptr);
-    g_pd3dCommandList->SetDescriptorHeaps(1, &g_pd3dSrvDescHeap);
+    frameCtx.CommandList->ResourceBarrier(1, &barrier);
+    frameCtx.CommandList->OMSetRenderTargets(1, &frameCtx.g_mainRenderTargetDescriptor, FALSE, nullptr);
+    frameCtx.CommandList->SetDescriptorHeaps(1, &g_pd3dSrvDescHeap);
 
     ImGui::Render();
-    ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
+    ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), frameCtx.CommandList);
 
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
-    g_pd3dCommandList->ResourceBarrier(1, &barrier);
+    frameCtx.CommandList->ResourceBarrier(1, &barrier);
 
-    HRESULT hrClose = g_pd3dCommandList->Close();
+    HRESULT hrClose = frameCtx.CommandList->Close();
     if (FAILED(hrClose))
     {
         LOG_ERROR("[hkPresent] frame %u: CommandList->Close() FAILED: 0x%08X", g_presentCallCount, hrClose);
@@ -473,7 +521,8 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
-    g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList *const *>(&g_pd3dCommandList));
+    ID3D12CommandList* ppCommandLists[] = { frameCtx.CommandList };
+    g_pd3dCommandQueue->ExecuteCommandLists(1, ppCommandLists);
 
     // Signal fence for this frame — do NOT wait here.
     // We wait at the TOP of the next frame that reuses this same backBufferIdx.
@@ -485,16 +534,13 @@ HRESULT __fastcall hkPresent(IDXGISwapChain *pSwapChain, UINT SyncInterval, UINT
     return oPresent(pSwapChain, SyncInterval, Flags);
 }
 
-void __fastcall hkExecuteCommandLists(ID3D12CommandQueue *pCommandQueue, UINT NumCommandLists, ID3D12CommandList *const *ppCommandLists)
+void __fastcall hkExecuteCommandLists(ID3D12CommandQueue* pCommandQueue, UINT NumCommandLists, ID3D12CommandList* const* ppCommandLists)
 {
-    // FIX: only capture the queue if this call is from the Present thread
     if (!g_pd3dCommandQueue && pCommandQueue && GetCurrentThreadId() == g_presentThreadId)
     {
         D3D12_COMMAND_QUEUE_DESC desc = pCommandQueue->GetDesc();
-        if (desc.Type == D3D12_COMMAND_LIST_TYPE_DIRECT)
-        {
-            g_pd3dCommandQueue = pCommandQueue;
-            LOG_INFO("[hkExecuteCommandLists] captured DIRECT queue: %p", pCommandQueue);
+        if (desc.Type == D3D12_COMMAND_LIST_TYPE_DIRECT) {
+            g_pendingQueue = pCommandQueue; // store then later verify identity in hkPresent
         }
     }
 
@@ -516,6 +562,8 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain *pSwapChain, UINT BufferCount,
 
     g_isResizing = true;
 
+    ImGui_ImplDX12_InvalidateDeviceObjects();   // drop font SRV and PSO before back buffers go away
+
     LOG_DEBUG("[hkResizeBuffers] WaitForAllFrames...");
     fflush(stdout);
     WaitForAllFrames();
@@ -536,6 +584,8 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain *pSwapChain, UINT BufferCount,
     {
         LOG_ERROR("[hkResizeBuffers] oResizeBuffers FAILED: 0x%08X", result);
         LogDeviceState("ResizeBuffers-afterCall");
+        // we already invalidated. Here must be rebuilt
+        ImGui_ImplDX12_CreateDeviceObjects();
         g_isResizing = false;
         return result;
     }
@@ -564,6 +614,11 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain *pSwapChain, UINT BufferCount,
         {
             for (UINT i = 0; i < (UINT)NUM_BACK_BUFFERS; i++)
             {
+                if (g_frameContext[i].CommandList)
+                {
+                    g_frameContext[i].CommandList->Release();
+                    g_frameContext[i].CommandList = nullptr;
+                }
                 if (g_frameContext[i].CommandAllocator)
                 {
                     g_frameContext[i].CommandAllocator->Release();
@@ -594,19 +649,25 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain *pSwapChain, UINT BufferCount,
         for (UINT i = 0; i < (UINT)NUM_BACK_BUFFERS; i++)
         {
             g_frameContext[i].CommandAllocator = nullptr;
+            g_frameContext[i].CommandList = nullptr;
             g_frameContext[i].FenceValue = 0;
             g_frameContext[i].g_mainRenderTargetResource = nullptr;
             g_frameContext[i].g_mainRenderTargetDescriptor = {};
+
             g_pd3dDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&g_frameContext[i].CommandAllocator));
+
+            g_pd3dDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, g_frameContext[i].CommandAllocator, nullptr, IID_PPV_ARGS(&g_frameContext[i].CommandList));
+            if (g_frameContext[i].CommandList) {
+                g_frameContext[i].CommandList->Close();
+            }
         }
     }
 
     LOG_DEBUG("[hkResizeBuffers] CreateRenderTarget...");
     CreateRenderTarget();
 
-    // No need to call ImGui_ImplDX12_InvalidateDeviceObjects / CreateDeviceObjects here.
-    // ImGui pipeline state, root signature and font texture are NOT dependent on
-    // swap chain dimensions. ImGui_ImplDX12_NewFrame() auto-recreates them if needed.
+    // Actually we do need to call CreateDeviceObjects here. RTV formats and SRV font gpu could changed.
+    ImGui_ImplDX12_CreateDeviceObjects();
 
     g_isResizing = false;
 
@@ -723,6 +784,11 @@ void ReleaseD3D12Hook()
     {
         for (UINT i = 0; i < (UINT)NUM_BACK_BUFFERS; i++)
         {
+            if (g_frameContext[i].CommandList)
+            {
+                g_frameContext[i].CommandList->Release();
+                g_frameContext[i].CommandList = nullptr;
+            }
             if (g_frameContext[i].CommandAllocator)
             {
                 g_frameContext[i].CommandAllocator->Release();
@@ -731,12 +797,6 @@ void ReleaseD3D12Hook()
         }
         delete[] g_frameContext;
         g_frameContext = nullptr;
-    }
-
-    if (g_pd3dCommandList)
-    {
-        g_pd3dCommandList->Release();
-        g_pd3dCommandList = nullptr;
     }
 
     if (g_fenceEvent)
@@ -781,8 +841,15 @@ void ReleaseD3D12Hook()
         g_pSwapChain = nullptr;
     }
 
+    if (g_swapchainIdentity)
+    {
+        g_swapchainIdentity->Release();
+        g_swapchainIdentity = nullptr;
+    }
+
     window = nullptr;
     g_pd3dCommandQueue = nullptr;
+    g_pendingQueue = nullptr;
     NUM_BACK_BUFFERS = 0;
     g_fenceValue = 0;
     g_initDone = false;
